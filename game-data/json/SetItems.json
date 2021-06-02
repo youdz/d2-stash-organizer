@@ -1,0 +1,5016 @@
+[
+  {
+    "name": "Civerb's Ward",
+    "code": "lrg",
+    "set": "Civerb's Vestments",
+    "qlevel": 13,
+    "levelReq": 9,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "block",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 21,
+        "max": 22
+      },
+      {
+        "prop": "res-pois",
+        "param": "",
+        "min": 25,
+        "max": 26
+      }
+    ]
+  },
+  {
+    "name": "Civerb's Icon",
+    "code": "amu",
+    "set": "Civerb's Vestments",
+    "qlevel": 13,
+    "levelReq": 9,
+    "baseModifiers": [
+      {
+        "prop": "regen-mana",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "regen",
+        "param": "",
+        "min": 4,
+        "max": 4
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ]
+  },
+  {
+    "name": "Civerb's Cudgel",
+    "code": "gsc",
+    "set": "Civerb's Vestments",
+    "qlevel": 13,
+    "levelReq": 9,
+    "baseModifiers": [
+      {
+        "prop": "att",
+        "param": "",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "dmg-max",
+        "param": "",
+        "min": 17,
+        "max": 23
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "dmg/lvl",
+        "param": "8",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Hsarus' Iron Heel",
+    "code": "mbt",
+    "set": "Hsarus' Defense",
+    "qlevel": 4,
+    "levelReq": 3,
+    "baseModifiers": [
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "move2",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att/lvl",
+        "param": "20",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Hsarus' Iron Fist",
+    "code": "buc",
+    "set": "Hsarus' Defense",
+    "qlevel": 4,
+    "levelReq": 3,
+    "baseModifiers": [
+      {
+        "prop": "red-dmg",
+        "param": "",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac/lvl",
+        "param": "20",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Hsarus' Iron Stay",
+    "code": "mbl",
+    "set": "Hsarus' Defense",
+    "qlevel": 4,
+    "levelReq": 3,
+    "baseModifiers": [
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac/lvl",
+        "param": "20",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Cleglaw's Tooth",
+    "code": "lsd",
+    "set": "Cleglaw's Brace",
+    "qlevel": 6,
+    "levelReq": 4,
+    "baseModifiers": [
+      {
+        "prop": "att%",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "deadly",
+        "param": "",
+        "min": 50,
+        "max": 50
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "dmg/lvl",
+        "param": "10",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Cleglaw's Claw",
+    "code": "sml",
+    "set": "Cleglaw's Brace",
+    "qlevel": 6,
+    "levelReq": 4,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 17,
+        "max": 17
+      },
+      {
+        "prop": "res-pois-len",
+        "param": "",
+        "min": 75,
+        "max": 75
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ]
+  },
+  {
+    "name": "Cleglaw's Pincers",
+    "code": "mgl",
+    "set": "Cleglaw's Brace",
+    "qlevel": 6,
+    "levelReq": 4,
+    "baseModifiers": [
+      {
+        "prop": "knock",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "slow",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att/lvl",
+        "param": "20",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Iratha's Collar",
+    "code": "amu",
+    "set": "Iratha's Finery",
+    "qlevel": 21,
+    "levelReq": 15,
+    "baseModifiers": [
+      {
+        "prop": "res-pois",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "res-pois-len",
+        "param": "",
+        "min": 75,
+        "max": 75
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ]
+  },
+  {
+    "name": "Iratha's Cuff",
+    "code": "tgl",
+    "set": "Iratha's Finery",
+    "qlevel": 21,
+    "levelReq": 15,
+    "baseModifiers": [
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "half-freeze",
+        "param": "",
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "swing2",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ]
+  },
+  {
+    "name": "Iratha's Coil",
+    "code": "crn",
+    "set": "Iratha's Finery",
+    "qlevel": 21,
+    "levelReq": 15,
+    "baseModifiers": [
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 30,
+        "max": 30
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac/lvl",
+        "param": "16",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Iratha's Cord",
+    "code": "tbl",
+    "set": "Iratha's Finery",
+    "qlevel": 21,
+    "levelReq": 15,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "dmg-min",
+        "param": "",
+        "min": 5,
+        "max": 5
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "Isenhart's Lightbrand",
+    "code": "bsd",
+    "set": "Isenhart's Armory",
+    "qlevel": 11,
+    "levelReq": 8,
+    "baseModifiers": [
+      {
+        "prop": "dmg-min",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "swing2",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att/lvl",
+        "param": "10",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Isenhart's Parry",
+    "code": "gts",
+    "set": "Isenhart's Armory",
+    "qlevel": 11,
+    "levelReq": 8,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "light-thorns",
+        "param": "",
+        "min": 4,
+        "max": 4
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 8,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "name": "Isenhart's Case",
+    "code": "brs",
+    "set": "Isenhart's Armory",
+    "qlevel": 11,
+    "levelReq": 8,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "red-mag",
+        "param": "",
+        "min": 2,
+        "max": 2
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac/lvl",
+        "param": "16",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Isenhart's Horns",
+    "code": "fhl",
+    "set": "Isenhart's Armory",
+    "qlevel": 11,
+    "levelReq": 8,
+    "baseModifiers": [
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 6,
+        "max": 6
+      },
+      {
+        "prop": "red-dmg",
+        "param": "",
+        "min": 2,
+        "max": 2
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 8,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "name": "Vidala's Barb",
+    "code": "lbb",
+    "set": "Vidala's Rig",
+    "qlevel": 19,
+    "levelReq": 14,
+    "baseModifiers": [
+      {
+        "prop": "ltng-min",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "ltng-max",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att/lvl",
+        "param": "16",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Vidala's Fetlock",
+    "code": "tbt",
+    "set": "Vidala's Rig",
+    "qlevel": 19,
+    "levelReq": 14,
+    "baseModifiers": [
+      {
+        "prop": "stam",
+        "param": "",
+        "min": 150,
+        "max": 150
+      },
+      {
+        "prop": "move3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 8,
+        "max": 8
+      }
+    ]
+  },
+  {
+    "name": "Vidala's Ambush",
+    "code": "lea",
+    "set": "Vidala's Rig",
+    "qlevel": 19,
+    "levelReq": 14,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 11,
+        "max": 11
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 24,
+        "max": 24
+      },
+      {
+        "prop": "ac/lvl",
+        "param": "20",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Vidala's Snare",
+    "code": "amu",
+    "set": "Vidala's Rig",
+    "qlevel": 19,
+    "levelReq": 14,
+    "baseModifiers": [
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 50,
+        "max": 50
+      }
+    ]
+  },
+  {
+    "name": "Milabrega's Orb",
+    "code": "kit",
+    "set": "Milabrega's Regalia",
+    "qlevel": 23,
+    "levelReq": 17,
+    "baseModifiers": [
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 50,
+        "max": 50
+      }
+    ]
+  },
+  {
+    "name": "Milabrega's Rod",
+    "code": "wsp",
+    "set": "Milabrega's Regalia",
+    "qlevel": 23,
+    "levelReq": 17,
+    "baseModifiers": [
+      {
+        "prop": "pal",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "light",
+        "param": "",
+        "min": 2,
+        "max": 2
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Milabrega's Diadem",
+    "code": "crn",
+    "set": "Milabrega's Regalia",
+    "qlevel": 23,
+    "levelReq": 17,
+    "baseModifiers": [
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 40,
+        "max": 40
+      }
+    ]
+  },
+  {
+    "name": "Milabrega's Robe",
+    "code": "aar",
+    "set": "Milabrega's Regalia",
+    "qlevel": 23,
+    "levelReq": 17,
+    "baseModifiers": [
+      {
+        "prop": "thorns",
+        "param": "",
+        "min": 3,
+        "max": 3
+      },
+      {
+        "prop": "red-dmg",
+        "param": "",
+        "min": 2,
+        "max": 2
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 100,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "name": "Cathan's Rule",
+    "code": "bst",
+    "set": "Cathan's Traps",
+    "qlevel": 15,
+    "levelReq": 11,
+    "baseModifiers": [
+      {
+        "prop": "fireskill",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "fire-max",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "Cathan's Mesh",
+    "code": "chn",
+    "set": "Cathan's Traps",
+    "qlevel": 15,
+    "levelReq": 11,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -50,
+        "max": -50
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "thorns",
+        "param": "",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 30,
+        "max": 30
+      }
+    ]
+  },
+  {
+    "name": "Cathan's Visage",
+    "code": "msk",
+    "set": "Cathan's Traps",
+    "qlevel": 15,
+    "levelReq": 11,
+    "baseModifiers": [
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac/lvl",
+        "param": "16",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Cathan's Sigil",
+    "code": "amu",
+    "set": "Cathan's Traps",
+    "qlevel": 15,
+    "levelReq": 11,
+    "baseModifiers": [
+      {
+        "prop": "balance1",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "light-thorns",
+        "param": "",
+        "min": 5,
+        "max": 5
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ]
+  },
+  {
+    "name": "Cathan's Seal",
+    "code": "rin",
+    "set": "Cathan's Traps",
+    "qlevel": 15,
+    "levelReq": 11,
+    "baseModifiers": [
+      {
+        "prop": "lifesteal",
+        "param": "",
+        "min": 6,
+        "max": 6
+      },
+      {
+        "prop": "red-dmg",
+        "param": "",
+        "min": 2,
+        "max": 2
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "str",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "Tancred's Crowbill",
+    "code": "mpi",
+    "set": "Tancred's Battlegear",
+    "qlevel": 27,
+    "levelReq": 20,
+    "baseModifiers": [
+      {
+        "prop": "att",
+        "param": "",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 80,
+        "max": 80
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "swing2",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ]
+  },
+  {
+    "name": "Tancred's Spine",
+    "code": "ful",
+    "set": "Tancred's Battlegear",
+    "qlevel": 27,
+    "levelReq": 20,
+    "baseModifiers": [
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac/lvl",
+        "param": "16",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Tancred's Hobnails",
+    "code": "lbt",
+    "set": "Tancred's Battlegear",
+    "qlevel": 27,
+    "levelReq": 20,
+    "baseModifiers": [
+      {
+        "prop": "regen-stam",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "move3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "Tancred's Weird",
+    "code": "amu",
+    "set": "Tancred's Battlegear",
+    "qlevel": 27,
+    "levelReq": 20,
+    "baseModifiers": [
+      {
+        "prop": "red-dmg",
+        "param": "",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "red-mag",
+        "param": "",
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 78,
+        "max": 78
+      },
+      {
+        "prop": "att",
+        "param": "",
+        "min": 60,
+        "max": 60
+      }
+    ]
+  },
+  {
+    "name": "Tancred's Skull",
+    "code": "bhm",
+    "set": "Tancred's Battlegear",
+    "qlevel": 27,
+    "levelReq": 20,
+    "baseModifiers": [
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "att",
+        "param": "",
+        "min": 40,
+        "max": 40
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "Sigon's Gage",
+    "code": "hgl",
+    "set": "Sigon's Complete Steel",
+    "qlevel": 9,
+    "levelReq": 6,
+    "baseModifiers": [
+      {
+        "prop": "str",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "att",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "swing3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      }
+    ]
+  },
+  {
+    "name": "Sigon's Visor",
+    "code": "ghm",
+    "set": "Sigon's Complete Steel",
+    "qlevel": 9,
+    "levelReq": 6,
+    "baseModifiers": [
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att/lvl",
+        "param": "16",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Sigon's Shelter",
+    "code": "gth",
+    "set": "Sigon's Complete Steel",
+    "qlevel": 9,
+    "levelReq": 6,
+    "baseModifiers": [
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 30,
+        "max": 30
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "thorns",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ]
+  },
+  {
+    "name": "Sigon's Sabot",
+    "code": "hbt",
+    "set": "Sigon's Complete Steel",
+    "qlevel": 9,
+    "levelReq": 6,
+    "baseModifiers": [
+      {
+        "prop": "move2",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 40,
+        "max": 40
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 50,
+        "max": 50
+      }
+    ]
+  },
+  {
+    "name": "Sigon's Wrap",
+    "code": "hbl",
+    "set": "Sigon's Complete Steel",
+    "qlevel": 9,
+    "levelReq": 6,
+    "baseModifiers": [
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac/lvl",
+        "param": "16",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Sigon's Guard",
+    "code": "tow",
+    "set": "Sigon's Complete Steel",
+    "qlevel": 9,
+    "levelReq": 6,
+    "baseModifiers": [
+      {
+        "prop": "allskills",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "block",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Infernal Cranium",
+    "code": "cap",
+    "set": "Infernal Tools",
+    "qlevel": 7,
+    "levelReq": 5,
+    "baseModifiers": [
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "dmg-to-mana",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac/lvl",
+        "param": "16",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Infernal Torch",
+    "code": "gwn",
+    "set": "Infernal Tools",
+    "qlevel": 7,
+    "levelReq": 5,
+    "baseModifiers": [
+      {
+        "prop": "dmg-min",
+        "param": "",
+        "min": 8,
+        "max": 8
+      },
+      {
+        "prop": "nec",
+        "param": "",
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att/lvl",
+        "param": "20",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Infernal Sign",
+    "code": "tbl",
+    "set": "Infernal Tools",
+    "qlevel": 7,
+    "levelReq": 5,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-pois",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "half-freeze",
+        "param": "",
+        "min": 1,
+        "max": 1
+      }
+    ]
+  },
+  {
+    "name": "Berserker's Headgear",
+    "code": "hlm",
+    "set": "Berserker's Garb",
+    "qlevel": 5,
+    "levelReq": 3,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att/lvl",
+        "param": "16",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Berserker's Hauberk",
+    "code": "spl",
+    "set": "Berserker's Garb",
+    "qlevel": 5,
+    "levelReq": 3,
+    "baseModifiers": [
+      {
+        "prop": "red-mag",
+        "param": "",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "bar",
+        "param": "",
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac/lvl",
+        "param": "24",
+        "min": 0,
+        "max": 0
+      }
+    ]
+  },
+  {
+    "name": "Berserker's Hatchet",
+    "code": "2ax",
+    "set": "Berserker's Garb",
+    "qlevel": 5,
+    "levelReq": 3,
+    "baseModifiers": [
+      {
+        "prop": "att%",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "manasteal",
+        "param": "",
+        "min": 5,
+        "max": 5
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 50,
+        "max": 50
+      }
+    ]
+  },
+  {
+    "name": "Death's Hand",
+    "code": "lgl",
+    "set": "Death's Disguise",
+    "qlevel": 8,
+    "levelReq": 6,
+    "baseModifiers": [
+      {
+        "prop": "res-pois",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "res-pois-len",
+        "param": "",
+        "min": 75,
+        "max": 75
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "swing3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      }
+    ]
+  },
+  {
+    "name": "Death's Guard",
+    "code": "lbl",
+    "set": "Death's Disguise",
+    "qlevel": 8,
+    "levelReq": 6,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "nofreeze",
+        "param": "",
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ]
+  },
+  {
+    "name": "Death's Touch",
+    "code": "wsd",
+    "set": "Death's Disguise",
+    "qlevel": 8,
+    "levelReq": 6,
+    "baseModifiers": [
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "lifesteal",
+        "param": "",
+        "min": 4,
+        "max": 4
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "dmg-cold",
+        "param": "75",
+        "min": 25,
+        "max": 75
+      }
+    ]
+  },
+  {
+    "name": "Angelic Sickle",
+    "code": "sbr",
+    "set": "Angelical Raiment",
+    "qlevel": 17,
+    "levelReq": 12,
+    "baseModifiers": [
+      {
+        "prop": "att",
+        "param": "",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "dmg-undead",
+        "param": "",
+        "min": 250,
+        "max": 250
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "swing3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      }
+    ]
+  },
+  {
+    "name": "Angelic Mantle",
+    "code": "rng",
+    "set": "Angelical Raiment",
+    "qlevel": 17,
+    "levelReq": 12,
+    "baseModifiers": [
+      {
+        "prop": "red-dmg",
+        "param": "",
+        "min": 3,
+        "max": 3
+      },
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 40,
+        "max": 40
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 150,
+        "max": 150
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 50,
+        "max": 50
+      }
+    ]
+  },
+  {
+    "name": "Angelic Halo",
+    "code": "rin",
+    "set": "Angelical Raiment",
+    "qlevel": 17,
+    "levelReq": 12,
+    "baseModifiers": [
+      {
+        "prop": "regen",
+        "param": "",
+        "min": 6,
+        "max": 6
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att/lvl",
+        "param": "24",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 50,
+        "max": 50
+      }
+    ]
+  },
+  {
+    "name": "Angelic Wings",
+    "code": "amu",
+    "set": "Angelical Raiment",
+    "qlevel": 17,
+    "levelReq": 12,
+    "baseModifiers": [
+      {
+        "prop": "light",
+        "param": "",
+        "min": 3,
+        "max": 3
+      },
+      {
+        "prop": "dmg-to-mana",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "allskills",
+        "param": "",
+        "min": 1,
+        "max": 1
+      }
+    ]
+  },
+  {
+    "name": "Arctic Horn",
+    "code": "swb",
+    "set": "Arctic Gear",
+    "qlevel": 3,
+    "levelReq": 2,
+    "baseModifiers": [
+      {
+        "prop": "att%",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 50,
+        "max": 50
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att/lvl",
+        "param": "16",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "prop": "dmg-cold",
+        "param": "75",
+        "min": 20,
+        "max": 30
+      }
+    ]
+  },
+  {
+    "name": "Arctic Furs",
+    "code": "qui",
+    "set": "Arctic Gear",
+    "qlevel": 3,
+    "levelReq": 2,
+    "baseModifiers": [
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 275,
+        "max": 325
+      },
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac/lvl",
+        "param": "24",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ]
+  },
+  {
+    "name": "Arctic Binding",
+    "code": "vbl",
+    "set": "Arctic Gear",
+    "qlevel": 3,
+    "levelReq": 2,
+    "baseModifiers": [
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 30,
+        "max": 30
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "Arctic Mitts",
+    "code": "tgl",
+    "set": "Arctic Gear",
+    "qlevel": 3,
+    "levelReq": 2,
+    "baseModifiers": [
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "swing1",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "att",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "Arcanna's Sign",
+    "code": "amu",
+    "set": "Arcanna's Tricks",
+    "qlevel": 20,
+    "levelReq": 15,
+    "baseModifiers": [
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "regen-mana",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ]
+  },
+  {
+    "name": "Arcanna's Deathwand",
+    "code": "wst",
+    "set": "Arcanna's Tricks",
+    "qlevel": 20,
+    "levelReq": 15,
+    "baseModifiers": [
+      {
+        "prop": "sor",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "deadly",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "regen-mana",
+        "param": "",
+        "min": 5,
+        "max": 5
+      }
+    ]
+  },
+  {
+    "name": "Arcanna's Head",
+    "code": "skp",
+    "set": "Arcanna's Tricks",
+    "qlevel": 20,
+    "levelReq": 15,
+    "baseModifiers": [
+      {
+        "prop": "regen",
+        "param": "",
+        "min": 4,
+        "max": 4
+      },
+      {
+        "prop": "thorns",
+        "param": "",
+        "min": 2,
+        "max": 2
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac/lvl",
+        "param": "24",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ]
+  },
+  {
+    "name": "Arcanna's Flesh",
+    "code": "ltp",
+    "set": "Arcanna's Tricks",
+    "qlevel": 20,
+    "levelReq": 15,
+    "baseModifiers": [
+      {
+        "prop": "light",
+        "param": "",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "red-dmg",
+        "param": "",
+        "min": 3,
+        "max": 3
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 100,
+        "max": 100
+      },
+      {
+        "prop": "enr",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "Natalya's Totem",
+    "code": "xh9",
+    "set": "Natalya's Odium",
+    "qlevel": 22,
+    "levelReq": 59,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 135,
+        "max": 175
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 20,
+        "max": 30
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 10,
+        "max": 20
+      },
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 10,
+        "max": 20
+      },
+      {
+        "prop": "red-mag",
+        "param": "",
+        "min": 3,
+        "max": 3
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Natalya's Mark",
+    "code": "7qr",
+    "set": "Natalya's Odium",
+    "qlevel": 22,
+    "levelReq": 79,
+    "baseModifiers": [
+      {
+        "prop": "swing3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 200,
+        "max": 200
+      },
+      {
+        "prop": "ignore-ac",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "dmg-cold",
+        "param": "100",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "dmg-fire",
+        "param": "",
+        "min": 12,
+        "max": 17
+      },
+      {
+        "prop": "dmg-undead",
+        "param": "",
+        "min": 200,
+        "max": 200
+      },
+      {
+        "prop": "dmg-demon",
+        "param": "",
+        "min": 200,
+        "max": 200
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Natalya's Shadow",
+    "code": "ucl",
+    "set": "Natalya's Odium",
+    "qlevel": 22,
+    "levelReq": 73,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 150,
+        "max": 225
+      },
+      {
+        "prop": "hp/lvl",
+        "param": "8",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "prop": "skilltab",
+        "param": "19",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "res-pois-len",
+        "param": "",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "res-pois",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "sock",
+        "param": "",
+        "min": 1,
+        "max": 3
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Natalya's Soul",
+    "code": "xmb",
+    "set": "Natalya's Odium",
+    "qlevel": 22,
+    "levelReq": 25,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 75,
+        "max": 125
+      },
+      {
+        "prop": "move3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "regen-stam/lvl",
+        "param": "2",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "prop": "dur",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 15,
+        "max": 25
+      },
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 15,
+        "max": 25
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Aldur's Stony Gaze",
+    "code": "dr8",
+    "set": "Aldur's Watchtower",
+    "qlevel": 29,
+    "levelReq": 36,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 90,
+        "max": 90
+      },
+      {
+        "prop": "regen-mana",
+        "param": "",
+        "min": 17,
+        "max": 17
+      },
+      {
+        "prop": "light",
+        "param": "",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "prop": "balance3",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 40,
+        "max": 50
+      },
+      {
+        "prop": "sock",
+        "param": "",
+        "min": 2,
+        "max": 2
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "enr",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "enr",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "enr",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ]
+  },
+  {
+    "name": "Aldur's Deception",
+    "code": "uul",
+    "set": "Aldur's Watchtower",
+    "qlevel": 29,
+    "levelReq": 76,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 300,
+        "max": 300
+      },
+      {
+        "prop": "skilltab",
+        "param": "16",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 40,
+        "max": 50
+      },
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -50,
+        "max": -50
+      },
+      {
+        "prop": "skilltab",
+        "param": "17",
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "vit",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "vit",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "vit",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ]
+  },
+  {
+    "name": "Aldur's Rhythm",
+    "code": "9mt",
+    "set": "Aldur's Watchtower",
+    "qlevel": 29,
+    "levelReq": 42,
+    "baseModifiers": [
+      {
+        "prop": "dmg-norm",
+        "param": "",
+        "min": 40,
+        "max": 62
+      },
+      {
+        "prop": "dmg-ltng",
+        "param": "",
+        "min": 50,
+        "max": 75
+      },
+      {
+        "prop": "lifesteal",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "swing3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "dmg-demon",
+        "param": "",
+        "min": 200,
+        "max": 200
+      },
+      {
+        "prop": "manasteal",
+        "param": "",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "prop": "sock",
+        "param": "",
+        "min": 2,
+        "max": 5
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "str",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ]
+  },
+  {
+    "name": "Aldur's Advance",
+    "code": "xtb",
+    "set": "Aldur's Watchtower",
+    "qlevel": 29,
+    "levelReq": 45,
+    "baseModifiers": [
+      {
+        "prop": "indestruct",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "regen-stam",
+        "param": "",
+        "min": 32,
+        "max": 32
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "dmg-to-mana",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "move3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "stam",
+        "param": "",
+        "min": 180,
+        "max": 180
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 40,
+        "max": 50
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ]
+  },
+  {
+    "name": "Immortal King's Will",
+    "code": "ba5",
+    "set": "Immortal King",
+    "qlevel": 37,
+    "levelReq": 47,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 125,
+        "max": 125
+      },
+      {
+        "prop": "gold%",
+        "param": "",
+        "min": 37,
+        "max": 37
+      },
+      {
+        "prop": "skilltab",
+        "param": "14",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "light",
+        "param": "",
+        "min": 4,
+        "max": 4
+      },
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 25,
+        "max": 40
+      },
+      {
+        "prop": "sock",
+        "param": "",
+        "min": 2,
+        "max": 2
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Immortal King's Soul Cage",
+    "code": "uar",
+    "set": "Immortal King",
+    "qlevel": 37,
+    "levelReq": 76,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 400,
+        "max": 400
+      },
+      {
+        "prop": "gethit-skill",
+        "param": "52",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "prop": "skilltab",
+        "param": "12",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "res-pois",
+        "param": "",
+        "min": 50,
+        "max": 50
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "balance2",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 50,
+        "max": 50
+      }
+    ]
+  },
+  {
+    "name": "Immortal King's Detail",
+    "code": "zhb",
+    "set": "Immortal King",
+    "qlevel": 37,
+    "levelReq": 29,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 36,
+        "max": 36
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 28,
+        "max": 28
+      },
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 31,
+        "max": 31
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 105,
+        "max": 105
+      },
+      {
+        "prop": "balance2",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 100,
+        "max": 100
+      },
+      {
+        "prop": "red-dmg%",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "skilltab",
+        "param": "13",
+        "min": 2,
+        "max": 2
+      }
+    ]
+  },
+  {
+    "name": "Immortal King's Forge",
+    "code": "xhg",
+    "set": "Immortal King",
+    "qlevel": 37,
+    "levelReq": 30,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 65,
+        "max": 65
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "gethit-skill",
+        "param": "38",
+        "min": 12,
+        "max": 4
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "swing2",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 120,
+        "max": 120
+      },
+      {
+        "prop": "lifesteal",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "manasteal",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "freeze",
+        "param": "",
+        "min": 2,
+        "max": 2
+      }
+    ]
+  },
+  {
+    "name": "Immortal King's Pillar",
+    "code": "xhb",
+    "set": "Immortal King",
+    "qlevel": 37,
+    "levelReq": 31,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "move3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "att",
+        "param": "",
+        "min": 110,
+        "max": 110
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 44,
+        "max": 44
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "skilltab",
+        "param": "12",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 160,
+        "max": 160
+      },
+      {
+        "prop": "half-freeze",
+        "param": "",
+        "min": 1,
+        "max": 1
+      }
+    ]
+  },
+  {
+    "name": "Immortal King's Stone Crusher",
+    "code": "7m7",
+    "set": "Immortal King",
+    "qlevel": 37,
+    "levelReq": 76,
+    "baseModifiers": [
+      {
+        "prop": "indestruct",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "swing3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "dmg-demon",
+        "param": "",
+        "min": 200,
+        "max": 200
+      },
+      {
+        "prop": "dmg-undead",
+        "param": "",
+        "min": 200,
+        "max": 200
+      },
+      {
+        "prop": "crush",
+        "param": "",
+        "min": 35,
+        "max": 40
+      },
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 200,
+        "max": 200
+      },
+      {
+        "prop": "sock",
+        "param": "",
+        "min": 2,
+        "max": 2
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "dmg-fire",
+        "param": "",
+        "min": 211,
+        "max": 397
+      },
+      {
+        "prop": "dmg-ltng",
+        "param": "",
+        "min": 7,
+        "max": 477
+      },
+      {
+        "prop": "dmg-cold",
+        "param": "150",
+        "min": 127,
+        "max": 364
+      },
+      {
+        "prop": "dmg-pois",
+        "param": "150",
+        "min": 349,
+        "max": 349
+      },
+      {
+        "prop": "dmg-mag",
+        "param": "",
+        "min": 250,
+        "max": 361
+      }
+    ]
+  },
+  {
+    "name": "Tal Rasha's Fine-Spun Cloth",
+    "code": "zmb",
+    "set": "Tal Rasha's Wrappings",
+    "qlevel": 26,
+    "levelReq": 53,
+    "baseModifiers": [
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -20,
+        "max": -20
+      },
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "dmg-to-mana",
+        "param": "",
+        "min": 37,
+        "max": 37
+      },
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 10,
+        "max": 15
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 60,
+        "max": 60
+      },
+      {
+        "prop": "cast2",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "Tal Rasha's Adjudication",
+    "code": "amu",
+    "set": "Tal Rasha's Wrappings",
+    "qlevel": 26,
+    "levelReq": 67,
+    "baseModifiers": [
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 33,
+        "max": 33
+      },
+      {
+        "prop": "sor",
+        "param": "",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "dmg-ltng",
+        "param": "",
+        "min": 3,
+        "max": 32
+      },
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 42,
+        "max": 42
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "cast2",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "Tal Rasha's Lidless Eye",
+    "code": "oba",
+    "set": "Tal Rasha's Wrappings",
+    "qlevel": 26,
+    "levelReq": 65,
+    "baseModifiers": [
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 57,
+        "max": 57
+      },
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 77,
+        "max": 77
+      },
+      {
+        "prop": "enr",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "cast3",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "skill",
+        "param": "Fire Mastery",
+        "min": 1,
+        "max": 2
+      },
+      {
+        "prop": "skill",
+        "param": "Lightning Mastery",
+        "min": 1,
+        "max": 2
+      },
+      {
+        "prop": "skill",
+        "param": "Cold Mastery",
+        "min": 1,
+        "max": 2
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "sor",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "pierce-fire",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "pierce-ltng",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "extra-cold",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ]
+  },
+  {
+    "name": "Tal Rasha's Guardianship",
+    "code": "uth",
+    "set": "Tal Rasha's Wrappings",
+    "qlevel": 26,
+    "levelReq": 71,
+    "baseModifiers": [
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -60,
+        "max": -60
+      },
+      {
+        "prop": "red-mag",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 88,
+        "max": 88
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 400,
+        "max": 400
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "cast2",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "Tal Rasha's Horadric Crest",
+    "code": "xsk",
+    "set": "Tal Rasha's Wrappings",
+    "qlevel": 26,
+    "levelReq": 66,
+    "baseModifiers": [
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 60,
+        "max": 60
+      },
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 45,
+        "max": 45
+      },
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "lifesteal",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "manasteal",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Griswold's Valor",
+    "code": "urn",
+    "set": "Griswold's Legacy",
+    "qlevel": 44,
+    "levelReq": 69,
+    "baseModifiers": [
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 50,
+        "max": 75
+      },
+      {
+        "prop": "abs-cold/lvl",
+        "param": "",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "sock",
+        "param": "",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -40,
+        "max": -40
+      },
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 20,
+        "max": 30
+      },
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 5,
+        "max": 5
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "skilltab",
+        "param": "10",
+        "min": 2,
+        "max": 2
+      }
+    ]
+  },
+  {
+    "name": "Griswold's Heart",
+    "code": "xar",
+    "set": "Griswold's Legacy",
+    "qlevel": 44,
+    "levelReq": 45,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 500,
+        "max": 500
+      },
+      {
+        "prop": "skilltab",
+        "param": "11",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "sock",
+        "param": "",
+        "min": 3,
+        "max": 3
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -40,
+        "max": -40
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Griswold's Redemption",
+    "code": "7ws",
+    "set": "Griswold's Legacy",
+    "qlevel": 44,
+    "levelReq": 53,
+    "baseModifiers": [
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 200,
+        "max": 240
+      },
+      {
+        "prop": "swing2",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "dmg-undead",
+        "param": "",
+        "min": 200,
+        "max": 200
+      },
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -20,
+        "max": -20
+      },
+      {
+        "prop": "sock",
+        "param": "",
+        "min": 3,
+        "max": 4
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "skilltab",
+        "param": "9",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "dmg-norm",
+        "param": "",
+        "min": 10,
+        "max": 20
+      },
+      {
+        "prop": "dmg-norm",
+        "param": "",
+        "min": 10,
+        "max": 20
+      }
+    ]
+  },
+  {
+    "name": "Griswold's Honor",
+    "code": "paf",
+    "set": "Griswold's Legacy",
+    "qlevel": 44,
+    "levelReq": 68,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 108,
+        "max": 108
+      },
+      {
+        "prop": "sock",
+        "param": "3",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "prop": "block2",
+        "param": "",
+        "min": 65,
+        "max": 65
+      },
+      {
+        "prop": "block",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 45,
+        "max": 45
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Trang-Oul's Guise",
+    "code": "uh9",
+    "set": "Trang-Oul's Avatar",
+    "qlevel": 32,
+    "levelReq": 65,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 80,
+        "max": 100
+      },
+      {
+        "prop": "balance2",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "thorns",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 150,
+        "max": 150
+      },
+      {
+        "prop": "regen",
+        "param": "",
+        "min": 5,
+        "max": 5
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Trang-Oul's Scales",
+    "code": "xul",
+    "set": "Trang-Oul's Avatar",
+    "qlevel": 32,
+    "levelReq": 49,
+    "baseModifiers": [
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -40,
+        "max": -40
+      },
+      {
+        "prop": "ac-miss",
+        "param": "",
+        "min": 100,
+        "max": 100
+      },
+      {
+        "prop": "res-pois",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "skilltab",
+        "param": "8",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "move3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 150,
+        "max": 150
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "red-dmg%",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ]
+  },
+  {
+    "name": "Trang-Oul's Wing",
+    "code": "ne9",
+    "set": "Trang-Oul's Avatar",
+    "qlevel": 32,
+    "levelReq": 54,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 125,
+        "max": 125
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 38,
+        "max": 45
+      },
+      {
+        "prop": "block",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "res-pois",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "skilltab",
+        "param": "7",
+        "min": 2,
+        "max": 2
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "pierce-pois",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "regen",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ]
+  },
+  {
+    "name": "Trang-Oul's Claws",
+    "code": "xmg",
+    "set": "Trang-Oul's Avatar",
+    "qlevel": 32,
+    "levelReq": 45,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "cast3",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "skilltab",
+        "param": "6",
+        "min": 2,
+        "max": 2
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "extra-pois",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ]
+  },
+  {
+    "name": "Trang-Oul's Girth",
+    "code": "utc",
+    "set": "Trang-Oul's Avatar",
+    "qlevel": 32,
+    "levelReq": 47,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 75,
+        "max": 100
+      },
+      {
+        "prop": "stam",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "regen",
+        "param": "",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 66,
+        "max": 66
+      },
+      {
+        "prop": "nofreeze",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -40,
+        "max": -40
+      },
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 25,
+        "max": 50
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 40,
+        "max": 40
+      }
+    ]
+  },
+  {
+    "name": "M'avina's True Sight",
+    "code": "ci3",
+    "set": "M'avina's Battle Hymn",
+    "qlevel": 21,
+    "levelReq": 59,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 150,
+        "max": 150
+      },
+      {
+        "prop": "regen",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "swing2",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "allskills",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "att%",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ]
+  },
+  {
+    "name": "M'avina's Embrace",
+    "code": "uld",
+    "set": "M'avina's Battle Hymn",
+    "qlevel": 21,
+    "levelReq": 70,
+    "baseModifiers": [
+      {
+        "prop": "gethit-skill",
+        "param": "55",
+        "min": 10,
+        "max": 3
+      },
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -30,
+        "max": -30
+      },
+      {
+        "prop": "red-mag",
+        "param": "",
+        "min": 5,
+        "max": 12
+      },
+      {
+        "prop": "skilltab",
+        "param": "1",
+        "min": 2,
+        "max": 2
+      },
+      {
+        "prop": "ac/lvl",
+        "param": "32",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 350,
+        "max": 350
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "balance2",
+        "param": "",
+        "min": 30,
+        "max": 30
+      }
+    ]
+  },
+  {
+    "name": "M'avina's Icy Clutch",
+    "code": "xtg",
+    "set": "M'avina's Battle Hymn",
+    "qlevel": 21,
+    "levelReq": 32,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 45,
+        "max": 50
+      },
+      {
+        "prop": "dmg-cold",
+        "param": "150",
+        "min": 6,
+        "max": 18
+      },
+      {
+        "prop": "half-freeze",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "gold%",
+        "param": "",
+        "min": 56,
+        "max": 56
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "dmg-cold",
+        "param": "100",
+        "min": 131,
+        "max": 252
+      },
+      {
+        "prop": "extra-cold",
+        "param": "",
+        "min": 20,
+        "max": 20
+      }
+    ]
+  },
+  {
+    "name": "M'avina's Tenet",
+    "code": "zvb",
+    "set": "M'avina's Battle Hymn",
+    "qlevel": 21,
+    "levelReq": 45,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "move2",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "manasteal",
+        "param": "",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "prop": "light",
+        "param": "",
+        "min": 5,
+        "max": 5
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 25,
+        "max": 25
+      }
+    ]
+  },
+  {
+    "name": "M'avina's Caster",
+    "code": "amc",
+    "set": "M'avina's Battle Hymn",
+    "qlevel": 21,
+    "levelReq": 70,
+    "baseModifiers": [
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 188,
+        "max": 188
+      },
+      {
+        "prop": "swing3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "magicarrow",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "att",
+        "param": "",
+        "min": 50,
+        "max": 50
+      }
+    ],
+    "setModifiers": [
+      {
+        "prop": "dmg-mag",
+        "param": "",
+        "min": 114,
+        "max": 377
+      },
+      {
+        "prop": "hit-skill",
+        "param": "Nova",
+        "min": 10,
+        "max": 15
+      },
+      {
+        "prop": "skilltab",
+        "param": "0",
+        "min": 2,
+        "max": 2
+      }
+    ]
+  },
+  {
+    "name": "Telling of Beads",
+    "code": "amu",
+    "set": "The Disciple",
+    "qlevel": 39,
+    "levelReq": 30,
+    "baseModifiers": [
+      {
+        "prop": "res-pois",
+        "param": "",
+        "min": 35,
+        "max": 50
+      },
+      {
+        "prop": "allskills",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 18,
+        "max": 18
+      },
+      {
+        "prop": "thorns",
+        "param": "",
+        "min": 8,
+        "max": 10
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Laying of Hands",
+    "code": "ulg",
+    "set": "The Disciple",
+    "qlevel": 39,
+    "levelReq": 63,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "swing2",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "dmg-demon",
+        "param": "",
+        "min": 350,
+        "max": 350
+      },
+      {
+        "prop": "hit-skill",
+        "param": "101",
+        "min": 10,
+        "max": 3
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Rite of Passage",
+    "code": "xlb",
+    "set": "The Disciple",
+    "qlevel": 39,
+    "levelReq": 29,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "move3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "half-freeze",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "stam",
+        "param": "",
+        "min": 15,
+        "max": 25
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Dark Adherent",
+    "code": "uui",
+    "set": "The Disciple",
+    "qlevel": 39,
+    "levelReq": 43,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 305,
+        "max": 415
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 24,
+        "max": 24
+      },
+      {
+        "prop": "gethit-skill",
+        "param": "48",
+        "min": 25,
+        "max": 3
+      },
+      {
+        "prop": "dmg-pois",
+        "param": "50",
+        "min": 125,
+        "max": 175
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Credendum",
+    "code": "umc",
+    "set": "The Disciple",
+    "qlevel": 39,
+    "levelReq": 65,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Dangoon's Teaching",
+    "code": "7ma",
+    "set": "Heaven's Brethren",
+    "qlevel": 55,
+    "levelReq": 68,
+    "baseModifiers": [
+      {
+        "prop": "dmg/lvl",
+        "param": "12",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "prop": "swing3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "hit-skill",
+        "param": "44",
+        "min": 10,
+        "max": 3
+      },
+      {
+        "prop": "dmg-fire",
+        "param": "",
+        "min": 20,
+        "max": 30
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Taebaek's Glory",
+    "code": "uts",
+    "set": "Heaven's Brethren",
+    "qlevel": 55,
+    "levelReq": 81,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 100,
+        "max": 100
+      },
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "thorns",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "indestruct",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "block",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "block3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Haemosu's Adamant",
+    "code": "xrs",
+    "set": "Heaven's Brethren",
+    "qlevel": 55,
+    "levelReq": 44,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 500,
+        "max": 500
+      },
+      {
+        "prop": "ac-miss",
+        "param": "",
+        "min": 35,
+        "max": 35
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "ac-hth",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -20,
+        "max": -20
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Ondal's Almighty",
+    "code": "uhm",
+    "set": "Heaven's Brethren",
+    "qlevel": 55,
+    "levelReq": 69,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -40,
+        "max": -40
+      },
+      {
+        "prop": "hit-skill",
+        "param": "72",
+        "min": 10,
+        "max": 3
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "balance3",
+        "param": "",
+        "min": 24,
+        "max": 24
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Guillaume's Face",
+    "code": "xhm",
+    "set": "Orphan's Call",
+    "qlevel": 41,
+    "levelReq": 34,
+    "baseModifiers": [
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 120,
+        "max": 120
+      },
+      {
+        "prop": "balance3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "crush",
+        "param": "",
+        "min": 35,
+        "max": 35
+      },
+      {
+        "prop": "deadly",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 15,
+        "max": 15
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Wilhelm's Pride",
+    "code": "ztb",
+    "set": "Orphan's Call",
+    "qlevel": 41,
+    "levelReq": 42,
+    "baseModifiers": [
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "manasteal",
+        "param": "",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "lifesteal",
+        "param": "",
+        "min": 5,
+        "max": 5
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Magnus' Skin",
+    "code": "xvg",
+    "set": "Orphan's Call",
+    "qlevel": 41,
+    "levelReq": 37,
+    "baseModifiers": [
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "swing2",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "light",
+        "param": "",
+        "min": 3,
+        "max": 3
+      },
+      {
+        "prop": "att",
+        "param": "",
+        "min": 100,
+        "max": 100
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Whitstan's Guard",
+    "code": "xml",
+    "set": "Orphan's Call",
+    "qlevel": 41,
+    "levelReq": 29,
+    "baseModifiers": [
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 175,
+        "max": 175
+      },
+      {
+        "prop": "block3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "block",
+        "param": "",
+        "min": 55,
+        "max": 55
+      },
+      {
+        "prop": "half-freeze",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "light",
+        "param": "",
+        "min": 5,
+        "max": 5
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Hwanin's Splendor",
+    "code": "xrn",
+    "set": "Hwanin's Majesty",
+    "qlevel": 28,
+    "levelReq": 45,
+    "baseModifiers": [
+      {
+        "prop": "regen",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "red-mag",
+        "param": "",
+        "min": 10,
+        "max": 10
+      },
+      {
+        "prop": "res-cold",
+        "param": "",
+        "min": 37,
+        "max": 37
+      },
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 100,
+        "max": 100
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Hwanin's Refuge",
+    "code": "xcl",
+    "set": "Hwanin's Majesty",
+    "qlevel": 28,
+    "levelReq": 30,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 200,
+        "max": 200
+      },
+      {
+        "prop": "res-pois",
+        "param": "",
+        "min": 27,
+        "max": 27
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 100,
+        "max": 100
+      },
+      {
+        "prop": "gethit-skill",
+        "param": "42",
+        "min": 10,
+        "max": 3
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Hwanin's Blessing",
+    "code": "mbl",
+    "set": "Hwanin's Majesty",
+    "qlevel": 28,
+    "levelReq": 35,
+    "baseModifiers": [
+      {
+        "prop": "dmg-ltng",
+        "param": "",
+        "min": 3,
+        "max": 33
+      },
+      {
+        "prop": "noheal",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "ac/lvl",
+        "param": "12",
+        "min": 0,
+        "max": 0
+      },
+      {
+        "prop": "dmg-to-mana",
+        "param": "",
+        "min": 12,
+        "max": 12
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Hwanin's Justice",
+    "code": "9vo",
+    "set": "Hwanin's Majesty",
+    "qlevel": 28,
+    "levelReq": 28,
+    "baseModifiers": [
+      {
+        "prop": "att",
+        "param": "",
+        "min": 330,
+        "max": 330
+      },
+      {
+        "prop": "indestruct",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "hit-skill",
+        "param": "45",
+        "min": 10,
+        "max": 3
+      },
+      {
+        "prop": "swing3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 200,
+        "max": 200
+      },
+      {
+        "prop": "dmg-ltng",
+        "param": "",
+        "min": 5,
+        "max": 25
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Sazabi's Cobalt Redeemer",
+    "code": "7ls",
+    "set": "Sazabi's Grand Tribute",
+    "qlevel": 34,
+    "levelReq": 73,
+    "baseModifiers": [
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 150,
+        "max": 150
+      },
+      {
+        "prop": "dmg-cold",
+        "param": "50",
+        "min": 25,
+        "max": 35
+      },
+      {
+        "prop": "swing3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "dmg-demon",
+        "param": "",
+        "min": 318,
+        "max": 318
+      },
+      {
+        "prop": "indestruct",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 5,
+        "max": 5
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Sazabi's Ghost Liberator",
+    "code": "upl",
+    "set": "Sazabi's Grand Tribute",
+    "qlevel": 34,
+    "levelReq": 67,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 400,
+        "max": 400
+      },
+      {
+        "prop": "balance3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "att-demon",
+        "param": "",
+        "min": 300,
+        "max": 300
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 50,
+        "max": 75
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Sazabi's Mental Sheath",
+    "code": "xhl",
+    "set": "Sazabi's Grand Tribute",
+    "qlevel": 34,
+    "levelReq": 43,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 100,
+        "max": 100
+      },
+      {
+        "prop": "allskills",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 15,
+        "max": 20
+      },
+      {
+        "prop": "res-ltng",
+        "param": "",
+        "min": 15,
+        "max": 20
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Bul-Kathos' Sacred Charge",
+    "code": "7gd",
+    "set": "Bul-Kathos' Children",
+    "qlevel": 50,
+    "levelReq": 61,
+    "baseModifiers": [
+      {
+        "prop": "crush",
+        "param": "",
+        "min": 35,
+        "max": 35
+      },
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "swing2",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "knock",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 200,
+        "max": 200
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Bul-Kathos' Tribal Guardian",
+    "code": "7wd",
+    "set": "Bul-Kathos' Children",
+    "qlevel": 50,
+    "levelReq": 54,
+    "baseModifiers": [
+      {
+        "prop": "res-fire",
+        "param": "",
+        "min": 50,
+        "max": 50
+      },
+      {
+        "prop": "dmg-pois",
+        "param": "50",
+        "min": 255,
+        "max": 255
+      },
+      {
+        "prop": "swing2",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 200,
+        "max": 200
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Cow King's Horns",
+    "code": "xap",
+    "set": "Cow King's Leathers",
+    "qlevel": 20,
+    "levelReq": 25,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "half-freeze",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "dmg-to-mana",
+        "param": "",
+        "min": 35,
+        "max": 35
+      },
+      {
+        "prop": "thorns",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Cow King's Hide",
+    "code": "stu",
+    "set": "Cow King's Leathers",
+    "qlevel": 20,
+    "levelReq": 18,
+    "baseModifiers": [
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 18,
+        "max": 18
+      },
+      {
+        "prop": "ac%",
+        "param": "",
+        "min": 60,
+        "max": 60
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "gethit-skill",
+        "param": "53",
+        "min": 18,
+        "max": 5
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Cow King's Hooves",
+    "code": "vbt",
+    "set": "Cow King's Leathers",
+    "qlevel": 20,
+    "levelReq": 13,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 25,
+        "max": 35
+      },
+      {
+        "prop": "move3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "dmg-fire",
+        "param": "",
+        "min": 25,
+        "max": 35
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Naj's Puzzler",
+    "code": "6cs",
+    "set": "Naj's Ancient Set",
+    "qlevel": 43,
+    "levelReq": 78,
+    "baseModifiers": [
+      {
+        "prop": "enr",
+        "param": "",
+        "min": 35,
+        "max": 35
+      },
+      {
+        "prop": "dmg%",
+        "param": "",
+        "min": 150,
+        "max": 150
+      },
+      {
+        "prop": "charged",
+        "param": "54",
+        "min": 69,
+        "max": 11
+      },
+      {
+        "prop": "cast3",
+        "param": "",
+        "min": 30,
+        "max": 30
+      },
+      {
+        "prop": "dmg-ltng",
+        "param": "",
+        "min": 6,
+        "max": 45
+      },
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 70,
+        "max": 70
+      },
+      {
+        "prop": "allskills",
+        "param": "",
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Naj's Light Plate",
+    "code": "ult",
+    "set": "Naj's Ancient Set",
+    "qlevel": 43,
+    "levelReq": 71,
+    "baseModifiers": [
+      {
+        "prop": "ease",
+        "param": "",
+        "min": -60,
+        "max": -60
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 65,
+        "max": 65
+      },
+      {
+        "prop": "res-all",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "dmg-to-mana",
+        "param": "",
+        "min": 45,
+        "max": 45
+      },
+      {
+        "prop": "allskills",
+        "param": "",
+        "min": 1,
+        "max": 1
+      },
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 300,
+        "max": 300
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Naj's Circlet",
+    "code": "ci0",
+    "set": "Naj's Ancient Set",
+    "qlevel": 43,
+    "levelReq": 28,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "dmg-fire",
+        "param": "",
+        "min": 25,
+        "max": 35
+      },
+      {
+        "prop": "light",
+        "param": "",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 15,
+        "max": 15
+      },
+      {
+        "prop": "gethit-skill",
+        "param": "53",
+        "min": 12,
+        "max": 5
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Sander's Paragon",
+    "code": "cap",
+    "set": "McAuley's Folly",
+    "qlevel": 20,
+    "levelReq": 25,
+    "baseModifiers": [
+      {
+        "prop": "mag%",
+        "param": "",
+        "min": 35,
+        "max": 35
+      },
+      {
+        "prop": "thorns",
+        "param": "",
+        "min": 8,
+        "max": 8
+      },
+      {
+        "prop": "ac/lvl",
+        "param": "8",
+        "min": 0,
+        "max": 0
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Sander's Riprap",
+    "code": "vbt",
+    "set": "McAuley's Folly",
+    "qlevel": 20,
+    "levelReq": 20,
+    "baseModifiers": [
+      {
+        "prop": "move3",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "att",
+        "param": "",
+        "min": 100,
+        "max": 100
+      },
+      {
+        "prop": "str",
+        "param": "",
+        "min": 5,
+        "max": 5
+      },
+      {
+        "prop": "dex",
+        "param": "",
+        "min": 10,
+        "max": 10
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Sander's Taboo",
+    "code": "vgl",
+    "set": "McAuley's Folly",
+    "qlevel": 20,
+    "levelReq": 28,
+    "baseModifiers": [
+      {
+        "prop": "ac",
+        "param": "",
+        "min": 20,
+        "max": 25
+      },
+      {
+        "prop": "swing2",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "hp",
+        "param": "",
+        "min": 40,
+        "max": 40
+      },
+      {
+        "prop": "dmg-pois",
+        "param": "75",
+        "min": 30,
+        "max": 36
+      }
+    ],
+    "setModifiers": []
+  },
+  {
+    "name": "Sander's Superstition",
+    "code": "bwn",
+    "set": "McAuley's Folly",
+    "qlevel": 20,
+    "levelReq": 25,
+    "baseModifiers": [
+      {
+        "prop": "dmg%",
+        "param": "2",
+        "min": 75,
+        "max": 75
+      },
+      {
+        "prop": "mana",
+        "param": "",
+        "min": 25,
+        "max": 25
+      },
+      {
+        "prop": "manasteal",
+        "param": "",
+        "min": 8,
+        "max": 8
+      },
+      {
+        "prop": "cast3",
+        "param": "",
+        "min": 20,
+        "max": 20
+      },
+      {
+        "prop": "dmg-cold",
+        "param": "50",
+        "min": 25,
+        "max": 75
+      }
+    ],
+    "setModifiers": []
+  }
+]

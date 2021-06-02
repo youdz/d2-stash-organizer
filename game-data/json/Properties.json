@@ -1,0 +1,2145 @@
+{
+  "ac": {
+    "stats": [
+      {
+        "stat": "armorclass",
+        "type": "other"
+      }
+    ]
+  },
+  "ac-miss": {
+    "stats": [
+      {
+        "stat": "armorclass_vs_missile",
+        "type": "other"
+      }
+    ]
+  },
+  "ac-hth": {
+    "stats": [
+      {
+        "stat": "armorclass_vs_hth",
+        "type": "other"
+      }
+    ]
+  },
+  "red-dmg": {
+    "stats": [
+      {
+        "stat": "normal_damage_reduction",
+        "type": "other"
+      }
+    ]
+  },
+  "red-dmg%": {
+    "stats": [
+      {
+        "stat": "damageresist",
+        "type": "other"
+      }
+    ]
+  },
+  "ac%": {
+    "stats": [
+      {
+        "stat": "item_armor_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "red-mag": {
+    "stats": [
+      {
+        "stat": "magic_damage_reduction",
+        "type": "other"
+      }
+    ]
+  },
+  "str": {
+    "stats": [
+      {
+        "stat": "strength",
+        "type": "other"
+      }
+    ]
+  },
+  "dex": {
+    "stats": [
+      {
+        "stat": "dexterity",
+        "type": "other"
+      }
+    ]
+  },
+  "vit": {
+    "stats": [
+      {
+        "stat": "vitality",
+        "type": "other"
+      }
+    ]
+  },
+  "enr": {
+    "stats": [
+      {
+        "stat": "energy",
+        "type": "other"
+      }
+    ]
+  },
+  "mana": {
+    "stats": [
+      {
+        "stat": "maxmana",
+        "type": "other"
+      }
+    ]
+  },
+  "mana%": {
+    "stats": [
+      {
+        "stat": "item_maxmana_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "hp": {
+    "stats": [
+      {
+        "stat": "maxhp",
+        "type": "other"
+      }
+    ]
+  },
+  "hp%": {
+    "stats": [
+      {
+        "stat": "item_maxhp_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "att": {
+    "stats": [
+      {
+        "stat": "tohit",
+        "type": "other"
+      }
+    ]
+  },
+  "block": {
+    "stats": [
+      {
+        "stat": "toblock",
+        "type": "other"
+      }
+    ]
+  },
+  "cold-min": {
+    "stats": [
+      {
+        "stat": "coldmindam",
+        "type": "other"
+      }
+    ]
+  },
+  "cold-max": {
+    "stats": [
+      {
+        "stat": "coldmaxdam",
+        "type": "other"
+      }
+    ]
+  },
+  "cold-len": {
+    "stats": [
+      {
+        "stat": "coldlength",
+        "type": "other"
+      }
+    ]
+  },
+  "fire-min": {
+    "stats": [
+      {
+        "stat": "firemindam",
+        "type": "other"
+      }
+    ]
+  },
+  "fire-max": {
+    "stats": [
+      {
+        "stat": "firemaxdam",
+        "type": "other"
+      }
+    ]
+  },
+  "ltng-min": {
+    "stats": [
+      {
+        "stat": "lightmindam",
+        "type": "other"
+      }
+    ]
+  },
+  "ltng-max": {
+    "stats": [
+      {
+        "stat": "lightmaxdam",
+        "type": "other"
+      }
+    ]
+  },
+  "pois-min": {
+    "stats": [
+      {
+        "stat": "poisonmindam",
+        "type": "other"
+      }
+    ]
+  },
+  "pois-max": {
+    "stats": [
+      {
+        "stat": "poisonmaxdam",
+        "type": "other"
+      }
+    ]
+  },
+  "pois-len": {
+    "stats": [
+      {
+        "stat": "poisonlength",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-min": {
+    "stats": [
+      {
+        "stat": "mindamage",
+        "type": "min"
+      }
+    ]
+  },
+  "dmg-max": {
+    "stats": [
+      {
+        "stat": "maxdamage",
+        "type": "max"
+      }
+    ]
+  },
+  "dmg%": {
+    "stats": [
+      {
+        "stat": "item_mindamage_percent",
+        "type": "other"
+      },
+      {
+        "stat": "item_maxdamage_percent",
+        "type": "all"
+      }
+    ]
+  },
+  "dmg-to-mana": {
+    "stats": [
+      {
+        "stat": "item_damagetomana",
+        "type": "other"
+      }
+    ]
+  },
+  "res-fire": {
+    "stats": [
+      {
+        "stat": "fireresist",
+        "type": "other"
+      }
+    ]
+  },
+  "res-fire-max": {
+    "stats": [
+      {
+        "stat": "maxfireresist",
+        "type": "other"
+      }
+    ]
+  },
+  "res-ltng": {
+    "stats": [
+      {
+        "stat": "lightresist",
+        "type": "other"
+      }
+    ]
+  },
+  "res-ltng-max": {
+    "stats": [
+      {
+        "stat": "maxlightresist",
+        "type": "other"
+      }
+    ]
+  },
+  "res-cold": {
+    "stats": [
+      {
+        "stat": "coldresist",
+        "type": "other"
+      }
+    ]
+  },
+  "res-cold-max": {
+    "stats": [
+      {
+        "stat": "maxcoldresist",
+        "type": "other"
+      }
+    ]
+  },
+  "res-mag": {
+    "stats": [
+      {
+        "stat": "magicresist",
+        "type": "other"
+      }
+    ]
+  },
+  "res-mag-max": {
+    "stats": [
+      {
+        "stat": "maxmagicresist",
+        "type": "other"
+      }
+    ]
+  },
+  "res-pois": {
+    "stats": [
+      {
+        "stat": "poisonresist",
+        "type": "other"
+      }
+    ]
+  },
+  "res-pois-max": {
+    "stats": [
+      {
+        "stat": "maxpoisonresist",
+        "type": "other"
+      }
+    ]
+  },
+  "res-all": {
+    "stats": [
+      {
+        "stat": "fireresist",
+        "type": "other"
+      },
+      {
+        "stat": "lightresist",
+        "type": "all"
+      },
+      {
+        "stat": "coldresist",
+        "type": "all"
+      },
+      {
+        "stat": "poisonresist",
+        "type": "all"
+      }
+    ]
+  },
+  "res-all-max": {
+    "stats": [
+      {
+        "stat": "maxfireresist",
+        "type": "other"
+      },
+      {
+        "stat": "maxlightresist",
+        "type": "all"
+      },
+      {
+        "stat": "maxcoldresist",
+        "type": "all"
+      },
+      {
+        "stat": "maxpoisonresist",
+        "type": "all"
+      }
+    ]
+  },
+  "abs-fire%": {
+    "stats": [
+      {
+        "stat": "item_absorbfire_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "abs-fire": {
+    "stats": [
+      {
+        "stat": "item_absorbfire",
+        "type": "other"
+      }
+    ]
+  },
+  "abs-ltng%": {
+    "stats": [
+      {
+        "stat": "item_absorblight_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "abs-ltng": {
+    "stats": [
+      {
+        "stat": "item_absorblight",
+        "type": "other"
+      }
+    ]
+  },
+  "abs-mag%": {
+    "stats": [
+      {
+        "stat": "item_absorbmagic_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "abs-mag": {
+    "stats": [
+      {
+        "stat": "item_absorbmagic",
+        "type": "other"
+      }
+    ]
+  },
+  "abs-cold%": {
+    "stats": [
+      {
+        "stat": "item_absorbcold_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "abs-cold": {
+    "stats": [
+      {
+        "stat": "item_absorbcold",
+        "type": "other"
+      }
+    ]
+  },
+  "dur": {
+    "stats": [
+      {
+        "stat": "maxdurability",
+        "type": "other"
+      }
+    ]
+  },
+  "dur%": {
+    "stats": [
+      {
+        "stat": "item_maxdurability_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "regen": {
+    "stats": [
+      {
+        "stat": "hpregen",
+        "type": "other"
+      }
+    ]
+  },
+  "thorns": {
+    "stats": [
+      {
+        "stat": "item_attackertakesdamage",
+        "type": "other"
+      }
+    ]
+  },
+  "swing1": {
+    "stats": [
+      {
+        "stat": "item_fasterattackrate",
+        "type": "other"
+      }
+    ]
+  },
+  "swing2": {
+    "stats": [
+      {
+        "stat": "item_fasterattackrate",
+        "type": "other"
+      }
+    ]
+  },
+  "swing3": {
+    "stats": [
+      {
+        "stat": "item_fasterattackrate",
+        "type": "other"
+      }
+    ]
+  },
+  "gold%": {
+    "stats": [
+      {
+        "stat": "item_goldbonus",
+        "type": "other"
+      }
+    ]
+  },
+  "mag%": {
+    "stats": [
+      {
+        "stat": "item_magicbonus",
+        "type": "other"
+      }
+    ]
+  },
+  "knock": {
+    "stats": [
+      {
+        "stat": "item_knockback",
+        "type": "other"
+      }
+    ]
+  },
+  "regen-stam": {
+    "stats": [
+      {
+        "stat": "staminarecoverybonus",
+        "type": "other"
+      }
+    ]
+  },
+  "regen-mana": {
+    "stats": [
+      {
+        "stat": "manarecoverybonus",
+        "type": "other"
+      }
+    ]
+  },
+  "stam": {
+    "stats": [
+      {
+        "stat": "maxstamina",
+        "type": "other"
+      }
+    ]
+  },
+  "time": {
+    "stats": [
+      {
+        "stat": "item_timeduration",
+        "type": "other"
+      }
+    ]
+  },
+  "manasteal": {
+    "stats": [
+      {
+        "stat": "manadrainmindam",
+        "type": "other"
+      }
+    ]
+  },
+  "lifesteal": {
+    "stats": [
+      {
+        "stat": "lifedrainmindam",
+        "type": "other"
+      }
+    ]
+  },
+  "ama": {
+    "stats": [
+      {
+        "stat": "item_addclassskills",
+        "param": 0,
+        "type": "other"
+      }
+    ]
+  },
+  "pal": {
+    "stats": [
+      {
+        "stat": "item_addclassskills",
+        "param": 3,
+        "type": "other"
+      }
+    ]
+  },
+  "nec": {
+    "stats": [
+      {
+        "stat": "item_addclassskills",
+        "param": 2,
+        "type": "other"
+      }
+    ]
+  },
+  "sor": {
+    "stats": [
+      {
+        "stat": "item_addclassskills",
+        "param": 1,
+        "type": "other"
+      }
+    ]
+  },
+  "bar": {
+    "stats": [
+      {
+        "stat": "item_addclassskills",
+        "param": 4,
+        "type": "other"
+      }
+    ]
+  },
+  "herb": {
+    "stats": [
+      {
+        "stat": "item_doubleherbduration",
+        "type": "other"
+      }
+    ]
+  },
+  "light": {
+    "stats": [
+      {
+        "stat": "item_lightradius",
+        "type": "other"
+      }
+    ]
+  },
+  "color": {
+    "stats": [
+      {
+        "stat": "item_lightcolor",
+        "type": "other"
+      }
+    ]
+  },
+  "ease": {
+    "stats": [
+      {
+        "stat": "item_req_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "move1": {
+    "stats": [
+      {
+        "stat": "item_fastermovevelocity",
+        "type": "other"
+      }
+    ]
+  },
+  "move2": {
+    "stats": [
+      {
+        "stat": "item_fastermovevelocity",
+        "type": "other"
+      }
+    ]
+  },
+  "move3": {
+    "stats": [
+      {
+        "stat": "item_fastermovevelocity",
+        "type": "other"
+      }
+    ]
+  },
+  "balance1": {
+    "stats": [
+      {
+        "stat": "item_fastergethitrate",
+        "type": "other"
+      }
+    ]
+  },
+  "balance2": {
+    "stats": [
+      {
+        "stat": "item_fastergethitrate",
+        "type": "other"
+      }
+    ]
+  },
+  "balance3": {
+    "stats": [
+      {
+        "stat": "item_fastergethitrate",
+        "type": "other"
+      }
+    ]
+  },
+  "block1": {
+    "stats": [
+      {
+        "stat": "item_fasterblockrate",
+        "type": "other"
+      }
+    ]
+  },
+  "block2": {
+    "stats": [
+      {
+        "stat": "item_fasterblockrate",
+        "type": "other"
+      }
+    ]
+  },
+  "block3": {
+    "stats": [
+      {
+        "stat": "item_fasterblockrate",
+        "type": "other"
+      }
+    ]
+  },
+  "cast1": {
+    "stats": [
+      {
+        "stat": "item_fastercastrate",
+        "type": "other"
+      }
+    ]
+  },
+  "cast2": {
+    "stats": [
+      {
+        "stat": "item_fastercastrate",
+        "type": "other"
+      }
+    ]
+  },
+  "cast3": {
+    "stats": [
+      {
+        "stat": "item_fastercastrate",
+        "type": "other"
+      }
+    ]
+  },
+  "res-pois-len": {
+    "stats": [
+      {
+        "stat": "item_poisonlengthresist",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg": {
+    "stats": [
+      {
+        "stat": "item_normaldamage",
+        "type": "other"
+      }
+    ]
+  },
+  "howl": {
+    "stats": [
+      {
+        "stat": "item_howl",
+        "type": "other"
+      }
+    ]
+  },
+  "stupidity": {
+    "stats": [
+      {
+        "stat": "item_stupidity",
+        "type": "other"
+      }
+    ]
+  },
+  "ignore-ac": {
+    "stats": [
+      {
+        "stat": "item_ignoretargetac",
+        "type": "other"
+      }
+    ]
+  },
+  "reduce-ac": {
+    "stats": [
+      {
+        "stat": "item_fractionaltargetac",
+        "type": "other"
+      }
+    ]
+  },
+  "noheal": {
+    "stats": [
+      {
+        "stat": "item_preventheal",
+        "type": "other"
+      }
+    ]
+  },
+  "half-freeze": {
+    "stats": [
+      {
+        "stat": "item_halffreezeduration",
+        "type": "other"
+      }
+    ]
+  },
+  "att%": {
+    "stats": [
+      {
+        "stat": "item_tohit_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-ac": {
+    "stats": [
+      {
+        "stat": "item_damagetargetac",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-demon": {
+    "stats": [
+      {
+        "stat": "item_demondamage_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-undead": {
+    "stats": [
+      {
+        "stat": "item_undeaddamage_percent",
+        "type": "other"
+      }
+    ]
+  },
+  "att-demon": {
+    "stats": [
+      {
+        "stat": "item_demon_tohit",
+        "type": "other"
+      }
+    ]
+  },
+  "att-undead": {
+    "stats": [
+      {
+        "stat": "item_undead_tohit",
+        "type": "other"
+      }
+    ]
+  },
+  "throw": {
+    "stats": [
+      {
+        "stat": "item_throwable",
+        "type": "other"
+      }
+    ]
+  },
+  "fireskill": {
+    "stats": [
+      {
+        "stat": "item_elemskill",
+        "param": 1,
+        "type": "other"
+      }
+    ]
+  },
+  "allskills": {
+    "stats": [
+      {
+        "stat": "item_allskills",
+        "type": "other"
+      }
+    ]
+  },
+  "light-thorns": {
+    "stats": [
+      {
+        "stat": "item_attackertakeslightdamage",
+        "type": "other"
+      }
+    ]
+  },
+  "freeze": {
+    "stats": [
+      {
+        "stat": "item_freeze",
+        "type": "other"
+      }
+    ]
+  },
+  "openwounds": {
+    "stats": [
+      {
+        "stat": "item_openwounds",
+        "type": "other"
+      }
+    ]
+  },
+  "crush": {
+    "stats": [
+      {
+        "stat": "item_crushingblow",
+        "type": "other"
+      }
+    ]
+  },
+  "kick": {
+    "stats": [
+      {
+        "stat": "item_kickdamage",
+        "type": "other"
+      }
+    ]
+  },
+  "mana-kill": {
+    "stats": [
+      {
+        "stat": "item_manaafterkill",
+        "type": "other"
+      }
+    ]
+  },
+  "demon-heal": {
+    "stats": [
+      {
+        "stat": "item_healafterdemonkill",
+        "type": "other"
+      }
+    ]
+  },
+  "bloody": {
+    "stats": [
+      {
+        "stat": "item_extrablood",
+        "type": "other"
+      }
+    ]
+  },
+  "deadly": {
+    "stats": [
+      {
+        "stat": "item_deadlystrike",
+        "type": "other"
+      }
+    ]
+  },
+  "slow": {
+    "stats": [
+      {
+        "stat": "item_slow",
+        "type": "other"
+      }
+    ]
+  },
+  "nofreeze": {
+    "stats": [
+      {
+        "stat": "item_cannotbefrozen",
+        "type": "other"
+      }
+    ]
+  },
+  "stamdrain": {
+    "stats": [
+      {
+        "stat": "item_staminadrainpct",
+        "type": "other"
+      }
+    ]
+  },
+  "reanimate": {
+    "stats": [
+      {
+        "stat": "item_reanimate",
+        "type": "other"
+      }
+    ]
+  },
+  "pierce": {
+    "stats": [
+      {
+        "stat": "item_pierce",
+        "type": "other"
+      }
+    ]
+  },
+  "magicarrow": {
+    "stats": [
+      {
+        "stat": "item_magicarrow",
+        "type": "other"
+      }
+    ]
+  },
+  "explosivearrow": {
+    "stats": [
+      {
+        "stat": "item_explosivearrow",
+        "type": "other"
+      }
+    ]
+  },
+  "dru": {
+    "stats": [
+      {
+        "stat": "item_addclassskills",
+        "param": 5,
+        "type": "other"
+      }
+    ]
+  },
+  "ass": {
+    "stats": [
+      {
+        "stat": "item_addclassskills",
+        "param": 6,
+        "type": "other"
+      }
+    ]
+  },
+  "skill": {
+    "stats": [
+      {
+        "stat": "item_singleskill",
+        "type": "other"
+      }
+    ]
+  },
+  "skilltab": {
+    "stats": [
+      {
+        "stat": "item_addskill_tab",
+        "type": "other"
+      }
+    ]
+  },
+  "aura": {
+    "stats": [
+      {
+        "stat": "item_aura",
+        "type": "other"
+      }
+    ]
+  },
+  "att-skill": {
+    "stats": [
+      {
+        "stat": "item_skillonattack",
+        "type": "proc"
+      }
+    ]
+  },
+  "hit-skill": {
+    "stats": [
+      {
+        "stat": "item_skillonhit",
+        "type": "proc"
+      }
+    ]
+  },
+  "gethit-skill": {
+    "stats": [
+      {
+        "stat": "item_skillongethit",
+        "type": "proc"
+      }
+    ]
+  },
+  "gembonus": {
+    "stats": []
+  },
+  "regen-dur": {
+    "stats": []
+  },
+  "fire-fx": {
+    "stats": []
+  },
+  "ltng-fx": {
+    "stats": []
+  },
+  "sock": {
+    "stats": [
+      {
+        "stat": "item_numsockets",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-fire": {
+    "stats": [
+      {
+        "stat": "firemindam",
+        "type": "min"
+      },
+      {
+        "stat": "firemaxdam",
+        "type": "max"
+      }
+    ]
+  },
+  "dmg-ltng": {
+    "stats": [
+      {
+        "stat": "lightmindam",
+        "type": "min"
+      },
+      {
+        "stat": "lightmaxdam",
+        "type": "max"
+      }
+    ]
+  },
+  "dmg-mag": {
+    "stats": [
+      {
+        "stat": "magicmindam",
+        "type": "min"
+      },
+      {
+        "stat": "magicmaxdam",
+        "type": "max"
+      }
+    ]
+  },
+  "dmg-cold": {
+    "stats": [
+      {
+        "stat": "coldmindam",
+        "type": "min"
+      },
+      {
+        "stat": "coldmaxdam",
+        "type": "max"
+      },
+      {
+        "stat": "coldlength",
+        "type": "param"
+      }
+    ]
+  },
+  "dmg-pois": {
+    "stats": [
+      {
+        "stat": "poisonmindam",
+        "type": "min"
+      },
+      {
+        "stat": "poisonmaxdam",
+        "type": "max"
+      },
+      {
+        "stat": "poisonlength",
+        "type": "param"
+      }
+    ]
+  },
+  "dmg-throw": {
+    "stats": [
+      {
+        "stat": "item_throw_mindamage",
+        "type": "min"
+      },
+      {
+        "stat": "item_throw_maxdamage",
+        "type": "max"
+      }
+    ]
+  },
+  "dmg-norm": {
+    "stats": [
+      {
+        "stat": "mindamage",
+        "type": "min"
+      },
+      {
+        "stat": "maxdamage",
+        "type": "max"
+      }
+    ]
+  },
+  "ac/lvl": {
+    "stats": [
+      {
+        "stat": "item_armor_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "ac%/lvl": {
+    "stats": [
+      {
+        "stat": "item_armorpercent_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "hp/lvl": {
+    "stats": [
+      {
+        "stat": "item_hp_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "mana/lvl": {
+    "stats": [
+      {
+        "stat": "item_mana_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "dmg/lvl": {
+    "stats": [
+      {
+        "stat": "item_maxdamage_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "dmg%/lvl": {
+    "stats": [
+      {
+        "stat": "item_maxdamage_percent_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "str/lvl": {
+    "stats": [
+      {
+        "stat": "item_strength_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "dex/lvl": {
+    "stats": [
+      {
+        "stat": "item_dexterity_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "enr/lvl": {
+    "stats": [
+      {
+        "stat": "item_energy_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "vit/lvl": {
+    "stats": [
+      {
+        "stat": "item_vitality_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "att/lvl": {
+    "stats": [
+      {
+        "stat": "item_tohit_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "att%/lvl": {
+    "stats": [
+      {
+        "stat": "item_tohitpercent_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "dmg-cold/lvl": {
+    "stats": [
+      {
+        "stat": "item_cold_damagemax_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "dmg-fire/lvl": {
+    "stats": [
+      {
+        "stat": "item_fire_damagemax_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "dmg-ltng/lvl": {
+    "stats": [
+      {
+        "stat": "item_ltng_damagemax_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "dmg-pois/lvl": {
+    "stats": [
+      {
+        "stat": "item_pois_damagemax_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "res-cold/lvl": {
+    "stats": [
+      {
+        "stat": "item_resist_cold_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "res-fire/lvl": {
+    "stats": [
+      {
+        "stat": "item_resist_fire_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "res-ltng/lvl": {
+    "stats": [
+      {
+        "stat": "item_resist_ltng_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "res-pois/lvl": {
+    "stats": [
+      {
+        "stat": "item_resist_pois_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "abs-cold/lvl": {
+    "stats": [
+      {
+        "stat": "item_absorb_cold_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "abs-fire/lvl": {
+    "stats": [
+      {
+        "stat": "item_absorb_fire_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "abs-ltng/lvl": {
+    "stats": [
+      {
+        "stat": "item_absorb_ltng_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "abs-pois/lvl": {
+    "stats": [
+      {
+        "stat": "item_absorb_pois_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "thorns/lvl": {
+    "stats": [
+      {
+        "stat": "item_thorns_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "gold%/lvl": {
+    "stats": [
+      {
+        "stat": "item_find_gold_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "mag%/lvl": {
+    "stats": [
+      {
+        "stat": "item_find_magic_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "regen-stam/lvl": {
+    "stats": [
+      {
+        "stat": "item_regenstamina_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "stam/lvl": {
+    "stats": [
+      {
+        "stat": "item_stamina_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "dmg-dem/lvl": {
+    "stats": [
+      {
+        "stat": "item_damage_demon_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "dmg-und/lvl": {
+    "stats": [
+      {
+        "stat": "item_damage_undead_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "att-dem/lvl": {
+    "stats": [
+      {
+        "stat": "item_tohit_demon_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "att-und/lvl": {
+    "stats": [
+      {
+        "stat": "item_tohit_undead_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "crush/lvl": {
+    "stats": [
+      {
+        "stat": "item_crushingblow_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "wounds/lvl": {
+    "stats": [
+      {
+        "stat": "item_openwounds_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "kick/lvl": {
+    "stats": [
+      {
+        "stat": "item_kick_damage_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "deadly/lvl": {
+    "stats": [
+      {
+        "stat": "item_deadlystrike_perlevel",
+        "type": "param"
+      }
+    ]
+  },
+  "gems%/lvl": {
+    "stats": []
+  },
+  "rep-dur": {
+    "stats": [
+      {
+        "stat": "item_replenish_durability",
+        "type": "param"
+      }
+    ]
+  },
+  "rep-quant": {
+    "stats": [
+      {
+        "stat": "item_replenish_quantity",
+        "type": "param"
+      }
+    ]
+  },
+  "stack": {
+    "stats": [
+      {
+        "stat": "item_extra_stack",
+        "type": "other"
+      }
+    ]
+  },
+  "item%": {
+    "stats": []
+  },
+  "dmg-slash": {
+    "stats": []
+  },
+  "dmg-slash%": {
+    "stats": []
+  },
+  "dmg-crush": {
+    "stats": []
+  },
+  "dmg-crush%": {
+    "stats": []
+  },
+  "dmg-thrust": {
+    "stats": []
+  },
+  "dmg-thrust%": {
+    "stats": []
+  },
+  "abs-slash": {
+    "stats": []
+  },
+  "abs-crush": {
+    "stats": []
+  },
+  "abs-thrust": {
+    "stats": []
+  },
+  "abs-slash%": {
+    "stats": []
+  },
+  "abs-crush%": {
+    "stats": []
+  },
+  "abs-thrust%": {
+    "stats": []
+  },
+  "ac/time": {
+    "stats": [
+      {
+        "stat": "item_armor_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "ac%/time": {
+    "stats": [
+      {
+        "stat": "item_armorpercent_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "hp/time": {
+    "stats": [
+      {
+        "stat": "item_hp_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "mana/time": {
+    "stats": [
+      {
+        "stat": "item_mana_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg/time": {
+    "stats": [
+      {
+        "stat": "item_maxdamage_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg%/time": {
+    "stats": [
+      {
+        "stat": "item_maxdamage_percent_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "str/time": {
+    "stats": [
+      {
+        "stat": "item_strength_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "dex/time": {
+    "stats": [
+      {
+        "stat": "item_dexterity_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "enr/time": {
+    "stats": [
+      {
+        "stat": "item_energy_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "vit/time": {
+    "stats": [
+      {
+        "stat": "item_vitality_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "att/time": {
+    "stats": [
+      {
+        "stat": "item_tohit_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "att%/time": {
+    "stats": [
+      {
+        "stat": "item_tohitpercent_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-cold/time": {
+    "stats": [
+      {
+        "stat": "item_cold_damagemax_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-fire/time": {
+    "stats": [
+      {
+        "stat": "item_fire_damagemax_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-ltng/time": {
+    "stats": [
+      {
+        "stat": "item_ltng_damagemax_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-pois/time": {
+    "stats": [
+      {
+        "stat": "item_pois_damagemax_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "res-cold/time": {
+    "stats": [
+      {
+        "stat": "item_resist_cold_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "res-fire/time": {
+    "stats": [
+      {
+        "stat": "item_resist_fire_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "res-ltng/time": {
+    "stats": [
+      {
+        "stat": "item_resist_ltng_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "res-pois/time": {
+    "stats": [
+      {
+        "stat": "item_resist_pois_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "abs-cold/time": {
+    "stats": [
+      {
+        "stat": "item_absorb_cold_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "abs-fire/time": {
+    "stats": [
+      {
+        "stat": "item_absorb_fire_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "abs-ltng/time": {
+    "stats": [
+      {
+        "stat": "item_absorb_ltng_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "abs-pois/time": {
+    "stats": [
+      {
+        "stat": "item_absorb_pois_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "gold%/time": {
+    "stats": [
+      {
+        "stat": "item_find_gold_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "mag%/time": {
+    "stats": [
+      {
+        "stat": "item_find_magic_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "regen-stam/time": {
+    "stats": [
+      {
+        "stat": "item_regenstamina_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "stam/time": {
+    "stats": [
+      {
+        "stat": "item_stamina_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-dem/time": {
+    "stats": [
+      {
+        "stat": "item_damage_demon_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-und/time": {
+    "stats": [
+      {
+        "stat": "item_damage_undead_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "att-dem/time": {
+    "stats": [
+      {
+        "stat": "item_tohit_demon_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "att-und/time": {
+    "stats": [
+      {
+        "stat": "item_tohit_undead_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "crush/time": {
+    "stats": [
+      {
+        "stat": "item_crushingblow_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "wounds/time": {
+    "stats": [
+      {
+        "stat": "item_openwounds_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "kick/time": {
+    "stats": [
+      {
+        "stat": "item_kick_damage_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "deadly/time": {
+    "stats": [
+      {
+        "stat": "item_deadlystrike_bytime",
+        "type": "other"
+      }
+    ]
+  },
+  "gems%/time": {
+    "stats": []
+  },
+  "pierce-fire": {
+    "stats": [
+      {
+        "stat": "passive_fire_pierce",
+        "type": "other"
+      }
+    ]
+  },
+  "pierce-ltng": {
+    "stats": [
+      {
+        "stat": "passive_ltng_pierce",
+        "type": "other"
+      }
+    ]
+  },
+  "pierce-cold": {
+    "stats": [
+      {
+        "stat": "passive_cold_pierce",
+        "type": "other"
+      }
+    ]
+  },
+  "pierce-pois": {
+    "stats": [
+      {
+        "stat": "passive_pois_pierce",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-mon": {
+    "stats": []
+  },
+  "dmg%-mon": {
+    "stats": []
+  },
+  "att-mon": {
+    "stats": []
+  },
+  "att%-mon": {
+    "stats": []
+  },
+  "ac-mon": {
+    "stats": []
+  },
+  "ac%-mon": {
+    "stats": []
+  },
+  "indestruct": {
+    "stats": [
+      {
+        "stat": "item_indesctructible",
+        "type": "other"
+      }
+    ]
+  },
+  "charged": {
+    "stats": [
+      {
+        "stat": "item_charged_skill",
+        "type": "charges"
+      }
+    ]
+  },
+  "extra-fire": {
+    "stats": [
+      {
+        "stat": "passive_fire_mastery",
+        "type": "other"
+      }
+    ]
+  },
+  "extra-ltng": {
+    "stats": [
+      {
+        "stat": "passive_ltng_mastery",
+        "type": "other"
+      }
+    ]
+  },
+  "extra-cold": {
+    "stats": [
+      {
+        "stat": "passive_cold_mastery",
+        "type": "other"
+      }
+    ]
+  },
+  "extra-pois": {
+    "stats": [
+      {
+        "stat": "passive_pois_mastery",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-elem": {
+    "stats": [
+      {
+        "stat": "firemindam",
+        "type": "min"
+      },
+      {
+        "stat": "firemaxdam",
+        "type": "max"
+      },
+      {
+        "stat": "lightmindam",
+        "type": "min"
+      },
+      {
+        "stat": "lightmaxdam",
+        "type": "max"
+      },
+      {
+        "stat": "coldmindam",
+        "type": "min"
+      },
+      {
+        "stat": "coldmaxdam",
+        "type": "max"
+      },
+      {
+        "stat": "coldlength",
+        "type": "param"
+      }
+    ]
+  },
+  "dmg-elem-min": {
+    "stats": [
+      {
+        "stat": "firemindam",
+        "type": "other"
+      },
+      {
+        "stat": "lightmindam",
+        "type": "all"
+      },
+      {
+        "stat": "coldmindam",
+        "type": "all"
+      }
+    ]
+  },
+  "dmg-elem-max": {
+    "stats": [
+      {
+        "stat": "firemaxdam",
+        "type": "other"
+      },
+      {
+        "stat": "lightmaxdam",
+        "type": "all"
+      },
+      {
+        "stat": "coldmaxdam",
+        "type": "all"
+      },
+      {
+        "stat": "coldlength",
+        "type": "param"
+      }
+    ]
+  },
+  "all-stats": {
+    "stats": [
+      {
+        "stat": "strength",
+        "type": "other"
+      },
+      {
+        "stat": "energy",
+        "type": "all"
+      },
+      {
+        "stat": "dexterity",
+        "type": "all"
+      },
+      {
+        "stat": "vitality",
+        "type": "all"
+      }
+    ]
+  },
+  "addxp": {
+    "stats": [
+      {
+        "stat": "item_addexperience",
+        "type": "other"
+      }
+    ]
+  },
+  "heal-kill": {
+    "stats": [
+      {
+        "stat": "item_healafterkill",
+        "type": "other"
+      }
+    ]
+  },
+  "cheap": {
+    "stats": [
+      {
+        "stat": "item_reducedprices",
+        "type": "other"
+      }
+    ]
+  },
+  "rip": {
+    "stats": [
+      {
+        "stat": "item_restinpeace",
+        "type": "other"
+      }
+    ]
+  },
+  "att-mon%": {
+    "stats": [
+      {
+        "stat": "attack_vs_montype",
+        "type": "other"
+      }
+    ]
+  },
+  "dmg-mon%": {
+    "stats": [
+      {
+        "stat": "damage_vs_montype",
+        "type": "other"
+      }
+    ]
+  },
+  "kill-skill": {
+    "stats": [
+      {
+        "stat": "item_skillonkill",
+        "type": "proc"
+      }
+    ]
+  },
+  "death-skill": {
+    "stats": [
+      {
+        "stat": "item_skillondeath",
+        "type": "proc"
+      }
+    ]
+  },
+  "levelup-skill": {
+    "stats": [
+      {
+        "stat": "item_skillonlevelup",
+        "type": "proc"
+      }
+    ]
+  },
+  "skill-rand": {
+    "stats": [
+      {
+        "stat": "item_singleskill",
+        "type": "other"
+      }
+    ]
+  },
+  "fade": {
+    "stats": [
+      {
+        "stat": "fade",
+        "type": "param"
+      }
+    ]
+  },
+  "levelreq": {
+    "stats": [
+      {
+        "stat": "item_levelreq",
+        "type": "other"
+      }
+    ]
+  },
+  "ethereal": {
+    "stats": []
+  },
+  "oskill": {
+    "stats": [
+      {
+        "stat": "item_nonclassskill",
+        "type": "other"
+      }
+    ]
+  },
+  "state": {
+    "stats": [
+      {
+        "stat": "state",
+        "type": "other"
+      }
+    ]
+  },
+  "randclassskill": {
+    "stats": [
+      {
+        "stat": "item_addclassskills",
+        "param": 3,
+        "type": "other"
+      }
+    ]
+  }
+}

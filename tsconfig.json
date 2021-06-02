@@ -1,0 +1,14 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "target": "es2020",
+    "strict": true,
+    "moduleResolution": "node",
+    "lib": ["es6", "es7", "es2017.object", "es2019.array", "es2020"]
+  },
+  "include": ["**/*.ts"]
+}

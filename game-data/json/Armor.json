@@ -1,0 +1,3032 @@
+{
+  "cap": {
+    "name": "Cap",
+    "type": "helm",
+    "tier": 0,
+    "def": [
+      3,
+      5
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 1,
+    "levelReq": 0
+  },
+  "skp": {
+    "name": "Skull Cap",
+    "type": "helm",
+    "tier": 0,
+    "def": [
+      8,
+      11
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 5,
+    "levelReq": 0
+  },
+  "hlm": {
+    "name": "Helm",
+    "type": "helm",
+    "tier": 0,
+    "def": [
+      15,
+      18
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 11,
+    "levelReq": 0
+  },
+  "fhl": {
+    "name": "Full Helm",
+    "type": "helm",
+    "tier": 0,
+    "def": [
+      23,
+      26
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 15,
+    "levelReq": 0
+  },
+  "ghm": {
+    "name": "Great Helm",
+    "type": "helm",
+    "tier": 0,
+    "def": [
+      30,
+      35
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 23,
+    "levelReq": 0
+  },
+  "crn": {
+    "name": "Crown",
+    "type": "helm",
+    "tier": 0,
+    "def": [
+      25,
+      45
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 29,
+    "levelReq": 0
+  },
+  "msk": {
+    "name": "Mask",
+    "type": "helm",
+    "tier": 0,
+    "def": [
+      9,
+      27
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 19,
+    "levelReq": 0
+  },
+  "qui": {
+    "name": "Quilted Armor",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      8,
+      11
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 1,
+    "levelReq": 0
+  },
+  "lea": {
+    "name": "Leather Armor",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      14,
+      17
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 3,
+    "levelReq": 0
+  },
+  "hla": {
+    "name": "Hard Leather Armor",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      21,
+      24
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 5,
+    "levelReq": 0
+  },
+  "stu": {
+    "name": "Studded Leather",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      32,
+      35
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 8,
+    "levelReq": 0
+  },
+  "rng": {
+    "name": "Ring Mail",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      45,
+      48
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 11,
+    "levelReq": 0
+  },
+  "scl": {
+    "name": "Scale Mail",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      57,
+      60
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 13,
+    "levelReq": 0
+  },
+  "chn": {
+    "name": "Chain Mail",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      72,
+      75
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 15,
+    "levelReq": 0
+  },
+  "brs": {
+    "name": "Breast Plate",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      65,
+      68
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 18,
+    "levelReq": 0
+  },
+  "spl": {
+    "name": "Splint Mail",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      90,
+      95
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 20,
+    "levelReq": 0
+  },
+  "plt": {
+    "name": "Plate Mail",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      108,
+      116
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 24,
+    "levelReq": 0
+  },
+  "fld": {
+    "name": "Field Plate",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      101,
+      105
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 28,
+    "levelReq": 0
+  },
+  "gth": {
+    "name": "Gothic Plate",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      128,
+      135
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 32,
+    "levelReq": 0
+  },
+  "ful": {
+    "name": "Full Plate Mail",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      150,
+      161
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 37,
+    "levelReq": 0
+  },
+  "aar": {
+    "name": "Ancient Armor",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      218,
+      233
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 40,
+    "levelReq": 0
+  },
+  "ltp": {
+    "name": "Light Plate",
+    "type": "tors",
+    "tier": 0,
+    "def": [
+      90,
+      107
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 35,
+    "levelReq": 0
+  },
+  "buc": {
+    "name": "Buckler",
+    "type": "shie",
+    "tier": 0,
+    "def": [
+      4,
+      6
+    ],
+    "maxSockets": 1,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 1,
+    "levelReq": 0
+  },
+  "sml": {
+    "name": "Small Shield",
+    "type": "shie",
+    "tier": 0,
+    "def": [
+      8,
+      10
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 5,
+    "levelReq": 0
+  },
+  "lrg": {
+    "name": "Large Shield",
+    "type": "shie",
+    "tier": 0,
+    "def": [
+      12,
+      14
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 11,
+    "levelReq": 0
+  },
+  "kit": {
+    "name": "Kite Shield",
+    "type": "shie",
+    "tier": 0,
+    "def": [
+      16,
+      18
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 15,
+    "levelReq": 0
+  },
+  "tow": {
+    "name": "Tower Shield",
+    "type": "shie",
+    "tier": 0,
+    "def": [
+      22,
+      25
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 22,
+    "levelReq": 0
+  },
+  "gts": {
+    "name": "Gothic Shield",
+    "type": "shie",
+    "tier": 0,
+    "def": [
+      30,
+      35
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 4,
+    "qlevel": 30,
+    "levelReq": 0
+  },
+  "lgl": {
+    "name": "Leather Gloves",
+    "type": "glov",
+    "tier": 0,
+    "def": [
+      2,
+      3
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 3,
+    "levelReq": 0
+  },
+  "vgl": {
+    "name": "Heavy Gloves",
+    "type": "glov",
+    "tier": 0,
+    "def": [
+      5,
+      6
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 7,
+    "levelReq": 0
+  },
+  "mgl": {
+    "name": "Chain Gloves",
+    "type": "glov",
+    "tier": 0,
+    "def": [
+      8,
+      9
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 12,
+    "levelReq": 0
+  },
+  "tgl": {
+    "name": "Light Gauntlets",
+    "type": "glov",
+    "tier": 0,
+    "def": [
+      9,
+      11
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 20,
+    "levelReq": 0
+  },
+  "hgl": {
+    "name": "Gauntlets",
+    "type": "glov",
+    "tier": 0,
+    "def": [
+      12,
+      15
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 27,
+    "levelReq": 0
+  },
+  "lbt": {
+    "name": "Boots",
+    "type": "boot",
+    "tier": 0,
+    "def": [
+      2,
+      3
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 3,
+    "levelReq": 0
+  },
+  "vbt": {
+    "name": "Heavy Boots",
+    "type": "boot",
+    "tier": 0,
+    "def": [
+      5,
+      6
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 7,
+    "levelReq": 0
+  },
+  "mbt": {
+    "name": "Chain Boots",
+    "type": "boot",
+    "tier": 0,
+    "def": [
+      8,
+      9
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 12,
+    "levelReq": 0
+  },
+  "tbt": {
+    "name": "Light Plated Boots",
+    "type": "boot",
+    "tier": 0,
+    "def": [
+      9,
+      11
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 20,
+    "levelReq": 0
+  },
+  "hbt": {
+    "name": "Greaves",
+    "type": "boot",
+    "tier": 0,
+    "def": [
+      12,
+      15
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 27,
+    "levelReq": 0
+  },
+  "lbl": {
+    "name": "Sash",
+    "type": "belt",
+    "tier": 0,
+    "def": [
+      2,
+      2
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 3,
+    "levelReq": 0
+  },
+  "vbl": {
+    "name": "Light Belt",
+    "type": "belt",
+    "tier": 0,
+    "def": [
+      3,
+      3
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 7,
+    "levelReq": 0
+  },
+  "mbl": {
+    "name": "Belt",
+    "type": "belt",
+    "tier": 0,
+    "def": [
+      5,
+      5
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 12,
+    "levelReq": 0
+  },
+  "tbl": {
+    "name": "Heavy Belt",
+    "type": "belt",
+    "tier": 0,
+    "def": [
+      6,
+      6
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 20,
+    "levelReq": 0
+  },
+  "hbl": {
+    "name": "Plated Belt",
+    "type": "belt",
+    "tier": 0,
+    "def": [
+      8,
+      11
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 27,
+    "levelReq": 0
+  },
+  "bhm": {
+    "name": "Bone Helm",
+    "type": "helm",
+    "tier": 0,
+    "def": [
+      33,
+      36
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 22,
+    "levelReq": 0
+  },
+  "bsh": {
+    "name": "Bone Shield",
+    "type": "shie",
+    "tier": 0,
+    "def": [
+      10,
+      30
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 19,
+    "levelReq": 0
+  },
+  "spk": {
+    "name": "Spiked Shield",
+    "type": "shie",
+    "tier": 0,
+    "def": [
+      15,
+      25
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 11,
+    "levelReq": 0
+  },
+  "xap": {
+    "name": "War Hat",
+    "type": "helm",
+    "tier": 1,
+    "def": [
+      45,
+      53
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 34,
+    "levelReq": 22
+  },
+  "xkp": {
+    "name": "Sallet",
+    "type": "helm",
+    "tier": 1,
+    "def": [
+      52,
+      62
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 37,
+    "levelReq": 25
+  },
+  "xlm": {
+    "name": "Casque",
+    "type": "helm",
+    "tier": 1,
+    "def": [
+      63,
+      72
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 42,
+    "levelReq": 25
+  },
+  "xhl": {
+    "name": "Basinet",
+    "type": "helm",
+    "tier": 1,
+    "def": [
+      75,
+      84
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 45,
+    "levelReq": 25
+  },
+  "xhm": {
+    "name": "Winged Helm",
+    "type": "helm",
+    "tier": 1,
+    "def": [
+      85,
+      98
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 51,
+    "levelReq": 25
+  },
+  "xrn": {
+    "name": "Grand Crown",
+    "type": "helm",
+    "tier": 1,
+    "def": [
+      78,
+      113
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 55,
+    "levelReq": 25
+  },
+  "xsk": {
+    "name": "Death Mask",
+    "type": "helm",
+    "tier": 1,
+    "def": [
+      54,
+      86
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 48,
+    "levelReq": 25
+  },
+  "xui": {
+    "name": "Ghost Armor",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      102,
+      117
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 34,
+    "levelReq": 22
+  },
+  "xea": {
+    "name": "Serpentskin Armor",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      111,
+      126
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 36,
+    "levelReq": 24
+  },
+  "xla": {
+    "name": "Demonhide Armor",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      122,
+      136
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 37,
+    "levelReq": 25
+  },
+  "xtu": {
+    "name": "Trellised Armor",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      138,
+      153
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 40,
+    "levelReq": 25
+  },
+  "xng": {
+    "name": "Linked Mail",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      158,
+      172
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 42,
+    "levelReq": 25
+  },
+  "xcl": {
+    "name": "Tigulated Mail",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      176,
+      190
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 43,
+    "levelReq": 25
+  },
+  "xhn": {
+    "name": "Mesh Armor",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      198,
+      213
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 45,
+    "levelReq": 25
+  },
+  "xrs": {
+    "name": "Cuirass",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      188,
+      202
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 47,
+    "levelReq": 25
+  },
+  "xpl": {
+    "name": "Russet Armor",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      225,
+      243
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 49,
+    "levelReq": 25
+  },
+  "xlt": {
+    "name": "Templar Coat",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      252,
+      274
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 52,
+    "levelReq": 25
+  },
+  "xld": {
+    "name": "Sharktooth Armor",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      242,
+      258
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 55,
+    "levelReq": 25
+  },
+  "xth": {
+    "name": "Embossed Plate",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      282,
+      303
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 58,
+    "levelReq": 25
+  },
+  "xul": {
+    "name": "Chaos Armor",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      315,
+      342
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 61,
+    "levelReq": 25
+  },
+  "xar": {
+    "name": "Ornate Plate",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      417,
+      450
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 64,
+    "levelReq": 25
+  },
+  "xtp": {
+    "name": "Mage Plate",
+    "type": "tors",
+    "tier": 1,
+    "def": [
+      225,
+      261
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 60,
+    "levelReq": 25
+  },
+  "xuc": {
+    "name": "Defender",
+    "type": "shie",
+    "tier": 1,
+    "def": [
+      41,
+      49
+    ],
+    "maxSockets": 1,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 34,
+    "levelReq": 22
+  },
+  "xml": {
+    "name": "Round Shield",
+    "type": "shie",
+    "tier": 1,
+    "def": [
+      47,
+      55
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 37,
+    "levelReq": 25
+  },
+  "xrg": {
+    "name": "Scutum",
+    "type": "shie",
+    "tier": 1,
+    "def": [
+      53,
+      61
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 42,
+    "levelReq": 25
+  },
+  "xit": {
+    "name": "Dragon Shield",
+    "type": "shie",
+    "tier": 1,
+    "def": [
+      59,
+      67
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 45,
+    "levelReq": 25
+  },
+  "xow": {
+    "name": "Pavise",
+    "type": "shie",
+    "tier": 1,
+    "def": [
+      68,
+      78
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 50,
+    "levelReq": 25
+  },
+  "xts": {
+    "name": "Ancient Shield",
+    "type": "shie",
+    "tier": 1,
+    "def": [
+      80,
+      93
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 4,
+    "qlevel": 56,
+    "levelReq": 25
+  },
+  "xlg": {
+    "name": "Demonhide Gloves",
+    "type": "glov",
+    "tier": 1,
+    "def": [
+      28,
+      35
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 33,
+    "levelReq": 21
+  },
+  "xvg": {
+    "name": "Sharkskin Gloves",
+    "type": "glov",
+    "tier": 1,
+    "def": [
+      33,
+      39
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 39,
+    "levelReq": 25
+  },
+  "xmg": {
+    "name": "Heavy Bracers",
+    "type": "glov",
+    "tier": 1,
+    "def": [
+      37,
+      44
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 43,
+    "levelReq": 25
+  },
+  "xtg": {
+    "name": "Battle Gauntlets",
+    "type": "glov",
+    "tier": 1,
+    "def": [
+      39,
+      47
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 49,
+    "levelReq": 25
+  },
+  "xhg": {
+    "name": "War Gauntlets",
+    "type": "glov",
+    "tier": 1,
+    "def": [
+      43,
+      53
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 54,
+    "levelReq": 25
+  },
+  "xlb": {
+    "name": "Demonhide Boots",
+    "type": "boot",
+    "tier": 1,
+    "def": [
+      28,
+      35
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 36,
+    "levelReq": 24
+  },
+  "xvb": {
+    "name": "Sharkskin Boots",
+    "type": "boot",
+    "tier": 1,
+    "def": [
+      33,
+      39
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 39,
+    "levelReq": 25
+  },
+  "xmb": {
+    "name": "Mesh Boots",
+    "type": "boot",
+    "tier": 1,
+    "def": [
+      37,
+      44
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 43,
+    "levelReq": 25
+  },
+  "xtb": {
+    "name": "Battle Boots",
+    "type": "boot",
+    "tier": 1,
+    "def": [
+      39,
+      47
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 49,
+    "levelReq": 25
+  },
+  "xhb": {
+    "name": "War Boots",
+    "type": "boot",
+    "tier": 1,
+    "def": [
+      43,
+      53
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 54,
+    "levelReq": 25
+  },
+  "zlb": {
+    "name": "Demonhide Sash",
+    "type": "belt",
+    "tier": 1,
+    "def": [
+      29,
+      34
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 36,
+    "levelReq": 24
+  },
+  "zvb": {
+    "name": "Sharkskin Belt",
+    "type": "belt",
+    "tier": 1,
+    "def": [
+      31,
+      36
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 39,
+    "levelReq": 25
+  },
+  "zmb": {
+    "name": "Mesh Belt",
+    "type": "belt",
+    "tier": 1,
+    "def": [
+      35,
+      40
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 43,
+    "levelReq": 25
+  },
+  "ztb": {
+    "name": "Battle Belt",
+    "type": "belt",
+    "tier": 1,
+    "def": [
+      37,
+      42
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 49,
+    "levelReq": 25
+  },
+  "zhb": {
+    "name": "War Belt",
+    "type": "belt",
+    "tier": 1,
+    "def": [
+      41,
+      52
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 54,
+    "levelReq": 25
+  },
+  "xh9": {
+    "name": "Grim Helm",
+    "type": "helm",
+    "tier": 1,
+    "def": [
+      60,
+      125
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 50,
+    "levelReq": 25
+  },
+  "xsh": {
+    "name": "Grim Shield",
+    "type": "shie",
+    "tier": 1,
+    "def": [
+      50,
+      150
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 48,
+    "levelReq": 25
+  },
+  "xpk": {
+    "name": "Barbed Shield",
+    "type": "shie",
+    "tier": 1,
+    "def": [
+      58,
+      78
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 42,
+    "levelReq": 25
+  },
+  "dr1": {
+    "name": "Wolf Head",
+    "type": "pelt",
+    "tier": 0,
+    "def": [
+      8,
+      11
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 4,
+    "levelReq": 3
+  },
+  "dr2": {
+    "name": "Hawk Helm",
+    "type": "pelt",
+    "tier": 0,
+    "def": [
+      4,
+      15
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 8,
+    "levelReq": 6
+  },
+  "dr3": {
+    "name": "Antlers",
+    "type": "pelt",
+    "tier": 0,
+    "def": [
+      18,
+      24
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 16,
+    "levelReq": 12
+  },
+  "dr4": {
+    "name": "Falcon Mask",
+    "type": "pelt",
+    "tier": 0,
+    "def": [
+      12,
+      28
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 20,
+    "levelReq": 15
+  },
+  "dr5": {
+    "name": "Spirit Mask",
+    "type": "pelt",
+    "tier": 0,
+    "def": [
+      22,
+      35
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 24,
+    "levelReq": 18
+  },
+  "ba1": {
+    "name": "Jawbone Cap",
+    "type": "phlm",
+    "tier": 0,
+    "def": [
+      10,
+      15
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 4,
+    "levelReq": 3
+  },
+  "ba2": {
+    "name": "Fanged Helm",
+    "type": "phlm",
+    "tier": 0,
+    "def": [
+      15,
+      20
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 8,
+    "levelReq": 6
+  },
+  "ba3": {
+    "name": "Horned Helm",
+    "type": "phlm",
+    "tier": 0,
+    "def": [
+      25,
+      30
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 16,
+    "levelReq": 12
+  },
+  "ba4": {
+    "name": "Assault Helmet",
+    "type": "phlm",
+    "tier": 0,
+    "def": [
+      30,
+      35
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 20,
+    "levelReq": 15
+  },
+  "ba5": {
+    "name": "Avenger Guard",
+    "type": "phlm",
+    "tier": 0,
+    "def": [
+      35,
+      50
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 24,
+    "levelReq": 18
+  },
+  "pa1": {
+    "name": "Targe",
+    "type": "ashd",
+    "tier": 0,
+    "def": [
+      8,
+      12
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 4,
+    "levelReq": 3
+  },
+  "pa2": {
+    "name": "Rondache",
+    "type": "ashd",
+    "tier": 0,
+    "def": [
+      10,
+      18
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 8,
+    "levelReq": 6
+  },
+  "pa3": {
+    "name": "Heraldic Shield",
+    "type": "ashd",
+    "tier": 0,
+    "def": [
+      16,
+      26
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 4,
+    "qlevel": 16,
+    "levelReq": 12
+  },
+  "pa4": {
+    "name": "Aerin Shield",
+    "type": "ashd",
+    "tier": 0,
+    "def": [
+      26,
+      36
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 4,
+    "qlevel": 20,
+    "levelReq": 15
+  },
+  "pa5": {
+    "name": "Crown Shield",
+    "type": "ashd",
+    "tier": 0,
+    "def": [
+      30,
+      40
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 24,
+    "levelReq": 18
+  },
+  "ne1": {
+    "name": "Preserved Head",
+    "type": "head",
+    "tier": 0,
+    "def": [
+      2,
+      5
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 4,
+    "levelReq": 3
+  },
+  "ne2": {
+    "name": "Zombie Head",
+    "type": "head",
+    "tier": 0,
+    "def": [
+      4,
+      8
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 8,
+    "levelReq": 6
+  },
+  "ne3": {
+    "name": "Unraveller Head",
+    "type": "head",
+    "tier": 0,
+    "def": [
+      6,
+      10
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 16,
+    "levelReq": 12
+  },
+  "ne4": {
+    "name": "Gargoyle Head",
+    "type": "head",
+    "tier": 0,
+    "def": [
+      10,
+      16
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 20,
+    "levelReq": 15
+  },
+  "ne5": {
+    "name": "Demon Head",
+    "type": "head",
+    "tier": 0,
+    "def": [
+      15,
+      20
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 24,
+    "levelReq": 18
+  },
+  "ci0": {
+    "name": "Circlet",
+    "type": "circ",
+    "tier": 0,
+    "def": [
+      20,
+      30
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 24,
+    "levelReq": 16
+  },
+  "ci1": {
+    "name": "Coronet",
+    "type": "circ",
+    "tier": 0,
+    "def": [
+      30,
+      40
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 52,
+    "levelReq": 39
+  },
+  "ci2": {
+    "name": "Tiara",
+    "type": "circ",
+    "tier": 1,
+    "def": [
+      40,
+      50
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 70,
+    "levelReq": 52
+  },
+  "ci3": {
+    "name": "Diadem",
+    "type": "circ",
+    "tier": 2,
+    "def": [
+      50,
+      60
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 85,
+    "levelReq": 64
+  },
+  "uap": {
+    "name": "Shako",
+    "type": "helm",
+    "tier": 2,
+    "def": [
+      98,
+      141
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 58,
+    "levelReq": 43
+  },
+  "ukp": {
+    "name": "Hydraskull",
+    "type": "helm",
+    "tier": 2,
+    "def": [
+      101,
+      145
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 63,
+    "levelReq": 47
+  },
+  "ulm": {
+    "name": "Armet",
+    "type": "helm",
+    "tier": 2,
+    "def": [
+      105,
+      149
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 68,
+    "levelReq": 51
+  },
+  "uhl": {
+    "name": "Giant Conch",
+    "type": "helm",
+    "tier": 2,
+    "def": [
+      110,
+      154
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 54,
+    "levelReq": 40
+  },
+  "uhm": {
+    "name": "Spired Helm",
+    "type": "helm",
+    "tier": 2,
+    "def": [
+      114,
+      159
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 79,
+    "levelReq": 59
+  },
+  "urn": {
+    "name": "Corona",
+    "type": "helm",
+    "tier": 2,
+    "def": [
+      111,
+      165
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 85,
+    "levelReq": 66
+  },
+  "usk": {
+    "name": "Demonhead",
+    "type": "helm",
+    "tier": 2,
+    "def": [
+      101,
+      154
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 74,
+    "levelReq": 55
+  },
+  "uui": {
+    "name": "Dusk Shroud",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      361,
+      467
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 65,
+    "levelReq": 49
+  },
+  "uea": {
+    "name": "Wyrmhide",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      364,
+      470
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 67,
+    "levelReq": 50
+  },
+  "ula": {
+    "name": "Scarab Husk",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      369,
+      474
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 68,
+    "levelReq": 51
+  },
+  "utu": {
+    "name": "Wire Fleece",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      375,
+      481
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 70,
+    "levelReq": 53
+  },
+  "ung": {
+    "name": "Diamond Mail",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      383,
+      489
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 72,
+    "levelReq": 54
+  },
+  "ucl": {
+    "name": "Loricated Mail",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      390,
+      496
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 73,
+    "levelReq": 55
+  },
+  "uhn": {
+    "name": "Boneweave",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      399,
+      505
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 62,
+    "levelReq": 47
+  },
+  "urs": {
+    "name": "Great Hauberk",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      395,
+      501
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 75,
+    "levelReq": 56
+  },
+  "upl": {
+    "name": "Balrog Skin",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      410,
+      517
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 76,
+    "levelReq": 57
+  },
+  "ult": {
+    "name": "Hellforge Plate",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      421,
+      530
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 78,
+    "levelReq": 59
+  },
+  "uld": {
+    "name": "Kraken Shell",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      417,
+      523
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 81,
+    "levelReq": 61
+  },
+  "uth": {
+    "name": "Lacquered Plate",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      433,
+      541
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 82,
+    "levelReq": 62
+  },
+  "uul": {
+    "name": "Shadow Plate",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      446,
+      557
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 83,
+    "levelReq": 64
+  },
+  "uar": {
+    "name": "Sacred Armor",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      487,
+      600
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 85,
+    "levelReq": 66
+  },
+  "utp": {
+    "name": "Archon Plate",
+    "type": "tors",
+    "tier": 2,
+    "def": [
+      410,
+      524
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 84,
+    "levelReq": 63
+  },
+  "uuc": {
+    "name": "Heater",
+    "type": "shie",
+    "tier": 2,
+    "def": [
+      95,
+      110
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 58,
+    "levelReq": 43
+  },
+  "uml": {
+    "name": "Luna",
+    "type": "shie",
+    "tier": 2,
+    "def": [
+      108,
+      123
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 61,
+    "levelReq": 45
+  },
+  "urg": {
+    "name": "Hyperion",
+    "type": "shie",
+    "tier": 2,
+    "def": [
+      119,
+      135
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 64,
+    "levelReq": 48
+  },
+  "uit": {
+    "name": "Monarch",
+    "type": "shie",
+    "tier": 2,
+    "def": [
+      133,
+      148
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 72,
+    "levelReq": 54
+  },
+  "uow": {
+    "name": "Aegis",
+    "type": "shie",
+    "tier": 2,
+    "def": [
+      145,
+      161
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 79,
+    "levelReq": 59
+  },
+  "uts": {
+    "name": "Ward",
+    "type": "shie",
+    "tier": 2,
+    "def": [
+      153,
+      170
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 4,
+    "qlevel": 84,
+    "levelReq": 63
+  },
+  "ulg": {
+    "name": "Bramble Mitts",
+    "type": "glov",
+    "tier": 2,
+    "def": [
+      54,
+      62
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 57,
+    "levelReq": 42
+  },
+  "uvg": {
+    "name": "Vampirebone Gloves",
+    "type": "glov",
+    "tier": 2,
+    "def": [
+      56,
+      65
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 63,
+    "levelReq": 47
+  },
+  "umg": {
+    "name": "Vambraces",
+    "type": "glov",
+    "tier": 2,
+    "def": [
+      59,
+      67
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 69,
+    "levelReq": 51
+  },
+  "utg": {
+    "name": "Crusader Gauntlets",
+    "type": "glov",
+    "tier": 2,
+    "def": [
+      59,
+      68
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 76,
+    "levelReq": 57
+  },
+  "uhg": {
+    "name": "Ogre Gauntlets",
+    "type": "glov",
+    "tier": 2,
+    "def": [
+      62,
+      71
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 85,
+    "levelReq": 64
+  },
+  "ulb": {
+    "name": "Wyrmhide Boots",
+    "type": "boot",
+    "tier": 2,
+    "def": [
+      54,
+      62
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 60,
+    "levelReq": 45
+  },
+  "uvb": {
+    "name": "Scarabshell Boots",
+    "type": "boot",
+    "tier": 2,
+    "def": [
+      56,
+      65
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 66,
+    "levelReq": 49
+  },
+  "umb": {
+    "name": "Boneweave Boots",
+    "type": "boot",
+    "tier": 2,
+    "def": [
+      59,
+      67
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 72,
+    "levelReq": 54
+  },
+  "utb": {
+    "name": "Mirrored Boots",
+    "type": "boot",
+    "tier": 2,
+    "def": [
+      59,
+      68
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 81,
+    "levelReq": 60
+  },
+  "uhb": {
+    "name": "Myrmidon Greaves",
+    "type": "boot",
+    "tier": 2,
+    "def": [
+      62,
+      71
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 85,
+    "levelReq": 65
+  },
+  "ulc": {
+    "name": "Spiderweb Sash",
+    "type": "belt",
+    "tier": 2,
+    "def": [
+      55,
+      62
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 61,
+    "levelReq": 46
+  },
+  "uvc": {
+    "name": "Vampirefang Belt",
+    "type": "belt",
+    "tier": 2,
+    "def": [
+      56,
+      63
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 68,
+    "levelReq": 51
+  },
+  "umc": {
+    "name": "Mithril Coil",
+    "type": "belt",
+    "tier": 2,
+    "def": [
+      58,
+      65
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 75,
+    "levelReq": 56
+  },
+  "utc": {
+    "name": "Troll Belt",
+    "type": "belt",
+    "tier": 2,
+    "def": [
+      59,
+      66
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 82,
+    "levelReq": 62
+  },
+  "uhc": {
+    "name": "Colossus Girdle",
+    "type": "belt",
+    "tier": 2,
+    "def": [
+      61,
+      71
+    ],
+    "maxSockets": 0,
+    "indestructible": false,
+    "width": 2,
+    "height": 1,
+    "qlevel": 85,
+    "levelReq": 67
+  },
+  "uh9": {
+    "name": "Bone Visage",
+    "type": "helm",
+    "tier": 2,
+    "def": [
+      100,
+      157
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 84,
+    "levelReq": 63
+  },
+  "ush": {
+    "name": "Troll Nest",
+    "type": "shie",
+    "tier": 2,
+    "def": [
+      158,
+      173
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 76,
+    "levelReq": 57
+  },
+  "upk": {
+    "name": "Blade Barrier",
+    "type": "shie",
+    "tier": 2,
+    "def": [
+      147,
+      163
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 3,
+    "qlevel": 68,
+    "levelReq": 51
+  },
+  "dr6": {
+    "name": "Alpha Helm",
+    "type": "pelt",
+    "tier": 1,
+    "def": [
+      52,
+      62
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 35,
+    "levelReq": 26
+  },
+  "dr7": {
+    "name": "Griffon Headdress",
+    "type": "pelt",
+    "tier": 1,
+    "def": [
+      46,
+      68
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 40,
+    "levelReq": 30
+  },
+  "dr8": {
+    "name": "Hunter's Guise",
+    "type": "pelt",
+    "tier": 1,
+    "def": [
+      67,
+      81
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 46,
+    "levelReq": 29
+  },
+  "dr9": {
+    "name": "Sacred Feathers",
+    "type": "pelt",
+    "tier": 1,
+    "def": [
+      58,
+      87
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 50,
+    "levelReq": 32
+  },
+  "dra": {
+    "name": "Totemic Mask",
+    "type": "pelt",
+    "tier": 1,
+    "def": [
+      73,
+      98
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 55,
+    "levelReq": 41
+  },
+  "ba6": {
+    "name": "Jawbone Visor",
+    "type": "phlm",
+    "tier": 1,
+    "def": [
+      55,
+      68
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 33,
+    "levelReq": 25
+  },
+  "ba7": {
+    "name": "Lion Helm",
+    "type": "phlm",
+    "tier": 1,
+    "def": [
+      63,
+      75
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 38,
+    "levelReq": 29
+  },
+  "ba8": {
+    "name": "Rage Mask",
+    "type": "phlm",
+    "tier": 1,
+    "def": [
+      78,
+      90
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 44,
+    "levelReq": 29
+  },
+  "ba9": {
+    "name": "Savage Helmet",
+    "type": "phlm",
+    "tier": 1,
+    "def": [
+      85,
+      98
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 49,
+    "levelReq": 32
+  },
+  "baa": {
+    "name": "Slayer Guard",
+    "type": "phlm",
+    "tier": 1,
+    "def": [
+      93,
+      120
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 54,
+    "levelReq": 40
+  },
+  "pa6": {
+    "name": "Akaran Targe",
+    "type": "ashd",
+    "tier": 1,
+    "def": [
+      101,
+      125
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 35,
+    "levelReq": 26
+  },
+  "pa7": {
+    "name": "Akaran Rondache",
+    "type": "ashd",
+    "tier": 1,
+    "def": [
+      113,
+      137
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 40,
+    "levelReq": 30
+  },
+  "pa8": {
+    "name": "Protector Shield",
+    "type": "ashd",
+    "tier": 1,
+    "def": [
+      129,
+      153
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 4,
+    "qlevel": 46,
+    "levelReq": 34
+  },
+  "pa9": {
+    "name": "Gilded Shield",
+    "type": "ashd",
+    "tier": 1,
+    "def": [
+      144,
+      168
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 4,
+    "qlevel": 51,
+    "levelReq": 38
+  },
+  "paa": {
+    "name": "Royal Shield",
+    "type": "ashd",
+    "tier": 1,
+    "def": [
+      156,
+      181
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 55,
+    "levelReq": 41
+  },
+  "ne6": {
+    "name": "Mummified Trophy",
+    "type": "head",
+    "tier": 1,
+    "def": [
+      38,
+      48
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 33,
+    "levelReq": 24
+  },
+  "ne7": {
+    "name": "Fetish Trophy",
+    "type": "head",
+    "tier": 1,
+    "def": [
+      41,
+      52
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 39,
+    "levelReq": 29
+  },
+  "ne8": {
+    "name": "Sexton Trophy",
+    "type": "head",
+    "tier": 1,
+    "def": [
+      44,
+      55
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 45,
+    "levelReq": 33
+  },
+  "ne9": {
+    "name": "Cantor Trophy",
+    "type": "head",
+    "tier": 1,
+    "def": [
+      50,
+      64
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 49,
+    "levelReq": 36
+  },
+  "nea": {
+    "name": "Hierophant Trophy",
+    "type": "head",
+    "tier": 1,
+    "def": [
+      58,
+      70
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 54,
+    "levelReq": 40
+  },
+  "drb": {
+    "name": "Blood Spirit",
+    "type": "pelt",
+    "tier": 2,
+    "def": [
+      101,
+      145
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 62,
+    "levelReq": 46
+  },
+  "drc": {
+    "name": "Sun Spirit",
+    "type": "pelt",
+    "tier": 2,
+    "def": [
+      98,
+      147
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 69,
+    "levelReq": 51
+  },
+  "drd": {
+    "name": "Earth Spirit",
+    "type": "pelt",
+    "tier": 2,
+    "def": [
+      107,
+      152
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 76,
+    "levelReq": 57
+  },
+  "dre": {
+    "name": "Sky Spirit",
+    "type": "pelt",
+    "tier": 2,
+    "def": [
+      103,
+      155
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 83,
+    "levelReq": 62
+  },
+  "drf": {
+    "name": "Dream Spirit",
+    "type": "pelt",
+    "tier": 2,
+    "def": [
+      109,
+      159
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 85,
+    "levelReq": 66
+  },
+  "bab": {
+    "name": "Carnage Helm",
+    "type": "phlm",
+    "tier": 2,
+    "def": [
+      102,
+      147
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 60,
+    "levelReq": 45
+  },
+  "bac": {
+    "name": "Fury Visor",
+    "type": "phlm",
+    "tier": 2,
+    "def": [
+      105,
+      150
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 66,
+    "levelReq": 49
+  },
+  "bad": {
+    "name": "Destroyer Helm",
+    "type": "phlm",
+    "tier": 2,
+    "def": [
+      111,
+      156
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 73,
+    "levelReq": 54
+  },
+  "bae": {
+    "name": "Conqueror Crown",
+    "type": "phlm",
+    "tier": 2,
+    "def": [
+      114,
+      159
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 80,
+    "levelReq": 60
+  },
+  "baf": {
+    "name": "Guardian Crown",
+    "type": "phlm",
+    "tier": 2,
+    "def": [
+      117,
+      168
+    ],
+    "maxSockets": 3,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 85,
+    "levelReq": 65
+  },
+  "pab": {
+    "name": "Sacred Targe",
+    "type": "ashd",
+    "tier": 2,
+    "def": [
+      126,
+      158
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 63,
+    "levelReq": 47
+  },
+  "pac": {
+    "name": "Sacred Rondache",
+    "type": "ashd",
+    "tier": 2,
+    "def": [
+      138,
+      164
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 70,
+    "levelReq": 52
+  },
+  "pad": {
+    "name": "Kurast Shield",
+    "type": "ashd",
+    "tier": 2,
+    "def": [
+      154,
+      172
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 4,
+    "qlevel": 74,
+    "levelReq": 55
+  },
+  "pae": {
+    "name": "Zakarum Shield",
+    "type": "ashd",
+    "tier": 2,
+    "def": [
+      169,
+      193
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 4,
+    "qlevel": 82,
+    "levelReq": 61
+  },
+  "paf": {
+    "name": "Vortex Shield",
+    "type": "ashd",
+    "tier": 2,
+    "def": [
+      182,
+      225
+    ],
+    "maxSockets": 4,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 85,
+    "levelReq": 66
+  },
+  "neb": {
+    "name": "Minion Skull",
+    "type": "head",
+    "tier": 2,
+    "def": [
+      95,
+      139
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 59,
+    "levelReq": 44
+  },
+  "neg": {
+    "name": "Hellspawn Skull",
+    "type": "head",
+    "tier": 2,
+    "def": [
+      96,
+      141
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 67,
+    "levelReq": 50
+  },
+  "ned": {
+    "name": "Overseer Skull",
+    "type": "head",
+    "tier": 2,
+    "def": [
+      98,
+      142
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 66,
+    "levelReq": 49
+  },
+  "nee": {
+    "name": "Succubus Skull",
+    "type": "head",
+    "tier": 2,
+    "def": [
+      100,
+      146
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 81,
+    "levelReq": 60
+  },
+  "nef": {
+    "name": "Bloodlord Skull",
+    "type": "head",
+    "tier": 2,
+    "def": [
+      103,
+      148
+    ],
+    "maxSockets": 2,
+    "indestructible": false,
+    "width": 2,
+    "height": 2,
+    "qlevel": 85,
+    "levelReq": 65
+  }
+}

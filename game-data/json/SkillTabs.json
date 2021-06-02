@@ -1,0 +1,86 @@
+[
+  {
+    "id": 0,
+    "name": "Bow and Crossbow Skills"
+  },
+  {
+    "id": 1,
+    "name": "Passive and Magic Skills"
+  },
+  {
+    "id": 2,
+    "name": "Javelin and Spear Skills"
+  },
+  {
+    "id": 8,
+    "name": "Fire Skills"
+  },
+  {
+    "id": 9,
+    "name": "Lightning Skills"
+  },
+  {
+    "id": 10,
+    "name": "Cold Skills"
+  },
+  {
+    "id": 16,
+    "name": "Curses Skills"
+  },
+  {
+    "id": 17,
+    "name": "Poison and Bone Skills"
+  },
+  {
+    "id": 18,
+    "name": "Necromancer Summoning Skills"
+  },
+  {
+    "id": 24,
+    "name": "Paladin Combat Skills"
+  },
+  {
+    "id": 25,
+    "name": "Offensive Auras Skills"
+  },
+  {
+    "id": 26,
+    "name": "Defensive Auras Skills"
+  },
+  {
+    "id": 32,
+    "name": "Barbarian Combat Skills"
+  },
+  {
+    "id": 33,
+    "name": "Masteries Skills"
+  },
+  {
+    "id": 34,
+    "name": "Warcries Skills"
+  },
+  {
+    "id": 40,
+    "name": "Druid Summoning Skills"
+  },
+  {
+    "id": 41,
+    "name": "Shape Shifting Skills"
+  },
+  {
+    "id": 42,
+    "name": "Elemental Skills"
+  },
+  {
+    "id": 48,
+    "name": "Traps Skills"
+  },
+  {
+    "id": 49,
+    "name": "Shadow Disciplines Skills"
+  },
+  {
+    "id": 50,
+    "name": "Martial Arts Skills"
+  }
+]

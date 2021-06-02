@@ -1,0 +1,1386 @@
+[
+  {
+    "name": "Ancients' Pledge",
+    "enabled": true,
+    "runes": [
+      "r08",
+      "r09",
+      "r07"
+    ],
+    "levelReq": 21
+  },
+  {
+    "name": "Armageddon",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Authority",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Beast",
+    "enabled": true,
+    "runes": [
+      "r30",
+      "r03",
+      "r22",
+      "r23",
+      "r17"
+    ],
+    "levelReq": 63
+  },
+  {
+    "name": "Beauty",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Black",
+    "enabled": true,
+    "runes": [
+      "r10",
+      "r16",
+      "r04"
+    ],
+    "levelReq": 35
+  },
+  {
+    "name": "Blood",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Bone",
+    "enabled": true,
+    "runes": [
+      "r12",
+      "r22",
+      "r22"
+    ],
+    "levelReq": 47
+  },
+  {
+    "name": "Bramble",
+    "enabled": true,
+    "runes": [
+      "r08",
+      "r27",
+      "r29",
+      "r05"
+    ],
+    "levelReq": 61
+  },
+  {
+    "name": "Brand",
+    "enabled": true,
+    "runes": [
+      "r31",
+      "r28",
+      "r23",
+      "r25"
+    ],
+    "levelReq": 65
+  },
+  {
+    "name": "Breath of the Dying",
+    "enabled": true,
+    "runes": [
+      "r26",
+      "r15",
+      "r01",
+      "r02",
+      "r33",
+      "r05"
+    ],
+    "levelReq": 69
+  },
+  {
+    "name": "Broken Promise",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Call to Arms",
+    "enabled": true,
+    "runes": [
+      "r11",
+      "r08",
+      "r23",
+      "r24",
+      "r27"
+    ],
+    "levelReq": 57
+  },
+  {
+    "name": "Chains of Honor",
+    "enabled": true,
+    "runes": [
+      "r14",
+      "r22",
+      "r30",
+      "r24"
+    ],
+    "levelReq": 63
+  },
+  {
+    "name": "Chance",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Chaos",
+    "enabled": true,
+    "runes": [
+      "r19",
+      "r27",
+      "r22"
+    ],
+    "levelReq": 57
+  },
+  {
+    "name": "Crescent Moon",
+    "enabled": true,
+    "runes": [
+      "r13",
+      "r22",
+      "r03"
+    ],
+    "levelReq": 47
+  },
+  {
+    "name": "Darkness",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Daylight",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Death",
+    "enabled": true,
+    "runes": [
+      "r15",
+      "r01",
+      "r26",
+      "r09",
+      "r25"
+    ],
+    "levelReq": 55
+  },
+  {
+    "name": "Deception",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Delirium",
+    "enabled": true,
+    "runes": [
+      "r20",
+      "r24",
+      "r16"
+    ],
+    "levelReq": 51
+  },
+  {
+    "name": "Desire",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Despair",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Destruction",
+    "enabled": true,
+    "runes": [
+      "r26",
+      "r28",
+      "r30",
+      "r31",
+      "r18"
+    ],
+    "levelReq": 65
+  },
+  {
+    "name": "Doom",
+    "enabled": true,
+    "runes": [
+      "r15",
+      "r27",
+      "r22",
+      "r28",
+      "r32"
+    ],
+    "levelReq": 67
+  },
+  {
+    "name": "Dragon",
+    "enabled": true,
+    "runes": [
+      "r29",
+      "r28",
+      "r12"
+    ],
+    "levelReq": 61
+  },
+  {
+    "name": "Dread",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Dream",
+    "enabled": true,
+    "runes": [
+      "r16",
+      "r31",
+      "r21"
+    ],
+    "levelReq": 65
+  },
+  {
+    "name": "Duress",
+    "enabled": true,
+    "runes": [
+      "r13",
+      "r22",
+      "r10"
+    ],
+    "levelReq": 47
+  },
+  {
+    "name": "Edge",
+    "enabled": true,
+    "runes": [
+      "r03",
+      "r07",
+      "r11"
+    ],
+    "levelReq": 25
+  },
+  {
+    "name": "Elation",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Enigma",
+    "enabled": true,
+    "runes": [
+      "r31",
+      "r06",
+      "r30"
+    ],
+    "levelReq": 65
+  },
+  {
+    "name": "Enlightenment",
+    "enabled": true,
+    "runes": [
+      "r21",
+      "r08",
+      "r12"
+    ],
+    "levelReq": 45
+  },
+  {
+    "name": "Envy",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Eternity",
+    "enabled": true,
+    "runes": [
+      "r11",
+      "r30",
+      "r24",
+      "r12",
+      "r29"
+    ],
+    "levelReq": 63
+  },
+  {
+    "name": "Exile",
+    "enabled": true,
+    "runes": [
+      "r26",
+      "r27",
+      "r24",
+      "r14"
+    ],
+    "levelReq": 57
+  },
+  {
+    "name": "Faith",
+    "enabled": true,
+    "runes": [
+      "r27",
+      "r31",
+      "r20",
+      "r02"
+    ],
+    "levelReq": 65
+  },
+  {
+    "name": "Famine",
+    "enabled": true,
+    "runes": [
+      "r19",
+      "r27",
+      "r09",
+      "r31"
+    ],
+    "levelReq": 65
+  },
+  {
+    "name": "Flame",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Fortitude",
+    "enabled": true,
+    "runes": [
+      "r01",
+      "r12",
+      "r14",
+      "r28"
+    ],
+    "levelReq": 59
+  },
+  {
+    "name": "Fortune",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Friendship",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Fury",
+    "enabled": true,
+    "runes": [
+      "r31",
+      "r25",
+      "r05"
+    ],
+    "levelReq": 65
+  },
+  {
+    "name": "Gloom",
+    "enabled": true,
+    "runes": [
+      "r19",
+      "r22",
+      "r21"
+    ],
+    "levelReq": 47
+  },
+  {
+    "name": "Glory",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Grief",
+    "enabled": true,
+    "runes": [
+      "r05",
+      "r03",
+      "r28",
+      "r23",
+      "r08"
+    ],
+    "levelReq": 59
+  },
+  {
+    "name": "Hand of Justice",
+    "enabled": true,
+    "runes": [
+      "r29",
+      "r32",
+      "r11",
+      "r28"
+    ],
+    "levelReq": 67
+  },
+  {
+    "name": "Harmony",
+    "enabled": true,
+    "runes": [
+      "r03",
+      "r06",
+      "r12",
+      "r18"
+    ],
+    "levelReq": 39
+  },
+  {
+    "name": "Hatred",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Heart of the Oak",
+    "enabled": true,
+    "runes": [
+      "r18",
+      "r26",
+      "r21",
+      "r10"
+    ],
+    "levelReq": 55
+  },
+  {
+    "name": "Heaven's Will",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Holy Tears",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Holy Thunder",
+    "enabled": true,
+    "runes": [
+      "r05",
+      "r08",
+      "r09",
+      "r07"
+    ],
+    "levelReq": 21
+  },
+  {
+    "name": "Honor",
+    "enabled": true,
+    "runes": [
+      "r11",
+      "r01",
+      "r06",
+      "r03",
+      "r12"
+    ],
+    "levelReq": 27
+  },
+  {
+    "name": "Revenge",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Humility",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Hunger",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Ice",
+    "enabled": true,
+    "runes": [
+      "r11",
+      "r13",
+      "r31",
+      "r28"
+    ],
+    "levelReq": 65
+  },
+  {
+    "name": "Infinity",
+    "enabled": true,
+    "runes": [
+      "r30",
+      "r23",
+      "r30",
+      "r24"
+    ],
+    "levelReq": 63
+  },
+  {
+    "name": "Innocence",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Insight",
+    "enabled": true,
+    "runes": [
+      "r08",
+      "r03",
+      "r07",
+      "r12"
+    ],
+    "levelReq": 27
+  },
+  {
+    "name": "Jealousy",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Judgement",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "King's Grace",
+    "enabled": true,
+    "runes": [
+      "r11",
+      "r08",
+      "r10"
+    ],
+    "levelReq": 25
+  },
+  {
+    "name": "Kingslayer",
+    "enabled": true,
+    "runes": [
+      "r23",
+      "r22",
+      "r25",
+      "r19"
+    ],
+    "levelReq": 53
+  },
+  {
+    "name": "Knight's Vigil",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Knowledge",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Last Wish",
+    "enabled": true,
+    "runes": [
+      "r31",
+      "r23",
+      "r31",
+      "r29",
+      "r31",
+      "r30"
+    ],
+    "levelReq": 65
+  },
+  {
+    "name": "Law",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Lawbringer",
+    "enabled": true,
+    "runes": [
+      "r11",
+      "r20",
+      "r18"
+    ],
+    "levelReq": 43
+  },
+  {
+    "name": "Leaf",
+    "enabled": true,
+    "runes": [
+      "r03",
+      "r08"
+    ],
+    "levelReq": 19
+  },
+  {
+    "name": "Lightning",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Lionheart",
+    "enabled": true,
+    "runes": [
+      "r15",
+      "r17",
+      "r19"
+    ],
+    "levelReq": 41
+  },
+  {
+    "name": "Lore",
+    "enabled": true,
+    "runes": [
+      "r09",
+      "r12"
+    ],
+    "levelReq": 27
+  },
+  {
+    "name": "Love",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Loyalty",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Lust",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Madness",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Malice",
+    "enabled": true,
+    "runes": [
+      "r06",
+      "r01",
+      "r05"
+    ],
+    "levelReq": 15
+  },
+  {
+    "name": "Melody",
+    "enabled": true,
+    "runes": [
+      "r13",
+      "r18",
+      "r04"
+    ],
+    "levelReq": 39
+  },
+  {
+    "name": "Memory",
+    "enabled": true,
+    "runes": [
+      "r17",
+      "r16",
+      "r12",
+      "r05"
+    ],
+    "levelReq": 37
+  },
+  {
+    "name": "Mist",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Morning",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Mystery",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Myth",
+    "enabled": true,
+    "runes": [
+      "r15",
+      "r11",
+      "r04"
+    ],
+    "levelReq": 25
+  },
+  {
+    "name": "Nadir",
+    "enabled": true,
+    "runes": [
+      "r04",
+      "r03"
+    ],
+    "levelReq": 13
+  },
+  {
+    "name": "Nature's Kingdom",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Night",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Oath",
+    "enabled": true,
+    "runes": [
+      "r13",
+      "r21",
+      "r23",
+      "r17"
+    ],
+    "levelReq": 49
+  },
+  {
+    "name": "Obedience",
+    "enabled": true,
+    "runes": [
+      "r15",
+      "r18",
+      "r10",
+      "r05",
+      "r19"
+    ],
+    "levelReq": 41
+  },
+  {
+    "name": "Oblivion",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Obsession",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Passion",
+    "enabled": true,
+    "runes": [
+      "r14",
+      "r09",
+      "r02",
+      "r20"
+    ],
+    "levelReq": 43
+  },
+  {
+    "name": "Passion",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Patter",
+    "enabled": false,
+    "runes": [
+      "r07",
+      "r09",
+      "r03"
+    ],
+    "levelReq": 21
+  },
+  {
+    "name": "Peace",
+    "enabled": true,
+    "runes": [
+      "r13",
+      "r10",
+      "r11"
+    ],
+    "levelReq": 29
+  },
+  {
+    "name": "Voice of Reason",
+    "enabled": true,
+    "runes": [
+      "r20",
+      "r18",
+      "r01",
+      "r02"
+    ],
+    "levelReq": 43
+  },
+  {
+    "name": "Penitence",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Peril",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Pestilence",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Phoenix",
+    "enabled": true,
+    "runes": [
+      "r26",
+      "r26",
+      "r28",
+      "r31"
+    ],
+    "levelReq": 65
+  },
+  {
+    "name": "Piety",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Pillar of Faith",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Plague",
+    "enabled": false,
+    "runes": [
+      "r32",
+      "r19",
+      "r22"
+    ],
+    "levelReq": 67
+  },
+  {
+    "name": "Praise",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Prayer",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Pride",
+    "enabled": true,
+    "runes": [
+      "r32",
+      "r29",
+      "r16",
+      "r28"
+    ],
+    "levelReq": 67
+  },
+  {
+    "name": "Principle",
+    "enabled": true,
+    "runes": [
+      "r08",
+      "r25",
+      "r02"
+    ],
+    "levelReq": 53
+  },
+  {
+    "name": "Prowess in Battle",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Prudence",
+    "enabled": true,
+    "runes": [
+      "r23",
+      "r03"
+    ],
+    "levelReq": 49
+  },
+  {
+    "name": "Punishment",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Purity",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Question",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Radiance",
+    "enabled": true,
+    "runes": [
+      "r04",
+      "r12",
+      "r06"
+    ],
+    "levelReq": 27
+  },
+  {
+    "name": "Rain",
+    "enabled": true,
+    "runes": [
+      "r09",
+      "r23",
+      "r06"
+    ],
+    "levelReq": 49
+  },
+  {
+    "name": "Reason",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Red",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Rhyme",
+    "enabled": true,
+    "runes": [
+      "r13",
+      "r05"
+    ],
+    "levelReq": 29
+  },
+  {
+    "name": "Rift",
+    "enabled": true,
+    "runes": [
+      "r15",
+      "r18",
+      "r20",
+      "r25"
+    ],
+    "levelReq": 53
+  },
+  {
+    "name": "Sanctuary",
+    "enabled": true,
+    "runes": [
+      "r18",
+      "r18",
+      "r23"
+    ],
+    "levelReq": 49
+  },
+  {
+    "name": "Serendipity",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Shadow",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Shadow of Doubt",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Silence",
+    "enabled": true,
+    "runes": [
+      "r14",
+      "r02",
+      "r15",
+      "r24",
+      "r03",
+      "r26"
+    ],
+    "levelReq": 55
+  },
+  {
+    "name": "Siren's Song",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Smoke",
+    "enabled": true,
+    "runes": [
+      "r04",
+      "r17"
+    ],
+    "levelReq": 37
+  },
+  {
+    "name": "Sorrow",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Spirit",
+    "enabled": true,
+    "runes": [
+      "r07",
+      "r10",
+      "r09",
+      "r11"
+    ],
+    "levelReq": 25
+  },
+  {
+    "name": "Splendor",
+    "enabled": true,
+    "runes": [
+      "r05",
+      "r17"
+    ],
+    "levelReq": 37
+  },
+  {
+    "name": "Starlight",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Stealth",
+    "enabled": true,
+    "runes": [
+      "r07",
+      "r05"
+    ],
+    "levelReq": 17
+  },
+  {
+    "name": "Steel",
+    "enabled": true,
+    "runes": [
+      "r03",
+      "r01"
+    ],
+    "levelReq": 13
+  },
+  {
+    "name": "Still Water",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Sting",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Stone",
+    "enabled": true,
+    "runes": [
+      "r13",
+      "r22",
+      "r21",
+      "r17"
+    ],
+    "levelReq": 47
+  },
+  {
+    "name": "Storm",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Strength",
+    "enabled": true,
+    "runes": [
+      "r11",
+      "r03"
+    ],
+    "levelReq": 25
+  },
+  {
+    "name": "Tempest",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Temptation",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Terror",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Thirst",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Thought",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Thunder",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Time",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Tradition",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Treachery",
+    "enabled": true,
+    "runes": [
+      "r13",
+      "r10",
+      "r20"
+    ],
+    "levelReq": 43
+  },
+  {
+    "name": "Trust",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Truth",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Unbending Will",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Valor",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Vengeance",
+    "enabled": false,
+    "runes": [
+      "r06",
+      "r11",
+      "r01"
+    ],
+    "levelReq": 25
+  },
+  {
+    "name": "Venom",
+    "enabled": true,
+    "runes": [
+      "r07",
+      "r14",
+      "r23"
+    ],
+    "levelReq": 49
+  },
+  {
+    "name": "Victory",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Voice",
+    "enabled": false,
+    "runes": [
+      "r03",
+      "r06"
+    ],
+    "levelReq": 15
+  },
+  {
+    "name": "Void",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "War",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Water",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Wealth",
+    "enabled": true,
+    "runes": [
+      "r20",
+      "r18",
+      "r03"
+    ],
+    "levelReq": 43
+  },
+  {
+    "name": "Whisper",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "White",
+    "enabled": true,
+    "runes": [
+      "r14",
+      "r16"
+    ],
+    "levelReq": 35
+  },
+  {
+    "name": "Wind",
+    "enabled": true,
+    "runes": [
+      "r29",
+      "r01"
+    ],
+    "levelReq": 61
+  },
+  {
+    "name": "Wings of Hope",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Wisdom",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Woe",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Wonder",
+    "enabled": false,
+    "runes": [
+      "r04",
+      "r12",
+      "r24"
+    ],
+    "levelReq": 51
+  },
+  {
+    "name": "Wrath",
+    "enabled": true,
+    "runes": [
+      "r21",
+      "r17",
+      "r30",
+      "r23"
+    ],
+    "levelReq": 63
+  },
+  {
+    "name": "Youth",
+    "enabled": false,
+    "runes": [],
+    "levelReq": 0
+  },
+  {
+    "name": "Zephyr",
+    "enabled": true,
+    "runes": [
+      "r09",
+      "r05"
+    ],
+    "levelReq": 21
+  }
+]

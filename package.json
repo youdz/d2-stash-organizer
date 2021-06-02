@@ -1,0 +1,27 @@
+{
+  "name": "stash-organizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/scripts/main.ts",
+    "game-strings": "ts-node src/game-data/generate-strings.ts",
+    "game-data": "ts-node src/game-data/generate-all.ts",
+    "format": "prettier --write './**/*.ts'",
+    "lint": "eslint './**/*.ts'",
+    "lint:fix": "eslint --fix './**/*.ts'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^15.6.1",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.3.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.2.4"
+  }
+}
