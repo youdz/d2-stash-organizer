@@ -10,6 +10,7 @@ import {
   UNIQUE_ITEMS,
 } from "../../../game-data";
 import { getBase } from "../getBase";
+// FIXME: don't ever import this in scripts or web
 import { getString } from "../../../game-data/strings";
 
 // Modifies the item in place, returns the last index read

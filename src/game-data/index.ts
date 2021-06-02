@@ -12,20 +12,21 @@ import {
   MagicAffix,
 } from "./types";
 
-import * as armors from "../../game-data/json/Armor.json";
-import * as weapons from "../../game-data/json/Weapons.json";
-import * as misc from "../../game-data/json/Misc.json";
-import * as uniqueItems from "../../game-data/json/UniqueItems.json";
-import * as setItems from "../../game-data/json/SetItems.json";
-import * as sets from "../../game-data/json/Sets.json";
-import * as properties from "../../game-data/json/Properties.json";
-import * as itemStats from "../../game-data/json/ItemStatCost.json";
-import * as skillTabs from "../../game-data/json/SkillTabs.json";
-import * as rareNames from "../../game-data/json/RareNames.json";
-import * as magicPrefixes from "../../game-data/json/MagicPrefix.json";
-import * as magicSuffixes from "../../game-data/json/MagicSuffix.json";
-import * as runewords from "../../game-data/json/Runewords.json";
+import armors from "../../game-data/json/Armor.json";
+import weapons from "../../game-data/json/Weapons.json";
+import misc from "../../game-data/json/Misc.json";
+import uniqueItems from "../../game-data/json/UniqueItems.json";
+import setItems from "../../game-data/json/SetItems.json";
+import sets from "../../game-data/json/Sets.json";
+import properties from "../../game-data/json/Properties.json";
+import itemStats from "../../game-data/json/ItemStatCost.json";
+import skillTabs from "../../game-data/json/SkillTabs.json";
+import rareNames from "../../game-data/json/RareNames.json";
+import magicPrefixes from "../../game-data/json/MagicPrefix.json";
+import magicSuffixes from "../../game-data/json/MagicSuffix.json";
+import runewords from "../../game-data/json/Runewords.json";
 
+// TODO: switch to JSON.parse
 export const ARMORS: Record<string, Armor | undefined> = armors;
 export const WEAPONS: Record<string, Weapon | undefined> = weapons;
 export const MISC: Record<string, Misc | undefined> = misc;

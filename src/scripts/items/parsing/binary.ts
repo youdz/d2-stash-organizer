@@ -6,7 +6,7 @@ export interface BinaryStream {
   readBool(position?: number): boolean;
 }
 
-export function binaryStream(buffer: Buffer): BinaryStream {
+export function binaryStream(buffer: Uint8Array): BinaryStream {
   const binary = toBinary(buffer);
   let nextIndex = 0;
   const stream = {
@@ -34,7 +34,7 @@ export function fromInt(n: number, size: number) {
   return n.toString(2).padStart(size, "0").split("").reverse().join("");
 }
 
-function toBinary(buffer: Buffer) {
+function toBinary(buffer: Uint8Array) {
   return buffer.reduce((binary, byte) => binary + fromInt(byte, 8), "");
 }
 

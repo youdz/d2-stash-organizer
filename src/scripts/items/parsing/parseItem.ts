@@ -5,7 +5,7 @@ import { parseQuality } from "./parseQuality";
 import { parseQuantified } from "./parseQuantified";
 import { parseModifiers } from "./parseModifiers";
 
-export function parseItem(raw: Buffer) {
+export function parseItem(raw: Uint8Array) {
   // https://squeek502.github.io/d2itemreader/formats/d2.html
   const stream = binaryStream(raw);
   const item = parseSimple(stream);

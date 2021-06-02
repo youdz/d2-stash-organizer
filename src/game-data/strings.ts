@@ -1,4 +1,4 @@
-import * as strings from "../../game-data/json/Strings.json";
+import strings from "../../game-data/json/Strings.json";
 
 const STRINGS: Record<string, string> = strings;
 

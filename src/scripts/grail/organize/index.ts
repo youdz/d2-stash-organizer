@@ -13,7 +13,7 @@ import { organizeUniques } from "./uniques";
 import { organizeRespecs } from "./respecs";
 import { organizeUbers } from "./ubers";
 
-export function newOrganize(stash: Stash, offset = 0, emptyPages = 0) {
+export function organize(stash: Stash, offset = 0, emptyPages = 0) {
   const before = getAllItems(stash);
   const expectedTotal = before.length;
   const toOrganize = deletePages(stash, offset);
@@ -57,13 +57,6 @@ export function newOrganize(stash: Stash, offset = 0, emptyPages = 0) {
     }
   }
   if (getAllItems(stash).length !== expectedTotal) {
-    const after = getAllItems(stash);
-    for (const item of before) {
-      if (!after.includes(item)) {
-        // console.log(item);
-      }
-    }
-    console.log(`Missing ${before.length - after.length} items.`);
     throw new Error("Lost items in the process, cancelling");
   }
 }

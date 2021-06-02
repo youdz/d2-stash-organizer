@@ -1,0 +1,43 @@
+body {
+    background: black;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    appearance: none;
+    margin: 0;
+    text-align: initial;
+    cursor: pointer;
+    box-shadow: none;
+    padding: 0.4em 0.8em;
+    border: 2px solid white;
+    border-radius: 0;
+    background: transparent;
+    color: white;
+    font-family: AvQuest;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.magic {
+    color: #4169E1;
+}
+.rare {
+    color: #FFFF00;
+}
+.unique {
+    color: #A59263;
+}
+.set {
+    color: #00FF00;
+}
+.crafted {
+    color: #FFA500;
+}
+.socketed {
+    color: #808080;
+}
