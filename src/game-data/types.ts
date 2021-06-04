@@ -63,6 +63,7 @@ export interface Runeword {
   enabled: boolean;
   runes: string[];
   levelReq: number;
+  modifiers: ModifierRange[];
 }
 
 export type PropertyType =

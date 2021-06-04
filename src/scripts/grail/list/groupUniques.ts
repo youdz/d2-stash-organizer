@@ -1,24 +1,49 @@
-import { UNIQUE_ITEMS, UniqueItem } from "../../../game-data";
+import { UniqueItem } from "../../../game-data";
 import { getBase } from "../../items/getBase";
+import { Item } from "../../items/types/Item";
+import {
+  TYPES_TO_UNIQUES_SECTION,
+  UNIQUES_ORDER,
+  UniqueSection,
+} from "./uniquesOrder";
 
-export function groupUniquesByTypeAndTier() {
-  const uniquesByType = new Map<string, UniqueItem[][]>();
-  for (const item of UNIQUE_ITEMS) {
-    // Skip disabled and quest items
-    if (!item.enabled || item.qlevel === 0) continue;
-
-    const base = getBase(item);
-    let tiers = uniquesByType.get(base.type);
-    if (!tiers) {
-      tiers = [];
-      uniquesByType.set(base.type, tiers);
+export function groupUniquesBySection<T extends Item | UniqueItem>(
+  items: T[],
+  withTiers: boolean
+) {
+  const grouped = new Map<UniqueSection, T[][]>();
+  // We start by adding every section in order,
+  // because Map guarantees insertion order on iteration
+  for (const category of UNIQUES_ORDER) {
+    for (const section of category) {
+      grouped.set(section, []);
     }
-    let tier = tiers[base.tier];
+  }
+
+  for (const item of items) {
+    const base = getBase(item);
+    const section =
+      TYPES_TO_UNIQUES_SECTION.get(base.type) ||
+      ("twoHanded" in base &&
+        TYPES_TO_UNIQUES_SECTION.get(`${base.type}-${Number(base.twoHanded)}`));
+    if (!section) {
+      continue;
+    }
+    const group = grouped.get(section)!;
+    const tierIndex = withTiers ? base.tier : 0;
+    let tier = group[tierIndex];
     if (!tier) {
       tier = [];
-      tiers[base.tier] = tier;
+      group[tierIndex] = tier;
     }
     tier.push(item);
   }
-  return uniquesByType;
+  // Discard empty tiers
+  for (const [section, tiers] of grouped) {
+    grouped.set(
+      section,
+      tiers.filter(({ length }) => length > 0)
+    );
+  }
+  return grouped;
 }

@@ -1,0 +1,11 @@
+.pagination {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.pagination button[disabled] {
+    opacity: 0;
+    cursor: default;
+}

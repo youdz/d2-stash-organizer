@@ -10,8 +10,11 @@ export function getStash() {
   return STASH;
 }
 
-export async function saveStash(file: File) {
-  STASH = parseSharedStash(new Uint8Array(await file.arrayBuffer()));
-  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(STASH));
-  return STASH;
+export async function saveStash(stash: File | Stash) {
+  if (stash instanceof File) {
+    stash = parseSharedStash(new Uint8Array(await stash.arrayBuffer()));
+  }
+  STASH = stash;
+  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(stash));
+  return stash;
 }

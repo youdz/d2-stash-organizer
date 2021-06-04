@@ -9,7 +9,7 @@
     "format": "prettier --write './**/*.ts'",
     "lint": "eslint './**/*.ts'",
     "lint:fix": "eslint --fix './**/*.ts'",
-    "build": "rollup -c --environment PROD",
+    "build": "rm -r ./docs && rollup -c --environment PROD",
     "watch": "rollup -cwm"
   },
   "keywords": [],

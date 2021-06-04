@@ -14,17 +14,16 @@ const PROD = !!process.env.PROD;
 const WATCH = !!process.env.ROLLUP_WATCH;
 
 export default {
+  input: "src/web/index.html",
   plugins: [
     // Entry point for application build; can specify a glob to build multiple
     // HTML files for non-SPA app
-    html({
-      input: "src/web/index.html",
-    }),
+    html(),
     // Resolve bare module specifiers to relative paths
     resolve(),
     json({ compact: true }),
     typescript({ tsconfig: "src/web/tsconfig.json" }),
-    postcss(),
+    postcss({ minimize: true }),
     // Minify HTML template literals
     minifyHTML(),
     // Minify JS
@@ -38,9 +37,10 @@ export default {
     WATCH && serve({ contentBase: "dist", open: true }),
   ],
   output: {
-    dir: "dist",
+    dir: PROD ? "docs" : "dist",
+    entryFileNames: "[name]-[hash].js",
     manualChunks: {
-      "game-data": ["src/game-data/index.ts", "src/game-data/strings.ts"],
+      "game-data": ["src/game-data/index.ts"],
     },
   },
   preserveEntrySignatures: "strict",

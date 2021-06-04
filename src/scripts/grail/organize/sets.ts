@@ -3,31 +3,18 @@ import { layout, LayoutResult } from "../layout";
 import { PageFlags, Stash } from "../../stash/types";
 import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
-import { SET_ITEMS, SetItem, SETS } from "../../../game-data";
+import { Set, SET_ITEMS, SetItem, SETS } from "../../../game-data";
 import { EQUIPMENT_TYPES } from "../list/uniquesOrder";
 import { SETS_ORDER } from "../list/setsOrder";
 import { fillTemplate } from "./fillTemplate";
 import { getBase } from "../../items/getBase";
-
-function groupBySet<T extends Item | SetItem>(items: T[]) {
-  const bySet = new Map<string, T[]>();
-  // We create all of them because we still want empty pages for the grail
-  for (const setId of Object.keys(SETS)) {
-    bySet.set(setId, []);
-  }
-  for (const item of items) {
-    const setItem =
-      "set" in item ? (item as SetItem) : SET_ITEMS[(item as Item).unique!];
-    bySet.get(setItem.set)!.push(item);
-  }
-  return bySet;
-}
+import { groupBySet } from "../list/groupSets";
 
 function createTemplates() {
   const allItems = groupBySet(SET_ITEMS);
-  const templates = new Map<string, LayoutResult<SetItem>>();
-  for (const setId of Object.keys(SETS)) {
-    templates.set(setId, layout("set", [allItems.get(setId)!]));
+  const templates = new Map<Set, LayoutResult<SetItem>>();
+  for (const [set, items] of allItems) {
+    templates.set(set, layout("set", [items]));
   }
   return templates;
 }
@@ -57,8 +44,8 @@ export function organizeSets(stash: Stash, items: Item[]) {
       // Make one instance of the set pretty
       const remaining = fillTemplate(
         stash,
-        bySet.get(set)!,
-        templates.get(set)!,
+        bySet.get(SETS[set])!,
+        templates.get(SETS[set])!,
         offset
       );
       offset++;

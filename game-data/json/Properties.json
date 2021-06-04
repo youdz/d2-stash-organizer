@@ -219,7 +219,7 @@
     "stats": [
       {
         "stat": "mindamage",
-        "type": "min"
+        "type": "other"
       }
     ]
   },
@@ -227,7 +227,7 @@
     "stats": [
       {
         "stat": "maxdamage",
-        "type": "max"
+        "type": "other"
       }
     ]
   },

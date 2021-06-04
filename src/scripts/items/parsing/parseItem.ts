@@ -4,6 +4,7 @@ import { binaryStream } from "./binary";
 import { parseQuality } from "./parseQuality";
 import { parseQuantified } from "./parseQuantified";
 import { parseModifiers } from "./parseModifiers";
+import { perfectionScore } from "../comparison/perfectionScore";
 
 export function parseItem(raw: Uint8Array) {
   // https://squeek502.github.io/d2itemreader/formats/d2.html
@@ -16,6 +17,14 @@ export function parseItem(raw: Uint8Array) {
 
     if (item.quality! > ItemQuality.NORMAL || item.runeword) {
       parseModifiers(stream, item);
+    }
+
+    if (
+      item.runeword ||
+      item.quality === ItemQuality.UNIQUE ||
+      item.quality === ItemQuality.SET
+    ) {
+      item.perfectionScore = perfectionScore(item);
     }
   }
   return item;

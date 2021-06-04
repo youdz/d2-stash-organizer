@@ -4,7 +4,6 @@ import { compare } from "./compare";
 import { generatePerfectItem } from "./generatePerfectItem";
 import { SET_ITEMS, UNIQUE_ITEMS } from "../../../game-data";
 
-// TODO: use ranges directly to give a "percentage of perfection" score
 export function isPerfect(item: Item) {
   if (typeof item.unique === "undefined") {
     throw new Error("Only uniques and set items can be tested for perfection.");

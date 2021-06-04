@@ -3,6 +3,10 @@ body {
     color: white;
 }
 
+h1 {
+    margin-top: 0;
+}
+
 .hidden {
     display: none;
 }
@@ -18,9 +22,11 @@ body {
     border-radius: 0;
     background: transparent;
     color: white;
-    font-family: AvQuest;
+    font-family: AvQuest, sans-serif;
     font-weight: bold;
+    font-size: 16px;
     letter-spacing: 1px;
+    text-decoration: none;
 }
 
 .magic {
@@ -39,5 +45,5 @@ body {
     color: #FFA500;
 }
 .socketed {
-    color: #808080;
+    color: #909090;
 }

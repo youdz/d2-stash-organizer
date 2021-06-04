@@ -1,0 +1,28 @@
+.found {
+    color: #6FB76F;
+}
+.found::after {
+    content: " ✔"
+}
+
+.missing {
+    color: #FF6F6F;
+}
+.missing::after {
+    content: " ✘"
+}
+
+#grail-tracker {
+    margin-top: 1em;
+}
+
+#grail-tracker th {
+    text-align: left;
+}
+#grail-tracker td {
+    padding: 0 1em;
+}
+#grail-tracker td[colspan] {
+    text-align: center;
+    padding-top: 1em
+}

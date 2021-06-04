@@ -1,0 +1,11 @@
+.page-title {
+    border-bottom: 1px solid #666666;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.page {
+    width: 100%;
+    table-layout: fixed;
+}

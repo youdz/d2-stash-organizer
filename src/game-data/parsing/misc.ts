@@ -35,7 +35,20 @@ export async function miscToJson() {
       levelReq: runes.length
         ? Math.max(...runes.map((rune) => misc[rune]?.levelReq ?? 0))
         : 0,
+      modifiers: [],
     };
+    for (let i = 1; i < 8; i++) {
+      const modifierIndex = 16 + 4 * i;
+      // * mods seem to be meant for negative values, but appear to be ignored by the game
+      if (line[modifierIndex] && !line[modifierIndex].startsWith("*")) {
+        runeword.modifiers.push({
+          prop: line[modifierIndex].trim().toLocaleLowerCase(),
+          param: line[modifierIndex + 1],
+          min: Number(line[modifierIndex + 2]),
+          max: Number(line[modifierIndex + 3]),
+        });
+      }
+    }
     // Thereis a bug in the data, there are two Runeword95 but no Runeword96
     if (runewords[index] && !runeword.enabled) index++;
     runewords[index] = runeword;

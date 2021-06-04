@@ -10,8 +10,6 @@ import {
   UNIQUE_ITEMS,
 } from "../../../game-data";
 import { getBase } from "../getBase";
-// FIXME: don't ever import this in scripts or web
-import { getString } from "../../../game-data/strings";
 
 // Modifies the item in place, returns the last index read
 export function parseQuality(
@@ -37,12 +35,12 @@ export function parseQuality(
       break;
     case ItemQuality.LOW:
       item.qualityModifier = readInt(3);
-      // TODO: use the correcty quality prefix
-      item.name = `${getString("Low Quality")} ${getBase(item).name}`;
+      // TODO: use the correct quality prefix
+      item.name = `Low Quality ${getBase(item).name}`;
       break;
     case ItemQuality.SUPERIOR:
       item.qualityModifier = readInt(3);
-      item.name = `${getString("Hiquality")} ${getBase(item).name}`;
+      item.name = `Superior ${getBase(item).name}`;
       break;
     case ItemQuality.MAGIC:
       item.prefixes = [readInt(11)];

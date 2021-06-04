@@ -1,0 +1,7 @@
+.item th, .item td {
+    text-align: left;
+}
+
+.item th {
+    width: 400px;
+}

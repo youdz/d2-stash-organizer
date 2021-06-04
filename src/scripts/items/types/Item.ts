@@ -32,6 +32,7 @@ export interface Item {
 
   unique?: number;
   runewordId?: number;
+  perfectionScore?: number;
 
   prefixes?: number[];
   suffixes?: number[];

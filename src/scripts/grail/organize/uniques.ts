@@ -4,80 +4,17 @@ import { PageFlags, Stash } from "../../stash/types";
 import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { UNIQUE_ITEMS, UniqueItem } from "../../../game-data";
-import {
-  TYPES_TO_UNIQUES_SECTION,
-  UNIQUES_ORDER,
-  UniqueSection,
-} from "../list/uniquesOrder";
+import { UNIQUES_ORDER, UniqueSection } from "../list/uniquesOrder";
 import { fillTemplate } from "./fillTemplate";
 import { getBase } from "../../items/getBase";
-
-// TODO: this is a mess, need to break it down and clean it up
-
-function groupBySection<T extends Item | UniqueItem>(
-  items: T[],
-  withTiers: boolean
-) {
-  const grouped = new Map<UniqueSection, T[][]>();
-  for (const item of items) {
-    const base = getBase(item);
-    const section =
-      TYPES_TO_UNIQUES_SECTION.get(base.type) ||
-      ("twoHanded" in base &&
-        TYPES_TO_UNIQUES_SECTION.get(`${base.type}-${Number(base.twoHanded)}`));
-    if (!section) {
-      continue;
-    }
-    let group = grouped.get(section);
-    if (!group) {
-      group = [];
-      grouped.set(section, group);
-    }
-    const tierIndex = withTiers ? base.tier : 0;
-    let tier = group[tierIndex];
-    if (!tier) {
-      tier = [];
-      group[tierIndex] = tier;
-    }
-    tier.push(item);
-  }
-  // Discard empty tiers
-  for (const [section, tiers] of grouped) {
-    grouped.set(
-      section,
-      tiers.filter(({ length }) => length > 0)
-    );
-  }
-  return grouped;
-}
+import { groupUniquesBySection } from "../list/groupUniques";
+import { listGrailUniques } from "../list/listGrailUniques";
 
 function createTemplates(eth: boolean) {
-  // Ignore disabled and quest items
-  let collectible = UNIQUE_ITEMS.filter(
-    (item) => item.enabled && item.qlevel > 0
-  );
-  if (eth) {
-    // Ignore indestructible items for the eth version
-    collectible = collectible.filter(
-      (item) =>
-        !getBase(item).indestructible &&
-        item.modifiers.every(({ prop }) => prop !== "indestruct")
-    );
-  }
-  const uniques = groupBySection(collectible, true);
-  // Sort each section by qlevel
-  for (const tiers of uniques.values()) {
-    for (const tier of tiers) {
-      tier.sort((a, b) => a.qlevel - b.qlevel);
-    }
-  }
+  const uniques = listGrailUniques(eth);
   const templates = new Map<UniqueSection, LayoutResult<UniqueItem>>();
-  for (const category of UNIQUES_ORDER) {
-    for (const section of category) {
-      const items = uniques.get(section);
-      if (!items) continue;
-      templates.set(section, layout(section.layout ?? "tier-lines", items));
-    }
+  for (const [section, items] of uniques) {
+    templates.set(section, layout(section.layout ?? "tier-lines", items));
   }
   return templates;
 }
@@ -99,7 +36,7 @@ function extrasOrder(a: Item, b: Item) {
 }
 
 export function organizeUniques(stash: Stash, items: Item[]) {
-  const bySection = groupBySection(items, false);
+  const bySection = groupUniquesBySection(items, false);
   const normalTemplates = createTemplates(false);
   const ethTemplates = createTemplates(true);
   let offset = stash.pages.length;
