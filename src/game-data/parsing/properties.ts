@@ -54,13 +54,13 @@ export async function propertiesToJson() {
     }
     if (propId === "dmg-min") {
       stats.push({
-        stat: "mindamage",
+        stat: "secondary_mindamage",
         type: "other",
       });
     }
     if (propId === "dmg-max") {
       stats.push({
-        stat: "maxdamage",
+        stat: "secondary_maxdamage",
         type: "other",
       });
     }

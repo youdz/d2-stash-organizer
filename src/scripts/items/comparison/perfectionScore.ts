@@ -30,6 +30,10 @@ export function perfectionScore(item: Item) {
   let score = 0;
   let nbProps = 0;
   function addProp(value: number, min: number, max: number) {
+    // Just putting a catch-all here when there is no range
+    if (min === max) {
+      return;
+    }
     score = (nbProps * score + (value - min) / (max - min)) / ++nbProps;
   }
 

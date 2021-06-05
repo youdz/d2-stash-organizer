@@ -14,7 +14,9 @@ const TEST_OUTPUT = "test/saved.sss";
 const DANGER_OUTPUT = INPUT;
 
 async function main() {
-  // MrLlama uses 1.13 + PlugY 10.00
+  // TODO: bulk transfer from personal to shared
+  // FIXME: "Most Ethereal only uniques don't show up, but Wraith Flight does as Ethereal"
+  // FIXME: "Item classes that don't have Normal, like throwing or class sutff still start from Normal quality"
   const buffer = await readFile(INPUT);
   const stash = parseStash(buffer);
   organize(stash);
