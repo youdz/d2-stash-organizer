@@ -12,6 +12,7 @@ export function parseSharedStash(raw: Uint8Array) {
     throw new Error("Your version of PlugY is way too old.");
   }
   const stash: Stash = {
+    pageFlags: true,
     gold: readInt32LE(raw, 6),
     // Number of pages: readInt32LE(raw, 10),
     pages: [],
@@ -24,5 +25,6 @@ export function parseSharedStash(raw: Uint8Array) {
     );
     currentPage = nextPage;
   }
+  stash.pageFlags = typeof stash.pages[0]?.flags !== "undefined";
   return stash;
 }

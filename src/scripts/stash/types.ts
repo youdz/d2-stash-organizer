@@ -8,13 +8,14 @@ export const enum PageFlags {
 }
 
 export interface Page {
-  flags: number;
+  flags?: number;
   name: string;
   items: Item[];
 }
 
 export interface Stash {
   filename?: string;
+  pageFlags: boolean;
   gold: number;
   pages: Page[];
 }

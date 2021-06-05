@@ -10,10 +10,11 @@ export function parsePage(raw: Uint8Array) {
   }
 
   const nameEnd = indexOf(raw, "JM");
+  const hasFlags = raw.indexOf(0) + 1 !== nameEnd;
   const page: Page = {
-    flags: raw[2],
-    // 4 bytes of flags before the name, and one empty byte at the end
-    name: String.fromCharCode(...raw.slice(6, nameEnd - 1)),
+    flags: hasFlags ? raw[2] : undefined,
+    // Possibly 4 bytes of flags before the name, and one empty byte at the end
+    name: String.fromCharCode(...raw.slice(hasFlags ? 6 : 2, nameEnd - 1)),
     // Number of items: "JM" + raw.readInt16LE(nameEnd + 2),
     items: [],
   };

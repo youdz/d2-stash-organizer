@@ -14,8 +14,10 @@ export function generateSaveFile(stash: Stash) {
 
   for (const page of stash.pages) {
     offset = writeString(saveFile, "ST", offset);
-    saveFile[offset] = page.flags;
-    offset += 4;
+    if (stash.pageFlags) {
+      saveFile[offset] = page.flags!;
+      offset += 4;
+    }
     offset = writeString(saveFile, page.name, offset);
     offset++;
     offset = writeString(saveFile, "JM", offset);

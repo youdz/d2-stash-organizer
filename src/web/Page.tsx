@@ -11,9 +11,9 @@ export interface PageProps {
 
 export function Page({ page, index }: PageProps) {
   const indexText =
-    page.flags > PageFlags.MAIN_INDEX
+    (page.flags ?? 0) > PageFlags.MAIN_INDEX
       ? "Main index"
-      : page.flags > PageFlags.INDEX
+      : (page.flags ?? 0) > PageFlags.INDEX
       ? "Index"
       : "";
 
