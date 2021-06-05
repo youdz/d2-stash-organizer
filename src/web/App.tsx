@@ -1,6 +1,6 @@
 import { render } from "preact";
 import { useCallback, useEffect, useMemo, useState } from "preact/hooks";
-import { getStash } from "./stash";
+import { getStash } from "./utils/stash";
 import "./App.css";
 import { Page } from "./Page";
 import { Actions } from "./Actions";
@@ -65,7 +65,7 @@ export function App() {
   return (
     <div>
       <GitHubLink />
-      <h1>Diablo 2 Plugy Stash Organizer</h1>
+      <h1>Diablo 2 PlugY Stash Organizer</h1>
       <Actions
         grailTracker={grailTracker}
         stash={stash}

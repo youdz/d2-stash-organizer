@@ -1,4 +1,4 @@
-import { getStash, saveStash } from "./stash";
+import { getStash, saveStash } from "./utils/stash";
 import { Stash } from "../scripts/stash/types";
 import { useCallback, useRef } from "preact/hooks";
 import { JSXInternal } from "preact/src/jsx";

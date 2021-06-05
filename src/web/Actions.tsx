@@ -3,7 +3,7 @@ import { Stash } from "../scripts/stash/types";
 import "./Actions.css";
 import { useCallback, useState } from "preact/hooks";
 import { organize } from "../scripts/grail/organize";
-import { saveStash } from "./stash";
+import { downloadStash, saveStash } from "./utils/stash";
 import { JSXInternal } from "preact/src/jsx";
 import { GrailSummary } from "./GrailSummary";
 
@@ -37,6 +37,7 @@ export function Actions({
       const clone = { ...stash };
       await saveStash(clone);
       onStashChange(clone);
+      downloadStash(stash);
     }
   }, [stash, skipPages, emptyPages, onStashChange]);
 

@@ -43,5 +43,5 @@ export function fromBinary(binary: string) {
   for (let i = 0; i < binary.length / 8; i++) {
     bytes.push(toInt(binary.slice(8 * i, 8 * (i + 1))));
   }
-  return Buffer.from(bytes);
+  return bytes;
 }

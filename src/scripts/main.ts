@@ -1,16 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { readFile } from "fs/promises";
 import { parseSharedStash } from "./stash/parsing/parseSharedStash";
-import { printGrailProgress } from "./grail/list/grailProgress";
+import { organize } from "./grail/organize";
+import { saveStash } from "./stash/saveStash";
 
-const INPUT = "test/stash.sss";
+const INPUT = "/Users/eudes/Perso/D2/SavedGames/_LOD_SharedStashSave.sss";
 const TEST_OUTPUT = "test/saved.sss";
 const DANGER_OUTPUT = INPUT;
 
 async function parseStash() {
   const buffer = await readFile(INPUT);
   const stash = parseSharedStash(buffer);
-  console.log(printGrailProgress(stash));
+  organize(stash);
+  await saveStash(stash, DANGER_OUTPUT);
 }
 
 void parseStash();
