@@ -15,7 +15,15 @@ export function getStash() {
 export async function saveStash(stash: File | Stash) {
   if (stash instanceof File) {
     const filename = stash.name;
-    stash = parseSharedStash(new Uint8Array(await stash.arrayBuffer()));
+    try {
+      stash = parseSharedStash(new Uint8Array(await stash.arrayBuffer()));
+    } catch (e) {
+      if ("message" in e) {
+        alert((e as Error).message);
+      }
+      throw e;
+    }
+
     stash.filename = filename;
   }
   STASH = stash;

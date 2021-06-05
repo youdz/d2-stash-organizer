@@ -4,9 +4,9 @@ import { getGrailItem } from "./getGrailItem";
 import { UniqueSection } from "./uniquesOrder";
 import { listGrailUniques } from "./listGrailUniques";
 import { groupBySet } from "./groupSets";
-import { getBase } from "../../items/getBase";
 import { Stash } from "../../stash/types";
 import { getAllItems } from "../../stash/getAllItems";
+import { canBeEthereal } from "./canBeEthereal";
 
 export interface GrailStatus {
   item: UniqueItem | SetItem;
@@ -36,13 +36,10 @@ export function grailProgress(stash: Stash) {
       section,
       uniques.map((tier) =>
         tier.map((item) => {
-          const canBeEthereal =
-            !getBase(item).indestructible &&
-            item.modifiers.every(({ prop }) => prop !== "indestruct");
           return {
             item,
             normal: !!found.get(item),
-            ethereal: canBeEthereal
+            ethereal: canBeEthereal(item)
               ? !!found.get(item)?.some(({ ethereal }) => ethereal)
               : undefined,
             perfect: !!found

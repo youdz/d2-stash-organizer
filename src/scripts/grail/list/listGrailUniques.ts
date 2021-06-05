@@ -1,6 +1,6 @@
 import { UNIQUE_ITEMS } from "../../../game-data";
 import { groupUniquesBySection } from "./groupUniques";
-import { getBase } from "../../items/getBase";
+import { canBeEthereal } from "./canBeEthereal";
 
 export function listGrailUniques(eth = false) {
   // Ignore disabled and quest items
@@ -9,11 +9,7 @@ export function listGrailUniques(eth = false) {
   );
   if (eth) {
     // Ignore indestructible items for the eth version
-    collectible = collectible.filter(
-      (item) =>
-        !getBase(item).indestructible &&
-        item.modifiers.every(({ prop }) => prop !== "indestruct")
-    );
+    collectible = collectible.filter(canBeEthereal);
   }
   const uniques = groupUniquesBySection(collectible, true);
   // Sort each section by qlevel

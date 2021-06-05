@@ -9,6 +9,7 @@ import { fillTemplate } from "./fillTemplate";
 import { getBase } from "../../items/getBase";
 import { groupUniquesBySection } from "../list/groupUniques";
 import { listGrailUniques } from "../list/listGrailUniques";
+import { canBeEthereal } from "../list/canBeEthereal";
 
 function createTemplates(eth: boolean) {
   const uniques = listGrailUniques(eth);
@@ -83,11 +84,14 @@ export function organizeUniques(stash: Stash, items: Item[]) {
       offset += normalTemplate.nbPages;
       // Position one instance of each remaining eth item in its eth spot
       if (ethTemplate) {
-        const remainingAfterEth = remaining.filter((item) => !item.ethereal);
+        const remainingAfterEth = remaining.filter(
+          (item) => !item.ethereal || !canBeEthereal(item)
+        );
         remainingAfterEth.push(
           ...fillTemplate(
             stash,
-            remaining.filter((item) => item.ethereal),
+            // The extra canBeEthereal is to ignore always-eth uniques
+            remaining.filter((item) => item.ethereal && canBeEthereal(item)),
             ethTemplate,
             offset
           )

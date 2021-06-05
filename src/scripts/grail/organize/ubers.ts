@@ -6,7 +6,7 @@ import { makeIndex } from "../../stash/makeIndex";
 import { sortAndGroupBy } from "./sortAndGroupBy";
 
 // Order to display them in
-export const UBERS = ["pk1", "pk2", "pk3", "dhn", "bey", "mbr"];
+export const UBERS = ["pk1", "pk2", "pk3", "dhn", "bey", "mbr", "std"];
 
 export function organizeUbers(stash: Stash, items: Item[]) {
   if (items.length === 0) return;

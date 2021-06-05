@@ -33,11 +33,18 @@ export function Actions({
 
   const handleOrganize = useCallback(async () => {
     if (stash) {
-      organize(stash, skipPages, emptyPages);
-      const clone = { ...stash };
-      await saveStash(clone);
-      onStashChange(clone);
-      downloadStash(stash);
+      try {
+        organize(stash, skipPages, emptyPages);
+        const clone = { ...stash };
+        await saveStash(clone);
+        onStashChange(clone);
+        downloadStash(stash);
+      } catch (e) {
+        if ("message" in e) {
+          alert((e as Error).message);
+        }
+        throw e;
+      }
     }
   }, [stash, skipPages, emptyPages, onStashChange]);
 

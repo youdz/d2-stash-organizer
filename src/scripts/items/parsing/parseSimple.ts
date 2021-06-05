@@ -1,6 +1,8 @@
 import { Item } from "../types/Item";
 import { BinaryStream } from "./binary";
 import { getBase } from "../getBase";
+import { RESPECS } from "../../grail/organize/respecs";
+import { UBERS } from "../../grail/organize/ubers";
 
 export function parseSimple({ raw, readBool, readInt }: BinaryStream) {
   const item: Item = {
@@ -30,6 +32,11 @@ export function parseSimple({ raw, readBool, readInt }: BinaryStream) {
   if (item.socketed && readInt(3, 108)) {
     // Array to store socketed items
     item.filledSockets = [];
+  }
+
+  // These items seem to sometimes be simple, sometimes not, at random
+  if (RESPECS.includes(item.code) || UBERS.includes(item.code)) {
+    item.simple = true;
   }
 
   if (item.simple) {
