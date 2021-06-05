@@ -38,11 +38,14 @@ export function setLayout<T extends LayoutItem>([
       case "shie":
       case "head":
       case "ashd":
-      // Special case for Bul-Kathos
-      case "7wd":
         positions.set(item, { page: 0, rows: [2], cols: [7] });
         break;
       default:
+        // Special case for Bul-Kathos
+        if (item.code === "7wd") {
+          positions.set(item, { page: 0, rows: [2], cols: [7] });
+          break;
+        }
         // All weapon types fall under the default
         positions.set(item, { page: 0, rows: [2], cols: [1] });
     }
