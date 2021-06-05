@@ -33,7 +33,7 @@ export function perfectionScore(item: Item) {
     score = (nbProps * score + (value - min) / (max - min)) / ++nbProps;
   }
 
-  for (const { prop, min, max } of ranges) {
+  for (const { prop, min, max, param } of ranges) {
     if (min === max) {
       continue;
     }
@@ -46,8 +46,9 @@ export function perfectionScore(item: Item) {
 
     const { stats } = PROPERTIES[prop];
     for (const { stat, type } of stats) {
-      // FIXME: hp/lvl can have a range, see Fortitude
-      if (type === "other") {
+      // Some weird cases of "param" like the hp/lvl on Fortitude actually do have a range
+      // Well, that one case. It's the only one in the entire game that I can find.
+      if (type === "other" || (type === "param" && !param)) {
         const modifier = item.modifiers?.find((mod) => mod.stat === stat);
         let value = 0;
         // I don't believe we can ever not go through that if, but let's be safe
