@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { readFile } from "fs/promises";
-import { parseSharedStash } from "./stash/parsing/parseSharedStash";
+import { parseStash } from "./stash/parsing/parseStash";
 import { organize } from "./grail/organize";
 import { saveStash } from "./stash/saveStash";
 import { getAllItems } from "./stash/getAllItems";
@@ -13,12 +13,12 @@ const INPUT = "test/not-working.sss";
 const TEST_OUTPUT = "test/saved.sss";
 const DANGER_OUTPUT = INPUT;
 
-async function parseStash() {
+async function main() {
   // MrLlama uses 1.13 + PlugY 10.00
   const buffer = await readFile(INPUT);
-  const stash = parseSharedStash(buffer);
+  const stash = parseStash(buffer);
   organize(stash);
   // await saveStash(stash, TEST_OUTPUT);
 }
 
-void parseStash();
+void main();

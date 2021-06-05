@@ -6,10 +6,16 @@ import { fromBinary } from "../../items/parsing/binary";
 
 export function generateSaveFile(stash: Stash) {
   const saveFile: number[] = [];
-  let offset = writeString(saveFile, "SSS\0", 0);
-  // File version
-  offset = writeString(saveFile, "02", offset);
-  offset = writeInt32LE(saveFile, stash.gold, offset);
+  let offset = 0;
+  if (stash.personal) {
+    offset = writeString(saveFile, "CSTM", offset);
+    offset = writeString(saveFile, "01", offset);
+    offset += 4;
+  } else {
+    offset = writeString(saveFile, "SSS\0", offset);
+    offset = writeString(saveFile, "02", offset);
+    offset = writeInt32LE(saveFile, stash.gold, offset);
+  }
   offset = writeInt32LE(saveFile, stash.pages.length, offset);
 
   for (const page of stash.pages) {

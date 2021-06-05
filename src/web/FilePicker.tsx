@@ -31,7 +31,7 @@ export function FilePicker({ onChange }: FilePickerProps) {
         class="hidden"
         ref={input}
         type="file"
-        accept=".sss"
+        accept=".sss,.d2x"
         onChange={handleChange}
       />
     </div>

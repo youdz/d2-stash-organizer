@@ -1,6 +1,6 @@
 import { Item } from "../../items/types/Item";
 import { layout, LayoutResult } from "../layout";
-import { PageFlags, Stash } from "../../stash/types";
+import { Stash } from "../../stash/types";
 import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { UNIQUE_ITEMS, UniqueItem } from "../../../game-data";
@@ -10,6 +10,7 @@ import { getBase } from "../../items/getBase";
 import { groupUniquesBySection } from "../list/groupUniques";
 import { listGrailUniques } from "../list/listGrailUniques";
 import { canBeEthereal } from "../list/canBeEthereal";
+import { addPage } from "../../stash/addPage";
 
 function createTemplates(eth: boolean) {
   const uniques = listGrailUniques(eth);
@@ -51,18 +52,13 @@ export function organizeUniques(stash: Stash, items: Item[]) {
         throw new Error(`No template for ${name}`);
       }
       for (let j = 0; j < normalTemplate.nbPages; j++) {
-        const page = { name: `# ${name}`, items: [], flags: PageFlags.SHARED };
+        const page = addPage(stash, name);
         if (j === 0) {
           makeIndex(page, i === 0);
         }
-        stash.pages.push(page);
       }
       for (let j = 0; j < (ethTemplate?.nbPages ?? 0); j++) {
-        stash.pages.push({
-          name: `# Eth ${shortName}`,
-          items: [],
-          flags: PageFlags.SHARED,
-        });
+        addPage(stash, `Eth ${shortName}`);
       }
 
       const itemsInSection = bySection.get(section)?.[0];
@@ -113,11 +109,7 @@ export function organizeUniques(stash: Stash, items: Item[]) {
         }, []);
         const { nbPages, positions } = layout("lines", byQuality);
         for (let j = 0; j < nbPages; j++) {
-          stash.pages.push({
-            name: `# Extra ${shortName}`,
-            items: [],
-            flags: PageFlags.SHARED,
-          });
+          addPage(stash, `Extra ${shortName}`);
         }
         for (const [item, { page, rows, cols }] of positions.entries()) {
           moveItem(stash, item, offset + page, rows[0], cols[0]);

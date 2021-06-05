@@ -1,9 +1,10 @@
 import { Stash } from "../../scripts/stash/types";
-import { parseSharedStash } from "../../scripts/stash/parsing/parseSharedStash";
+import { parseStash } from "../../scripts/stash/parsing/parseStash";
 import { generateSaveFile } from "../../scripts/stash/parsing/generateSaveFile";
 
 const LOCAL_STORAGE_KEY = "stash";
-const DEFAULT_FILENAME = "_LOD_SharedStashSave.sss";
+const DEFAULT_SHARED_FILENAME = "_LOD_SharedStashSave.sss";
+const DEFAULT_PERSONAL_FILENAME = "CharacterName.d2x";
 
 const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
 let STASH: Stash | null = stored && JSON.parse(stored);
@@ -16,7 +17,7 @@ export async function saveStash(stash: File | Stash) {
   if (stash instanceof File) {
     const filename = stash.name;
     try {
-      stash = parseSharedStash(new Uint8Array(await stash.arrayBuffer()));
+      stash = parseStash(new Uint8Array(await stash.arrayBuffer()));
     } catch (e) {
       if ("message" in e) {
         alert((e as Error).message);
@@ -36,7 +37,9 @@ export function downloadStash(stash: Stash) {
   elem.href = window.URL.createObjectURL(
     new Blob([generateSaveFile(stash).buffer])
   );
-  elem.download = stash.filename ?? DEFAULT_FILENAME;
+  elem.download =
+    stash.filename ??
+    (stash.personal ? DEFAULT_PERSONAL_FILENAME : DEFAULT_SHARED_FILENAME);
   document.body.appendChild(elem);
   elem.click();
   document.body.removeChild(elem);

@@ -9,11 +9,14 @@ export interface PageProps {
   page: Page;
 }
 
+const DEFAULT_PERSONAL_NAME = "Personal Page #";
+const DEFAULT_SHARED_NAME = "Shared Page #";
+
 export function Page({ page, index }: PageProps) {
   const indexText =
-    (page.flags ?? 0) > PageFlags.MAIN_INDEX
+    (page.flags ?? 0) >= PageFlags.MAIN_INDEX
       ? "Main index"
-      : (page.flags ?? 0) > PageFlags.INDEX
+      : (page.flags ?? 0) >= PageFlags.INDEX
       ? "Index"
       : "";
 
@@ -33,10 +36,16 @@ export function Page({ page, index }: PageProps) {
     }
   }
 
+  const pageName =
+    page.name ||
+    (typeof page.flags !== "undefined" && page.flags % 2
+      ? DEFAULT_SHARED_NAME
+      : DEFAULT_PERSONAL_NAME);
+
   return (
     <section>
       <h3 class="page-title">
-        <span>{page.name.replace("#", `${index + 1}`)}</span>
+        <span>{pageName.replace("#", `${index + 1}`)}</span>
         <span>{indexText}</span>
       </h3>
       <table class="page">

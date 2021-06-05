@@ -1,10 +1,11 @@
 import { Item } from "../../items/types/Item";
 import { layout } from "../layout";
-import { PageFlags, Stash } from "../../stash/types";
+import { Stash } from "../../stash/types";
 import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { MISC } from "../../../game-data";
 import { sortAndGroupBy } from "./sortAndGroupBy";
+import { addPage } from "../../stash/addPage";
 
 const ORDER = ["gsy", "gsv", "gsb", "gsr", "gsg", "gsw", "sku"];
 const GEM_TYPES = ORDER.map((code) => MISC[code]!.type);
@@ -31,15 +32,10 @@ export function organizeGems(stash: Stash, items: Item[]) {
   for (let i = 0; i < byType.length; i++) {
     const { nbPages, positions } = layout("lines", byTypeAndQuality[i]);
     for (let j = 0; j < nbPages; j++) {
-      const page = {
-        name: `# ${PAGE_NAMES[i]}`,
-        items: [],
-        flags: PageFlags.SHARED,
-      };
+      const page = addPage(stash, PAGE_NAMES[i]);
       if (j === 0) {
         makeIndex(page, i === 0);
       }
-      stash.pages.push(page);
     }
     for (const [item, { page, rows, cols }] of positions.entries()) {
       moveItem(stash, item, offset + page, rows[0], cols[0]);

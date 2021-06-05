@@ -1,6 +1,6 @@
 import { Item } from "../../items/types/Item";
 import { layout, LayoutResult } from "../layout";
-import { PageFlags, Stash } from "../../stash/types";
+import { Stash } from "../../stash/types";
 import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { Set, SET_ITEMS, SetItem, SETS } from "../../../game-data";
@@ -9,6 +9,7 @@ import { SETS_ORDER } from "../list/setsOrder";
 import { fillTemplate } from "./fillTemplate";
 import { getBase } from "../../items/getBase";
 import { groupBySet } from "../list/groupSets";
+import { addPage } from "../../stash/addPage";
 
 function createTemplates() {
   const allItems = groupBySet(SET_ITEMS);
@@ -33,13 +34,8 @@ export function organizeSets(stash: Stash, items: Item[]) {
   for (const category of SETS_ORDER) {
     category.forEach(({ name, shortName, set }, i) => {
       // Create the main page for the set
-      const mainPage = {
-        name: `# ${name}`,
-        items: [],
-        flags: PageFlags.SHARED,
-      };
+      const mainPage = addPage(stash, name);
       makeIndex(mainPage, i === 0);
-      stash.pages.push(mainPage);
 
       // Make one instance of the set pretty
       const remaining = fillTemplate(
@@ -55,11 +51,7 @@ export function organizeSets(stash: Stash, items: Item[]) {
         remaining.sort(extrasOrder);
         const { nbPages, positions } = layout("lines", [remaining]);
         for (let j = 0; j < nbPages; j++) {
-          stash.pages.push({
-            name: `# Extra ${shortName}`,
-            items: [],
-            flags: PageFlags.SHARED,
-          });
+          addPage(stash, `Extra ${shortName}`);
         }
         for (const [item, { page, rows, cols }] of positions.entries()) {
           moveItem(stash, item, offset + page, rows[0], cols[0]);

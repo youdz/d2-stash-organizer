@@ -15,6 +15,7 @@ export interface Page {
 
 export interface Stash {
   filename?: string;
+  personal: boolean;
   pageFlags: boolean;
   gold: number;
   pages: Page[];

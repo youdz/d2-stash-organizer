@@ -1,4 +1,4 @@
-import { PageFlags, Stash } from "../../stash/types";
+import { Stash } from "../../stash/types";
 import { deletePages } from "../../stash/deletePages";
 import { groupBySection } from "./groupBySection";
 import { SECTIONS_ORDER } from "./sections";
@@ -12,13 +12,14 @@ import { organizeSets } from "./sets";
 import { organizeUniques } from "./uniques";
 import { organizeRespecs } from "./respecs";
 import { organizeUbers } from "./ubers";
+import { addPage } from "../../stash/addPage";
 
 export function organize(stash: Stash, offset = 0, emptyPages = 0) {
   const before = getAllItems(stash);
   const expectedTotal = before.length;
   const toOrganize = deletePages(stash, offset);
   for (let i = 0; i < emptyPages; i++) {
-    stash.pages.push({ name: `# Misc`, items: [], flags: PageFlags.SHARED });
+    addPage(stash, "Misc");
   }
   const bySection = groupBySection(toOrganize);
   for (const sectionId of SECTIONS_ORDER) {

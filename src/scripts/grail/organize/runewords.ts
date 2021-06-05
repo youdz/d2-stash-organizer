@@ -1,11 +1,12 @@
 import { Item } from "../../items/types/Item";
 import { layout } from "../layout";
-import { PageFlags, Stash } from "../../stash/types";
+import { Stash } from "../../stash/types";
 import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { RUNEWORDS } from "../../../game-data";
 import { getBase } from "../../items/getBase";
 import { EQUIPMENT_TYPES } from "../list/uniquesOrder";
+import { addPage } from "../../stash/addPage";
 
 function runewordsOrder(a: Item, b: Item) {
   return RUNEWORDS[a.runewordId!].levelReq - RUNEWORDS[b.runewordId!].levelReq;
@@ -47,11 +48,10 @@ export function organizeRunewords(stash: Stash, both: Item[]) {
     ([name, items], i) => {
       const { nbPages, positions } = layout("lines", [items]);
       for (let j = 0; j < nbPages; j++) {
-        const page = { name: `# ${name}`, items: [], flags: PageFlags.SHARED };
+        const page = addPage(stash, name);
         if (j === 0) {
           makeIndex(page, i === 0);
         }
-        stash.pages.push(page);
       }
       for (const [item, { page, rows, cols }] of positions.entries()) {
         moveItem(stash, item, offset + page, rows[0], cols[0]);

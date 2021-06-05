@@ -4,22 +4,31 @@ import { readInt32LE } from "./readInt32LE";
 import { indexOf } from "./indexOf";
 
 // Can't use Node's Buffer because this needs to run in the browser
-export function parseSharedStash(raw: Uint8Array) {
-  if (String.fromCharCode(...raw.slice(0, 3)) !== "SSS") {
-    throw new Error("This tool can only parse shared stash files.");
+export function parseStash(raw: Uint8Array) {
+  const header = String.fromCharCode(...raw.slice(0, 4));
+  if (header !== "SSS\0" && header !== "CSTM") {
+    throw new Error(
+      "This does not look like a plugy stash file (.sss or .d2x)"
+    );
   }
-  const version = String.fromCharCode(...raw.slice(4, 6));
-  let currentPage = 10;
   const stash: Stash = {
+    personal: header === "CSTM",
     pageFlags: true,
     gold: 0,
     pages: [],
   };
-  // logic for no shared stash gold vs shared stash gold
-  if (version === "02") {
+  let currentPage = 10;
+  const version = String.fromCharCode(...raw.slice(4, 6));
+  if (version === "01") {
+    // This is either a personal stash or a shared stash without gold
+    if (stash.personal) {
+      currentPage += 4;
+    }
+  } else if (version === "02") {
+    // this is a shared stash with gold
     stash.gold = readInt32LE(raw, 6);
-    currentPage = currentPage + 4;
-  } else if (version !== "01") {
+    currentPage += 4;
+  } else {
     throw new Error("Your version of PlugY is too old.");
   }
   while (currentPage >= 0) {
