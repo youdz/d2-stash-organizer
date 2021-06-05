@@ -46,6 +46,7 @@ export function perfectionScore(item: Item) {
 
     const { stats } = PROPERTIES[prop];
     for (const { stat, type } of stats) {
+      // FIXME: hp/lvl can have a range, see Fortitude
       if (type === "other") {
         const modifier = item.modifiers?.find((mod) => mod.stat === stat);
         let value = 0;
@@ -64,7 +65,11 @@ export function perfectionScore(item: Item) {
     "def" in base &&
     !ranges.some(({ prop }) => prop === "ac%")
   ) {
-    addProp(item.defense ?? 0, base.def[0], base.def[1]);
+    let defense = item.defense ?? 0;
+    if (item.ethereal) {
+      defense = defense / 1.5;
+    }
+    addProp(defense, base.def[0], base.def[1]);
   }
 
   return nbProps === 0 ? 100 : Math.floor(100 * score);
