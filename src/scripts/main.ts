@@ -15,6 +15,11 @@ const DANGER_OUTPUT = INPUT;
 
 async function main() {
   // TODO: bulk transfer from personal to shared
+  // TODO: Boneshade is 140%/240%
+  //  Bloodletter is 125%
+  // TODO: - when the item is perfect, the 'perfect' text could be in a different color
+  //  -  for Eth items, it would be better to have 'Ethereal' tag at the end, so the %perfect tags are aligned nicely
+  //  - when you click "next" at the end of the page, it should go to the top of the page
   // FIXME: "Most Ethereal only uniques don't show up, but Wraith Flight does as Ethereal"
   // FIXME: "Item classes that don't have Normal, like throwing or class sutff still start from Normal quality"
   const buffer = await readFile(INPUT);

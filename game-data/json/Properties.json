@@ -218,6 +218,10 @@
   "dmg-min": {
     "stats": [
       {
+        "stat": "mindamage",
+        "type": "other"
+      },
+      {
         "stat": "secondary_mindamage",
         "type": "other"
       }
@@ -225,6 +229,10 @@
   },
   "dmg-max": {
     "stats": [
+      {
+        "stat": "maxdamage",
+        "type": "other"
+      },
       {
         "stat": "secondary_maxdamage",
         "type": "other"

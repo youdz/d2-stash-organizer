@@ -54,6 +54,14 @@ export function perfectionScore(item: Item) {
       // Well, that one case. It's the only one in the entire game that I can find.
       if (type === "other" || (type === "param" && !param)) {
         const modifier = item.modifiers?.find((mod) => mod.stat === stat);
+        // dmg-min and dmg-max are sometimes mindamage, sometimes secondary_mindamage
+        if (
+          (prop === "dmg-min" || prop === "dmg-max") &&
+          typeof modifier === "undefined"
+        ) {
+          // It's the other property, we just ignore this one not to mess up the
+          continue;
+        }
         let value = 0;
         // I don't believe we can ever not go through that if, but let's be safe
         if (modifier && "value" in modifier) {

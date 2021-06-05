@@ -53,16 +53,28 @@ export async function propertiesToJson() {
       );
     }
     if (propId === "dmg-min") {
-      stats.push({
-        stat: "secondary_mindamage",
-        type: "other",
-      });
+      stats.push(
+        {
+          stat: "mindamage",
+          type: "other",
+        },
+        {
+          stat: "secondary_mindamage",
+          type: "other",
+        }
+      );
     }
     if (propId === "dmg-max") {
-      stats.push({
-        stat: "secondary_maxdamage",
-        type: "other",
-      });
+      stats.push(
+        {
+          stat: "maxdamage",
+          type: "other",
+        },
+        {
+          stat: "secondary_maxdamage",
+          type: "other",
+        }
+      );
     }
     if (propId === "indestruct") {
       stats.push({
