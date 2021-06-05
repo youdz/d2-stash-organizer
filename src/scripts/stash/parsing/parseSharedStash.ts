@@ -8,16 +8,21 @@ export function parseSharedStash(raw: Uint8Array) {
   if (String.fromCharCode(...raw.slice(0, 3)) !== "SSS") {
     throw new Error("This tool can only parse shared stash files.");
   }
-  if (String.fromCharCode(...raw.slice(4, 6)) !== "02") {
-    throw new Error("Your version of PlugY is way too old.");
-  }
+  let currentPage = 10;
   const stash: Stash = {
     pageFlags: true,
-    gold: readInt32LE(raw, 6),
-    // Number of pages: readInt32LE(raw, 10),
+    gold: 0,
     pages: [],
   };
-  let currentPage = 14;
+  // logic for no shared stash gold vs shared stash gold 
+  if (String.fromCharCode(...raw.slice(4, 6)) == "01") {
+    // pass
+  } else if (String.fromCharCode(...raw.slice(4, 6)) == "02"){
+    stash.gold = readInt32LE(raw, 6);
+    currentPage = currentPage + 4;
+  } else {
+    throw new Error("Your version of PlugY is way too old.");
+  }
   while (currentPage >= 0) {
     const nextPage = indexOf(raw, "ST", currentPage + 2);
     stash.pages.push(
