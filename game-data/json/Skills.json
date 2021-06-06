@@ -1,0 +1,1073 @@
+{
+  "Attack": {
+    "id": 0
+  },
+  "Kick": {
+    "id": 1
+  },
+  "Throw": {
+    "id": 2
+  },
+  "Unsummon": {
+    "id": 3
+  },
+  "Left Hand Throw": {
+    "id": 4
+  },
+  "Left Hand Swing": {
+    "id": 5
+  },
+  "Magic Arrow": {
+    "id": 6
+  },
+  "Fire Arrow": {
+    "id": 7
+  },
+  "Inner Sight": {
+    "id": 8
+  },
+  "Critical Strike": {
+    "id": 9
+  },
+  "Jab": {
+    "id": 10
+  },
+  "Cold Arrow": {
+    "id": 11
+  },
+  "Multiple Shot": {
+    "id": 12
+  },
+  "Dodge": {
+    "id": 13
+  },
+  "Power Strike": {
+    "id": 14
+  },
+  "Poison Javelin": {
+    "id": 15
+  },
+  "Exploding Arrow": {
+    "id": 16
+  },
+  "Slow Missiles": {
+    "id": 17
+  },
+  "Avoid": {
+    "id": 18
+  },
+  "Impale": {
+    "id": 19
+  },
+  "Lightning Bolt": {
+    "id": 20
+  },
+  "Ice Arrow": {
+    "id": 21
+  },
+  "Guided Arrow": {
+    "id": 22
+  },
+  "Penetrate": {
+    "id": 23
+  },
+  "Charged Strike": {
+    "id": 24
+  },
+  "Plague Javelin": {
+    "id": 25
+  },
+  "Strafe": {
+    "id": 26
+  },
+  "Immolation Arrow": {
+    "id": 27
+  },
+  "Dopplezon": {
+    "id": 28
+  },
+  "Evade": {
+    "id": 29
+  },
+  "Fend": {
+    "id": 30
+  },
+  "Freezing Arrow": {
+    "id": 31
+  },
+  "Valkyrie": {
+    "id": 32
+  },
+  "Pierce": {
+    "id": 33
+  },
+  "Lightning Strike": {
+    "id": 34
+  },
+  "Lightning Fury": {
+    "id": 35
+  },
+  "Fire Bolt": {
+    "id": 36
+  },
+  "Warmth": {
+    "id": 37
+  },
+  "Charged Bolt": {
+    "id": 38
+  },
+  "Ice Bolt": {
+    "id": 39
+  },
+  "Frozen Armor": {
+    "id": 40
+  },
+  "Inferno": {
+    "id": 41
+  },
+  "Static Field": {
+    "id": 42
+  },
+  "Telekinesis": {
+    "id": 43
+  },
+  "Frost Nova": {
+    "id": 44
+  },
+  "Ice Blast": {
+    "id": 45
+  },
+  "Blaze": {
+    "id": 46
+  },
+  "Fire Ball": {
+    "id": 47
+  },
+  "Nova": {
+    "id": 48
+  },
+  "Lightning": {
+    "id": 49
+  },
+  "Shiver Armor": {
+    "id": 50
+  },
+  "Fire Wall": {
+    "id": 51
+  },
+  "Enchant": {
+    "id": 52
+  },
+  "Chain Lightning": {
+    "id": 53
+  },
+  "Teleport": {
+    "id": 54
+  },
+  "Glacial Spike": {
+    "id": 55
+  },
+  "Meteor": {
+    "id": 56
+  },
+  "Thunder Storm": {
+    "id": 57
+  },
+  "Energy Shield": {
+    "id": 58
+  },
+  "Blizzard": {
+    "id": 59
+  },
+  "Chilling Armor": {
+    "id": 60
+  },
+  "Fire Mastery": {
+    "id": 61
+  },
+  "Hydra": {
+    "id": 62
+  },
+  "Lightning Mastery": {
+    "id": 63
+  },
+  "Frozen Orb": {
+    "id": 64
+  },
+  "Cold Mastery": {
+    "id": 65
+  },
+  "Amplify Damage": {
+    "id": 66
+  },
+  "Teeth": {
+    "id": 67
+  },
+  "Bone Armor": {
+    "id": 68
+  },
+  "Skeleton Mastery": {
+    "id": 69
+  },
+  "Raise Skeleton": {
+    "id": 70
+  },
+  "Dim Vision": {
+    "id": 71
+  },
+  "Weaken": {
+    "id": 72
+  },
+  "Poison Dagger": {
+    "id": 73
+  },
+  "Corpse Explosion": {
+    "id": 74
+  },
+  "Clay Golem": {
+    "id": 75
+  },
+  "Iron Maiden": {
+    "id": 76
+  },
+  "Terror": {
+    "id": 77
+  },
+  "Bone Wall": {
+    "id": 78
+  },
+  "Golem Mastery": {
+    "id": 79
+  },
+  "Raise Skeletal Mage": {
+    "id": 80
+  },
+  "Confuse": {
+    "id": 81
+  },
+  "Life Tap": {
+    "id": 82
+  },
+  "Poison Explosion": {
+    "id": 83
+  },
+  "Bone Spear": {
+    "id": 84
+  },
+  "BloodGolem": {
+    "id": 85
+  },
+  "Attract": {
+    "id": 86
+  },
+  "Decrepify": {
+    "id": 87
+  },
+  "Bone Prison": {
+    "id": 88
+  },
+  "Summon Resist": {
+    "id": 89
+  },
+  "IronGolem": {
+    "id": 90
+  },
+  "Lower Resist": {
+    "id": 91
+  },
+  "Poison Nova": {
+    "id": 92
+  },
+  "Bone Spirit": {
+    "id": 93
+  },
+  "FireGolem": {
+    "id": 94
+  },
+  "Revive": {
+    "id": 95
+  },
+  "Sacrifice": {
+    "id": 96
+  },
+  "Smite": {
+    "id": 97
+  },
+  "Might": {
+    "id": 98
+  },
+  "Prayer": {
+    "id": 99
+  },
+  "Resist Fire": {
+    "id": 100
+  },
+  "Holy Bolt": {
+    "id": 101
+  },
+  "Holy Fire": {
+    "id": 102
+  },
+  "Thorns": {
+    "id": 103
+  },
+  "Defiance": {
+    "id": 104
+  },
+  "Resist Cold": {
+    "id": 105
+  },
+  "Zeal": {
+    "id": 106
+  },
+  "Charge": {
+    "id": 107
+  },
+  "Blessed Aim": {
+    "id": 108
+  },
+  "Cleansing": {
+    "id": 109
+  },
+  "Resist Lightning": {
+    "id": 110
+  },
+  "Vengeance": {
+    "id": 111
+  },
+  "Blessed Hammer": {
+    "id": 112
+  },
+  "Concentration": {
+    "id": 113
+  },
+  "Holy Freeze": {
+    "id": 114
+  },
+  "Vigor": {
+    "id": 115
+  },
+  "Conversion": {
+    "id": 116
+  },
+  "Holy Shield": {
+    "id": 117
+  },
+  "Holy Shock": {
+    "id": 118
+  },
+  "Sanctuary": {
+    "id": 119
+  },
+  "Meditation": {
+    "id": 120
+  },
+  "Fist of the Heavens": {
+    "id": 121
+  },
+  "Fanaticism": {
+    "id": 122
+  },
+  "Conviction": {
+    "id": 123
+  },
+  "Redemption": {
+    "id": 124
+  },
+  "Salvation": {
+    "id": 125
+  },
+  "Bash": {
+    "id": 126
+  },
+  "Sword Mastery": {
+    "id": 127
+  },
+  "Axe Mastery": {
+    "id": 128
+  },
+  "Mace Mastery": {
+    "id": 129
+  },
+  "Howl": {
+    "id": 130
+  },
+  "Find Potion": {
+    "id": 131
+  },
+  "Leap": {
+    "id": 132
+  },
+  "Double Swing": {
+    "id": 133
+  },
+  "Pole Arm Mastery": {
+    "id": 134
+  },
+  "Throwing Mastery": {
+    "id": 135
+  },
+  "Spear Mastery": {
+    "id": 136
+  },
+  "Taunt": {
+    "id": 137
+  },
+  "Shout": {
+    "id": 138
+  },
+  "Stun": {
+    "id": 139
+  },
+  "Double Throw": {
+    "id": 140
+  },
+  "Increased Stamina": {
+    "id": 141
+  },
+  "Find Item": {
+    "id": 142
+  },
+  "Leap Attack": {
+    "id": 143
+  },
+  "Concentrate": {
+    "id": 144
+  },
+  "Iron Skin": {
+    "id": 145
+  },
+  "Battle Cry": {
+    "id": 146
+  },
+  "Frenzy": {
+    "id": 147
+  },
+  "Increased Speed": {
+    "id": 148
+  },
+  "Battle Orders": {
+    "id": 149
+  },
+  "Grim Ward": {
+    "id": 150
+  },
+  "Whirlwind": {
+    "id": 151
+  },
+  "Berserk": {
+    "id": 152
+  },
+  "Natural Resistance": {
+    "id": 153
+  },
+  "War Cry": {
+    "id": 154
+  },
+  "Battle Command": {
+    "id": 155
+  },
+  "Fire Hit": {
+    "id": 156
+  },
+  "UnHolyBolt": {
+    "id": 157
+  },
+  "SkeletonRaise": {
+    "id": 158
+  },
+  "MaggotEgg": {
+    "id": 159
+  },
+  "ShamanFire": {
+    "id": 160
+  },
+  "MagottUp": {
+    "id": 161
+  },
+  "MagottDown": {
+    "id": 162
+  },
+  "MagottLay": {
+    "id": 163
+  },
+  "AndrialSpray": {
+    "id": 164
+  },
+  "Jump": {
+    "id": 165
+  },
+  "Swarm Move": {
+    "id": 166
+  },
+  "Nest": {
+    "id": 167
+  },
+  "Quick Strike": {
+    "id": 168
+  },
+  "VampireFireball": {
+    "id": 169
+  },
+  "VampireFirewall": {
+    "id": 170
+  },
+  "VampireMeteor": {
+    "id": 171
+  },
+  "GargoyleTrap": {
+    "id": 172
+  },
+  "SpiderLay": {
+    "id": 173
+  },
+  "VampireHeal": {
+    "id": 174
+  },
+  "VampireRaise": {
+    "id": 175
+  },
+  "Submerge": {
+    "id": 176
+  },
+  "FetishAura": {
+    "id": 177
+  },
+  "FetishInferno": {
+    "id": 178
+  },
+  "ZakarumHeal": {
+    "id": 179
+  },
+  "Emerge": {
+    "id": 180
+  },
+  "Resurrect": {
+    "id": 181
+  },
+  "Bestow": {
+    "id": 182
+  },
+  "MissileSkill1": {
+    "id": 183
+  },
+  "MonTeleport": {
+    "id": 184
+  },
+  "PrimeLightning": {
+    "id": 185
+  },
+  "PrimeBolt": {
+    "id": 186
+  },
+  "PrimeBlaze": {
+    "id": 187
+  },
+  "PrimeFirewall": {
+    "id": 188
+  },
+  "PrimeSpike": {
+    "id": 189
+  },
+  "PrimeIceNova": {
+    "id": 190
+  },
+  "PrimePoisonball": {
+    "id": 191
+  },
+  "PrimePoisonNova": {
+    "id": 192
+  },
+  "DiabLight": {
+    "id": 193
+  },
+  "DiabCold": {
+    "id": 194
+  },
+  "DiabFire": {
+    "id": 195
+  },
+  "FingerMageSpider": {
+    "id": 196
+  },
+  "DiabWall": {
+    "id": 197
+  },
+  "DiabRun": {
+    "id": 198
+  },
+  "DiabPrison": {
+    "id": 199
+  },
+  "PoisonBallTrap": {
+    "id": 200
+  },
+  "AndyPoisonBolt": {
+    "id": 201
+  },
+  "HireableMissile": {
+    "id": 202
+  },
+  "DesertTurret": {
+    "id": 203
+  },
+  "ArcaneTower": {
+    "id": 204
+  },
+  "MonBlizzard": {
+    "id": 205
+  },
+  "Mosquito": {
+    "id": 206
+  },
+  "CursedBallTrapRight": {
+    "id": 207
+  },
+  "CursedBallTrapLeft": {
+    "id": 208
+  },
+  "MonFrozenArmor": {
+    "id": 209
+  },
+  "MonBoneArmor": {
+    "id": 210
+  },
+  "MonBoneSpirit": {
+    "id": 211
+  },
+  "MonCurseCast": {
+    "id": 212
+  },
+  "HellMeteor": {
+    "id": 213
+  },
+  "RegurgitatorEat": {
+    "id": 214
+  },
+  "MonFrenzy": {
+    "id": 215
+  },
+  "QueenDeath": {
+    "id": 216
+  },
+  "Scroll of Identify": {
+    "id": 217
+  },
+  "Book of Identify": {
+    "id": 218
+  },
+  "Scroll of Townportal": {
+    "id": 219
+  },
+  "Book of Townportal": {
+    "id": 220
+  },
+  "Raven": {
+    "id": 221
+  },
+  "Plague Poppy": {
+    "id": 222
+  },
+  "Wearwolf": {
+    "id": 223
+  },
+  "Shape Shifting": {
+    "id": 224
+  },
+  "Firestorm": {
+    "id": 225
+  },
+  "Oak Sage": {
+    "id": 226
+  },
+  "Summon Spirit Wolf": {
+    "id": 227
+  },
+  "Wearbear": {
+    "id": 228
+  },
+  "Molten Boulder": {
+    "id": 229
+  },
+  "Arctic Blast": {
+    "id": 230
+  },
+  "Cycle of Life": {
+    "id": 231
+  },
+  "Feral Rage": {
+    "id": 232
+  },
+  "Maul": {
+    "id": 233
+  },
+  "Eruption": {
+    "id": 234
+  },
+  "Cyclone Armor": {
+    "id": 235
+  },
+  "Heart of Wolverine": {
+    "id": 236
+  },
+  "Summon Fenris": {
+    "id": 237
+  },
+  "Rabies": {
+    "id": 238
+  },
+  "Fire Claws": {
+    "id": 239
+  },
+  "Twister": {
+    "id": 240
+  },
+  "Vines": {
+    "id": 241
+  },
+  "Hunger": {
+    "id": 242
+  },
+  "Shock Wave": {
+    "id": 243
+  },
+  "Volcano": {
+    "id": 244
+  },
+  "Tornado": {
+    "id": 245
+  },
+  "Spirit of Barbs": {
+    "id": 246
+  },
+  "Summon Grizzly": {
+    "id": 247
+  },
+  "Fury": {
+    "id": 248
+  },
+  "Armageddon": {
+    "id": 249
+  },
+  "Hurricane": {
+    "id": 250
+  },
+  "Fire Trauma": {
+    "id": 251
+  },
+  "Claw Mastery": {
+    "id": 252
+  },
+  "Psychic Hammer": {
+    "id": 253
+  },
+  "Tiger Strike": {
+    "id": 254
+  },
+  "Dragon Talon": {
+    "id": 255
+  },
+  "Shock Field": {
+    "id": 256
+  },
+  "Blade Sentinel": {
+    "id": 257
+  },
+  "Quickness": {
+    "id": 258
+  },
+  "Fists of Fire": {
+    "id": 259
+  },
+  "Dragon Claw": {
+    "id": 260
+  },
+  "Charged Bolt Sentry": {
+    "id": 261
+  },
+  "Wake of Fire Sentry": {
+    "id": 262
+  },
+  "Weapon Block": {
+    "id": 263
+  },
+  "Cloak of Shadows": {
+    "id": 264
+  },
+  "Cobra Strike": {
+    "id": 265
+  },
+  "Blade Fury": {
+    "id": 266
+  },
+  "Fade": {
+    "id": 267
+  },
+  "Shadow Warrior": {
+    "id": 268
+  },
+  "Claws of Thunder": {
+    "id": 269
+  },
+  "Dragon Tail": {
+    "id": 270
+  },
+  "Lightning Sentry": {
+    "id": 271
+  },
+  "Inferno Sentry": {
+    "id": 272
+  },
+  "Mind Blast": {
+    "id": 273
+  },
+  "Blades of Ice": {
+    "id": 274
+  },
+  "Dragon Flight": {
+    "id": 275
+  },
+  "Death Sentry": {
+    "id": 276
+  },
+  "Blade Shield": {
+    "id": 277
+  },
+  "Venom": {
+    "id": 278
+  },
+  "Shadow Master": {
+    "id": 279
+  },
+  "Royal Strike": {
+    "id": 280
+  },
+  "Wake Of Destruction Sentry": {
+    "id": 281
+  },
+  "Imp Inferno": {
+    "id": 282
+  },
+  "Imp Fireball": {
+    "id": 283
+  },
+  "Baal Taunt": {
+    "id": 284
+  },
+  "Baal Corpse Explode": {
+    "id": 285
+  },
+  "Baal Monster Spawn": {
+    "id": 286
+  },
+  "Catapult Charged Ball": {
+    "id": 287
+  },
+  "Catapult Spike Ball": {
+    "id": 288
+  },
+  "Suck Blood": {
+    "id": 289
+  },
+  "Cry Help": {
+    "id": 290
+  },
+  "Healing Vortex": {
+    "id": 291
+  },
+  "Teleport 2": {
+    "id": 292
+  },
+  "Self-resurrect": {
+    "id": 293
+  },
+  "Vine Attack": {
+    "id": 294
+  },
+  "Overseer Whip": {
+    "id": 295
+  },
+  "Barbs Aura": {
+    "id": 296
+  },
+  "Wolverine Aura": {
+    "id": 297
+  },
+  "Oak Sage Aura": {
+    "id": 298
+  },
+  "Imp Fire Missile": {
+    "id": 299
+  },
+  "Impregnate": {
+    "id": 300
+  },
+  "Siege Beast Stomp": {
+    "id": 301
+  },
+  "MinionSpawner": {
+    "id": 302
+  },
+  "CatapultBlizzard": {
+    "id": 303
+  },
+  "CatapultPlague": {
+    "id": 304
+  },
+  "CatapultMeteor": {
+    "id": 305
+  },
+  "BoltSentry": {
+    "id": 306
+  },
+  "CorpseCycler": {
+    "id": 307
+  },
+  "DeathMaul": {
+    "id": 308
+  },
+  "Defense Curse": {
+    "id": 309
+  },
+  "Blood Mana": {
+    "id": 310
+  },
+  "mon inferno sentry": {
+    "id": 311
+  },
+  "mon death sentry": {
+    "id": 312
+  },
+  "sentry lightning": {
+    "id": 313
+  },
+  "fenris rage": {
+    "id": 314
+  },
+  "Baal Tentacle": {
+    "id": 315
+  },
+  "Baal Nova": {
+    "id": 316
+  },
+  "Baal Inferno": {
+    "id": 317
+  },
+  "Baal Cold Missiles": {
+    "id": 318
+  },
+  "MegademonInferno": {
+    "id": 319
+  },
+  "EvilHutSpawner": {
+    "id": 320
+  },
+  "CountessFirewall": {
+    "id": 321
+  },
+  "ImpBolt": {
+    "id": 322
+  },
+  "Horror Arctic Blast": {
+    "id": 323
+  },
+  "death sentry ltng": {
+    "id": 324
+  },
+  "VineCycler": {
+    "id": 325
+  },
+  "BearSmite": {
+    "id": 326
+  },
+  "Resurrect2": {
+    "id": 327
+  },
+  "BloodLordFrenzy": {
+    "id": 328
+  },
+  "Baal Teleport": {
+    "id": 329
+  },
+  "Imp Teleport": {
+    "id": 330
+  },
+  "Baal Clone Teleport": {
+    "id": 331
+  },
+  "ZakarumLightning": {
+    "id": 332
+  },
+  "VampireMissile": {
+    "id": 333
+  },
+  "MephistoMissile": {
+    "id": 334
+  },
+  "DoomKnightMissile": {
+    "id": 335
+  },
+  "RogueMissile": {
+    "id": 336
+  },
+  "HydraMissile": {
+    "id": 337
+  },
+  "NecromageMissile": {
+    "id": 338
+  },
+  "MonBow": {
+    "id": 339
+  },
+  "MonFireArrow": {
+    "id": 340
+  },
+  "MonColdArrow": {
+    "id": 341
+  },
+  "MonExplodingArrow": {
+    "id": 342
+  },
+  "MonFreezingArrow": {
+    "id": 343
+  },
+  "MonPowerStrike": {
+    "id": 344
+  },
+  "SuccubusBolt": {
+    "id": 345
+  },
+  "MephFrostNova": {
+    "id": 346
+  },
+  "MonIceSpear": {
+    "id": 347
+  },
+  "ShamanIce": {
+    "id": 348
+  },
+  "Diablogeddon": {
+    "id": 349
+  },
+  "Delerium Change": {
+    "id": 350
+  },
+  "NihlathakCorpseExplosion": {
+    "id": 351
+  },
+  "SerpentCharge": {
+    "id": 352
+  },
+  "Trap Nova": {
+    "id": 353
+  },
+  "UnHolyBoltEx": {
+    "id": 354
+  },
+  "ShamanFireEx": {
+    "id": 355
+  },
+  "Imp Fire Missile Ex": {
+    "id": 356
+  }
+}

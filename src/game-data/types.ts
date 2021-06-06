@@ -100,6 +100,10 @@ export interface MagicAffix {
   name: string;
 }
 
+export interface Skill {
+  id: number;
+}
+
 export interface SkillTab {
   id: number;
   name: string;

@@ -3,11 +3,14 @@ import {
   PROPERTIES,
   RUNEWORDS,
   SET_ITEMS,
+  SKILL_TABS,
+  SKILLS,
   UNIQUE_ITEMS,
 } from "../../../game-data";
 import { Item } from "../types/Item";
 import { ItemQuality } from "../types/ItemQuality";
 import { getBase } from "../getBase";
+import { Modifier } from "../types/Modifier";
 
 export function perfectionScore(item: Item) {
   let ranges: ModifierRange[];
@@ -53,13 +56,23 @@ export function perfectionScore(item: Item) {
       // Some weird cases of "param" like the hp/lvl on Fortitude actually do have a range
       // Well, that one case. It's the only one in the entire game that I can find.
       if (type === "other" || (type === "param" && !param)) {
-        const modifier = item.modifiers?.find((mod) => mod.stat === stat);
+        let condition = (mod: Modifier) => mod.stat === stat;
+        if (prop === "skill") {
+          const skillId = SKILLS[param!]?.id;
+          condition = (mod) =>
+            "param" in mod && mod.param === skillId && mod.stat === stat;
+        } else if (prop === "skilltab") {
+          const skillTab = SKILL_TABS[Number(param)]?.id;
+          condition = (mod) =>
+            "param" in mod && mod.param === skillTab && mod.stat === stat;
+        }
+        const modifier = item.modifiers?.find(condition);
         // dmg-min and dmg-max are sometimes mindamage, sometimes secondary_mindamage
         if (
           (prop === "dmg-min" || prop === "dmg-max") &&
           typeof modifier === "undefined"
         ) {
-          // It's the other property, we just ignore this one not to mess up the
+          // It's the other property, we just ignore this one not to mess up the score
           continue;
         }
         let value = 0;
