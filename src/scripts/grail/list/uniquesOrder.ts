@@ -101,7 +101,7 @@ export const UNIQUES_ORDER: UniqueSection[][] = [
   ],
   [
     { name: "Amazon", shortName: "Amazon", types: ["ajav", "abow", "aspe"] },
-    { name: "Assassin", shortName: "Assassin", types: ["h2h2"] },
+    { name: "Assassin", shortName: "Assassin", types: ["h2h", "h2h2"] },
     { name: "Barbarian", shortName: "Barbarian", types: ["phlm"] },
     { name: "Druid", shortName: "Druid", types: ["pelt"] },
     { name: "Necromancer", shortName: "Necro", types: ["head"] },

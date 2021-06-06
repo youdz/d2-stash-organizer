@@ -12,6 +12,8 @@ export function canBeEthereal(item: Item | UniqueItem) {
   }
   return (
     !getBase(item).indestructible &&
-    item.modifiers.every(({ prop }) => prop !== "indestruct")
+    item.modifiers.every(
+      ({ prop }) => prop !== "indestruct" && prop !== "ethereal"
+    )
   );
 }
