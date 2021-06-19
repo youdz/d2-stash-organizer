@@ -3,14 +3,12 @@ import { Item } from "./Item";
 import { Item as ItemType } from "../scripts/items/types/Item";
 import "./Page.css";
 import { isSimpleItem } from "./utils/isSimpleItem";
+import { pageName } from "./utils/pageName";
 
 export interface PageProps {
   index: number;
   page: Page;
 }
-
-const DEFAULT_PERSONAL_NAME = "Personal Page #";
-const DEFAULT_SHARED_NAME = "Shared Page #";
 
 export function Page({ page, index }: PageProps) {
   const indexText =
@@ -36,16 +34,10 @@ export function Page({ page, index }: PageProps) {
     }
   }
 
-  const pageName =
-    page.name ||
-    (typeof page.flags !== "undefined" && page.flags % 2
-      ? DEFAULT_SHARED_NAME
-      : DEFAULT_PERSONAL_NAME);
-
   return (
     <section>
       <h3 class="page-title">
-        <span>{pageName.replace("#", `${index + 1}`)}</span>
+        <span>{pageName(page).replace("#", `${index + 1}`)}</span>
         <span>{indexText}</span>
       </h3>
       <table class="page">

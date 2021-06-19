@@ -9,6 +9,7 @@ import { Stash } from "../scripts/stash/types";
 import { getBase } from "../scripts/items/getBase";
 import { GitHubLink } from "./GitHubLink";
 import { GrailTracker } from "./GrailTracker";
+import { pageName } from "./utils/pageName";
 
 export function App() {
   const [stash, setStash] = useState(() => getStash());
@@ -45,9 +46,10 @@ export function App() {
               );
             });
           }
+
           return {
             ...page,
-            name: page.name.replace("#", `${index + 1}`),
+            name: pageName(page).replace("#", `${index + 1}`),
             items,
           };
         })
