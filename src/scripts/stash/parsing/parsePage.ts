@@ -21,7 +21,11 @@ export function parsePage(raw: Uint8Array) {
   // After that comes the first item
   let currentItem = indexOf(raw, "JM", nameEnd + 2);
   while (currentItem >= 0) {
-    const nextItem = indexOf(raw, "JM", currentItem + 2);
+    let nextItem = indexOf(raw, "JM", currentItem + 2);
+    // Sometimes the item ID will contain "JM", we have to skip over that "JM"
+    while (14 < nextItem - currentItem && nextItem - currentItem < 18) {
+      nextItem = indexOf(raw, "JM", nextItem + 2);
+    }
     const parsedItem = parseItem(
       raw.slice(currentItem, nextItem >= 0 ? nextItem : undefined)
     );

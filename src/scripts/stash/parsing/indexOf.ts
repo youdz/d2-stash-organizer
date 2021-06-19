@@ -1,6 +1,6 @@
 export function indexOf(buffer: Uint8Array, value: string, offset = 0) {
   if (value.length !== 2) {
-    throw new Error("indexOf was writtent for exactly 2-char strings");
+    throw new Error("indexOf was written for exactly 2-char strings");
   }
   const first = value.charCodeAt(0);
   const second = value.charCodeAt(1);
