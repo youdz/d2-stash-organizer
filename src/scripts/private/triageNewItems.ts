@@ -1,9 +1,10 @@
 import { Stash } from "../stash/types";
 import { getAllItems } from "../stash/getAllItems";
 import { compare } from "../items/comparison/compare";
+import { ItemQuality } from "../items/types/ItemQuality";
 
 const FIRST_PAGE = 1;
-const LAST_PAGE = 5;
+const LAST_PAGE = 6;
 
 export function triageNewItems(stash: Stash) {
   const toTriage = getAllItems(stash, FIRST_PAGE, LAST_PAGE + 1);
@@ -12,6 +13,8 @@ export function triageNewItems(stash: Stash) {
   const better = new Set<string>();
   const review = new Map<string, ReturnType<typeof compare>[]>();
   for (const item of toTriage) {
+    if (item.quality !== ItemQuality.UNIQUE && item.quality !== ItemQuality.SET)
+      continue;
     const name = item.name!;
     const duplicates = previouslyFound.filter(
       ({ quality, unique }) =>

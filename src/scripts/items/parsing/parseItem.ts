@@ -5,6 +5,7 @@ import { parseQuality } from "./parseQuality";
 import { parseQuantified } from "./parseQuantified";
 import { parseModifiers } from "./parseModifiers";
 import { perfectionScore } from "../comparison/perfectionScore";
+import { ItemParsingError } from "../../errors/ItemParsingError";
 
 export function parseItem(raw: Uint8Array) {
   // https://squeek502.github.io/d2itemreader/formats/d2.html
@@ -12,19 +13,26 @@ export function parseItem(raw: Uint8Array) {
   const item = parseSimple(stream);
 
   if (!item.simple) {
-    parseQuality(stream, item);
-    parseQuantified(stream, item);
+    try {
+      parseQuality(stream, item);
+      parseQuantified(stream, item);
 
-    if (item.quality! > ItemQuality.NORMAL || item.runeword) {
-      parseModifiers(stream, item);
-    }
+      if (item.quality! > ItemQuality.NORMAL || item.runeword) {
+        parseModifiers(stream, item);
+      }
 
-    if (
-      item.runeword ||
-      item.quality === ItemQuality.UNIQUE ||
-      item.quality === ItemQuality.SET
-    ) {
-      item.perfectionScore = perfectionScore(item);
+      if (
+        item.runeword ||
+        item.quality === ItemQuality.UNIQUE ||
+        item.quality === ItemQuality.SET
+      ) {
+        item.perfectionScore = perfectionScore(item);
+      }
+    } catch (e) {
+      if (e instanceof ItemParsingError) {
+        throw e;
+      }
+      throw new ItemParsingError(item);
     }
   }
   return item;

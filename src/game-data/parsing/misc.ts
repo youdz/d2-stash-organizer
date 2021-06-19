@@ -22,7 +22,7 @@ export async function miscToJson() {
 
   let runewords: Runeword[] = [];
   for (const line of await readGameFile("Runes")) {
-    // This is a bit crazy, but it's what the games seems to actually do for runeword names
+    // This is a bit crazy, but it's what the game seems to actually do for runeword names
     let index = Number(line[0].split("Runeword")[1]);
     const runes = line
       .slice(14, 20)

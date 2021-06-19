@@ -77,6 +77,10 @@ export function parseQuality(
 
   if (item.runeword) {
     item.runewordId = readInt(12) - 27;
+    // Special case for Delirium, I can't figure out why outside of it being the only patched runeword
+    if (item.runewordId === 2691) {
+      item.runewordId = 21;
+    }
     item.name = RUNEWORDS[item.runewordId].name;
     read(4);
   }

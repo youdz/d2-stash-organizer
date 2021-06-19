@@ -2,19 +2,20 @@ import { BinaryStream } from "./binary";
 import { Item } from "../types/Item";
 import { ItemQuality } from "../types/ItemQuality";
 import { ITEM_STATS } from "../../../game-data";
-import { Modifier } from "../types/Modifier";
+import { ItemParsingError } from "../../errors/ItemParsingError";
 
 /*
  * Parses one list of modifiers at a time. Some items have more than one:
  * - Runewords have one for the base item mods, and one for the runeword itself
  * - Sets have one for each increment in set bonuses
  */
-function parseModsList({ readInt }: BinaryStream, mods: Modifier[]) {
+function parseModsList({ readInt }: BinaryStream, item: Item) {
+  const mods = item.modifiers!;
   let modId = readInt(9);
   while (modId !== 511) {
     const modInfo = ITEM_STATS[modId];
     if (!modInfo) {
-      throw new Error(`Unknown mod ${modId}`);
+      throw new ItemParsingError(item, `Unknown mod ${modId}`);
     }
     if (modInfo.encode === 3) {
       mods.push({
@@ -59,14 +60,14 @@ export function parseModifiers(stream: BinaryStream, item: Item) {
     // but we're only interested in the number of lists here.
     const nbLists = stream.read(5).split("1").length;
     for (let i = 0; i < nbLists - 1; i++) {
-      parseModsList(stream, item.modifiers);
+      parseModsList(stream, item);
     }
   }
 
   if (item.runeword) {
     // Runewords have 2 lists, the base item mods and the runeword mods
-    parseModsList(stream, item.modifiers);
+    parseModsList(stream, item);
   }
 
-  parseModsList(stream, item.modifiers);
+  parseModsList(stream, item);
 }

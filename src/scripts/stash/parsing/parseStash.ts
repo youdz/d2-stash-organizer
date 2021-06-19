@@ -33,9 +33,17 @@ export function parseStash(raw: Uint8Array) {
   }
   while (currentPage >= 0) {
     const nextPage = indexOf(raw, "ST", currentPage + 2);
-    stash.pages.push(
-      parsePage(raw.slice(currentPage, nextPage >= 0 ? nextPage : undefined))
-    );
+    try {
+      stash.pages.push(
+        parsePage(raw.slice(currentPage, nextPage >= 0 ? nextPage : undefined))
+      );
+    } catch (e) {
+      if ("message" in e) {
+        throw new Error(
+          `${(e as Error).message} on page ${stash.pages.length + 1}`
+        );
+      }
+    }
     currentPage = nextPage;
   }
   stash.pageFlags = typeof stash.pages[0]?.flags !== "undefined";
