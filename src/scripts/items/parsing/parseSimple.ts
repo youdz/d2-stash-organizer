@@ -12,6 +12,7 @@ export function parseSimple({ raw, readBool, readInt }: BinaryStream) {
     socketed: readBool(27),
     simple: readBool(37),
     ethereal: readBool(38),
+    personalized: readBool(40),
     runeword: readBool(42),
 
     location: readInt(3, 58),

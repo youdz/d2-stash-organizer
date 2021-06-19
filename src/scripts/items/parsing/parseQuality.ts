@@ -84,6 +84,16 @@ export function parseQuality(
     item.name = RUNEWORDS[item.runewordId].name;
     read(4);
   }
+
+  if (item.personalized) {
+    let charName = "";
+    let charCode: number;
+    while ((charCode = readInt(7)) !== 0) {
+      charName += String.fromCharCode(charCode);
+    }
+    item.name = `${charName}'s ${item.name}`;
+  }
+
   // Skip unknown "timestamp" bit
   read(1);
 }

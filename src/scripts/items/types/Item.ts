@@ -9,6 +9,7 @@ export interface Item {
   socketed: boolean;
   simple: boolean;
   ethereal: boolean;
+  personalized: boolean;
   runeword: boolean;
 
   location: ItemLocation;

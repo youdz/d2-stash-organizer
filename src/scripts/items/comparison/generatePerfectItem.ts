@@ -92,6 +92,7 @@ export function generatePerfectItem(uniqueOrSet: UniqueItem | SetItem): Item {
     socketed: !!nbSockets,
     simple: false,
     ethereal: ranges.some(({ prop }) => prop === "ethereal"),
+    personalized: false,
     runeword: false,
     location: 0,
     stored: 0,
