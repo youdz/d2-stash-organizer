@@ -9,7 +9,7 @@ function sortModifiers(mods: Modifier[]) {
       return nameComp;
     }
     if ("spell" in a && "spell" in b) {
-      return a.spell - b.spell;
+      return a.spell! - b.spell!;
     }
     if ("param" in a && "param" in b) {
       return (a.param ?? 0) - (b.param ?? 0);
@@ -62,7 +62,7 @@ export function compare(
       continue;
     }
     if ("value" in next1 && "value" in next2) {
-      difference.push({ stat: next1.stat, value: next1.value - next2.value });
+      difference.push({ stat: next1.stat, value: next1.value! - next2.value! });
     }
     // Spell charges and chances to cast have no variation, no point comparing them
     next1 = mods1.pop();

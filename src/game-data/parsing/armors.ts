@@ -27,4 +27,5 @@ export async function armorsToJson() {
     };
   }
   await writeJson("Armor", armors);
+  return armors;
 }

@@ -4,7 +4,6 @@ import {
   RUNEWORDS,
   SET_ITEMS,
   SKILL_TABS,
-  SKILLS,
   UNIQUE_ITEMS,
 } from "../../../game-data";
 import { Item } from "../types/Item";
@@ -58,9 +57,8 @@ export function perfectionScore(item: Item) {
       if (type === "other" || (type === "param" && !param)) {
         let condition = (mod: Modifier) => mod.stat === stat;
         if (prop === "skill") {
-          const skillId = SKILLS[param!]?.id;
           condition = (mod) =>
-            "param" in mod && mod.param === skillId && mod.stat === stat;
+            "param" in mod && mod.param === param && mod.stat === stat;
         } else if (prop === "skilltab") {
           const skillTab = SKILL_TABS[Number(param)]?.id;
           condition = (mod) =>
@@ -78,7 +76,7 @@ export function perfectionScore(item: Item) {
         let value = 0;
         // I don't believe we can ever not go through that if, but let's be safe
         if (modifier && "value" in modifier) {
-          value = modifier.value;
+          value = modifier.value!;
         }
         addProp(value, min!, max!);
       }

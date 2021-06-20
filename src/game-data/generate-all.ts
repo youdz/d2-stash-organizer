@@ -9,15 +9,22 @@ import { skillTabsToJson } from "./parsing/skillTabs";
 import { rareNamesToJson } from "./parsing/rareNames";
 import { miscToJson } from "./parsing/misc";
 import { magicAffixesToJson } from "./parsing/magicAffixes";
+import { runewordsToJson } from "./parsing/runewords";
 
-void armorsToJson();
-void weaponsToJson();
-void miscToJson();
-void itemStatsToJson();
-void propertiesToJson();
-void skillsToJson();
-void skillTabsToJson();
-void magicAffixesToJson();
-void rareNamesToJson();
-void uniquesToJson();
-void setsToJson();
+// Order matters
+async function generateAll() {
+  await armorsToJson();
+  await weaponsToJson();
+  const misc = await miscToJson();
+  await itemStatsToJson();
+  await propertiesToJson();
+  const skills = await skillsToJson();
+  await skillTabsToJson();
+  await magicAffixesToJson();
+  await rareNamesToJson();
+  await uniquesToJson(skills);
+  await setsToJson(skills);
+  await runewordsToJson(misc, skills);
+}
+
+void generateAll();

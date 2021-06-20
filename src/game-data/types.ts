@@ -30,7 +30,7 @@ export interface Misc extends Equipment {}
 
 export interface ModifierRange {
   prop: string;
-  param?: string;
+  param?: number;
   min?: number;
   max?: number;
 }
@@ -94,6 +94,7 @@ export interface ItemStat {
   descVal: number;
   descPos: string;
   descNeg: string;
+  descAdditional: string;
 }
 
 export interface MagicAffix {
@@ -101,7 +102,8 @@ export interface MagicAffix {
 }
 
 export interface Skill {
-  id: number;
+  code: string;
+  name: string;
 }
 
 export interface SkillTab {

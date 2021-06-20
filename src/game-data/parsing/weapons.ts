@@ -28,4 +28,5 @@ export async function weaponsToJson() {
     };
   }
   await writeJson("Weapons", weapons);
+  return weapons;
 }

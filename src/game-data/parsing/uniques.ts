@@ -1,8 +1,9 @@
 import { readGameFile, writeJson } from "./files";
-import { UniqueItem } from "../types";
+import { Skill, UniqueItem } from "../types";
 import { getString } from "../strings";
+import { readModifierRange } from "./modifierRange";
 
-export async function uniquesToJson() {
+export async function uniquesToJson(skills: Skill[]) {
   const table = await readGameFile("UniqueItems");
   const uniques: UniqueItem[] = [];
   for (const line of table) {
@@ -14,15 +15,9 @@ export async function uniquesToJson() {
       modifiers: [],
     };
     for (let i = 1; i < 13; i++) {
-      const modifierIndex = 17 + 4 * i;
-      // * mods seem to be meant for negative values, but appear to be ignored by the game
-      if (line[modifierIndex] && !line[modifierIndex].startsWith("*")) {
-        item.modifiers.push({
-          prop: line[modifierIndex].trim().toLocaleLowerCase(),
-          param: line[modifierIndex + 1],
-          min: Number(line[modifierIndex + 2]),
-          max: Number(line[modifierIndex + 3]),
-        });
+      const modifier = readModifierRange(line, 17 + 4 * i, skills);
+      if (modifier) {
+        item.modifiers.push(modifier);
       }
     }
     uniques.push(item);

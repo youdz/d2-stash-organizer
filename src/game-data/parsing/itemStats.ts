@@ -25,6 +25,7 @@ export async function itemStatsToJson() {
       descVal: Number(line[41]),
       descPos: getString(line[42].trim()),
       descNeg: getString(line[43].trim()),
+      descAdditional: getString(line[44].trim()),
     };
     if (
       (item.encode === 2 && (item.size !== 7 || item.paramSize !== 16)) ||
@@ -40,4 +41,5 @@ export async function itemStatsToJson() {
     itemStats[id] = item;
   }
   await writeJson("ItemStatCost", itemStats);
+  return itemStats;
 }

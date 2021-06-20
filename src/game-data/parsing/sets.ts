@@ -1,8 +1,9 @@
 import { readGameFile, writeJson } from "./files";
-import { SetItem, Set } from "../types";
+import { SetItem, Set, Skill } from "../types";
 import { getString } from "../strings";
+import { readModifierRange } from "./modifierRange";
 
-export async function setsToJson() {
+export async function setsToJson(skills: Skill[]) {
   const itemsTable = await readGameFile("SetItems");
   const setItems: SetItem[] = [];
   for (const line of itemsTable) {
@@ -16,15 +17,9 @@ export async function setsToJson() {
       setModifiers: [],
     };
     for (let i = 1; i < 20; i++) {
-      const modifierIndex = 13 + 4 * i;
-      // * mods seem to be meant for negative values, but appear to be ignored by the game
-      if (line[modifierIndex] && !line[modifierIndex].startsWith("*")) {
-        item[i > 9 ? "setModifiers" : "baseModifiers"].push({
-          prop: line[modifierIndex].trim().toLocaleLowerCase(),
-          param: line[modifierIndex + 1],
-          min: Number(line[modifierIndex + 2]),
-          max: Number(line[modifierIndex + 3]),
-        });
+      const modifier = readModifierRange(line, 13 + 4 * i, skills);
+      if (modifier) {
+        item[i > 9 ? "setModifiers" : "baseModifiers"].push(modifier);
       }
     }
     setItems.push(item);

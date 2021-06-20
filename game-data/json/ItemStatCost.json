@@ -9,7 +9,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Strength",
-    "descNeg": "to Strength"
+    "descNeg": "to Strength",
+    "descAdditional": ""
   },
   {
     "stat": "energy",
@@ -21,7 +22,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Energy",
-    "descNeg": "to Energy"
+    "descNeg": "to Energy",
+    "descAdditional": ""
   },
   {
     "stat": "dexterity",
@@ -33,7 +35,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Dexterity",
-    "descNeg": "to Dexterity"
+    "descNeg": "to Dexterity",
+    "descAdditional": ""
   },
   {
     "stat": "vitality",
@@ -45,7 +48,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Vitality",
-    "descNeg": "to Vitality"
+    "descNeg": "to Vitality",
+    "descAdditional": ""
   },
   null,
   null,
@@ -60,7 +64,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Life",
-    "descNeg": "to Life"
+    "descNeg": "to Life",
+    "descAdditional": ""
   },
   null,
   {
@@ -73,7 +78,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Mana",
-    "descNeg": "to Mana"
+    "descNeg": "to Mana",
+    "descAdditional": ""
   },
   null,
   {
@@ -86,7 +92,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "Maximum Stamina",
-    "descNeg": "Maximum Stamina"
+    "descNeg": "Maximum Stamina",
+    "descAdditional": ""
   },
   null,
   null,
@@ -102,7 +109,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "Enhanced Defense",
-    "descNeg": "Enhanced Defense"
+    "descNeg": "Enhanced Defense",
+    "descAdditional": ""
   },
   {
     "stat": "item_maxdamage_percent",
@@ -115,6 +123,7 @@
     "descVal": 0,
     "descPos": "Enhanced Maximum Damage",
     "descNeg": "Enhanced Maximum Damage",
+    "descAdditional": "",
     "followedBy": 18
   },
   {
@@ -127,7 +136,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Enhanced Minimum Damage",
-    "descNeg": "Enhanced Minimum Damage"
+    "descNeg": "Enhanced Minimum Damage",
+    "descAdditional": ""
   },
   {
     "stat": "tohit",
@@ -139,7 +149,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Attack Rating",
-    "descNeg": "to Attack Rating"
+    "descNeg": "to Attack Rating",
+    "descAdditional": ""
   },
   {
     "stat": "toblock",
@@ -151,7 +162,8 @@
     "descFunc": 2,
     "descVal": 1,
     "descPos": "Increased Chance of Blocking",
-    "descNeg": "Increased Chance of Blocking"
+    "descNeg": "Increased Chance of Blocking",
+    "descAdditional": ""
   },
   {
     "stat": "mindamage",
@@ -163,7 +175,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Minimum Damage",
-    "descNeg": "to Minimum Damage"
+    "descNeg": "to Minimum Damage",
+    "descAdditional": ""
   },
   {
     "stat": "maxdamage",
@@ -175,7 +188,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Maximum Damage",
-    "descNeg": "to Maximum Damage"
+    "descNeg": "to Maximum Damage",
+    "descAdditional": ""
   },
   {
     "stat": "secondary_mindamage",
@@ -187,7 +201,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Minimum Damage",
-    "descNeg": "to Minimum Damage"
+    "descNeg": "to Minimum Damage",
+    "descAdditional": ""
   },
   {
     "stat": "secondary_maxdamage",
@@ -199,7 +214,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Maximum Damage",
-    "descNeg": "to Maximum Damage"
+    "descNeg": "to Maximum Damage",
+    "descAdditional": ""
   },
   {
     "stat": "damagepercent",
@@ -211,7 +227,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "manarecovery",
@@ -223,7 +240,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "manarecoverybonus",
@@ -235,7 +253,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Regenerate Mana",
-    "descNeg": "Regenerate Mana"
+    "descNeg": "Regenerate Mana",
+    "descAdditional": ""
   },
   {
     "stat": "staminarecoverybonus",
@@ -247,7 +266,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Heal Stamina Plus",
-    "descNeg": "Heal Stamina Plus"
+    "descNeg": "Heal Stamina Plus",
+    "descAdditional": ""
   },
   null,
   null,
@@ -261,7 +281,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "Defense",
-    "descNeg": "Defense"
+    "descNeg": "Defense",
+    "descAdditional": ""
   },
   {
     "stat": "armorclass_vs_missile",
@@ -273,7 +294,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "Defense vs. Missile",
-    "descNeg": "Defense vs. Missile"
+    "descNeg": "Defense vs. Missile",
+    "descAdditional": ""
   },
   {
     "stat": "armorclass_vs_hth",
@@ -285,7 +307,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "Defense vs. Melee",
-    "descNeg": "Defense vs. Melee"
+    "descNeg": "Defense vs. Melee",
+    "descAdditional": ""
   },
   {
     "stat": "normal_damage_reduction",
@@ -297,7 +320,8 @@
     "descFunc": 3,
     "descVal": 2,
     "descPos": "Damage Reduced by",
-    "descNeg": "Damage Reduced by"
+    "descNeg": "Damage Reduced by",
+    "descAdditional": ""
   },
   {
     "stat": "magic_damage_reduction",
@@ -309,7 +333,8 @@
     "descFunc": 3,
     "descVal": 2,
     "descPos": "Magic Damage Reduced by",
-    "descNeg": "Magic Damage Reduced by"
+    "descNeg": "Magic Damage Reduced by",
+    "descAdditional": ""
   },
   {
     "stat": "damageresist",
@@ -321,7 +346,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Damage Reduced by",
-    "descNeg": "Damage Reduced by"
+    "descNeg": "Damage Reduced by",
+    "descAdditional": ""
   },
   {
     "stat": "magicresist",
@@ -333,7 +359,8 @@
     "descFunc": 4,
     "descVal": 2,
     "descPos": "Magic Resist",
-    "descNeg": "Magic Resist"
+    "descNeg": "Magic Resist",
+    "descAdditional": ""
   },
   {
     "stat": "maxmagicresist",
@@ -345,7 +372,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "to Maximum Magic Resist",
-    "descNeg": "to Maximum Magic Resist"
+    "descNeg": "to Maximum Magic Resist",
+    "descAdditional": ""
   },
   {
     "stat": "fireresist",
@@ -357,7 +385,8 @@
     "descFunc": 4,
     "descVal": 2,
     "descPos": "Fire Resist",
-    "descNeg": "Fire Resist"
+    "descNeg": "Fire Resist",
+    "descAdditional": ""
   },
   {
     "stat": "maxfireresist",
@@ -369,7 +398,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "to Maximum Fire Resist",
-    "descNeg": "to Maximum Fire Resist"
+    "descNeg": "to Maximum Fire Resist",
+    "descAdditional": ""
   },
   {
     "stat": "lightresist",
@@ -381,7 +411,8 @@
     "descFunc": 4,
     "descVal": 2,
     "descPos": "Lightning Resist",
-    "descNeg": "Lightning Resist"
+    "descNeg": "Lightning Resist",
+    "descAdditional": ""
   },
   {
     "stat": "maxlightresist",
@@ -393,7 +424,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "to Maximum Lightning Resist",
-    "descNeg": "to Maximum Lightning Resist"
+    "descNeg": "to Maximum Lightning Resist",
+    "descAdditional": ""
   },
   {
     "stat": "coldresist",
@@ -405,7 +437,8 @@
     "descFunc": 4,
     "descVal": 2,
     "descPos": "Cold Resist",
-    "descNeg": "Cold Resist"
+    "descNeg": "Cold Resist",
+    "descAdditional": ""
   },
   {
     "stat": "maxcoldresist",
@@ -417,7 +450,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "to Maximum Cold Resist",
-    "descNeg": "to Maximum Cold Resist"
+    "descNeg": "to Maximum Cold Resist",
+    "descAdditional": ""
   },
   {
     "stat": "poisonresist",
@@ -429,7 +463,8 @@
     "descFunc": 4,
     "descVal": 2,
     "descPos": "Poison Resist",
-    "descNeg": "Poison Resist"
+    "descNeg": "Poison Resist",
+    "descAdditional": ""
   },
   {
     "stat": "maxpoisonresist",
@@ -441,7 +476,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "to Maximum Poison Resist",
-    "descNeg": "to Maximum Poison Resist"
+    "descNeg": "to Maximum Poison Resist",
+    "descAdditional": ""
   },
   null,
   {
@@ -455,6 +491,7 @@
     "descVal": 1,
     "descPos": "to Minimum Fire Damage",
     "descNeg": "to Minimum Fire Damage",
+    "descAdditional": "",
     "followedBy": 49
   },
   {
@@ -467,7 +504,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Maximum Fire Damage",
-    "descNeg": "to Maximum Fire Damage"
+    "descNeg": "to Maximum Fire Damage",
+    "descAdditional": ""
   },
   {
     "stat": "lightmindam",
@@ -480,6 +518,7 @@
     "descVal": 1,
     "descPos": "to Minimum Lightning Damage",
     "descNeg": "to Minimum Lightning Damage",
+    "descAdditional": "",
     "followedBy": 51
   },
   {
@@ -492,7 +531,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Maximum Lightning Damage",
-    "descNeg": "to Maximum Lightning Damage"
+    "descNeg": "to Maximum Lightning Damage",
+    "descAdditional": ""
   },
   {
     "stat": "magicmindam",
@@ -505,6 +545,7 @@
     "descVal": 1,
     "descPos": "+%d magic damage",
     "descNeg": "+%d magic damage",
+    "descAdditional": "",
     "followedBy": 53
   },
   {
@@ -517,7 +558,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "+%d magic damage",
-    "descNeg": "+%d magic damage"
+    "descNeg": "+%d magic damage",
+    "descAdditional": ""
   },
   {
     "stat": "coldmindam",
@@ -530,6 +572,7 @@
     "descVal": 1,
     "descPos": "to Minimum Cold Damage",
     "descNeg": "to Minimum Cold Damage",
+    "descAdditional": "",
     "followedBy": 55
   },
   {
@@ -543,6 +586,7 @@
     "descVal": 1,
     "descPos": "to Maximum Cold Damage",
     "descNeg": "to Maximum Cold Damage",
+    "descAdditional": "",
     "followedBy": 56
   },
   {
@@ -555,7 +599,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "poisonmindam",
@@ -568,6 +613,7 @@
     "descVal": 1,
     "descPos": "to Minimum Poison Damage",
     "descNeg": "to Minimum Poison Damage",
+    "descAdditional": "",
     "followedBy": 58
   },
   {
@@ -581,6 +627,7 @@
     "descVal": 1,
     "descPos": "to Maximum Poison Damage",
     "descNeg": "to Maximum Poison Damage",
+    "descAdditional": "",
     "followedBy": 59
   },
   {
@@ -593,7 +640,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "lifedrainmindam",
@@ -605,7 +653,8 @@
     "descFunc": 2,
     "descVal": 1,
     "descPos": "Life stolen per hit",
-    "descNeg": "Life stolen per hit"
+    "descNeg": "Life stolen per hit",
+    "descAdditional": ""
   },
   null,
   {
@@ -618,7 +667,8 @@
     "descFunc": 2,
     "descVal": 1,
     "descPos": "Mana stolen per hit",
-    "descNeg": "Mana stolen per hit"
+    "descNeg": "Mana stolen per hit",
+    "descAdditional": ""
   },
   null,
   null,
@@ -634,7 +684,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "attackrate",
@@ -646,7 +697,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   null,
   null,
@@ -660,7 +712,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "durability",
@@ -672,7 +725,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "maxdurability",
@@ -684,7 +738,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "hpregen",
@@ -696,7 +751,8 @@
     "descFunc": 1,
     "descVal": 2,
     "descPos": "Replenish Life",
-    "descNeg": "Drain Life"
+    "descNeg": "Drain Life",
+    "descAdditional": ""
   },
   {
     "stat": "item_maxdurability_percent",
@@ -708,7 +764,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Increase Maximum Durability",
-    "descNeg": "Increase Maximum Durability"
+    "descNeg": "Increase Maximum Durability",
+    "descAdditional": ""
   },
   {
     "stat": "item_maxhp_percent",
@@ -720,7 +777,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Increase Maximum Life",
-    "descNeg": "Increase Maximum Life"
+    "descNeg": "Increase Maximum Life",
+    "descAdditional": ""
   },
   {
     "stat": "item_maxmana_percent",
@@ -732,7 +790,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Increase Maximum Mana",
-    "descNeg": "Increase Maximum Mana"
+    "descNeg": "Increase Maximum Mana",
+    "descAdditional": ""
   },
   {
     "stat": "item_attackertakesdamage",
@@ -744,7 +803,8 @@
     "descFunc": 3,
     "descVal": 2,
     "descPos": "Attacker Takes Damage of",
-    "descNeg": "Attacker Takes Damage of"
+    "descNeg": "Attacker Takes Damage of",
+    "descAdditional": ""
   },
   {
     "stat": "item_goldbonus",
@@ -756,7 +816,8 @@
     "descFunc": 2,
     "descVal": 1,
     "descPos": "Extra Gold from Monsters",
-    "descNeg": "Extra Gold from Monsters"
+    "descNeg": "Extra Gold from Monsters",
+    "descAdditional": ""
   },
   {
     "stat": "item_magicbonus",
@@ -768,7 +829,8 @@
     "descFunc": 2,
     "descVal": 1,
     "descPos": "Better Chance of Getting Magic Items",
-    "descNeg": "Better Chance of Getting Magic Items"
+    "descNeg": "Better Chance of Getting Magic Items",
+    "descAdditional": ""
   },
   {
     "stat": "item_knockback",
@@ -780,7 +842,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Knockback",
-    "descNeg": "Knockback"
+    "descNeg": "Knockback",
+    "descAdditional": ""
   },
   {
     "stat": "item_timeduration",
@@ -792,7 +855,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "item_addclassskills",
@@ -804,7 +868,8 @@
     "descFunc": 13,
     "descVal": 1,
     "descPos": "to Amazon Skill Levels",
-    "descNeg": "to Amazon Skill Levels"
+    "descNeg": "to Amazon Skill Levels",
+    "descAdditional": ""
   },
   null,
   {
@@ -817,7 +882,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "to Experience Gained",
-    "descNeg": "to Experience Gained"
+    "descNeg": "to Experience Gained",
+    "descAdditional": ""
   },
   {
     "stat": "item_healafterkill",
@@ -829,7 +895,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "Life after each Kill",
-    "descNeg": "Life after each Kill"
+    "descNeg": "Life after each Kill",
+    "descAdditional": ""
   },
   {
     "stat": "item_reducedprices",
@@ -841,7 +908,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Reduces all Vendor Prices",
-    "descNeg": "Reduces all Vendor Prices"
+    "descNeg": "Reduces all Vendor Prices",
+    "descAdditional": ""
   },
   {
     "stat": "item_doubleherbduration",
@@ -853,7 +921,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "item_lightradius",
@@ -865,7 +934,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Light Radius",
-    "descNeg": "to Light Radius"
+    "descNeg": "to Light Radius",
+    "descAdditional": ""
   },
   {
     "stat": "item_lightcolor",
@@ -877,7 +947,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "item_req_percent",
@@ -889,7 +960,8 @@
     "descFunc": 4,
     "descVal": 2,
     "descPos": "Requirements",
-    "descNeg": "Requirements"
+    "descNeg": "Requirements",
+    "descAdditional": ""
   },
   {
     "stat": "item_levelreq",
@@ -901,7 +973,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "item_fasterattackrate",
@@ -913,7 +986,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "Increased Attack Speed",
-    "descNeg": "Increased Attack Speed"
+    "descNeg": "Increased Attack Speed",
+    "descAdditional": ""
   },
   {
     "stat": "item_levelreqpct",
@@ -925,7 +999,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   null,
   {
@@ -938,7 +1013,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "Faster Run/Walk",
-    "descNeg": "Faster Run/Walk"
+    "descNeg": "Faster Run/Walk",
+    "descAdditional": ""
   },
   {
     "stat": "item_nonclassskill",
@@ -950,7 +1026,8 @@
     "descFunc": 28,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "state",
@@ -962,7 +1039,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "item_fastergethitrate",
@@ -974,7 +1052,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "Faster Hit Recovery",
-    "descNeg": "Faster Hit Recovery"
+    "descNeg": "Faster Hit Recovery",
+    "descAdditional": ""
   },
   null,
   null,
@@ -988,7 +1067,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "Faster Block Rate",
-    "descNeg": "Faster Block Rate"
+    "descNeg": "Faster Block Rate",
+    "descAdditional": ""
   },
   null,
   null,
@@ -1002,7 +1082,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "Faster Cast Rate",
-    "descNeg": "Faster Cast Rate"
+    "descNeg": "Faster Cast Rate",
+    "descAdditional": ""
   },
   null,
   {
@@ -1015,7 +1096,8 @@
     "descFunc": 27,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "item_restinpeace",
@@ -1027,7 +1109,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Slain Monsters Rest in Peace",
-    "descNeg": "Slain Monsters Rest in Peace"
+    "descNeg": "Slain Monsters Rest in Peace",
+    "descAdditional": ""
   },
   {
     "stat": "curse_resistance",
@@ -1039,7 +1122,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "item_poisonlengthresist",
@@ -1051,7 +1135,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Poison Length Reduced by",
-    "descNeg": "Poison Length Reduced by"
+    "descNeg": "Poison Length Reduced by",
+    "descAdditional": ""
   },
   {
     "stat": "item_normaldamage",
@@ -1063,7 +1148,8 @@
     "descFunc": 1,
     "descVal": 2,
     "descPos": "Damage",
-    "descNeg": "Damage"
+    "descNeg": "Damage",
+    "descAdditional": ""
   },
   {
     "stat": "item_howl",
@@ -1075,7 +1161,8 @@
     "descFunc": 5,
     "descVal": 2,
     "descPos": "Hit Causes Monster to Flee",
-    "descNeg": "Hit Causes Monster to Flee"
+    "descNeg": "Hit Causes Monster to Flee",
+    "descAdditional": ""
   },
   {
     "stat": "item_stupidity",
@@ -1087,7 +1174,8 @@
     "descFunc": 12,
     "descVal": 2,
     "descPos": "Hit Blinds Target",
-    "descNeg": "Hit Blinds Target"
+    "descNeg": "Hit Blinds Target",
+    "descAdditional": ""
   },
   {
     "stat": "item_damagetomana",
@@ -1099,7 +1187,8 @@
     "descFunc": 2,
     "descVal": 1,
     "descPos": "Damage Taken Goes To Mana",
-    "descNeg": "Damage Taken Goes To Mana"
+    "descNeg": "Damage Taken Goes To Mana",
+    "descAdditional": ""
   },
   {
     "stat": "item_ignoretargetac",
@@ -1111,7 +1200,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Ignore Target's Defense",
-    "descNeg": "Ignore Target's Defense"
+    "descNeg": "Ignore Target's Defense",
+    "descAdditional": ""
   },
   {
     "stat": "item_fractionaltargetac",
@@ -1123,7 +1213,8 @@
     "descFunc": 20,
     "descVal": 1,
     "descPos": "Target Defense",
-    "descNeg": "Target Defense"
+    "descNeg": "Target Defense",
+    "descAdditional": ""
   },
   {
     "stat": "item_preventheal",
@@ -1135,7 +1226,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Prevent Monster Heal",
-    "descNeg": "Prevent Monster Heal"
+    "descNeg": "Prevent Monster Heal",
+    "descAdditional": ""
   },
   {
     "stat": "item_halffreezeduration",
@@ -1147,7 +1239,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Half Freeze Duration",
-    "descNeg": "Half Freeze Duration"
+    "descNeg": "Half Freeze Duration",
+    "descAdditional": ""
   },
   {
     "stat": "item_tohit_percent",
@@ -1159,7 +1252,8 @@
     "descFunc": 2,
     "descVal": 1,
     "descPos": "Bonus to Attack Rating",
-    "descNeg": "Bonus to Attack Rating"
+    "descNeg": "Bonus to Attack Rating",
+    "descAdditional": ""
   },
   {
     "stat": "item_damagetargetac",
@@ -1171,7 +1265,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Monster Defense Per Hit",
-    "descNeg": "to Monster Defense Per Hit"
+    "descNeg": "to Monster Defense Per Hit",
+    "descAdditional": ""
   },
   {
     "stat": "item_demondamage_percent",
@@ -1183,7 +1278,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "Damage to Demons",
-    "descNeg": "Damage to Demons"
+    "descNeg": "Damage to Demons",
+    "descAdditional": ""
   },
   {
     "stat": "item_undeaddamage_percent",
@@ -1195,7 +1291,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "Damage to Undead",
-    "descNeg": "Damage to Undead"
+    "descNeg": "Damage to Undead",
+    "descAdditional": ""
   },
   {
     "stat": "item_demon_tohit",
@@ -1207,7 +1304,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Attack Rating against Demons",
-    "descNeg": "to Attack Rating against Demons"
+    "descNeg": "to Attack Rating against Demons",
+    "descAdditional": ""
   },
   {
     "stat": "item_undead_tohit",
@@ -1219,7 +1317,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Attack Rating against Undead",
-    "descNeg": "to Attack Rating against Undead"
+    "descNeg": "to Attack Rating against Undead",
+    "descAdditional": ""
   },
   {
     "stat": "item_throwable",
@@ -1231,7 +1330,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Throwable",
-    "descNeg": "Throwable"
+    "descNeg": "Throwable",
+    "descAdditional": ""
   },
   {
     "stat": "item_elemskill",
@@ -1243,7 +1343,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Fire Skills",
-    "descNeg": "to Fire Skills"
+    "descNeg": "to Fire Skills",
+    "descAdditional": ""
   },
   {
     "stat": "item_allskills",
@@ -1255,7 +1356,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to All Skills",
-    "descNeg": "to All Skills"
+    "descNeg": "to All Skills",
+    "descAdditional": ""
   },
   {
     "stat": "item_attackertakeslightdamage",
@@ -1267,7 +1369,8 @@
     "descFunc": 3,
     "descVal": 2,
     "descPos": "Attacker Takes Lightning Damage of",
-    "descNeg": "Attacker Takes Lightning Damage of"
+    "descNeg": "Attacker Takes Lightning Damage of",
+    "descAdditional": ""
   },
   null,
   null,
@@ -1284,7 +1387,8 @@
     "descFunc": 12,
     "descVal": 2,
     "descPos": "Freezes target",
-    "descNeg": "Freezes target"
+    "descNeg": "Freezes target",
+    "descAdditional": ""
   },
   {
     "stat": "item_openwounds",
@@ -1296,7 +1400,8 @@
     "descFunc": 2,
     "descVal": 1,
     "descPos": "Chance of Open Wounds",
-    "descNeg": "Chance of Open Wounds"
+    "descNeg": "Chance of Open Wounds",
+    "descAdditional": ""
   },
   {
     "stat": "item_crushingblow",
@@ -1308,7 +1413,8 @@
     "descFunc": 2,
     "descVal": 1,
     "descPos": "Chance of Crushing Blow",
-    "descNeg": "Chance of Crushing Blow"
+    "descNeg": "Chance of Crushing Blow",
+    "descAdditional": ""
   },
   {
     "stat": "item_kickdamage",
@@ -1320,7 +1426,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "Kick Damage",
-    "descNeg": "Kick Damage"
+    "descNeg": "Kick Damage",
+    "descAdditional": ""
   },
   {
     "stat": "item_manaafterkill",
@@ -1332,7 +1439,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "to Mana after each Kill",
-    "descNeg": "to Mana after each Kill"
+    "descNeg": "to Mana after each Kill",
+    "descAdditional": ""
   },
   {
     "stat": "item_healafterdemonkill",
@@ -1344,7 +1452,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "Life after each Demon Kill",
-    "descNeg": "Life after each Demon Kill"
+    "descNeg": "Life after each Demon Kill",
+    "descAdditional": ""
   },
   {
     "stat": "item_extrablood",
@@ -1356,7 +1465,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "item_deadlystrike",
@@ -1368,7 +1478,8 @@
     "descFunc": 2,
     "descVal": 1,
     "descPos": "Deadly Strike",
-    "descNeg": "Deadly Strike"
+    "descNeg": "Deadly Strike",
+    "descAdditional": ""
   },
   {
     "stat": "item_absorbfire_percent",
@@ -1380,7 +1491,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Fire Absorb",
-    "descNeg": "Fire Absorb"
+    "descNeg": "Fire Absorb",
+    "descAdditional": ""
   },
   {
     "stat": "item_absorbfire",
@@ -1392,7 +1504,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "Fire Absorb",
-    "descNeg": "Fire Absorb"
+    "descNeg": "Fire Absorb",
+    "descAdditional": ""
   },
   {
     "stat": "item_absorblight_percent",
@@ -1404,7 +1517,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Lightning Absorb",
-    "descNeg": "Lightning Absorb"
+    "descNeg": "Lightning Absorb",
+    "descAdditional": ""
   },
   {
     "stat": "item_absorblight",
@@ -1416,7 +1530,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "Lightning Absorb",
-    "descNeg": "Lightning Absorb"
+    "descNeg": "Lightning Absorb",
+    "descAdditional": ""
   },
   {
     "stat": "item_absorbmagic_percent",
@@ -1428,7 +1543,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Magic Absorb",
-    "descNeg": "Magic Absorb"
+    "descNeg": "Magic Absorb",
+    "descAdditional": ""
   },
   {
     "stat": "item_absorbmagic",
@@ -1440,7 +1556,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "Magic Absorb",
-    "descNeg": "Magic Absorb"
+    "descNeg": "Magic Absorb",
+    "descAdditional": ""
   },
   {
     "stat": "item_absorbcold_percent",
@@ -1452,7 +1569,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Cold Absorb",
-    "descNeg": "Cold Absorb"
+    "descNeg": "Cold Absorb",
+    "descAdditional": ""
   },
   {
     "stat": "item_absorbcold",
@@ -1464,7 +1582,8 @@
     "descFunc": 1,
     "descVal": 1,
     "descPos": "Cold Absorb",
-    "descNeg": "Cold Absorb"
+    "descNeg": "Cold Absorb",
+    "descAdditional": ""
   },
   {
     "stat": "item_slow",
@@ -1476,7 +1595,8 @@
     "descFunc": 2,
     "descVal": 2,
     "descPos": "Slows Target by",
-    "descNeg": "Slows Target by"
+    "descNeg": "Slows Target by",
+    "descAdditional": ""
   },
   {
     "stat": "item_aura",
@@ -1488,7 +1608,8 @@
     "descFunc": 16,
     "descVal": 0,
     "descPos": "Level %d %s Aura When Equipped",
-    "descNeg": "Level %d %s Aura When Equipped"
+    "descNeg": "Level %d %s Aura When Equipped",
+    "descAdditional": ""
   },
   {
     "stat": "item_indesctructible",
@@ -1500,7 +1621,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Indestructible",
-    "descNeg": "Indestructible"
+    "descNeg": "Indestructible",
+    "descAdditional": ""
   },
   {
     "stat": "item_cannotbefrozen",
@@ -1512,7 +1634,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Cannot Be Frozen",
-    "descNeg": "Cannot Be Frozen"
+    "descNeg": "Cannot Be Frozen",
+    "descAdditional": ""
   },
   {
     "stat": "item_staminadrainpct",
@@ -1524,7 +1647,8 @@
     "descFunc": 2,
     "descVal": 1,
     "descPos": "Slower Stamina Drain",
-    "descNeg": "Slower Stamina Drain"
+    "descNeg": "Slower Stamina Drain",
+    "descAdditional": ""
   },
   {
     "stat": "item_reanimate",
@@ -1536,7 +1660,8 @@
     "descFunc": 23,
     "descVal": 1,
     "descPos": "Reanimate as:",
-    "descNeg": "Reanimate as:"
+    "descNeg": "Reanimate as:",
+    "descAdditional": ""
   },
   {
     "stat": "item_pierce",
@@ -1548,7 +1673,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Piercing Attack",
-    "descNeg": "Piercing Attack"
+    "descNeg": "Piercing Attack",
+    "descAdditional": ""
   },
   {
     "stat": "item_magicarrow",
@@ -1560,7 +1686,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Fires Magic Arrows",
-    "descNeg": "Fires Magic Arrows"
+    "descNeg": "Fires Magic Arrows",
+    "descAdditional": ""
   },
   {
     "stat": "item_explosivearrow",
@@ -1572,7 +1699,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Fires Explosive Arrows or Bolts",
-    "descNeg": "Fires Explosive Arrows or Bolts"
+    "descNeg": "Fires Explosive Arrows or Bolts",
+    "descAdditional": ""
   },
   {
     "stat": "item_throw_mindamage",
@@ -1584,7 +1712,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "item_throw_maxdamage",
@@ -1596,7 +1725,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   null,
   null,
@@ -1626,7 +1756,8 @@
     "descFunc": 22,
     "descVal": 1,
     "descPos": "to Attack Rating versus",
-    "descNeg": "to Attack Rating versus"
+    "descNeg": "to Attack Rating versus",
+    "descAdditional": ""
   },
   {
     "stat": "damage_vs_montype",
@@ -1638,7 +1769,8 @@
     "descFunc": 22,
     "descVal": 1,
     "descPos": "to Damage versus",
-    "descNeg": "to Damage versus"
+    "descNeg": "to Damage versus",
+    "descAdditional": ""
   },
   {
     "stat": "fade",
@@ -1650,7 +1782,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   null,
   null,
@@ -1668,7 +1801,8 @@
     "descFunc": 14,
     "descVal": 0,
     "descPos": "+%d to Javelin and Spear Skills",
-    "descNeg": "+%d to Javelin and Spear Skills"
+    "descNeg": "+%d to Javelin and Spear Skills",
+    "descAdditional": ""
   },
   null,
   null,
@@ -1685,7 +1819,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "item_skillonattack",
@@ -1697,7 +1832,8 @@
     "descFunc": 15,
     "descVal": 0,
     "descPos": "%d%% Chance to cast level %d %s on attack",
-    "descNeg": "%d%% Chance to cast level %d %s on attack"
+    "descNeg": "%d%% Chance to cast level %d %s on attack",
+    "descAdditional": ""
   },
   {
     "stat": "item_skillonkill",
@@ -1709,7 +1845,8 @@
     "descFunc": 15,
     "descVal": 0,
     "descPos": "%d%% Chance to cast level %d %s when you Kill an Enemy",
-    "descNeg": "%d%% Chance to cast level %d %s when you Kill an Enemy"
+    "descNeg": "%d%% Chance to cast level %d %s when you Kill an Enemy",
+    "descAdditional": ""
   },
   {
     "stat": "item_skillondeath",
@@ -1721,7 +1858,8 @@
     "descFunc": 15,
     "descVal": 0,
     "descPos": "%d%% Chance to cast level %d %s when you Die",
-    "descNeg": "%d%% Chance to cast level %d %s when you Die"
+    "descNeg": "%d%% Chance to cast level %d %s when you Die",
+    "descAdditional": ""
   },
   {
     "stat": "item_skillonhit",
@@ -1733,7 +1871,8 @@
     "descFunc": 15,
     "descVal": 0,
     "descPos": "%d%% Chance to cast level %d %s on striking",
-    "descNeg": "%d%% Chance to cast level %d %s on striking"
+    "descNeg": "%d%% Chance to cast level %d %s on striking",
+    "descAdditional": ""
   },
   {
     "stat": "item_skillonlevelup",
@@ -1745,7 +1884,8 @@
     "descFunc": 15,
     "descVal": 0,
     "descPos": "%d%% Chance to cast level %d %s when you Level-Up",
-    "descNeg": "%d%% Chance to cast level %d %s when you Level-Up"
+    "descNeg": "%d%% Chance to cast level %d %s when you Level-Up",
+    "descAdditional": ""
   },
   null,
   {
@@ -1758,7 +1898,8 @@
     "descFunc": 15,
     "descVal": 0,
     "descPos": "%d%% Chance to cast level %d %s when struck",
-    "descNeg": "%d%% Chance to cast level %d %s when struck"
+    "descNeg": "%d%% Chance to cast level %d %s when struck",
+    "descAdditional": ""
   },
   null,
   null,
@@ -1772,7 +1913,8 @@
     "descFunc": 24,
     "descVal": 0,
     "descPos": "(%d/%d Charges)",
-    "descNeg": "(%d/%d Charges)"
+    "descNeg": "(%d/%d Charges)",
+    "descAdditional": ""
   },
   null,
   null,
@@ -1793,7 +1935,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "Defense",
-    "descNeg": "Defense"
+    "descNeg": "Defense",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_armorpercent_perlevel",
@@ -1805,7 +1948,8 @@
     "descFunc": 8,
     "descVal": 1,
     "descPos": "Enhanced Defense",
-    "descNeg": "Enhanced Defense"
+    "descNeg": "Enhanced Defense",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_hp_perlevel",
@@ -1817,7 +1961,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Life",
-    "descNeg": "to Life"
+    "descNeg": "to Life",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_mana_perlevel",
@@ -1829,7 +1974,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Mana",
-    "descNeg": "to Mana"
+    "descNeg": "to Mana",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_maxdamage_perlevel",
@@ -1841,7 +1987,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Maximum Damage",
-    "descNeg": "to Maximum Damage"
+    "descNeg": "to Maximum Damage",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_maxdamage_percent_perlevel",
@@ -1853,7 +2000,8 @@
     "descFunc": 8,
     "descVal": 1,
     "descPos": "Enhanced Maximum Damage",
-    "descNeg": "Enhanced Maximum Damage"
+    "descNeg": "Enhanced Maximum Damage",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_strength_perlevel",
@@ -1865,7 +2013,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Strength",
-    "descNeg": "to Strength"
+    "descNeg": "to Strength",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_dexterity_perlevel",
@@ -1877,7 +2026,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Dexterity",
-    "descNeg": "to Dexterity"
+    "descNeg": "to Dexterity",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_energy_perlevel",
@@ -1889,7 +2039,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Energy",
-    "descNeg": "to Energy"
+    "descNeg": "to Energy",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_vitality_perlevel",
@@ -1901,7 +2052,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Vitality",
-    "descNeg": "to Vitality"
+    "descNeg": "to Vitality",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_tohit_perlevel",
@@ -1913,7 +2065,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Attack Rating",
-    "descNeg": "to Attack Rating"
+    "descNeg": "to Attack Rating",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_tohitpercent_perlevel",
@@ -1925,7 +2078,8 @@
     "descFunc": 7,
     "descVal": 1,
     "descPos": "Bonus to Attack Rating",
-    "descNeg": "Bonus to Attack Rating"
+    "descNeg": "Bonus to Attack Rating",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_cold_damagemax_perlevel",
@@ -1937,7 +2091,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Maximum Cold Damage",
-    "descNeg": "to Maximum Cold Damage"
+    "descNeg": "to Maximum Cold Damage",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_fire_damagemax_perlevel",
@@ -1949,7 +2104,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Maximum Fire Damage",
-    "descNeg": "to Maximum Fire Damage"
+    "descNeg": "to Maximum Fire Damage",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_ltng_damagemax_perlevel",
@@ -1961,7 +2117,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Maximum Lightning Damage",
-    "descNeg": "to Maximum Lightning Damage"
+    "descNeg": "to Maximum Lightning Damage",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_pois_damagemax_perlevel",
@@ -1973,7 +2130,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Maximum Poison Damage",
-    "descNeg": "to Maximum Poison Damage"
+    "descNeg": "to Maximum Poison Damage",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_resist_cold_perlevel",
@@ -1985,7 +2143,8 @@
     "descFunc": 7,
     "descVal": 2,
     "descPos": "Cold Resist",
-    "descNeg": "Cold Resist"
+    "descNeg": "Cold Resist",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_resist_fire_perlevel",
@@ -1997,7 +2156,8 @@
     "descFunc": 7,
     "descVal": 2,
     "descPos": "Fire Resist",
-    "descNeg": "Fire Resist"
+    "descNeg": "Fire Resist",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_resist_ltng_perlevel",
@@ -2009,7 +2169,8 @@
     "descFunc": 7,
     "descVal": 2,
     "descPos": "Lightning Resist",
-    "descNeg": "Lightning Resist"
+    "descNeg": "Lightning Resist",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_resist_pois_perlevel",
@@ -2021,7 +2182,8 @@
     "descFunc": 7,
     "descVal": 2,
     "descPos": "Poison Resist",
-    "descNeg": "Poison Resist"
+    "descNeg": "Poison Resist",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_absorb_cold_perlevel",
@@ -2033,7 +2195,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "Absorbs Cold Damage",
-    "descNeg": "Absorbs Cold Damage"
+    "descNeg": "Absorbs Cold Damage",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_absorb_fire_perlevel",
@@ -2045,7 +2208,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "Absorbs Fire Damage",
-    "descNeg": "Absorbs Fire Damage"
+    "descNeg": "Absorbs Fire Damage",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_absorb_ltng_perlevel",
@@ -2057,7 +2221,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "Absorbs Lightning Damage",
-    "descNeg": "Absorbs Lightning Damage"
+    "descNeg": "Absorbs Lightning Damage",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_absorb_pois_perlevel",
@@ -2069,7 +2234,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "item_thorns_perlevel",
@@ -2081,7 +2247,8 @@
     "descFunc": 9,
     "descVal": 2,
     "descPos": "Attacker Takes Damage of",
-    "descNeg": "Attacker Takes Damage of"
+    "descNeg": "Attacker Takes Damage of",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_find_gold_perlevel",
@@ -2093,7 +2260,8 @@
     "descFunc": 7,
     "descVal": 1,
     "descPos": "Extra Gold from Monsters",
-    "descNeg": "Extra Gold from Monsters"
+    "descNeg": "Extra Gold from Monsters",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_find_magic_perlevel",
@@ -2105,7 +2273,8 @@
     "descFunc": 7,
     "descVal": 1,
     "descPos": "Better Chance of Getting Magic Items",
-    "descNeg": "Better Chance of Getting Magic Items"
+    "descNeg": "Better Chance of Getting Magic Items",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_regenstamina_perlevel",
@@ -2117,7 +2286,8 @@
     "descFunc": 8,
     "descVal": 2,
     "descPos": "Heal Stamina Plus",
-    "descNeg": "Heal Stamina Plus"
+    "descNeg": "Heal Stamina Plus",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_stamina_perlevel",
@@ -2129,7 +2299,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "Maximum Stamina",
-    "descNeg": "Maximum Stamina"
+    "descNeg": "Maximum Stamina",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_damage_demon_perlevel",
@@ -2141,7 +2312,8 @@
     "descFunc": 8,
     "descVal": 1,
     "descPos": "Damage to Demons",
-    "descNeg": "Damage to Demons"
+    "descNeg": "Damage to Demons",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_damage_undead_perlevel",
@@ -2153,7 +2325,8 @@
     "descFunc": 8,
     "descVal": 1,
     "descPos": "Damage to Undead",
-    "descNeg": "Damage to Undead"
+    "descNeg": "Damage to Undead",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_tohit_demon_perlevel",
@@ -2165,7 +2338,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Attack Rating against Demons",
-    "descNeg": "to Attack Rating against Demons"
+    "descNeg": "to Attack Rating against Demons",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_tohit_undead_perlevel",
@@ -2177,7 +2351,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "to Attack Rating against Undead",
-    "descNeg": "to Attack Rating against Undead"
+    "descNeg": "to Attack Rating against Undead",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_crushingblow_perlevel",
@@ -2189,7 +2364,8 @@
     "descFunc": 7,
     "descVal": 1,
     "descPos": "Chance of Crushing Blow",
-    "descNeg": "Chance of Crushing Blow"
+    "descNeg": "Chance of Crushing Blow",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_openwounds_perlevel",
@@ -2201,7 +2377,8 @@
     "descFunc": 7,
     "descVal": 1,
     "descPos": "Chance of Open Wounds",
-    "descNeg": "Chance of Open Wounds"
+    "descNeg": "Chance of Open Wounds",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_kick_damage_perlevel",
@@ -2213,7 +2390,8 @@
     "descFunc": 6,
     "descVal": 1,
     "descPos": "Kick Damage",
-    "descNeg": "Kick Damage"
+    "descNeg": "Kick Damage",
+    "descAdditional": "(Based on Character Level)"
   },
   {
     "stat": "item_deadlystrike_perlevel",
@@ -2225,7 +2403,8 @@
     "descFunc": 7,
     "descVal": 1,
     "descPos": "Deadly Strike",
-    "descNeg": "Deadly Strike"
+    "descNeg": "Deadly Strike",
+    "descAdditional": "(Based on Character Level)"
   },
   null,
   {
@@ -2238,7 +2417,8 @@
     "descFunc": 11,
     "descVal": 0,
     "descPos": "Repairs %d durability per second",
-    "descNeg": "Repairs %d durability per second"
+    "descNeg": "Repairs %d durability per second",
+    "descAdditional": ""
   },
   {
     "stat": "item_replenish_quantity",
@@ -2250,7 +2430,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Replenishes quantity",
-    "descNeg": "Replenishes quantity"
+    "descNeg": "Replenishes quantity",
+    "descAdditional": ""
   },
   {
     "stat": "item_extra_stack",
@@ -2262,7 +2443,8 @@
     "descFunc": 3,
     "descVal": 0,
     "descPos": "Increased Stack Size",
-    "descNeg": "Increased Stack Size"
+    "descNeg": "Increased Stack Size",
+    "descAdditional": ""
   },
   null,
   null,
@@ -2324,7 +2506,8 @@
     "descFunc": 20,
     "descVal": 1,
     "descPos": "to Enemy Cold Resistance",
-    "descNeg": "to Enemy Cold Resistance"
+    "descNeg": "to Enemy Cold Resistance",
+    "descAdditional": ""
   },
   {
     "stat": "item_pierce_fire",
@@ -2336,7 +2519,8 @@
     "descFunc": 20,
     "descVal": 1,
     "descPos": "to Enemy Fire Resistance",
-    "descNeg": "to Enemy Fire Resistance"
+    "descNeg": "to Enemy Fire Resistance",
+    "descAdditional": ""
   },
   {
     "stat": "item_pierce_ltng",
@@ -2348,7 +2532,8 @@
     "descFunc": 20,
     "descVal": 1,
     "descPos": "to Enemy Lightning Resistance",
-    "descNeg": "to Enemy Lightning Resistance"
+    "descNeg": "to Enemy Lightning Resistance",
+    "descAdditional": ""
   },
   {
     "stat": "item_pierce_pois",
@@ -2360,7 +2545,8 @@
     "descFunc": 20,
     "descVal": 1,
     "descPos": "to Enemy Poison Resistance",
-    "descNeg": "to Enemy Poison Resistance"
+    "descNeg": "to Enemy Poison Resistance",
+    "descAdditional": ""
   },
   null,
   null,
@@ -2387,7 +2573,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   null,
   null,
@@ -2403,7 +2590,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "to Fire Skill Damage",
-    "descNeg": "to Fire Skill Damage"
+    "descNeg": "to Fire Skill Damage",
+    "descAdditional": ""
   },
   {
     "stat": "passive_ltng_mastery",
@@ -2415,7 +2603,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "to Lightning Skill Damage",
-    "descNeg": "to Lightning Skill Damage"
+    "descNeg": "to Lightning Skill Damage",
+    "descAdditional": ""
   },
   {
     "stat": "passive_cold_mastery",
@@ -2427,7 +2616,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "to Cold Skill Damage",
-    "descNeg": "to Cold Skill Damage"
+    "descNeg": "to Cold Skill Damage",
+    "descAdditional": ""
   },
   {
     "stat": "passive_pois_mastery",
@@ -2439,7 +2629,8 @@
     "descFunc": 4,
     "descVal": 1,
     "descPos": "to Poison Skill Damage",
-    "descNeg": "to Poison Skill Damage"
+    "descNeg": "to Poison Skill Damage",
+    "descAdditional": ""
   },
   {
     "stat": "passive_fire_pierce",
@@ -2451,7 +2642,8 @@
     "descFunc": 20,
     "descVal": 1,
     "descPos": "to Enemy Fire Resistance",
-    "descNeg": "to Enemy Fire Resistance"
+    "descNeg": "to Enemy Fire Resistance",
+    "descAdditional": ""
   },
   {
     "stat": "passive_ltng_pierce",
@@ -2463,7 +2655,8 @@
     "descFunc": 20,
     "descVal": 1,
     "descPos": "to Enemy Lightning Resistance",
-    "descNeg": "to Enemy Lightning Resistance"
+    "descNeg": "to Enemy Lightning Resistance",
+    "descAdditional": ""
   },
   {
     "stat": "passive_cold_pierce",
@@ -2475,7 +2668,8 @@
     "descFunc": 20,
     "descVal": 1,
     "descPos": "to Enemy Cold Resistance",
-    "descNeg": "to Enemy Cold Resistance"
+    "descNeg": "to Enemy Cold Resistance",
+    "descAdditional": ""
   },
   {
     "stat": "passive_pois_pierce",
@@ -2487,7 +2681,8 @@
     "descFunc": 20,
     "descVal": 1,
     "descPos": "to Enemy Poison Resistance",
-    "descNeg": "to Enemy Poison Resistance"
+    "descNeg": "to Enemy Poison Resistance",
+    "descAdditional": ""
   },
   {
     "stat": "passive_critical_strike",
@@ -2499,7 +2694,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_dodge",
@@ -2511,7 +2707,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_avoid",
@@ -2523,7 +2720,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_evade",
@@ -2535,7 +2733,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_warmth",
@@ -2547,7 +2746,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_mastery_melee_th",
@@ -2559,7 +2759,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_mastery_melee_dmg",
@@ -2571,7 +2772,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_mastery_melee_crit",
@@ -2583,7 +2785,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_mastery_throw_th",
@@ -2595,7 +2798,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_mastery_throw_dmg",
@@ -2607,7 +2811,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_mastery_throw_crit",
@@ -2619,7 +2824,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_weaponblock",
@@ -2631,7 +2837,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_summon_resist",
@@ -2643,7 +2850,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   null,
   null,
@@ -2661,7 +2869,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_mag_mastery",
@@ -2673,7 +2882,8 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   },
   {
     "stat": "passive_mag_pierce",
@@ -2685,6 +2895,7 @@
     "descFunc": 0,
     "descVal": 0,
     "descPos": "",
-    "descNeg": ""
+    "descNeg": "",
+    "descAdditional": ""
   }
 ]
