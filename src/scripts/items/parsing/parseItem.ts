@@ -32,7 +32,7 @@ export function parseItem(raw: Uint8Array) {
       if (e instanceof ItemParsingError) {
         throw e;
       }
-      throw new ItemParsingError(item);
+      throw new ItemParsingError(item, (e as Error).message);
     }
   }
   return item;

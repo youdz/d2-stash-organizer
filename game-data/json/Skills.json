@@ -25,603 +25,753 @@
   },
   {
     "code": "Magic Arrow",
-    "name": "Magic Arrow"
+    "name": "Magic Arrow",
+    "charClass": 0
   },
   {
     "code": "Fire Arrow",
-    "name": "Fire Arrow"
+    "name": "Fire Arrow",
+    "charClass": 0
   },
   {
     "code": "Inner Sight",
-    "name": "Inner Sight"
+    "name": "Inner Sight",
+    "charClass": 0
   },
   {
     "code": "Critical Strike",
-    "name": "Critical Strike"
+    "name": "Critical Strike",
+    "charClass": 0
   },
   {
     "code": "Jab",
-    "name": "Jab"
+    "name": "Jab",
+    "charClass": 0
   },
   {
     "code": "Cold Arrow",
-    "name": "Cold Arrow"
+    "name": "Cold Arrow",
+    "charClass": 0
   },
   {
     "code": "Multiple Shot",
-    "name": "Multiple Shot"
+    "name": "Multiple Shot",
+    "charClass": 0
   },
   {
     "code": "Dodge",
-    "name": "Dodge"
+    "name": "Dodge",
+    "charClass": 0
   },
   {
     "code": "Power Strike",
-    "name": "Power Strike"
+    "name": "Power Strike",
+    "charClass": 0
   },
   {
     "code": "Poison Javelin",
-    "name": "Poison Javelin"
+    "name": "Poison Javelin",
+    "charClass": 0
   },
   {
     "code": "Exploding Arrow",
-    "name": "Exploding Arrow"
+    "name": "Exploding Arrow",
+    "charClass": 0
   },
   {
     "code": "Slow Missiles",
-    "name": "Slow Missiles"
+    "name": "Slow Missiles",
+    "charClass": 0
   },
   {
     "code": "Avoid",
-    "name": "Avoid"
+    "name": "Avoid",
+    "charClass": 0
   },
   {
     "code": "Impale",
-    "name": "Impale"
+    "name": "Impale",
+    "charClass": 0
   },
   {
     "code": "Lightning Bolt",
-    "name": "Lightning Bolt"
+    "name": "Lightning Bolt",
+    "charClass": 0
   },
   {
     "code": "Ice Arrow",
-    "name": "Ice Arrow"
+    "name": "Ice Arrow",
+    "charClass": 0
   },
   {
     "code": "Guided Arrow",
-    "name": "Guided Arrow"
+    "name": "Guided Arrow",
+    "charClass": 0
   },
   {
     "code": "Penetrate",
-    "name": "Penetrate"
+    "name": "Penetrate",
+    "charClass": 0
   },
   {
     "code": "Charged Strike",
-    "name": "Charged Strike"
+    "name": "Charged Strike",
+    "charClass": 0
   },
   {
     "code": "Plague Javelin",
-    "name": "Plague Javelin"
+    "name": "Plague Javelin",
+    "charClass": 0
   },
   {
     "code": "Strafe",
-    "name": "Strafe"
+    "name": "Strafe",
+    "charClass": 0
   },
   {
     "code": "Immolation Arrow",
-    "name": "Immolation Arrow"
+    "name": "Immolation Arrow",
+    "charClass": 0
   },
   {
     "code": "Dopplezon",
-    "name": "Decoy"
+    "name": "Decoy",
+    "charClass": 0
   },
   {
     "code": "Evade",
-    "name": "Evade"
+    "name": "Evade",
+    "charClass": 0
   },
   {
     "code": "Fend",
-    "name": "Fend"
+    "name": "Fend",
+    "charClass": 0
   },
   {
     "code": "Freezing Arrow",
-    "name": "Freezing Arrow"
+    "name": "Freezing Arrow",
+    "charClass": 0
   },
   {
     "code": "Valkyrie",
-    "name": "Valkyrie"
+    "name": "Valkyrie",
+    "charClass": 0
   },
   {
     "code": "Pierce",
-    "name": "Pierce"
+    "name": "Pierce",
+    "charClass": 0
   },
   {
     "code": "Lightning Strike",
-    "name": "Lightning Strike"
+    "name": "Lightning Strike",
+    "charClass": 0
   },
   {
     "code": "Lightning Fury",
-    "name": "Lightning Fury"
+    "name": "Lightning Fury",
+    "charClass": 0
   },
   {
     "code": "Fire Bolt",
-    "name": "Fire Bolt"
+    "name": "Fire Bolt",
+    "charClass": 1
   },
   {
     "code": "Warmth",
-    "name": "Warmth"
+    "name": "Warmth",
+    "charClass": 1
   },
   {
     "code": "Charged Bolt",
-    "name": "Charged Bolt"
+    "name": "Charged Bolt",
+    "charClass": 1
   },
   {
     "code": "Ice Bolt",
-    "name": "Ice Bolt"
+    "name": "Ice Bolt",
+    "charClass": 1
   },
   {
     "code": "Frozen Armor",
-    "name": "Frozen Armor"
+    "name": "Frozen Armor",
+    "charClass": 1
   },
   {
     "code": "Inferno",
-    "name": "Inferno"
+    "name": "Inferno",
+    "charClass": 1
   },
   {
     "code": "Static Field",
-    "name": "Static Field"
+    "name": "Static Field",
+    "charClass": 1
   },
   {
     "code": "Telekinesis",
-    "name": "Telekinesis"
+    "name": "Telekinesis",
+    "charClass": 1
   },
   {
     "code": "Frost Nova",
-    "name": "Frost Nova"
+    "name": "Frost Nova",
+    "charClass": 1
   },
   {
     "code": "Ice Blast",
-    "name": "Ice Blast"
+    "name": "Ice Blast",
+    "charClass": 1
   },
   {
     "code": "Blaze",
-    "name": "Blaze"
+    "name": "Blaze",
+    "charClass": 1
   },
   {
     "code": "Fire Ball",
-    "name": "Fire Ball"
+    "name": "Fire Ball",
+    "charClass": 1
   },
   {
     "code": "Nova",
-    "name": "Nova"
+    "name": "Nova",
+    "charClass": 1
   },
   {
     "code": "Lightning",
-    "name": "Lightning"
+    "name": "Lightning",
+    "charClass": 1
   },
   {
     "code": "Shiver Armor",
-    "name": "Shiver Armor"
+    "name": "Shiver Armor",
+    "charClass": 1
   },
   {
     "code": "Fire Wall",
-    "name": "Fire Wall"
+    "name": "Fire Wall",
+    "charClass": 1
   },
   {
     "code": "Enchant",
-    "name": "Enchant"
+    "name": "Enchant",
+    "charClass": 1
   },
   {
     "code": "Chain Lightning",
-    "name": "Chain Lightning"
+    "name": "Chain Lightning",
+    "charClass": 1
   },
   {
     "code": "Teleport",
-    "name": "Teleport"
+    "name": "Teleport",
+    "charClass": 1
   },
   {
     "code": "Glacial Spike",
-    "name": "Glacial Spike"
+    "name": "Glacial Spike",
+    "charClass": 1
   },
   {
     "code": "Meteor",
-    "name": "Meteor"
+    "name": "Meteor",
+    "charClass": 1
   },
   {
     "code": "Thunder Storm",
-    "name": "Thunder Storm"
+    "name": "Thunder Storm",
+    "charClass": 1
   },
   {
     "code": "Energy Shield",
-    "name": "Energy Shield"
+    "name": "Energy Shield",
+    "charClass": 1
   },
   {
     "code": "Blizzard",
-    "name": "Blizzard"
+    "name": "Blizzard",
+    "charClass": 1
   },
   {
     "code": "Chilling Armor",
-    "name": "Chilling Armor"
+    "name": "Chilling Armor",
+    "charClass": 1
   },
   {
     "code": "Fire Mastery",
-    "name": "Fire Mastery"
+    "name": "Fire Mastery",
+    "charClass": 1
   },
   {
     "code": "Hydra",
-    "name": "Hydra"
+    "name": "Hydra",
+    "charClass": 1
   },
   {
     "code": "Lightning Mastery",
-    "name": "Lightning Mastery"
+    "name": "Lightning Mastery",
+    "charClass": 1
   },
   {
     "code": "Frozen Orb",
-    "name": "Frozen Orb"
+    "name": "Frozen Orb",
+    "charClass": 1
   },
   {
     "code": "Cold Mastery",
-    "name": "Cold Mastery"
+    "name": "Cold Mastery",
+    "charClass": 1
   },
   {
     "code": "Amplify Damage",
-    "name": "Amplify Damage"
+    "name": "Amplify Damage",
+    "charClass": 2
   },
   {
     "code": "Teeth",
-    "name": "Teeth"
+    "name": "Teeth",
+    "charClass": 2
   },
   {
     "code": "Bone Armor",
-    "name": "Bone Armor"
+    "name": "Bone Armor",
+    "charClass": 2
   },
   {
     "code": "Skeleton Mastery",
-    "name": "Skeleton Mastery"
+    "name": "Skeleton Mastery",
+    "charClass": 2
   },
   {
     "code": "Raise Skeleton",
-    "name": "Raise Skeleton"
+    "name": "Raise Skeleton",
+    "charClass": 2
   },
   {
     "code": "Dim Vision",
-    "name": "Dim Vision"
+    "name": "Dim Vision",
+    "charClass": 2
   },
   {
     "code": "Weaken",
-    "name": "Weaken"
+    "name": "Weaken",
+    "charClass": 2
   },
   {
     "code": "Poison Dagger",
-    "name": "Poison Dagger"
+    "name": "Poison Dagger",
+    "charClass": 2
   },
   {
     "code": "Corpse Explosion",
-    "name": "Corpse Explosion"
+    "name": "Corpse Explosion",
+    "charClass": 2
   },
   {
     "code": "Clay Golem",
-    "name": "Clay Golem"
+    "name": "Clay Golem",
+    "charClass": 2
   },
   {
     "code": "Iron Maiden",
-    "name": "Iron Maiden"
+    "name": "Iron Maiden",
+    "charClass": 2
   },
   {
     "code": "Terror",
-    "name": "Terror"
+    "name": "Terror",
+    "charClass": 2
   },
   {
     "code": "Bone Wall",
-    "name": "Bone Wall"
+    "name": "Bone Wall",
+    "charClass": 2
   },
   {
     "code": "Golem Mastery",
-    "name": "Golem Mastery"
+    "name": "Golem Mastery",
+    "charClass": 2
   },
   {
     "code": "Raise Skeletal Mage",
-    "name": "Raise Skeletal Mage"
+    "name": "Raise Skeletal Mage",
+    "charClass": 2
   },
   {
     "code": "Confuse",
-    "name": "Confuse"
+    "name": "Confuse",
+    "charClass": 2
   },
   {
     "code": "Life Tap",
-    "name": "Life Tap"
+    "name": "Life Tap",
+    "charClass": 2
   },
   {
     "code": "Poison Explosion",
-    "name": "Poison Explosion"
+    "name": "Poison Explosion",
+    "charClass": 2
   },
   {
     "code": "Bone Spear",
-    "name": "Bone Spear"
+    "name": "Bone Spear",
+    "charClass": 2
   },
   {
     "code": "BloodGolem",
-    "name": "Blood Golem"
+    "name": "Blood Golem",
+    "charClass": 2
   },
   {
     "code": "Attract",
-    "name": "Attract"
+    "name": "Attract",
+    "charClass": 2
   },
   {
     "code": "Decrepify",
-    "name": "Decrepify"
+    "name": "Decrepify",
+    "charClass": 2
   },
   {
     "code": "Bone Prison",
-    "name": "Bone Prison"
+    "name": "Bone Prison",
+    "charClass": 2
   },
   {
     "code": "Summon Resist",
-    "name": "Summon Resist"
+    "name": "Summon Resist",
+    "charClass": 2
   },
   {
     "code": "IronGolem",
-    "name": "Iron Golem"
+    "name": "Iron Golem",
+    "charClass": 2
   },
   {
     "code": "Lower Resist",
-    "name": "Lower Resist"
+    "name": "Lower Resist",
+    "charClass": 2
   },
   {
     "code": "Poison Nova",
-    "name": "Poison Nova"
+    "name": "Poison Nova",
+    "charClass": 2
   },
   {
     "code": "Bone Spirit",
-    "name": "Bone Spirit"
+    "name": "Bone Spirit",
+    "charClass": 2
   },
   {
     "code": "FireGolem",
-    "name": "Fire Golem"
+    "name": "Fire Golem",
+    "charClass": 2
   },
   {
     "code": "Revive",
-    "name": "Revive"
+    "name": "Revive",
+    "charClass": 2
   },
   {
     "code": "Sacrifice",
-    "name": "Sacrifice"
+    "name": "Sacrifice",
+    "charClass": 3
   },
   {
     "code": "Smite",
-    "name": "Smite"
+    "name": "Smite",
+    "charClass": 3
   },
   {
     "code": "Might",
-    "name": "Might"
+    "name": "Might",
+    "charClass": 3
   },
   {
     "code": "Prayer",
-    "name": "Prayer"
+    "name": "Prayer",
+    "charClass": 3
   },
   {
     "code": "Resist Fire",
-    "name": "Resist Fire"
+    "name": "Resist Fire",
+    "charClass": 3
   },
   {
     "code": "Holy Bolt",
-    "name": "Holy Bolt"
+    "name": "Holy Bolt",
+    "charClass": 3
   },
   {
     "code": "Holy Fire",
-    "name": "Holy Fire"
+    "name": "Holy Fire",
+    "charClass": 3
   },
   {
     "code": "Thorns",
-    "name": "Thorns"
+    "name": "Thorns",
+    "charClass": 3
   },
   {
     "code": "Defiance",
-    "name": "Defiance"
+    "name": "Defiance",
+    "charClass": 3
   },
   {
     "code": "Resist Cold",
-    "name": "Resist Cold"
+    "name": "Resist Cold",
+    "charClass": 3
   },
   {
     "code": "Zeal",
-    "name": "Zeal"
+    "name": "Zeal",
+    "charClass": 3
   },
   {
     "code": "Charge",
-    "name": "Charge"
+    "name": "Charge",
+    "charClass": 3
   },
   {
     "code": "Blessed Aim",
-    "name": "Blessed Aim"
+    "name": "Blessed Aim",
+    "charClass": 3
   },
   {
     "code": "Cleansing",
-    "name": "Cleansing"
+    "name": "Cleansing",
+    "charClass": 3
   },
   {
     "code": "Resist Lightning",
-    "name": "Resist Lightning"
+    "name": "Resist Lightning",
+    "charClass": 3
   },
   {
     "code": "Vengeance",
-    "name": "Vengeance"
+    "name": "Vengeance",
+    "charClass": 3
   },
   {
     "code": "Blessed Hammer",
-    "name": "Blessed Hammer"
+    "name": "Blessed Hammer",
+    "charClass": 3
   },
   {
     "code": "Concentration",
-    "name": "Concentration"
+    "name": "Concentration",
+    "charClass": 3
   },
   {
     "code": "Holy Freeze",
-    "name": "Holy Freeze"
+    "name": "Holy Freeze",
+    "charClass": 3
   },
   {
     "code": "Vigor",
-    "name": "Vigor"
+    "name": "Vigor",
+    "charClass": 3
   },
   {
     "code": "Conversion",
-    "name": "Conversion"
+    "name": "Conversion",
+    "charClass": 3
   },
   {
     "code": "Holy Shield",
-    "name": "Holy Shield"
+    "name": "Holy Shield",
+    "charClass": 3
   },
   {
     "code": "Holy Shock",
-    "name": "Holy Shock"
+    "name": "Holy Shock",
+    "charClass": 3
   },
   {
     "code": "Sanctuary",
-    "name": "Sanctuary"
+    "name": "Sanctuary",
+    "charClass": 3
   },
   {
     "code": "Meditation",
-    "name": "Meditation"
+    "name": "Meditation",
+    "charClass": 3
   },
   {
     "code": "Fist of the Heavens",
-    "name": "Fist of the Heavens"
+    "name": "Fist of the Heavens",
+    "charClass": 3
   },
   {
     "code": "Fanaticism",
-    "name": "Fanaticism"
+    "name": "Fanaticism",
+    "charClass": 3
   },
   {
     "code": "Conviction",
-    "name": "Conviction"
+    "name": "Conviction",
+    "charClass": 3
   },
   {
     "code": "Redemption",
-    "name": "Redemption"
+    "name": "Redemption",
+    "charClass": 3
   },
   {
     "code": "Salvation",
-    "name": "Salvation"
+    "name": "Salvation",
+    "charClass": 3
   },
   {
     "code": "Bash",
-    "name": "Bash"
+    "name": "Bash",
+    "charClass": 4
   },
   {
     "code": "Sword Mastery",
-    "name": "Sword Mastery"
+    "name": "Sword Mastery",
+    "charClass": 4
   },
   {
     "code": "Axe Mastery",
-    "name": "Axe Mastery"
+    "name": "Axe Mastery",
+    "charClass": 4
   },
   {
     "code": "Mace Mastery",
-    "name": "Mace Mastery"
+    "name": "Mace Mastery",
+    "charClass": 4
   },
   {
     "code": "Howl",
-    "name": "Howl"
+    "name": "Howl",
+    "charClass": 4
   },
   {
     "code": "Find Potion",
-    "name": "Find Potion"
+    "name": "Find Potion",
+    "charClass": 4
   },
   {
     "code": "Leap",
-    "name": "Leap"
+    "name": "Leap",
+    "charClass": 4
   },
   {
     "code": "Double Swing",
-    "name": "Double Swing"
+    "name": "Double Swing",
+    "charClass": 4
   },
   {
     "code": "Pole Arm Mastery",
-    "name": "Pole Arm Mastery"
+    "name": "Pole Arm Mastery",
+    "charClass": 4
   },
   {
     "code": "Throwing Mastery",
-    "name": "Throwing Mastery"
+    "name": "Throwing Mastery",
+    "charClass": 4
   },
   {
     "code": "Spear Mastery",
-    "name": "Spear Mastery"
+    "name": "Spear Mastery",
+    "charClass": 4
   },
   {
     "code": "Taunt",
-    "name": "Taunt"
+    "name": "Taunt",
+    "charClass": 4
   },
   {
     "code": "Shout",
-    "name": "Shout"
+    "name": "Shout",
+    "charClass": 4
   },
   {
     "code": "Stun",
-    "name": "Stun"
+    "name": "Stun",
+    "charClass": 4
   },
   {
     "code": "Double Throw",
-    "name": "Double Throw"
+    "name": "Double Throw",
+    "charClass": 4
   },
   {
     "code": "Increased Stamina",
-    "name": "Increased Stamina"
+    "name": "Increased Stamina",
+    "charClass": 4
   },
   {
     "code": "Find Item",
-    "name": "Find Item"
+    "name": "Find Item",
+    "charClass": 4
   },
   {
     "code": "Leap Attack",
-    "name": "Leap Attack"
+    "name": "Leap Attack",
+    "charClass": 4
   },
   {
     "code": "Concentrate",
-    "name": "Concentrate"
+    "name": "Concentrate",
+    "charClass": 4
   },
   {
     "code": "Iron Skin",
-    "name": "Iron Skin"
+    "name": "Iron Skin",
+    "charClass": 4
   },
   {
     "code": "Battle Cry",
-    "name": "Battle Cry"
+    "name": "Battle Cry",
+    "charClass": 4
   },
   {
     "code": "Frenzy",
-    "name": "Frenzy"
+    "name": "Frenzy",
+    "charClass": 4
   },
   {
     "code": "Increased Speed",
-    "name": "Increased Speed"
+    "name": "Increased Speed",
+    "charClass": 4
   },
   {
     "code": "Battle Orders",
-    "name": "Battle Orders"
+    "name": "Battle Orders",
+    "charClass": 4
   },
   {
     "code": "Grim Ward",
-    "name": "Grim Ward"
+    "name": "Grim Ward",
+    "charClass": 4
   },
   {
     "code": "Whirlwind",
-    "name": "Whirlwind"
+    "name": "Whirlwind",
+    "charClass": 4
   },
   {
     "code": "Berserk",
-    "name": "Berserk"
+    "name": "Berserk",
+    "charClass": 4
   },
   {
     "code": "Natural Resistance",
-    "name": "Natural Resistance"
+    "name": "Natural Resistance",
+    "charClass": 4
   },
   {
     "code": "War Cry",
-    "name": "War Cry"
+    "name": "War Cry",
+    "charClass": 4
   },
   {
     "code": "Battle Command",
-    "name": "Battle Command"
+    "name": "Battle Command",
+    "charClass": 4
   },
   {
     "code": "Fire Hit",
@@ -885,243 +1035,303 @@
   },
   {
     "code": "Raven",
-    "name": "Raven"
+    "name": "Raven",
+    "charClass": 5
   },
   {
     "code": "Plague Poppy",
-    "name": "Werewolf"
+    "name": "Werewolf",
+    "charClass": 5
   },
   {
     "code": "Wearwolf",
-    "name": "Werewolf"
+    "name": "Werewolf",
+    "charClass": 5
   },
   {
     "code": "Shape Shifting",
-    "name": "Lycanthropy"
+    "name": "Lycanthropy",
+    "charClass": 5
   },
   {
     "code": "Firestorm",
-    "name": "Firestorm"
+    "name": "Firestorm",
+    "charClass": 5
   },
   {
     "code": "Oak Sage",
-    "name": "Oak Sage"
+    "name": "Oak Sage",
+    "charClass": 5
   },
   {
     "code": "Summon Spirit Wolf",
-    "name": "Summon Spirit Wolf"
+    "name": "Summon Spirit Wolf",
+    "charClass": 5
   },
   {
     "code": "Wearbear",
-    "name": "Werebear"
+    "name": "Werebear",
+    "charClass": 5
   },
   {
     "code": "Molten Boulder",
-    "name": "Molten Boulder"
+    "name": "Molten Boulder",
+    "charClass": 5
   },
   {
     "code": "Arctic Blast",
-    "name": "Arctic Blast"
+    "name": "Arctic Blast",
+    "charClass": 5
   },
   {
     "code": "Cycle of Life",
-    "name": "Carrion Vine"
+    "name": "Carrion Vine",
+    "charClass": 5
   },
   {
     "code": "Feral Rage",
-    "name": "Feral Rage"
+    "name": "Feral Rage",
+    "charClass": 5
   },
   {
     "code": "Maul",
-    "name": "Maul"
+    "name": "Maul",
+    "charClass": 5
   },
   {
     "code": "Eruption",
-    "name": "Fissure"
+    "name": "Fissure",
+    "charClass": 5
   },
   {
     "code": "Cyclone Armor",
-    "name": "Cyclone Armor"
+    "name": "Cyclone Armor",
+    "charClass": 5
   },
   {
     "code": "Heart of Wolverine",
-    "name": "Heart of Wolverine"
+    "name": "Heart of Wolverine",
+    "charClass": 5
   },
   {
     "code": "Summon Fenris",
-    "name": "Summon Dire Wolf"
+    "name": "Summon Dire Wolf",
+    "charClass": 5
   },
   {
     "code": "Rabies",
-    "name": "Rabies"
+    "name": "Rabies",
+    "charClass": 5
   },
   {
     "code": "Fire Claws",
-    "name": "Fire Claws"
+    "name": "Fire Claws",
+    "charClass": 5
   },
   {
     "code": "Twister",
-    "name": "Twister"
+    "name": "Twister",
+    "charClass": 5
   },
   {
     "code": "Vines",
-    "name": "Solar Creeper"
+    "name": "Solar Creeper",
+    "charClass": 5
   },
   {
     "code": "Hunger",
-    "name": "Hunger"
+    "name": "Hunger",
+    "charClass": 5
   },
   {
     "code": "Shock Wave",
-    "name": "Shock Wave"
+    "name": "Shock Wave",
+    "charClass": 5
   },
   {
     "code": "Volcano",
-    "name": "Volcano"
+    "name": "Volcano",
+    "charClass": 5
   },
   {
     "code": "Tornado",
-    "name": "Tornado"
+    "name": "Tornado",
+    "charClass": 5
   },
   {
     "code": "Spirit of Barbs",
-    "name": "Spirit of Barbs"
+    "name": "Spirit of Barbs",
+    "charClass": 5
   },
   {
     "code": "Summon Grizzly",
-    "name": "Summon Grizzly"
+    "name": "Summon Grizzly",
+    "charClass": 5
   },
   {
     "code": "Fury",
-    "name": "Fury"
+    "name": "Fury",
+    "charClass": 5
   },
   {
     "code": "Armageddon",
-    "name": "Armageddon"
+    "name": "Armageddon",
+    "charClass": 5
   },
   {
     "code": "Hurricane",
-    "name": "Hurricane"
+    "name": "Hurricane",
+    "charClass": 5
   },
   {
     "code": "Fire Trauma",
-    "name": "Fire Blast"
+    "name": "Fire Blast",
+    "charClass": 6
   },
   {
     "code": "Claw Mastery",
-    "name": "Claw Mastery"
+    "name": "Claw Mastery",
+    "charClass": 6
   },
   {
     "code": "Psychic Hammer",
-    "name": "Psychic Hammer"
+    "name": "Psychic Hammer",
+    "charClass": 6
   },
   {
     "code": "Tiger Strike",
-    "name": "Tiger Strike"
+    "name": "Tiger Strike",
+    "charClass": 6
   },
   {
     "code": "Dragon Talon",
-    "name": "Dragon Talon"
+    "name": "Dragon Talon",
+    "charClass": 6
   },
   {
     "code": "Shock Field",
-    "name": "Shock Web"
+    "name": "Shock Web",
+    "charClass": 6
   },
   {
     "code": "Blade Sentinel",
-    "name": "Blade Sentinel"
+    "name": "Blade Sentinel",
+    "charClass": 6
   },
   {
     "code": "Quickness",
-    "name": "Burst of Speed"
+    "name": "Burst of Speed",
+    "charClass": 6
   },
   {
     "code": "Fists of Fire",
-    "name": "Fists of Fire"
+    "name": "Fists of Fire",
+    "charClass": 6
   },
   {
     "code": "Dragon Claw",
-    "name": "Dragon Claw"
+    "name": "Dragon Claw",
+    "charClass": 6
   },
   {
     "code": "Charged Bolt Sentry",
-    "name": "Charged Bolt Sentry"
+    "name": "Charged Bolt Sentry",
+    "charClass": 6
   },
   {
     "code": "Wake of Fire Sentry",
-    "name": "Wake of Fire"
+    "name": "Wake of Fire",
+    "charClass": 6
   },
   {
     "code": "Weapon Block",
-    "name": "Weapon Block"
+    "name": "Weapon Block",
+    "charClass": 6
   },
   {
     "code": "Cloak of Shadows",
-    "name": "Cloak of Shadows"
+    "name": "Cloak of Shadows",
+    "charClass": 6
   },
   {
     "code": "Cobra Strike",
-    "name": "Cobra Strike"
+    "name": "Cobra Strike",
+    "charClass": 6
   },
   {
     "code": "Blade Fury",
-    "name": "Blade Fury"
+    "name": "Blade Fury",
+    "charClass": 6
   },
   {
     "code": "Fade",
-    "name": "Fade"
+    "name": "Fade",
+    "charClass": 6
   },
   {
     "code": "Shadow Warrior",
-    "name": "Shadow Warrior"
+    "name": "Shadow Warrior",
+    "charClass": 6
   },
   {
     "code": "Claws of Thunder",
-    "name": "Claws of Thunder"
+    "name": "Claws of Thunder",
+    "charClass": 6
   },
   {
     "code": "Dragon Tail",
-    "name": "Dragon Tail"
+    "name": "Dragon Tail",
+    "charClass": 6
   },
   {
     "code": "Lightning Sentry",
-    "name": "Lightning Sentry"
+    "name": "Lightning Sentry",
+    "charClass": 6
   },
   {
     "code": "Inferno Sentry",
-    "name": "Wake of Inferno"
+    "name": "Wake of Inferno",
+    "charClass": 6
   },
   {
     "code": "Mind Blast",
-    "name": "Mind Blast"
+    "name": "Mind Blast",
+    "charClass": 6
   },
   {
     "code": "Blades of Ice",
-    "name": "Blades of Ice"
+    "name": "Blades of Ice",
+    "charClass": 6
   },
   {
     "code": "Dragon Flight",
-    "name": "Dragon Flight"
+    "name": "Dragon Flight",
+    "charClass": 6
   },
   {
     "code": "Death Sentry",
-    "name": "Death Sentry"
+    "name": "Death Sentry",
+    "charClass": 6
   },
   {
     "code": "Blade Shield",
-    "name": "Blade Shield"
+    "name": "Blade Shield",
+    "charClass": 6
   },
   {
     "code": "Venom",
-    "name": "Venom"
+    "name": "Venom",
+    "charClass": 6
   },
   {
     "code": "Shadow Master",
-    "name": "Shadow Master"
+    "name": "Shadow Master",
+    "charClass": 6
   },
   {
     "code": "Royal Strike",
-    "name": "Phoenix Strike"
+    "name": "Phoenix Strike",
+    "charClass": 6
   },
   {
     "code": "Wake Of Destruction Sentry",

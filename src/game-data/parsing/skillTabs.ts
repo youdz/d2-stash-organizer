@@ -28,9 +28,11 @@ const IN_ORDER = [
 export async function skillTabsToJson() {
   const tabs: SkillTab[] = [];
   for (let i = 0; i < IN_ORDER.length; i++) {
+    const charClass = Math.floor(i / 3);
     tabs.push({
-      id: i + 5 * Math.floor(i / 3),
+      id: i + 5 * charClass,
       name: IN_ORDER[i],
+      charClass,
     });
   }
   await writeJson("SkillTabs", tabs);

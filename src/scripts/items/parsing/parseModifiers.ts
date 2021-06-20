@@ -3,6 +3,7 @@ import { Item } from "../types/Item";
 import { ItemQuality } from "../types/ItemQuality";
 import { ITEM_STATS } from "../../../game-data";
 import { ItemParsingError } from "../../errors/ItemParsingError";
+import { describeMod } from "./describeMod";
 
 /*
  * Parses one list of modifiers at a time. Some items have more than one:
@@ -10,16 +11,21 @@ import { ItemParsingError } from "../../errors/ItemParsingError";
  * - Sets have one for each increment in set bonuses
  */
 function parseModsList({ readInt }: BinaryStream, item: Item) {
-  const mods = item.modifiers!;
+  const mods = [];
   let modId = readInt(9);
   while (modId !== 511) {
     const modInfo = ITEM_STATS[modId];
     if (!modInfo) {
       throw new ItemParsingError(item, `Unknown mod ${modId}`);
     }
+    const shared = {
+      id: modId,
+      stat: modInfo.stat,
+      priority: modInfo.descPriority,
+    };
     if (modInfo.encode === 3) {
       mods.push({
-        stat: modInfo.stat,
+        ...shared,
         level: readInt(6) - modInfo.bias,
         spell: readInt(10) - modInfo.bias,
         charges: readInt(8) - modInfo.bias,
@@ -27,7 +33,7 @@ function parseModsList({ readInt }: BinaryStream, item: Item) {
       });
     } else if (modInfo.encode === 2) {
       mods.push({
-        stat: modInfo.stat,
+        ...shared,
         level: readInt(6) - modInfo.bias,
         spell: readInt(10) - modInfo.bias,
         chance: readInt(modInfo.size) - modInfo.bias,
@@ -38,7 +44,7 @@ function parseModsList({ readInt }: BinaryStream, item: Item) {
         param = readInt(modInfo.paramSize) - modInfo.bias;
       }
       mods.push({
-        stat: modInfo.stat,
+        ...shared,
         value: readInt(modInfo.size) - modInfo.bias,
         param,
       });
@@ -50,6 +56,8 @@ function parseModsList({ readInt }: BinaryStream, item: Item) {
       modId = readInt(9);
     }
   }
+  mods.sort(({ priority: a }, { priority: b }) => b - a);
+  item.modifiers!.push(...mods);
 }
 
 export function parseModifiers(stream: BinaryStream, item: Item) {
@@ -70,4 +78,9 @@ export function parseModifiers(stream: BinaryStream, item: Item) {
   }
 
   parseModsList(stream, item);
+  item.description?.push(
+    ...item.modifiers
+      .map((mod) => describeMod(mod))
+      .filter((desc): desc is string => !!desc)
+  );
 }

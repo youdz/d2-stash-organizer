@@ -4,12 +4,13 @@ import { parseStash } from "./stash/parsing/parseStash";
 import { organize } from "./grail/organize";
 import { saveStash } from "./stash/saveStash";
 import { getAllItems } from "./stash/getAllItems";
-import { UNIQUE_ITEMS } from "../game-data";
+import { ITEM_STATS, UNIQUE_ITEMS } from "../game-data";
 import { printGrailProgress } from "./grail/list/grailProgress";
 import { listGrailUniques } from "./grail/list/listGrailUniques";
 import { UNIQUES_ORDER } from "./grail/list/uniquesOrder";
+import { triageNewItems } from "./private/triageNewItems";
 
-const INPUT = "test/not-working.sss";
+const INPUT = "test/stash.sss";
 const TEST_OUTPUT = "test/saved.sss";
 const DANGER_OUTPUT = INPUT;
 
@@ -21,8 +22,13 @@ async function main() {
   // TODO: ignore item_extrablood mod (like Gorefoot)
   const buffer = await readFile(INPUT);
   const stash = parseStash(buffer);
-  // organize(stash);
-  // await saveStash(stash, TEST_OUTPUT);
+  for (const item of stash.pages[0].items) {
+    console.log(item);
+  }
+
+  // triageNewItems(stash);
+  // organize(stash, 1, 5);
+  // await saveStash(stash, DANGER_OUTPUT);
 }
 
 void main();

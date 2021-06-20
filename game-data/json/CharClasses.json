@@ -1,0 +1,44 @@
+[
+  {
+    "code": "ama",
+    "name": "Amazon",
+    "skillsMod": "to Amazon Skill Levels",
+    "classOnly": "(Amazon Only)"
+  },
+  {
+    "code": "sor",
+    "name": "Sorceress",
+    "skillsMod": "to Sorceress Skill Levels",
+    "classOnly": "(Sorceress Only)"
+  },
+  {
+    "code": "nec",
+    "name": "Necromancer",
+    "skillsMod": "to Necromancer Skill Levels",
+    "classOnly": "(Necromancer Only)"
+  },
+  {
+    "code": "pal",
+    "name": "Paladin",
+    "skillsMod": "to Paladin Skill Levels",
+    "classOnly": "(Paladin Only)"
+  },
+  {
+    "code": "bar",
+    "name": "Barbarian",
+    "skillsMod": "to Barbarian Skill Levels",
+    "classOnly": "(Barbarian Only)"
+  },
+  {
+    "code": "dru",
+    "name": "Druid",
+    "skillsMod": "to Druid Skills",
+    "classOnly": "(Druid Only)"
+  },
+  {
+    "code": "ass",
+    "name": "Assassin",
+    "skillsMod": "to Assassin Skills",
+    "classOnly": "(Assassin Only)"
+  }
+]

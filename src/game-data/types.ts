@@ -104,9 +104,18 @@ export interface MagicAffix {
 export interface Skill {
   code: string;
   name: string;
+  charClass?: number;
 }
 
 export interface SkillTab {
   id: number;
   name: string;
+  charClass: number;
+}
+
+export interface CharacterClass {
+  code: string;
+  name: string;
+  skillsMod: string;
+  classOnly: string;
 }

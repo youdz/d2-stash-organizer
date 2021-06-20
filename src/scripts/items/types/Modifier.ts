@@ -4,9 +4,9 @@
  * Others have value + param (optional)
  */
 export interface Modifier {
+  id: number;
   stat: string;
   priority: number;
-  description?: string;
   value?: number;
   param?: number;
   spell?: number;

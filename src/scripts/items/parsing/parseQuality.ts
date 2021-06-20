@@ -19,6 +19,7 @@ export function parseQuality(
   item.id = readInt(32, 111);
   item.level = readInt(7);
   item.quality = readInt(4);
+  item.description = [];
 
   // Items with multiple pictures
   if (readBool()) {

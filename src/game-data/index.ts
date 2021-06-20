@@ -11,6 +11,7 @@ import {
   Runeword,
   MagicAffix,
   Skill,
+  CharacterClass,
 } from "./types";
 
 import armors from "../../game-data/json/Armor.json";
@@ -23,6 +24,7 @@ import properties from "../../game-data/json/Properties.json";
 import itemStats from "../../game-data/json/ItemStatCost.json";
 import skills from "../../game-data/json/Skills.json";
 import skillTabs from "../../game-data/json/SkillTabs.json";
+import charClasses from "../../game-data/json/CharClasses.json";
 import rareNames from "../../game-data/json/RareNames.json";
 import magicPrefixes from "../../game-data/json/MagicPrefix.json";
 import magicSuffixes from "../../game-data/json/MagicSuffix.json";
@@ -39,6 +41,7 @@ export const PROPERTIES = properties as Record<string, Property>;
 export const ITEM_STATS: (ItemStat | null)[] = itemStats;
 export const SKILLS: Skill[] = skills;
 export const SKILL_TABS: SkillTab[] = skillTabs;
+export const CHAR_CLASSES: CharacterClass[] = charClasses;
 export const RARE_NAMES: string[] = rareNames;
 export const MAGIC_PREFIXES: MagicAffix[] = magicPrefixes;
 export const MAGIC_SUFFIXES: MagicAffix[] = magicSuffixes;
