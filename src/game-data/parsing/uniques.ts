@@ -14,8 +14,8 @@ export async function uniquesToJson(skills: Skill[]) {
       qlevel: Number(line[6]),
       modifiers: [],
     };
-    for (let i = 1; i < 13; i++) {
-      const modifier = readModifierRange(line, 17 + 4 * i, skills);
+    for (let i = 0; i < 12; i++) {
+      const modifier = readModifierRange(line, 21 + 4 * i, skills);
       if (modifier) {
         item.modifiers.push(modifier);
       }
@@ -23,4 +23,5 @@ export async function uniquesToJson(skills: Skill[]) {
     uniques.push(item);
   }
   await writeJson("UniqueItems", uniques);
+  return uniques;
 }

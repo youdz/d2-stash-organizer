@@ -19,12 +19,16 @@ export function perfectionScore(item: Item) {
     ranges = UNIQUE_ITEMS[item.unique!].modifiers;
   } else if (item.quality === ItemQuality.SET) {
     const setItem = SET_ITEMS[item.unique!];
+    // This would break if a set item had a mod that appears in both lists and is a range in one of them.
+    // But no such item exists in the game, so this is fine.
     ranges = [...setItem.baseModifiers, ...setItem.setModifiers];
   } else {
     throw new Error(
       "Only uniques, sets and runewords have a perfection score."
     );
   }
+  // We ignore the "Extra bloody" prop not to confuse people with hidden imperfections
+  ranges = ranges.filter(({ prop }) => prop !== "bloody");
 
   const base = getBase(item);
 

@@ -2,24 +2,28 @@ import { Modifier } from "../types/Modifier";
 import {
   CHAR_CLASSES,
   ITEM_STATS,
-  ItemStat,
   Skill,
   SKILL_TABS,
   SKILLS,
   SkillTab,
+  StatDescription,
 } from "../../../game-data";
 
-export function describeMod(modifier: Modifier): string | undefined {
-  const modInfo = ITEM_STATS[modifier.id];
+export function describeSingleMod(
+  modifier: Modifier,
+  modInfo: StatDescription | null = ITEM_STATS[modifier.id]
+) {
   if (!modInfo) return;
 
   let modValue = modifier.value;
   if (modInfo.stat.endsWith("perlevel")) {
+    // Per-level mod, we show it for character level 99 for the flair
     if (modInfo.stat.includes("tohit")) {
       modValue = modValue! / 2;
     } else {
       modValue = modValue! / 8;
     }
+    modValue = Math.floor(99 * modValue);
   }
 
   let modDesc = (modValue ?? 0) < 0 ? modInfo.descNeg : modInfo.descPos;
@@ -30,7 +34,7 @@ export function describeMod(modifier: Modifier): string | undefined {
     case 1:
     case 6:
     case 12:
-      valueDesc = `+${modValue}`;
+      valueDesc = (modValue ?? 0) < 0 ? `${modValue}` : `+${modValue}`;
       break;
     case 2:
     case 7:
@@ -75,6 +79,9 @@ export function describeMod(modifier: Modifier): string | undefined {
         .replace("%d", `${modValue}`)
         .replace("%s", `${SKILLS[modifier.param!].name}`);
       break;
+    case 19:
+      modDesc = modDesc.replace("%d", `${modValue}`);
+      break;
     case 20:
       valueDesc = `${-modValue!}%`;
       break;
@@ -102,20 +109,51 @@ export function describeMod(modifier: Modifier): string | undefined {
     case 28:
       modDesc = `+${modValue} to ${SKILLS[modifier.param!].name}`;
       break;
+    // Custom describe functions to handle groups
+    case 100:
+      // Non-poison elemental or magic damage.
+      if (modifier.values?.[0] !== modifier.values?.[1]) {
+        modDesc = modInfo.descNeg;
+      }
+      modDesc = modDesc
+        .replace("%d", `${modifier.values?.[0]}`)
+        .replace("%d", `${modifier.values?.[1]}`);
+      break;
+    case 101:
+      // Poison damage
+      if (modifier.values?.[0] === modifier.values?.[1]) {
+        modDesc = modDesc
+          .replace(
+            "%d",
+            `${Math.round((modifier.values![0] * modifier.values![2]) / 256)}`
+          )
+          .replace("%d", `${Math.round(modifier.values![2] / 25)}`);
+      } else {
+        modDesc = modInfo.descNeg
+          .replace(
+            "%d",
+            `${Math.round((modifier.values![0] * modifier.values![2]) / 256)}`
+          )
+          .replace(
+            "%d",
+            `${Math.round((modifier.values![1] * modifier.values![2]) / 256)}`
+          )
+          .replace("%d", `${Math.round(modifier.values![2] / 25)}`);
+      }
+      break;
   }
 
   if (modDesc) {
     let fullDesc = "";
     switch (modInfo.descVal) {
-      case 0:
-        fullDesc = modDesc;
-        break;
       case 1:
         fullDesc = `${valueDesc} ${modDesc}`;
         break;
       case 2:
         fullDesc = `${modDesc} ${valueDesc}`;
         break;
+      default:
+        fullDesc = modDesc;
     }
     if (6 <= modInfo.descFunc && modInfo.descFunc <= 9) {
       fullDesc += ` ${modInfo.descAdditional}`;

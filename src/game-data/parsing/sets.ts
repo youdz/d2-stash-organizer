@@ -16,10 +16,10 @@ export async function setsToJson(skills: Skill[]) {
       baseModifiers: [],
       setModifiers: [],
     };
-    for (let i = 1; i < 20; i++) {
-      const modifier = readModifierRange(line, 13 + 4 * i, skills);
+    for (let i = 0; i < 19; i++) {
+      const modifier = readModifierRange(line, 17 + 4 * i, skills);
       if (modifier) {
-        item[i > 9 ? "setModifiers" : "baseModifiers"].push(modifier);
+        item[i > 8 ? "setModifiers" : "baseModifiers"].push(modifier);
       }
     }
     setItems.push(item);

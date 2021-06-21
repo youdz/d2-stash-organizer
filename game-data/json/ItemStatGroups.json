@@ -1,0 +1,156 @@
+[
+  {
+    "stat": "group:all-attr",
+    "statsInGroup": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "allEqual": true,
+    "descPos": "to all Attributes",
+    "descNeg": "to all Attributes",
+    "descFunc": 1,
+    "descVal": 1,
+    "descPriority": 67
+  },
+  {
+    "stat": "group:all-res",
+    "statsInGroup": [
+      39,
+      41,
+      43,
+      45
+    ],
+    "allEqual": true,
+    "descPos": "All Resistances +%d",
+    "descNeg": "All Resistances +%d",
+    "descFunc": 19,
+    "descPriority": 40
+  },
+  {
+    "stat": "group:enhanced-dmg",
+    "statsInGroup": [
+      17,
+      18
+    ],
+    "allEqual": true,
+    "descPos": "Enhanced damage",
+    "descNeg": "Enhanced damage",
+    "descFunc": 4,
+    "descVal": 1,
+    "descPriority": 130
+  },
+  {
+    "stat": "group:primary-dmg",
+    "statsInGroup": [
+      21,
+      22
+    ],
+    "isRange": true,
+    "descPos": "+%d damage",
+    "descNeg": "Adds %d-%d damage",
+    "descFunc": 100,
+    "descPriority": 127
+  },
+  {
+    "stat": "group:secondary-dmg",
+    "statsInGroup": [
+      23,
+      24
+    ],
+    "isRange": true,
+    "descPos": "+%d damage",
+    "descNeg": "Adds %d-%d damage",
+    "descFunc": 100,
+    "descPriority": 124
+  },
+  {
+    "stat": "group:fire-dmg",
+    "statsInGroup": [
+      48,
+      49
+    ],
+    "isRange": true,
+    "descPos": "+%d fire damage",
+    "descNeg": "Adds %d-%d fire damage",
+    "descFunc": 100,
+    "descPriority": 102
+  },
+  {
+    "stat": "group:light-dmg",
+    "statsInGroup": [
+      50,
+      51
+    ],
+    "isRange": true,
+    "descPos": "+%d lightning damage",
+    "descNeg": "Adds %d-%d lightning damage",
+    "descFunc": 100,
+    "descPriority": 99
+  },
+  {
+    "stat": "group:magic-dmg",
+    "statsInGroup": [
+      52,
+      53
+    ],
+    "isRange": true,
+    "descPos": "+%d magic damage",
+    "descNeg": "Adds %d-%d magic damage",
+    "descFunc": 100,
+    "descPriority": 104
+  },
+  {
+    "stat": "group:cold-dmg",
+    "statsInGroup": [
+      54,
+      55,
+      56
+    ],
+    "isRange": true,
+    "descPos": "+%d cold damage",
+    "descNeg": "Adds %d-%d cold damage",
+    "descFunc": 100,
+    "descPriority": 96
+  },
+  {
+    "stat": "group:poison-dmg",
+    "statsInGroup": [
+      57,
+      58,
+      59
+    ],
+    "isRange": true,
+    "descPos": "+%d poison damage over %d seconds",
+    "descNeg": "Adds %d-%d poison damage over %d seconds",
+    "descFunc": 101,
+    "descPriority": 92
+  },
+  {
+    "stat": "group:min-dmg",
+    "statsInGroup": [
+      21,
+      23
+    ],
+    "allEqual": true,
+    "descPos": "to Minimum Damage",
+    "descNeg": "to Minimum Damage",
+    "descFunc": 1,
+    "descVal": 1,
+    "descPriority": 127
+  },
+  {
+    "stat": "group:max-dmg",
+    "statsInGroup": [
+      22,
+      24
+    ],
+    "allEqual": true,
+    "descPos": "to Maximum Damage",
+    "descNeg": "to Maximum Damage",
+    "descFunc": 1,
+    "descVal": 1,
+    "descPriority": 126
+  }
+]

@@ -3,7 +3,10 @@ import { Item } from "../types/Item";
 import { ItemQuality } from "../types/ItemQuality";
 import { ITEM_STATS } from "../../../game-data";
 import { ItemParsingError } from "../../errors/ItemParsingError";
-import { describeMod } from "./describeMod";
+import { describeSingleMod } from "./describeSingleMod";
+import { Modifier } from "../types/Modifier";
+import { addModGroups } from "./addModGroups";
+import { consolidateMods } from "./consolidateMods";
 
 /*
  * Parses one list of modifiers at a time. Some items have more than one:
@@ -11,44 +14,45 @@ import { describeMod } from "./describeMod";
  * - Sets have one for each increment in set bonuses
  */
 function parseModsList({ readInt }: BinaryStream, item: Item) {
-  const mods = [];
+  const mods: Modifier[] = [];
   let modId = readInt(9);
   while (modId !== 511) {
     const modInfo = ITEM_STATS[modId];
     if (!modInfo) {
       throw new ItemParsingError(item, `Unknown mod ${modId}`);
     }
-    const shared = {
+    let mod: Modifier = {
       id: modId,
       stat: modInfo.stat,
       priority: modInfo.descPriority,
     };
     if (modInfo.encode === 3) {
-      mods.push({
-        ...shared,
+      mod = {
+        ...mod,
         level: readInt(6) - modInfo.bias,
         spell: readInt(10) - modInfo.bias,
         charges: readInt(8) - modInfo.bias,
         maxCharges: readInt(8) - modInfo.bias,
-      });
+      };
     } else if (modInfo.encode === 2) {
-      mods.push({
-        ...shared,
+      mod = {
+        ...mod,
         level: readInt(6) - modInfo.bias,
         spell: readInt(10) - modInfo.bias,
         chance: readInt(modInfo.size) - modInfo.bias,
-      });
+      };
     } else {
       let param = undefined;
       if (modInfo.paramSize) {
         param = readInt(modInfo.paramSize) - modInfo.bias;
       }
-      mods.push({
-        ...shared,
+      mod = {
+        ...mod,
         value: readInt(modInfo.size) - modInfo.bias,
         param,
-      });
+      };
     }
+    mods.push(mod);
 
     if (modInfo.followedBy) {
       modId = modInfo.followedBy;
@@ -56,7 +60,6 @@ function parseModsList({ readInt }: BinaryStream, item: Item) {
       modId = readInt(9);
     }
   }
-  mods.sort(({ priority: a }, { priority: b }) => b - a);
   item.modifiers!.push(...mods);
 }
 
@@ -78,9 +81,23 @@ export function parseModifiers(stream: BinaryStream, item: Item) {
   }
 
   parseModsList(stream, item);
+
+  // TODO: move all this to a post-processing phase on the whole stack. It's not parsing
+  consolidateMods(item);
+  // Generate descriptions after consolidating
+  for (const mod of item.modifiers) {
+    mod.description = describeSingleMod(mod);
+  }
+
+  addModGroups(item);
+  // FIXME: by sorting here, we break sets order. If we sort earlier, then groups and runewords are broken.
+  item.modifiers.sort(
+    ({ priority: a, param: c }, { priority: b, param: d }) =>
+      b - a || (d ?? 0) - (c ?? 0)
+  );
   item.description?.push(
     ...item.modifiers
-      .map((mod) => describeMod(mod))
+      .map(({ description }) => description)
       .filter((desc): desc is string => !!desc)
   );
 }

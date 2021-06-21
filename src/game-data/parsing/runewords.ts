@@ -24,8 +24,8 @@ export async function runewordsToJson(
         : 0,
       modifiers: [],
     };
-    for (let i = 1; i < 8; i++) {
-      const modifier = readModifierRange(line, 16 + 4 * i, skills);
+    for (let i = 0; i < 7; i++) {
+      const modifier = readModifierRange(line, 20 + 4 * i, skills);
       if (modifier) {
         runeword.modifiers.push(modifier);
       }

@@ -12,6 +12,7 @@ import {
   MagicAffix,
   Skill,
   CharacterClass,
+  StatGroup,
 } from "./types";
 
 import armors from "../../game-data/json/Armor.json";
@@ -22,6 +23,7 @@ import setItems from "../../game-data/json/SetItems.json";
 import sets from "../../game-data/json/Sets.json";
 import properties from "../../game-data/json/Properties.json";
 import itemStats from "../../game-data/json/ItemStatCost.json";
+import statGroups from "../../game-data/json/ItemStatGroups.json";
 import skills from "../../game-data/json/Skills.json";
 import skillTabs from "../../game-data/json/SkillTabs.json";
 import charClasses from "../../game-data/json/CharClasses.json";
@@ -39,6 +41,7 @@ export const SET_ITEMS: SetItem[] = setItems;
 export const SETS: Record<string, Set> = sets;
 export const PROPERTIES = properties as Record<string, Property>;
 export const ITEM_STATS: (ItemStat | null)[] = itemStats;
+export const STAT_GROUPS: StatGroup[] = statGroups;
 export const SKILLS: Skill[] = skills;
 export const SKILL_TABS: SkillTab[] = skillTabs;
 export const CHAR_CLASSES: CharacterClass[] = charClasses;

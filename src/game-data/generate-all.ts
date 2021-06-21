@@ -11,12 +11,14 @@ import { miscToJson } from "./parsing/misc";
 import { magicAffixesToJson } from "./parsing/magicAffixes";
 import { runewordsToJson } from "./parsing/runewords";
 import { charClassesToJson } from "./parsing/charClasses";
+import { statGroupsToJson } from "./parsing/statGroups";
 
 async function generateAll() {
   await armorsToJson();
   await weaponsToJson();
   const misc = await miscToJson();
-  await itemStatsToJson();
+  const itemStats = await itemStatsToJson();
+  await statGroupsToJson(itemStats);
   await propertiesToJson();
   const charClasses = await charClassesToJson();
   const skills = await skillsToJson(charClasses);

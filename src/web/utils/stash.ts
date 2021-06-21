@@ -6,6 +6,7 @@ const LOCAL_STORAGE_KEY = "stash";
 const DEFAULT_SHARED_FILENAME = "_LOD_SharedStashSave.sss";
 const DEFAULT_PERSONAL_FILENAME = "CharacterName.d2x";
 
+// FIXME: store the raw file directly, and re-parse every time to avoid versioning issues
 const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
 let STASH: Stash | null = stored && JSON.parse(stored);
 
