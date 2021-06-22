@@ -5,6 +5,11 @@ function mergeable(a: Modifier, b: Modifier) {
   return a.id === b.id && "value" in a && a.param === b.param;
 }
 
+/**
+ * Sums identical mods from different sources on an item.
+ * For instance, +25 all res on a shield and +19 all res from a Perfect Diamond
+ * is consolidated into a single +44 all res.
+ */
 export function consolidateMods(item: Item) {
   const mods = item.modifiers!;
   for (const mod of mods) {

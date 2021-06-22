@@ -12,6 +12,7 @@ import { magicAffixesToJson } from "./parsing/magicAffixes";
 import { runewordsToJson } from "./parsing/runewords";
 import { charClassesToJson } from "./parsing/charClasses";
 import { statGroupsToJson } from "./parsing/statGroups";
+import { gemsToJson } from "./parsing/gems";
 
 async function generateAll() {
   await armorsToJson();
@@ -25,6 +26,7 @@ async function generateAll() {
   await skillTabsToJson();
   await magicAffixesToJson();
   await rareNamesToJson();
+  await gemsToJson(skills);
   await uniquesToJson(skills);
   await setsToJson(skills);
   await runewordsToJson(misc, skills);

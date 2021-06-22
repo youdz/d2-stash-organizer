@@ -3,10 +3,7 @@ import { Item } from "../types/Item";
 import { ItemQuality } from "../types/ItemQuality";
 import { ITEM_STATS } from "../../../game-data";
 import { ItemParsingError } from "../../errors/ItemParsingError";
-import { describeSingleMod } from "./describeSingleMod";
 import { Modifier } from "../types/Modifier";
-import { addModGroups } from "./addModGroups";
-import { consolidateMods } from "./consolidateMods";
 
 /*
  * Parses one list of modifiers at a time. Some items have more than one:
@@ -81,23 +78,4 @@ export function parseModifiers(stream: BinaryStream, item: Item) {
   }
 
   parseModsList(stream, item);
-
-  // TODO: move all this to a post-processing phase on the whole stack. It's not parsing
-  consolidateMods(item);
-  // Generate descriptions after consolidating
-  for (const mod of item.modifiers) {
-    mod.description = describeSingleMod(mod);
-  }
-
-  addModGroups(item);
-  // FIXME: by sorting here, we break sets order. If we sort earlier, then groups and runewords are broken.
-  item.modifiers.sort(
-    ({ priority: a, param: c }, { priority: b, param: d }) =>
-      b - a || (d ?? 0) - (c ?? 0)
-  );
-  item.description?.push(
-    ...item.modifiers
-      .map(({ description }) => description)
-      .filter((desc): desc is string => !!desc)
-  );
 }

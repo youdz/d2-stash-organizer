@@ -48,9 +48,7 @@ export interface Item {
 
   // Pretty description of the item. Right now it'll be only mods,
   // but we can add things like item level, level req or base item
-  // TODO: at least add ethereal, defense, number of sockets, durability
-  // TODO: mods from socketed items don't appear in the description. It should combine with existing ones too.
-  // TODO: test groups + base + sockets with Ancient's Pledge.
+  // TODO: ethereal, defense, number of sockets, durability
   // TODO: test groups + base + sockets with Moser's.
   // TODO: (low priority) order of charges on Todesfaelle Flamme is wrong
   description?: string[];

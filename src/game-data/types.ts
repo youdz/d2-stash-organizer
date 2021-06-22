@@ -35,6 +35,12 @@ export interface ModifierRange {
   max?: number;
 }
 
+export interface Gem {
+  weapon: ModifierRange[];
+  armor: ModifierRange[];
+  shield: ModifierRange[];
+}
+
 export interface UniqueItem {
   name: string;
   enabled: boolean;
@@ -82,19 +88,28 @@ export interface Property {
   }[];
 }
 
-export interface ItemStat {
+export interface StatDescription {
   stat: string;
+  descPriority: number;
+  descFunc: number;
+  descVal?: number;
+  descPos: string;
+  descNeg: string;
+  descAdditional?: string;
+}
+
+export interface ItemStat extends StatDescription {
   size: number;
   encode: number;
   bias: number;
   paramSize: number;
   followedBy?: number;
-  descPriority: number;
-  descFunc: number;
-  descVal: number;
-  descPos: string;
-  descNeg: string;
-  descAdditional: string;
+}
+
+export interface StatGroup extends StatDescription {
+  statsInGroup: number[];
+  allEqual?: boolean;
+  isRange?: boolean;
 }
 
 export interface MagicAffix {

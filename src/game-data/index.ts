@@ -13,6 +13,7 @@ import {
   Skill,
   CharacterClass,
   StatGroup,
+  Gem,
 } from "./types";
 
 import armors from "../../game-data/json/Armor.json";
@@ -31,6 +32,7 @@ import rareNames from "../../game-data/json/RareNames.json";
 import magicPrefixes from "../../game-data/json/MagicPrefix.json";
 import magicSuffixes from "../../game-data/json/MagicSuffix.json";
 import runewords from "../../game-data/json/Runewords.json";
+import gems from "../../game-data/json/Gems.json";
 
 // TODO: switch to JSON.parse
 export const ARMORS: Record<string, Armor | undefined> = armors;
@@ -49,5 +51,6 @@ export const RARE_NAMES: string[] = rareNames;
 export const MAGIC_PREFIXES: MagicAffix[] = magicPrefixes;
 export const MAGIC_SUFFIXES: MagicAffix[] = magicSuffixes;
 export const RUNEWORDS: Runeword[] = runewords;
+export const GEMS: Record<string, Gem> = gems;
 
 export * from "./types";

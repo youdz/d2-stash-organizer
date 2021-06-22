@@ -3,6 +3,10 @@ import { STAT_GROUPS, StatGroup } from "../../../game-data";
 import { Modifier } from "../types/Modifier";
 import { describeSingleMod } from "./describeSingleMod";
 
+/**
+ * Creates "custom" mods to track groups of mods that should be searched or displayed together:
+ * all resistances, damage ranges, poison damage, etc.
+ */
 function addGroup(group: StatGroup, item: Item) {
   // This function relies on a specific order for these mods (see poison)
   const mods =

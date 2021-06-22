@@ -9,6 +9,9 @@ import {
   StatDescription,
 } from "../../../game-data";
 
+/**
+ * Generates the human-friendly description for an item modifier
+ */
 export function describeSingleMod(
   modifier: Modifier,
   modInfo: StatDescription | null = ITEM_STATS[modifier.id]
