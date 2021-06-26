@@ -3,6 +3,15 @@ import { consolidateMods } from "../../items/post-processing/consolidateMods";
 import { describeSingleMod } from "../../items/post-processing/describeSingleMod";
 import { addModGroups } from "../../items/post-processing/addModGroups";
 import { addSocketedMods } from "../../items/post-processing/addSocketedMods";
+import { ItemQuality } from "../../items/types/ItemQuality";
+import { Modifier } from "../../items/types/Modifier";
+
+function sortByPriority(modifiers: Modifier[]) {
+  modifiers.sort(
+    ({ priority: a, param: c }, { priority: b, param: d }) =>
+      b - a || (d ?? 0) - (c ?? 0)
+  );
+}
 
 /**
  * Performs all operations that are not actually parsing, but that we need for our scripts and UI.
@@ -21,23 +30,35 @@ export function postProcess(stash: Stash) {
         continue;
       }
 
-      consolidateMods(item);
+      consolidateMods(item.modifiers);
       // Generate descriptions only after consolidating
       for (const mod of item.modifiers) {
         mod.description = describeSingleMod(mod);
       }
-      addModGroups(item);
-
-      // FIXME: by sorting here, we break sets order. If we sort earlier, then groups and runewords are broken.
-      item.modifiers.sort(
-        ({ priority: a, param: c }, { priority: b, param: d }) =>
-          b - a || (d ?? 0) - (c ?? 0)
-      );
+      addModGroups(item.modifiers);
+      sortByPriority(item.modifiers);
       item.description?.push(
         ...item.modifiers
           .map(({ description }) => description)
           .filter((desc): desc is string => !!desc)
       );
+
+      if (item.quality === ItemQuality.SET) {
+        // FIXME: this needs to be more explicit for UI to display.
+        item.description?.push("");
+        item.setModifiers?.forEach((mods, i) => {
+          for (const mod of mods) {
+            mod.description = `${describeSingleMod(mod)} (${i + 2} items)`;
+          }
+          addModGroups(mods);
+          sortByPriority(mods);
+          item.description?.push(
+            ...mods
+              .map(({ description }) => description)
+              .filter((desc): desc is string => !!desc)
+          );
+        });
+      }
     }
   }
 }

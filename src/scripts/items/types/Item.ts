@@ -45,11 +45,12 @@ export interface Item {
   quantity?: number;
 
   modifiers?: Modifier[];
+  setModifiers?: Modifier[][];
 
   // Pretty description of the item. Right now it'll be only mods,
   // but we can add things like item level, level req or base item
   // TODO: ethereal, defense, number of sockets, durability
-  // TODO: test groups + base + sockets with Moser's.
+  // FIXME: set items
   // TODO: (low priority) order of charges on Todesfaelle Flamme is wrong
   description?: string[];
 }

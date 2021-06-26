@@ -1,4 +1,3 @@
-import { Item } from "../types/Item";
 import { Modifier } from "../types/Modifier";
 
 function mergeable(a: Modifier, b: Modifier) {
@@ -10,8 +9,7 @@ function mergeable(a: Modifier, b: Modifier) {
  * For instance, +25 all res on a shield and +19 all res from a Perfect Diamond
  * is consolidated into a single +44 all res.
  */
-export function consolidateMods(item: Item) {
-  const mods = item.modifiers!;
+export function consolidateMods(mods: Modifier[]) {
   for (const mod of mods) {
     let duplicateIndex: number | undefined;
     while (

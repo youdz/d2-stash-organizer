@@ -1,130 +1,1770 @@
 {
   "Civerb's Vestments": {
     "name": "Civerb's Vestments",
-    "levelReq": 9
+    "levelReq": 9,
+    "modifiers": [
+      [
+        {
+          "prop": "res-fire",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      [],
+      [],
+      [
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        },
+        {
+          "prop": "dmg-undead",
+          "param": 0,
+          "min": 200,
+          "max": 200
+        },
+        {
+          "prop": "res-ltng",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ]
+    ]
   },
   "Hsarus' Defense": {
     "name": "Hsarus' Defense",
-    "levelReq": 3
+    "levelReq": 3,
+    "modifiers": [
+      [
+        {
+          "prop": "thorns",
+          "param": 0,
+          "min": 5,
+          "max": 5
+        }
+      ],
+      [],
+      [],
+      [],
+      [
+        {
+          "prop": "dmg-max",
+          "param": 0,
+          "min": 5,
+          "max": 5
+        },
+        {
+          "prop": "nofreeze",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "prop": "res-ltng",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ]
+    ]
   },
   "Cleglaw's Brace": {
     "name": "Cleglaw's Brace",
-    "levelReq": 4
+    "levelReq": 4,
+    "modifiers": [
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [],
+      [],
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "manasteal",
+          "param": 0,
+          "min": 6,
+          "max": 6
+        },
+        {
+          "prop": "crush",
+          "param": 0,
+          "min": 35,
+          "max": 35
+        },
+        {
+          "prop": "swing2",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ]
+    ]
   },
   "Iratha's Finery": {
     "name": "Iratha's Finery",
-    "levelReq": 15
+    "levelReq": 15,
+    "modifiers": [
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "move2",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        },
+        {
+          "prop": "res-fire-max",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "res-cold-max",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "res-ltng-max",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "res-pois-max",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ]
+    ]
   },
   "Isenhart's Armory": {
     "name": "Isenhart's Armory",
-    "levelReq": 8
+    "levelReq": 8,
+    "modifiers": [
+      [
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 5,
+          "max": 5
+        },
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "att%",
+          "param": 0,
+          "min": 35,
+          "max": 35
+        },
+        {
+          "prop": "block",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        },
+        {
+          "prop": "move2",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ]
+    ]
   },
   "Vidala's Rig": {
     "name": "Vidala's Rig",
-    "levelReq": 14
+    "levelReq": 14,
+    "modifiers": [
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 75,
+          "max": 75
+        }
+      ],
+      [
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "dmg-cold",
+          "param": 50,
+          "min": 15,
+          "max": 20
+        },
+        {
+          "prop": "freeze",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "prop": "pierce",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ]
+    ]
   },
   "Milabrega's Regalia": {
     "name": "Milabrega's Regalia",
-    "levelReq": 17
+    "levelReq": 17,
+    "modifiers": [
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 75,
+          "max": 75
+        }
+      ],
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 125,
+          "max": 125
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 8,
+          "max": 8
+        },
+        {
+          "prop": "pal",
+          "param": 0,
+          "min": 2,
+          "max": 2
+        },
+        {
+          "prop": "manasteal",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "res-pois",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ]
+    ]
   },
   "Cathan's Traps": {
     "name": "Cathan's Traps",
-    "levelReq": 11
+    "levelReq": 11,
+    "modifiers": [
+      [
+        {
+          "prop": "dmg-fire",
+          "param": 0,
+          "min": 15,
+          "max": 20
+        }
+      ],
+      [
+        {
+          "prop": "res-ltng",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 60,
+          "max": 60
+        },
+        {
+          "prop": "red-mag",
+          "param": 0,
+          "min": 3,
+          "max": 3
+        },
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        },
+        {
+          "prop": "cast1",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ]
+    ]
   },
   "Tancred's Battlegear": {
     "name": "Tancred's Battlegear",
-    "levelReq": 20
+    "levelReq": 20,
+    "modifiers": [
+      [
+        {
+          "prop": "dmg-ltng",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 5,
+          "max": 5
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "gold%",
+          "param": 0,
+          "min": 75,
+          "max": 75
+        },
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "slow",
+          "param": 0,
+          "min": 35,
+          "max": 35
+        },
+        {
+          "prop": "manasteal",
+          "param": 0,
+          "min": 5,
+          "max": 5
+        }
+      ]
+    ]
   },
   "Sigon's Complete Steel": {
     "name": "Sigon's Complete Steel",
-    "levelReq": 6
+    "levelReq": 6,
+    "modifiers": [
+      [
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "res-fire",
+          "param": 0,
+          "min": 12,
+          "max": 12
+        },
+        {
+          "prop": "thorns",
+          "param": 0,
+          "min": 12,
+          "max": 12
+        },
+        {
+          "prop": "red-dmg",
+          "param": 0,
+          "min": 7,
+          "max": 7
+        },
+        {
+          "prop": "fire-max",
+          "param": 0,
+          "min": 24,
+          "max": 24
+        },
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ]
+    ]
   },
   "Infernal Tools": {
     "name": "Infernal Tools",
-    "levelReq": 5
+    "levelReq": 5,
+    "modifiers": [
+      [
+        {
+          "prop": "dmg-pois",
+          "param": 80,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "att%",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        },
+        {
+          "prop": "nec",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "prop": "openwounds",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        },
+        {
+          "prop": "manasteal",
+          "param": 0,
+          "min": 6,
+          "max": 6
+        }
+      ]
+    ]
   },
   "Berserker's Garb": {
     "name": "Berserker's Arsenal",
-    "levelReq": 3
+    "levelReq": 3,
+    "modifiers": [
+      [
+        {
+          "prop": "hp",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [],
+      [],
+      [
+        {
+          "prop": "res-pois-len",
+          "param": 0,
+          "min": 75,
+          "max": 75
+        },
+        {
+          "prop": "pois-min",
+          "param": 0,
+          "min": 16,
+          "max": 16
+        },
+        {
+          "prop": "pois-max",
+          "param": 0,
+          "min": 32,
+          "max": 32
+        },
+        {
+          "prop": "pois-len",
+          "param": 0,
+          "min": 75,
+          "max": 75
+        },
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 75,
+          "max": 75
+        }
+      ]
+    ]
   },
   "Death's Disguise": {
     "name": "Death's Disguise",
-    "levelReq": 6
+    "levelReq": 6,
+    "modifiers": [
+      [
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 8,
+          "max": 8
+        }
+      ],
+      [],
+      [],
+      [],
+      [
+        {
+          "prop": "att%",
+          "param": 0,
+          "min": 40,
+          "max": 40
+        },
+        {
+          "prop": "dmg-min",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ]
+    ]
   },
   "Angelical Raiment": {
     "name": "Angelic Raiment",
-    "levelReq": 12
+    "levelReq": 12,
+    "modifiers": [
+      [
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        },
+        {
+          "prop": "half-freeze",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 40,
+          "max": 40
+        },
+        {
+          "prop": "regen-mana",
+          "param": 0,
+          "min": 8,
+          "max": 8
+        }
+      ]
+    ]
   },
   "Arctic Gear": {
     "name": "Arctic Gear",
-    "levelReq": 2
+    "levelReq": 2,
+    "modifiers": [
+      [
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 5,
+          "max": 5
+        }
+      ],
+      [
+        {
+          "prop": "hp",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "cold-min",
+          "param": 0,
+          "min": 6,
+          "max": 6
+        },
+        {
+          "prop": "cold-max",
+          "param": 0,
+          "min": 14,
+          "max": 14
+        },
+        {
+          "prop": "cold-len",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        },
+        {
+          "prop": "nofreeze",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        }
+      ]
+    ]
   },
   "Arcanna's Tricks": {
     "name": "Arcanna's Tricks",
-    "levelReq": 15
+    "levelReq": 15,
+    "modifiers": [
+      [
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [
+        {
+          "prop": "hp",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "cast3",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        },
+        {
+          "prop": "manasteal",
+          "param": 0,
+          "min": 5,
+          "max": 5
+        },
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ]
+    ]
   },
   "Natalya's Odium": {
     "name": "Natalya's Odium",
-    "levelReq": 79
+    "levelReq": 79,
+    "modifiers": [
+      [
+        {
+          "prop": "red-mag",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 200,
+          "max": 200
+        }
+      ],
+      [
+        {
+          "prop": "res-pois",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      [],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "ass",
+          "param": 0,
+          "min": 3,
+          "max": 3
+        },
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 150,
+          "max": 150
+        },
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 14,
+          "max": 14
+        },
+        {
+          "prop": "manasteal",
+          "param": 0,
+          "min": 14,
+          "max": 14
+        },
+        {
+          "prop": "red-dmg%",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        },
+        {
+          "prop": "fade",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        }
+      ]
+    ]
   },
   "Aldur's Watchtower": {
     "name": "Aldur's Watchtower",
-    "levelReq": 76
+    "levelReq": 76,
+    "modifiers": [
+      [
+        {
+          "prop": "att%",
+          "param": 0,
+          "min": 150,
+          "max": 150
+        }
+      ],
+      [
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "dru",
+          "param": 0,
+          "min": 3,
+          "max": 3
+        },
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 150,
+          "max": 150
+        },
+        {
+          "prop": "manasteal",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 150,
+          "max": 150
+        },
+        {
+          "prop": "dmg%",
+          "param": 0,
+          "min": 350,
+          "max": 350
+        },
+        {
+          "prop": "state",
+          "param": -1,
+          "min": 1,
+          "max": 1
+        }
+      ]
+    ]
   },
   "Immortal King": {
     "name": "Immortal King",
-    "levelReq": 76
+    "levelReq": 76,
+    "modifiers": [
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 75,
+          "max": 75
+        }
+      ],
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 125,
+          "max": 125
+        }
+      ],
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 200,
+          "max": 200
+        }
+      ],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "bar",
+          "param": 0,
+          "min": 3,
+          "max": 3
+        },
+        {
+          "prop": "hp",
+          "param": 0,
+          "min": 150,
+          "max": 150
+        },
+        {
+          "prop": "red-mag",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "state",
+          "param": -1,
+          "min": 1,
+          "max": 1
+        }
+      ]
+    ]
   },
   "Tal Rasha's Wrappings": {
     "name": "Tal Rasha's Wrappings",
-    "levelReq": 71
+    "levelReq": 71,
+    "modifiers": [
+      [
+        {
+          "prop": "regen",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 65,
+          "max": 65
+        }
+      ],
+      [
+        {
+          "prop": "balance2",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "sor",
+          "param": 0,
+          "min": 3,
+          "max": 3
+        },
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 150,
+          "max": 150
+        },
+        {
+          "prop": "hp",
+          "param": 0,
+          "min": 150,
+          "max": 150
+        },
+        {
+          "prop": "ac-miss",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "state",
+          "param": -1,
+          "min": 1,
+          "max": 1
+        }
+      ]
+    ]
   },
   "Griswold's Legacy": {
     "name": "Griswold's Legacy",
-    "levelReq": 69
+    "levelReq": 69,
+    "modifiers": [
+      [
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      [
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "pal",
+          "param": 0,
+          "min": 3,
+          "max": 3
+        },
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 200,
+          "max": 200
+        },
+        {
+          "prop": "hp",
+          "param": 0,
+          "min": 150,
+          "max": 150
+        },
+        {
+          "prop": "state",
+          "param": -1,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "prop": "balance2",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ]
+    ]
   },
   "Trang-Oul's Avatar": {
     "name": "Trang-Oul's Avatar",
-    "levelReq": 65
+    "levelReq": 65,
+    "modifiers": [
+      [
+        {
+          "prop": "regen-mana",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        },
+        {
+          "prop": "oskill",
+          "param": 47,
+          "min": 18,
+          "max": 18
+        }
+      ],
+      [
+        {
+          "prop": "regen-mana",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        },
+        {
+          "prop": "oskill",
+          "param": 51,
+          "min": 13,
+          "max": 13
+        }
+      ],
+      [
+        {
+          "prop": "regen-mana",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        },
+        {
+          "prop": "oskill",
+          "param": 56,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "nec",
+          "param": 0,
+          "min": 3,
+          "max": 3
+        },
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        },
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 200,
+          "max": 200
+        },
+        {
+          "prop": "state",
+          "param": -1,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "prop": "regen-mana",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        },
+        {
+          "prop": "oskill",
+          "param": 61,
+          "min": 3,
+          "max": 3
+        },
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ]
+    ]
   },
   "M'avina's Battle Hymn": {
     "name": "M'avina's Battle Hymn",
-    "levelReq": 70
+    "levelReq": 70,
+    "modifiers": [
+      [
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      [
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "ama",
+          "param": 0,
+          "min": 3,
+          "max": 3
+        },
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        },
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        },
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        },
+        {
+          "prop": "state",
+          "param": -1,
+          "min": 1,
+          "max": 1
+        }
+      ]
+    ]
   },
   "The Disciple": {
     "name": "The Disciple",
-    "levelReq": 65
+    "levelReq": 65,
+    "modifiers": [
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 150,
+          "max": 150
+        }
+      ],
+      [
+        {
+          "prop": "dmg-pois",
+          "param": 75,
+          "min": 75,
+          "max": 75
+        }
+      ],
+      [
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "allskills",
+          "param": 0,
+          "min": 2,
+          "max": 2
+        },
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        }
+      ]
+    ]
   },
   "Heaven's Brethren": {
     "name": "Heaven's Brethren",
-    "levelReq": 81
+    "levelReq": 81,
+    "modifiers": [
+      [
+        {
+          "prop": "regen-stam",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "regen",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      [
+        {
+          "prop": "dmg-fire",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ],
+      [],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "allskills",
+          "param": 0,
+          "min": 2,
+          "max": 2
+        },
+        {
+          "prop": "nofreeze",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "prop": "light",
+          "param": 0,
+          "min": 5,
+          "max": 5
+        }
+      ]
+    ]
   },
   "Orphan's Call": {
     "name": "Orphan's Call",
-    "levelReq": 42
+    "levelReq": 42,
+    "modifiers": [
+      [
+        {
+          "prop": "hp",
+          "param": 0,
+          "min": 35,
+          "max": 35
+        }
+      ],
+      [
+        {
+          "prop": "thorns",
+          "param": 0,
+          "min": 5,
+          "max": 5
+        }
+      ],
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        }
+      ],
+      [],
+      [
+        {
+          "prop": "hp",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        },
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        },
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        },
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 80,
+          "max": 80
+        }
+      ]
+    ]
   },
   "Hwanin's Majesty": {
     "name": "Hwanin's Majesty",
-    "levelReq": 45
+    "levelReq": 45,
+    "modifiers": [
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        }
+      ],
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 200,
+          "max": 200
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "allskills",
+          "param": 0,
+          "min": 2,
+          "max": 2
+        },
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        },
+        {
+          "prop": "move3",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        },
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ]
+    ]
   },
   "Sazabi's Grand Tribute": {
     "name": "Sazabi's Grand Tribute",
-    "levelReq": 73
+    "levelReq": 73,
+    "modifiers": [
+      [
+        {
+          "prop": "move3",
+          "param": 0,
+          "min": 40,
+          "max": 40
+        }
+      ],
+      [],
+      [],
+      [],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        },
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        },
+        {
+          "prop": "hp%",
+          "param": 0,
+          "min": 27,
+          "max": 27
+        }
+      ]
+    ]
   },
   "Bul-Kathos' Children": {
     "name": "Bul-Kathos' Children",
-    "levelReq": 61
+    "levelReq": 61,
+    "modifiers": [
+      [],
+      [],
+      [],
+      [],
+      [
+        {
+          "prop": "dmg-fire",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        },
+        {
+          "prop": "allskills",
+          "param": 0,
+          "min": 2,
+          "max": 2
+        },
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 200,
+          "max": 200
+        },
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        },
+        {
+          "prop": "dmg-undead",
+          "param": 0,
+          "min": 200,
+          "max": 200
+        },
+        {
+          "prop": "dmg-demon",
+          "param": 0,
+          "min": 200,
+          "max": 200
+        }
+      ]
+    ]
   },
   "Cow King's Leathers": {
     "name": "Cow King's Leathers",
-    "levelReq": 25
+    "levelReq": 25,
+    "modifiers": [
+      [
+        {
+          "prop": "res-pois",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [],
+      [],
+      [],
+      [
+        {
+          "prop": "stam",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        },
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        },
+        {
+          "prop": "gold%",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        },
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        },
+        {
+          "prop": "gethit-skill",
+          "param": 42,
+          "min": 25,
+          "max": 5
+        },
+        {
+          "prop": "swing3",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ]
+    ]
   },
   "Naj's Ancient Set": {
     "name": "Naj's Ancient Vestige",
-    "levelReq": 78
+    "levelReq": 78,
+    "modifiers": [
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 175,
+          "max": 175
+        }
+      ],
+      [],
+      [],
+      [],
+      [
+        {
+          "prop": "allskills",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "prop": "regen",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        },
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        },
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        },
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        }
+      ]
+    ]
   },
   "McAuley's Folly": {
     "name": "Sander's Folly",
-    "levelReq": 28
+    "levelReq": 28,
+    "modifiers": [
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 75,
+          "max": 75
+        }
+      ],
+      [],
+      [],
+      [
+        {
+          "prop": "allskills",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        },
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 4,
+          "max": 4
+        }
+      ]
+    ]
   }
 }

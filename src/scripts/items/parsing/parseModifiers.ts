@@ -57,25 +57,30 @@ function parseModsList({ readInt }: BinaryStream, item: Item) {
       modId = readInt(9);
     }
   }
-  item.modifiers!.push(...mods);
+  return mods;
 }
 
 export function parseModifiers(stream: BinaryStream, item: Item) {
   item.modifiers = [];
 
-  if (item.quality === ItemQuality.SET) {
-    // Actually indicates how many items of the same set are needed for each list,
-    // but we're only interested in the number of lists here.
-    const nbLists = stream.read(5).split("1").length;
-    for (let i = 0; i < nbLists - 1; i++) {
-      parseModsList(stream, item);
-    }
-  }
+  // Indicates how many items of the same set are needed for each list.
+  const flags = item.quality === ItemQuality.SET ? stream.read(5) : undefined;
 
   if (item.runeword) {
     // Runewords have 2 lists, the base item mods and the runeword mods
-    parseModsList(stream, item);
+    item.modifiers.push(...parseModsList(stream, item));
   }
 
-  parseModsList(stream, item);
+  item.modifiers.push(...parseModsList(stream, item));
+
+  if (flags) {
+    item.setModifiers = [];
+    for (let i = 0; i < flags.length; i++) {
+      if (flags[i] === "1") {
+        item.setModifiers.push(parseModsList(stream, item));
+      } else {
+        item.setModifiers.push([]);
+      }
+    }
+  }
 }

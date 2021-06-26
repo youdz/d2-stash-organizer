@@ -1,4 +1,3 @@
-import { Item } from "../types/Item";
 import { STAT_GROUPS, StatGroup } from "../../../game-data";
 import { Modifier } from "../types/Modifier";
 import { describeSingleMod } from "./describeSingleMod";
@@ -7,10 +6,10 @@ import { describeSingleMod } from "./describeSingleMod";
  * Creates "custom" mods to track groups of mods that should be searched or displayed together:
  * all resistances, damage ranges, poison damage, etc.
  */
-function addGroup(group: StatGroup, item: Item) {
+function addGroup(group: StatGroup, allModifiers: Modifier[]) {
   // This function relies on a specific order for these mods (see poison)
   const mods =
-    item.modifiers?.filter(({ id }) => group.statsInGroup.includes(id)) ?? [];
+    allModifiers?.filter(({ id }) => group.statsInGroup.includes(id)) ?? [];
   // We assume a mods have been merged so we cannot have duplicates
   if (mods.length !== group.statsInGroup.length) {
     return false;
@@ -29,8 +28,8 @@ function addGroup(group: StatGroup, item: Item) {
     group.stat === "group:min-dmg" ||
     group.stat === "group:max-dmg"
   ) {
-    // We already wrong the range down, ignore these "duplicate" groups
-    if (item.modifiers?.find((mod) => mod.stat === "group:primary-dmg")) {
+    // We already described the range, ignore these "duplicate" groups
+    if (allModifiers?.find((mod) => mod.stat === "group:primary-dmg")) {
       // We still have to remember to delete the description from the mods,
       // primary-dmg only contains 2, not all 4.
       for (const mod of mods) {
@@ -48,7 +47,7 @@ function addGroup(group: StatGroup, item: Item) {
     values: mods.map(({ value }) => value ?? 0),
   };
   extraMod.description = describeSingleMod(extraMod, group);
-  item.modifiers?.push(extraMod);
+  allModifiers?.push(extraMod);
 
   // Clear descriptions of items in group so they are not displayed
   for (const mod of mods) {
@@ -57,8 +56,8 @@ function addGroup(group: StatGroup, item: Item) {
   return true;
 }
 
-export function addModGroups(item: Item) {
+export function addModGroups(modifiers: Modifier[]) {
   for (const group of STAT_GROUPS) {
-    addGroup(group, item);
+    addGroup(group, modifiers);
   }
 }

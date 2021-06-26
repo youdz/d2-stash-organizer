@@ -20,18 +20,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "mana",
-        "param": 0,
-        "min": 21,
-        "max": 22
-      },
-      {
-        "prop": "res-pois",
-        "param": 0,
-        "min": 25,
-        "max": 26
-      }
+      [
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 21,
+          "max": 22
+        }
+      ],
+      [
+        {
+          "prop": "res-pois",
+          "param": 0,
+          "min": 25,
+          "max": 26
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -55,18 +62,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-cold",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      },
-      {
-        "prop": "ac",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      }
+      [
+        {
+          "prop": "res-cold",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -90,12 +104,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "dmg/lvl",
-        "param": 8,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "dmg/lvl",
+          "param": 8,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -119,12 +139,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att/lvl",
-        "param": 20,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "att/lvl",
+          "param": 20,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -148,12 +174,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac/lvl",
-        "param": 20,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 20,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -177,12 +209,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac/lvl",
-        "param": 20,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 20,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -206,12 +244,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "dmg/lvl",
-        "param": 10,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "dmg/lvl",
+          "param": 10,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -235,12 +279,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-all",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      }
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -264,12 +314,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att/lvl",
-        "param": 20,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "att/lvl",
+          "param": 20,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -293,12 +349,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-all",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      }
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -322,12 +384,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "swing2",
-        "param": 0,
-        "min": 20,
-        "max": 20
-      }
+      [
+        {
+          "prop": "swing2",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -351,12 +419,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac/lvl",
-        "param": 16,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 16,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -380,12 +454,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "dex",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      }
+      [
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -409,12 +489,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att/lvl",
-        "param": 10,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "att/lvl",
+          "param": 10,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -438,12 +524,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-all",
-        "param": 0,
-        "min": 8,
-        "max": 8
-      }
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 8,
+          "max": 8
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -467,12 +559,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac/lvl",
-        "param": 16,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 16,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -496,12 +594,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-all",
-        "param": 0,
-        "min": 8,
-        "max": 8
-      }
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 8,
+          "max": 8
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -525,12 +629,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att/lvl",
-        "param": 16,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "att/lvl",
+          "param": 16,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -554,12 +664,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-all",
-        "param": 0,
-        "min": 8,
-        "max": 8
-      }
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 8,
+          "max": 8
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -583,18 +699,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-fire",
-        "param": 0,
-        "min": 24,
-        "max": 24
-      },
-      {
-        "prop": "ac/lvl",
-        "param": 20,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "res-fire",
+          "param": 0,
+          "min": 24,
+          "max": 24
+        }
+      ],
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 20,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -618,12 +741,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "mag%",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      }
+      [
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -647,18 +776,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "hp",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      },
-      {
-        "prop": "ac%",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      }
+      [
+        {
+          "prop": "hp",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "ac%",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -687,7 +823,13 @@
         "max": 2
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Milabrega's Diadem",
@@ -710,12 +852,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-cold",
-        "param": 0,
-        "min": 40,
-        "max": 40
-      }
+      [
+        {
+          "prop": "res-cold",
+          "param": 0,
+          "min": 40,
+          "max": 40
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -739,12 +887,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac%",
-        "param": 0,
-        "min": 100,
-        "max": 100
-      }
+      [
+        {
+          "prop": "ac%",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -768,18 +922,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "mana",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      },
-      {
-        "prop": "res-all",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      }
+      [
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -803,18 +964,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "thorns",
-        "param": 0,
-        "min": 5,
-        "max": 5
-      },
-      {
-        "prop": "res-fire",
-        "param": 0,
-        "min": 30,
-        "max": 30
-      }
+      [
+        {
+          "prop": "thorns",
+          "param": 0,
+          "min": 5,
+          "max": 5
+        }
+      ],
+      [
+        {
+          "prop": "res-fire",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -838,12 +1006,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac/lvl",
-        "param": 16,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 16,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -867,18 +1041,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      },
-      {
-        "prop": "mag%",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      }
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -902,12 +1083,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "str",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      }
+      [
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -931,18 +1118,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "mana",
-        "param": 0,
-        "min": 20,
-        "max": 20
-      },
-      {
-        "prop": "swing2",
-        "param": 0,
-        "min": 20,
-        "max": 20
-      }
+      [
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      [
+        {
+          "prop": "swing2",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -966,12 +1160,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac/lvl",
-        "param": 16,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 16,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -995,18 +1195,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "move3",
-        "param": 0,
-        "min": 30,
-        "max": 30
-      },
-      {
-        "prop": "str",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      }
+      [
+        {
+          "prop": "move3",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ],
+      [
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1030,18 +1237,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "mag%",
-        "param": 0,
-        "min": 78,
-        "max": 78
-      },
-      {
-        "prop": "att",
-        "param": 0,
-        "min": 60,
-        "max": 60
-      }
+      [
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 78,
+          "max": 78
+        }
+      ],
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 60,
+          "max": 60
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1065,12 +1279,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-all",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      }
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1094,12 +1314,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "swing3",
-        "param": 0,
-        "min": 30,
-        "max": 30
-      }
+      [
+        {
+          "prop": "swing3",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1123,12 +1349,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att/lvl",
-        "param": 16,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "att/lvl",
+          "param": 16,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1152,12 +1384,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "thorns",
-        "param": 0,
-        "min": 20,
-        "max": 20
-      }
+      [
+        {
+          "prop": "thorns",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1181,18 +1419,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      },
-      {
-        "prop": "mag%",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      }
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1216,12 +1461,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac/lvl",
-        "param": 16,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 16,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1244,7 +1495,13 @@
         "max": 20
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Infernal Cranium",
@@ -1267,12 +1524,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac/lvl",
-        "param": 16,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 16,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1296,12 +1559,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att/lvl",
-        "param": 20,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "att/lvl",
+          "param": 20,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1325,18 +1594,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-pois",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      },
-      {
-        "prop": "half-freeze",
-        "param": 0,
-        "min": 1,
-        "max": 1
-      }
+      [
+        {
+          "prop": "res-pois",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [
+        {
+          "prop": "half-freeze",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1360,12 +1636,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att/lvl",
-        "param": 16,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "att/lvl",
+          "param": 16,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1389,12 +1671,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac/lvl",
-        "param": 24,
-        "min": 0,
-        "max": 0
-      }
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 24,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1418,12 +1706,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "dmg%",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      }
+      [
+        {
+          "prop": "dmg%",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1447,12 +1741,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "swing3",
-        "param": 0,
-        "min": 30,
-        "max": 30
-      }
+      [
+        {
+          "prop": "swing3",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1476,12 +1776,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-all",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      }
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1505,12 +1811,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "dmg-cold",
-        "param": 75,
-        "min": 25,
-        "max": 75
-      }
+      [
+        {
+          "prop": "dmg-cold",
+          "param": 75,
+          "min": 25,
+          "max": 75
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1534,18 +1846,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "dmg%",
-        "param": 0,
-        "min": 75,
-        "max": 75
-      },
-      {
-        "prop": "swing3",
-        "param": 0,
-        "min": 30,
-        "max": 30
-      }
+      [
+        {
+          "prop": "dmg%",
+          "param": 0,
+          "min": 75,
+          "max": 75
+        }
+      ],
+      [
+        {
+          "prop": "swing3",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1569,18 +1888,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac",
-        "param": 0,
-        "min": 150,
-        "max": 150
-      },
-      {
-        "prop": "res-fire",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      }
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 150,
+          "max": 150
+        }
+      ],
+      [
+        {
+          "prop": "res-fire",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1604,18 +1930,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att/lvl",
-        "param": 24,
-        "min": 0,
-        "max": 0
-      },
-      {
-        "prop": "mag%",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      }
+      [
+        {
+          "prop": "att/lvl",
+          "param": 24,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1639,18 +1972,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "hp",
-        "param": 0,
-        "min": 75,
-        "max": 75
-      },
-      {
-        "prop": "allskills",
-        "param": 0,
-        "min": 1,
-        "max": 1
-      }
+      [
+        {
+          "prop": "hp",
+          "param": 0,
+          "min": 75,
+          "max": 75
+        }
+      ],
+      [
+        {
+          "prop": "allskills",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1674,18 +2014,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att/lvl",
-        "param": 16,
-        "min": 0,
-        "max": 0
-      },
-      {
-        "prop": "dmg-cold",
-        "param": 75,
-        "min": 20,
-        "max": 30
-      }
+      [
+        {
+          "prop": "att/lvl",
+          "param": 16,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [
+        {
+          "prop": "dmg-cold",
+          "param": 75,
+          "min": 20,
+          "max": 30
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1709,18 +2056,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac/lvl",
-        "param": 24,
-        "min": 0,
-        "max": 0
-      },
-      {
-        "prop": "res-cold",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      }
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 24,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [
+        {
+          "prop": "res-cold",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1744,18 +2098,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "mag%",
-        "param": 0,
-        "min": 40,
-        "max": 40
-      },
-      {
-        "prop": "res-cold",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      }
+      [
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 40,
+          "max": 40
+        }
+      ],
+      [
+        {
+          "prop": "res-cold",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1779,18 +2140,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "att",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      },
-      {
-        "prop": "dex",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      }
+      [
+        {
+          "prop": "att",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1814,18 +2182,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "mag%",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      },
-      {
-        "prop": "res-fire",
-        "param": 0,
-        "min": 20,
-        "max": 20
-      }
+      [
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "res-fire",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1849,18 +2224,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "mana",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      },
-      {
-        "prop": "regen-mana",
-        "param": 0,
-        "min": 5,
-        "max": 5
-      }
+      [
+        {
+          "prop": "mana",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "regen-mana",
+          "param": 0,
+          "min": 5,
+          "max": 5
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1884,18 +2266,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac/lvl",
-        "param": 24,
-        "min": 0,
-        "max": 0
-      },
-      {
-        "prop": "res-ltng",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      }
+      [
+        {
+          "prop": "ac/lvl",
+          "param": 24,
+          "min": 0,
+          "max": 0
+        }
+      ],
+      [
+        {
+          "prop": "res-ltng",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1919,18 +2308,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac",
-        "param": 0,
-        "min": 100,
-        "max": 100
-      },
-      {
-        "prop": "enr",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      }
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        }
+      ],
+      [
+        {
+          "prop": "enr",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -1971,7 +2367,13 @@
         "max": 3
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Natalya's Mark",
@@ -2023,7 +2425,13 @@
         "max": 200
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Natalya's Shadow",
@@ -2069,7 +2477,13 @@
         "max": 3
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Natalya's Soul",
@@ -2115,7 +2529,13 @@
         "max": 25
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Aldur's Stony Gaze",
@@ -2162,24 +2582,32 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "enr",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      },
-      {
-        "prop": "enr",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      },
-      {
-        "prop": "enr",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      }
+      [
+        {
+          "prop": "enr",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "enr",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "enr",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      []
     ]
   },
   {
@@ -2233,24 +2661,32 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "vit",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      },
-      {
-        "prop": "vit",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      },
-      {
-        "prop": "vit",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      }
+      [
+        {
+          "prop": "vit",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "vit",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "vit",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      []
     ]
   },
   {
@@ -2304,24 +2740,32 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "str",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      },
-      {
-        "prop": "str",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      },
-      {
-        "prop": "str",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      }
+      [
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "str",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      []
     ]
   },
   {
@@ -2375,24 +2819,32 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "dex",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      },
-      {
-        "prop": "dex",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      },
-      {
-        "prop": "dex",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      }
+      [
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "dex",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      []
     ]
   },
   {
@@ -2439,7 +2891,13 @@
         "max": 2
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Immortal King's Soul Cage",
@@ -2474,36 +2932,46 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "balance2",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      },
-      {
-        "prop": "res-cold",
-        "param": 0,
-        "min": 40,
-        "max": 40
-      },
-      {
-        "prop": "res-fire",
-        "param": 0,
-        "min": 40,
-        "max": 40
-      },
-      {
-        "prop": "res-ltng",
-        "param": 0,
-        "min": 40,
-        "max": 40
-      },
-      {
-        "prop": "ac%",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      }
+      [
+        {
+          "prop": "balance2",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [
+        {
+          "prop": "res-cold",
+          "param": 0,
+          "min": 40,
+          "max": 40
+        }
+      ],
+      [
+        {
+          "prop": "res-fire",
+          "param": 0,
+          "min": 40,
+          "max": 40
+        }
+      ],
+      [
+        {
+          "prop": "res-ltng",
+          "param": 0,
+          "min": 40,
+          "max": 40
+        }
+      ],
+      [
+        {
+          "prop": "ac%",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ]
     ]
   },
   {
@@ -2539,36 +3007,46 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac",
-        "param": 0,
-        "min": 105,
-        "max": 105
-      },
-      {
-        "prop": "balance2",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      },
-      {
-        "prop": "ac%",
-        "param": 0,
-        "min": 100,
-        "max": 100
-      },
-      {
-        "prop": "red-dmg%",
-        "param": 0,
-        "min": 20,
-        "max": 20
-      },
-      {
-        "prop": "skilltab",
-        "param": 13,
-        "min": 2,
-        "max": 2
-      }
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 105,
+          "max": 105
+        }
+      ],
+      [
+        {
+          "prop": "balance2",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [
+        {
+          "prop": "ac%",
+          "param": 0,
+          "min": 100,
+          "max": 100
+        }
+      ],
+      [
+        {
+          "prop": "red-dmg%",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      [
+        {
+          "prop": "skilltab",
+          "param": 13,
+          "min": 2,
+          "max": 2
+        }
+      ]
     ]
   },
   {
@@ -2604,36 +3082,46 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "swing2",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      },
-      {
-        "prop": "ac",
-        "param": 0,
-        "min": 120,
-        "max": 120
-      },
-      {
-        "prop": "lifesteal",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      },
-      {
-        "prop": "manasteal",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      },
-      {
-        "prop": "freeze",
-        "param": 0,
-        "min": 2,
-        "max": 2
-      }
+      [
+        {
+          "prop": "swing2",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 120,
+          "max": 120
+        }
+      ],
+      [
+        {
+          "prop": "lifesteal",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [
+        {
+          "prop": "manasteal",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [
+        {
+          "prop": "freeze",
+          "param": 0,
+          "min": 2,
+          "max": 2
+        }
+      ]
     ]
   },
   {
@@ -2669,30 +3157,39 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "mag%",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      },
-      {
-        "prop": "skilltab",
-        "param": 12,
-        "min": 2,
-        "max": 2
-      },
-      {
-        "prop": "ac",
-        "param": 0,
-        "min": 160,
-        "max": 160
-      },
-      {
-        "prop": "half-freeze",
-        "param": 0,
-        "min": 1,
-        "max": 1
-      }
+      [
+        {
+          "prop": "mag%",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [
+        {
+          "prop": "skilltab",
+          "param": 12,
+          "min": 2,
+          "max": 2
+        }
+      ],
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 160,
+          "max": 160
+        }
+      ],
+      [
+        {
+          "prop": "half-freeze",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        }
+      ],
+      []
     ]
   },
   {
@@ -2746,36 +3243,46 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "dmg-fire",
-        "param": 0,
-        "min": 211,
-        "max": 397
-      },
-      {
-        "prop": "dmg-ltng",
-        "param": 0,
-        "min": 7,
-        "max": 477
-      },
-      {
-        "prop": "dmg-cold",
-        "param": 150,
-        "min": 127,
-        "max": 364
-      },
-      {
-        "prop": "dmg-pois",
-        "param": 150,
-        "min": 349,
-        "max": 349
-      },
-      {
-        "prop": "dmg-mag",
-        "param": 0,
-        "min": 250,
-        "max": 361
-      }
+      [
+        {
+          "prop": "dmg-fire",
+          "param": 0,
+          "min": 211,
+          "max": 397
+        }
+      ],
+      [
+        {
+          "prop": "dmg-ltng",
+          "param": 0,
+          "min": 7,
+          "max": 477
+        }
+      ],
+      [
+        {
+          "prop": "dmg-cold",
+          "param": 150,
+          "min": 127,
+          "max": 364
+        }
+      ],
+      [
+        {
+          "prop": "dmg-pois",
+          "param": 150,
+          "min": 349,
+          "max": 349
+        }
+      ],
+      [
+        {
+          "prop": "dmg-mag",
+          "param": 0,
+          "min": 250,
+          "max": 361
+        }
+      ]
     ]
   },
   {
@@ -2817,18 +3324,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "ac",
-        "param": 0,
-        "min": 60,
-        "max": 60
-      },
-      {
-        "prop": "cast2",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      }
+      [
+        {
+          "prop": "ac",
+          "param": 0,
+          "min": 60,
+          "max": 60
+        }
+      ],
+      [
+        {
+          "prop": "cast2",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -2870,12 +3384,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "cast2",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      }
+      [],
+      [],
+      [
+        {
+          "prop": "cast2",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      []
     ]
   },
   {
@@ -2929,30 +3449,39 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "sor",
-        "param": 0,
-        "min": 1,
-        "max": 1
-      },
-      {
-        "prop": "pierce-fire",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      },
-      {
-        "prop": "pierce-ltng",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      },
-      {
-        "prop": "extra-cold",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      }
+      [
+        {
+          "prop": "sor",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        }
+      ],
+      [
+        {
+          "prop": "pierce-fire",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "pierce-ltng",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "extra-cold",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      []
     ]
   },
   {
@@ -3006,12 +3535,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "cast2",
-        "param": 0,
-        "min": 10,
-        "max": 10
-      }
+      [
+        {
+          "prop": "cast2",
+          "param": 0,
+          "min": 10,
+          "max": 10
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -3058,7 +3593,13 @@
         "max": 10
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Griswold's Valor",
@@ -3105,12 +3646,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "skilltab",
-        "param": 10,
-        "min": 2,
-        "max": 2
-      }
+      [
+        {
+          "prop": "skilltab",
+          "param": 10,
+          "min": 2,
+          "max": 2
+        }
+      ],
+      [],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -3151,7 +3698,13 @@
         "max": -40
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Griswold's Redemption",
@@ -3192,24 +3745,32 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "skilltab",
-        "param": 9,
-        "min": 2,
-        "max": 2
-      },
-      {
-        "prop": "dmg-norm",
-        "param": 0,
-        "min": 10,
-        "max": 20
-      },
-      {
-        "prop": "dmg-norm",
-        "param": 0,
-        "min": 10,
-        "max": 20
-      }
+      [
+        {
+          "prop": "skilltab",
+          "param": 9,
+          "min": 2,
+          "max": 2
+        }
+      ],
+      [
+        {
+          "prop": "dmg-norm",
+          "param": 0,
+          "min": 10,
+          "max": 20
+        }
+      ],
+      [
+        {
+          "prop": "dmg-norm",
+          "param": 0,
+          "min": 10,
+          "max": 20
+        }
+      ],
+      [],
+      []
     ]
   },
   {
@@ -3250,7 +3811,13 @@
         "max": 45
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Trang-Oul's Guise",
@@ -3290,7 +3857,13 @@
         "max": 5
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Trang-Oul's Scales",
@@ -3337,18 +3910,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-ltng",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      },
-      {
-        "prop": "red-dmg%",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      }
+      [],
+      [
+        {
+          "prop": "res-ltng",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [],
+      [
+        {
+          "prop": "red-dmg%",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      []
     ]
   },
   {
@@ -3402,18 +3982,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "pierce-pois",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      },
-      {
-        "prop": "regen",
-        "param": 0,
-        "min": 15,
-        "max": 15
-      }
+      [],
+      [
+        {
+          "prop": "pierce-pois",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [
+        {
+          "prop": "regen",
+          "param": 0,
+          "min": 15,
+          "max": 15
+        }
+      ],
+      [],
+      []
     ]
   },
   {
@@ -3449,12 +4036,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "extra-pois",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      }
+      [],
+      [],
+      [
+        {
+          "prop": "extra-pois",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [],
+      []
     ]
   },
   {
@@ -3508,12 +4101,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-cold",
-        "param": 0,
-        "min": 40,
-        "max": 40
-      }
+      [],
+      [
+        {
+          "prop": "res-cold",
+          "param": 0,
+          "min": 40,
+          "max": 40
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -3549,24 +4148,32 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "allskills",
-        "param": 0,
-        "min": 1,
-        "max": 1
-      },
-      {
-        "prop": "att%",
-        "param": 0,
-        "min": 50,
-        "max": 50
-      },
-      {
-        "prop": "res-all",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      }
+      [
+        {
+          "prop": "allskills",
+          "param": 0,
+          "min": 1,
+          "max": 1
+        }
+      ],
+      [
+        {
+          "prop": "att%",
+          "param": 0,
+          "min": 50,
+          "max": 50
+        }
+      ],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [],
+      []
     ]
   },
   {
@@ -3614,12 +4221,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "balance2",
-        "param": 0,
-        "min": 30,
-        "max": 30
-      }
+      [],
+      [
+        {
+          "prop": "balance2",
+          "param": 0,
+          "min": 30,
+          "max": 30
+        }
+      ],
+      [],
+      [],
+      []
     ]
   },
   {
@@ -3667,18 +4280,25 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "dmg-cold",
-        "param": 100,
-        "min": 131,
-        "max": 252
-      },
-      {
-        "prop": "extra-cold",
-        "param": 0,
-        "min": 20,
-        "max": 20
-      }
+      [],
+      [],
+      [
+        {
+          "prop": "dmg-cold",
+          "param": 100,
+          "min": 131,
+          "max": 252
+        }
+      ],
+      [
+        {
+          "prop": "extra-cold",
+          "param": 0,
+          "min": 20,
+          "max": 20
+        }
+      ],
+      []
     ]
   },
   {
@@ -3714,12 +4334,18 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "res-all",
-        "param": 0,
-        "min": 25,
-        "max": 25
-      }
+      [],
+      [],
+      [
+        {
+          "prop": "res-all",
+          "param": 0,
+          "min": 25,
+          "max": 25
+        }
+      ],
+      [],
+      []
     ]
   },
   {
@@ -3755,24 +4381,32 @@
       }
     ],
     "setModifiers": [
-      {
-        "prop": "dmg-mag",
-        "param": 0,
-        "min": 114,
-        "max": 377
-      },
-      {
-        "prop": "hit-skill",
-        "param": 48,
-        "min": 10,
-        "max": 15
-      },
-      {
-        "prop": "skilltab",
-        "param": 0,
-        "min": 2,
-        "max": 2
-      }
+      [
+        {
+          "prop": "dmg-mag",
+          "param": 0,
+          "min": 114,
+          "max": 377
+        }
+      ],
+      [
+        {
+          "prop": "hit-skill",
+          "param": 48,
+          "min": 10,
+          "max": 15
+        }
+      ],
+      [
+        {
+          "prop": "skilltab",
+          "param": 0,
+          "min": 2,
+          "max": 2
+        }
+      ],
+      [],
+      []
     ]
   },
   {
@@ -3807,7 +4441,13 @@
         "max": 10
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Laying of Hands",
@@ -3847,7 +4487,13 @@
         "max": 3
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Rite of Passage",
@@ -3881,7 +4527,13 @@
         "max": 25
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Dark Adherent",
@@ -3915,7 +4567,13 @@
         "max": 175
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Credendum",
@@ -3949,7 +4607,13 @@
         "max": 15
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Dangoon's Teaching",
@@ -3983,7 +4647,13 @@
         "max": 30
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Taebaek's Glory",
@@ -4035,7 +4705,13 @@
         "max": 30
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Haemosu's Adamant",
@@ -4075,7 +4751,13 @@
         "max": -20
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Ondal's Almighty",
@@ -4121,7 +4803,13 @@
         "max": 24
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Guillaume's Face",
@@ -4161,7 +4849,13 @@
         "max": 15
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Wilhelm's Pride",
@@ -4195,7 +4889,13 @@
         "max": 5
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Magnus' Skin",
@@ -4235,7 +4935,13 @@
         "max": 100
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Whitstan's Guard",
@@ -4275,7 +4981,13 @@
         "max": 5
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Hwanin's Splendor",
@@ -4309,7 +5021,13 @@
         "max": 100
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Hwanin's Refuge",
@@ -4343,7 +5061,13 @@
         "max": 3
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Hwanin's Blessing",
@@ -4377,7 +5101,13 @@
         "max": 12
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Hwanin's Justice",
@@ -4423,7 +5153,13 @@
         "max": 25
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Sazabi's Cobalt Redeemer",
@@ -4475,7 +5211,13 @@
         "max": 5
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Sazabi's Ghost Liberator",
@@ -4515,7 +5257,13 @@
         "max": 75
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Sazabi's Mental Sheath",
@@ -4549,7 +5297,13 @@
         "max": 20
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Bul-Kathos' Sacred Charge",
@@ -4589,7 +5343,13 @@
         "max": 200
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Bul-Kathos' Tribal Guardian",
@@ -4629,7 +5389,13 @@
         "max": 200
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Cow King's Horns",
@@ -4663,7 +5429,13 @@
         "max": 10
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Cow King's Hide",
@@ -4697,7 +5469,13 @@
         "max": 5
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Cow King's Hooves",
@@ -4737,7 +5515,13 @@
         "max": 35
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Naj's Puzzler",
@@ -4789,7 +5573,13 @@
         "max": 1
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Naj's Light Plate",
@@ -4835,7 +5625,13 @@
         "max": 300
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Naj's Circlet",
@@ -4875,7 +5671,13 @@
         "max": 5
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Sander's Paragon",
@@ -4903,7 +5705,13 @@
         "max": 0
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Sander's Riprap",
@@ -4937,7 +5745,13 @@
         "max": 10
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Sander's Taboo",
@@ -4971,7 +5785,13 @@
         "max": 36
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   },
   {
     "name": "Sander's Superstition",
@@ -5011,6 +5831,12 @@
         "max": 75
       }
     ],
-    "setModifiers": []
+    "setModifiers": [
+      [],
+      [],
+      [],
+      [],
+      []
+    ]
   }
 ]

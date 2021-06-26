@@ -54,7 +54,7 @@ export interface SetItem {
   code: string;
   set: string;
   baseModifiers: ModifierRange[];
-  setModifiers: ModifierRange[];
+  setModifiers: ModifierRange[][];
   qlevel: number;
   levelReq: number;
 }
@@ -62,6 +62,7 @@ export interface SetItem {
 export interface Set {
   name: string;
   levelReq: number;
+  modifiers: ModifierRange[][];
 }
 
 export interface Runeword {

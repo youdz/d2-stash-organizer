@@ -11,17 +11,49 @@ import { ItemQuality } from "../types/ItemQuality";
 import { getBase } from "../getBase";
 import { Modifier } from "../types/Modifier";
 
+function checkRange(
+  { prop, min, max, param }: ModifierRange,
+  modifiers: Modifier[],
+  callback: (value: number, min: number, max: number) => void
+) {
+  const { stats } = PROPERTIES[prop];
+  for (const { stat, type } of stats) {
+    // Some weird cases of "param" like the hp/lvl on Fortitude actually do have a range
+    // Well, that one case. It's the only one in the entire game that I can find.
+    if (type === "other" || (type === "param" && !param)) {
+      let condition = (mod: Modifier) => mod.stat === stat;
+      if (prop === "skill") {
+        condition = (mod) =>
+          "param" in mod && mod.param === param && mod.stat === stat;
+      } else if (prop === "skilltab") {
+        const skillTab = SKILL_TABS[Number(param)]?.id;
+        condition = (mod) =>
+          "param" in mod && mod.param === skillTab && mod.stat === stat;
+      }
+      const modifier = modifiers?.find(condition);
+      // dmg-min and dmg-max are sometimes mindamage, sometimes secondary_mindamage
+      if (
+        (prop === "dmg-min" || prop === "dmg-max") &&
+        typeof modifier === "undefined"
+      ) {
+        // It's the other property, we just ignore this one not to mess up the score
+        continue;
+      }
+      callback(modifier?.value ?? 0, min!, max!);
+    }
+  }
+}
+
 export function perfectionScore(item: Item) {
+  if (!item.modifiers) return 0;
+
   let ranges: ModifierRange[];
   if (item.runeword) {
     ranges = RUNEWORDS[item.runewordId!].modifiers;
   } else if (item.quality === ItemQuality.UNIQUE) {
     ranges = UNIQUE_ITEMS[item.unique!].modifiers;
   } else if (item.quality === ItemQuality.SET) {
-    const setItem = SET_ITEMS[item.unique!];
-    // This would break if a set item had a mod that appears in both lists and is a range in one of them.
-    // But no such item exists in the game, so this is fine.
-    ranges = [...setItem.baseModifiers, ...setItem.setModifiers];
+    ranges = SET_ITEMS[item.unique!].baseModifiers;
   } else {
     throw new Error(
       "Only uniques, sets and runewords have a perfection score."
@@ -43,48 +75,27 @@ export function perfectionScore(item: Item) {
     score = (nbProps * score + (value - min) / (max - min)) / ++nbProps;
   }
 
-  for (const { prop, min, max, param } of ranges) {
-    if (min === max) {
+  for (const range of ranges) {
+    if (range.min === range.max) {
       continue;
     }
     // Sockets are a special case: sometimes it's min-max, sometimes it's param,
     // and sometimes it's way more than the actual item allows
-    if (prop === "sock") {
-      addProp(item.sockets!, min!, Math.min(max!, base.maxSockets));
+    if (range.prop === "sock") {
+      addProp(item.sockets!, range.min!, Math.min(range.max!, base.maxSockets));
       continue;
     }
+    checkRange(range, item.modifiers, addProp);
+  }
 
-    const { stats } = PROPERTIES[prop];
-    for (const { stat, type } of stats) {
-      // Some weird cases of "param" like the hp/lvl on Fortitude actually do have a range
-      // Well, that one case. It's the only one in the entire game that I can find.
-      if (type === "other" || (type === "param" && !param)) {
-        let condition = (mod: Modifier) => mod.stat === stat;
-        if (prop === "skill") {
-          condition = (mod) =>
-            "param" in mod && mod.param === param && mod.stat === stat;
-        } else if (prop === "skilltab") {
-          const skillTab = SKILL_TABS[Number(param)]?.id;
-          condition = (mod) =>
-            "param" in mod && mod.param === skillTab && mod.stat === stat;
+  if (item.quality === ItemQuality.SET) {
+    SET_ITEMS[item.unique!].setModifiers.forEach((ranges, i) => {
+      for (const range of ranges) {
+        if (range.min !== range.max) {
+          checkRange(range, item.setModifiers![i], addProp);
         }
-        const modifier = item.modifiers?.find(condition);
-        // dmg-min and dmg-max are sometimes mindamage, sometimes secondary_mindamage
-        if (
-          (prop === "dmg-min" || prop === "dmg-max") &&
-          typeof modifier === "undefined"
-        ) {
-          // It's the other property, we just ignore this one not to mess up the score
-          continue;
-        }
-        let value = 0;
-        // I don't believe we can ever not go through that if, but let's be safe
-        if (modifier && "value" in modifier) {
-          value = modifier.value!;
-        }
-        addProp(value, min!, max!);
       }
-    }
+    });
   }
 
   // % enhanced defense armor always spawn with max def + 1

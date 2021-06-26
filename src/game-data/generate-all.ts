@@ -3,6 +3,7 @@ import { itemStatsToJson } from "./parsing/itemStats";
 import { propertiesToJson } from "./parsing/properties";
 import { weaponsToJson } from "./parsing/weapons";
 import { setsToJson } from "./parsing/sets";
+import { setItemsToJson } from "./parsing/setItems";
 import { uniquesToJson } from "./parsing/uniques";
 import { skillsToJson } from "./parsing/skills";
 import { skillTabsToJson } from "./parsing/skillTabs";
@@ -28,7 +29,8 @@ async function generateAll() {
   await rareNamesToJson();
   await gemsToJson(skills);
   await uniquesToJson(skills);
-  await setsToJson(skills);
+  const setItems = await setItemsToJson(skills);
+  await setsToJson(setItems, skills);
   await runewordsToJson(misc, skills);
 }
 
