@@ -1,5 +1,5 @@
-import { Stash } from "../scripts/stash/types";
-import { grailSummary } from "../scripts/grail/list/grailProgress";
+import { Stash } from "../../scripts/stash/types";
+import { grailSummary } from "../../scripts/grail/list/grailProgress";
 import { useMemo } from "preact/hooks";
 
 export interface GrailSummaryProps {

@@ -3,9 +3,9 @@ import { Stash } from "../scripts/stash/types";
 import "./Actions.css";
 import { useCallback, useState } from "preact/hooks";
 import { organize } from "../scripts/grail/organize";
-import { downloadStash, stashToFile, writeStashFile } from "./utils/stash";
+import { downloadStash, stashToFile, writeStashFile } from "./utils/store";
 import { JSXInternal } from "preact/src/jsx";
-import { GrailSummary } from "./GrailSummary";
+import { GrailSummary } from "./grail/GrailSummary";
 
 export interface ActionsProps {
   grailTracker: boolean;

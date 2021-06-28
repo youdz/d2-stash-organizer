@@ -1,9 +1,9 @@
-import { Page, PageFlags } from "../scripts/stash/types";
+import { Page, PageFlags } from "../../scripts/stash/types";
 import { Item } from "./Item";
-import { Item as ItemType } from "../scripts/items/types/Item";
+import { Item as ItemType } from "../../scripts/items/types/Item";
 import "./Page.css";
-import { isSimpleItem } from "./utils/isSimpleItem";
-import { pageName } from "./utils/pageName";
+import { isSimpleItem } from "../utils/isSimpleItem";
+import { pageName } from "../utils/pageName";
 
 export interface PageProps {
   index: number;

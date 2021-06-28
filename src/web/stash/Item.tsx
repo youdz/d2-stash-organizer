@@ -1,5 +1,5 @@
-import { Item } from "../scripts/items/types/Item";
-import { colorClass } from "./utils/colorClass";
+import { Item } from "../../scripts/items/types/Item";
+import { colorClass } from "../utils/colorClass";
 import { AdditionalInfo } from "./AdditionalInfo";
 import "./Item.css";
 

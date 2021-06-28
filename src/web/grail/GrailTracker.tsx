@@ -1,5 +1,5 @@
-import { Stash } from "../scripts/stash/types";
-import { grailProgress } from "../scripts/grail/list/grailProgress";
+import { Stash } from "../../scripts/stash/types";
+import { grailProgress } from "../../scripts/grail/list/grailProgress";
 import { useMemo } from "preact/hooks";
 import { JSX } from "preact";
 import "./GrailTracker.css";
@@ -10,14 +10,13 @@ export interface GrailTrackerProps {
 
 const TIER_NAMES = ["Normal", "Exceptional", "Elite"];
 
-const toDingbat = (b: boolean) => (b ? "✔" : "✘");
 const toClassName = (b: boolean) => (b ? "found" : "missing");
 
 export function GrailTracker({ stash }: GrailTrackerProps) {
   const progress = useMemo(() => grailProgress(stash), [stash]);
 
   const sections: JSX.Element[] = [];
-  for (const [section, tiers] of grailProgress(stash)) {
+  for (const [section, tiers] of progress) {
     tiers.forEach((tier, i) => {
       const items = [];
       for (const { item, normal, ethereal, perfect } of tier) {
