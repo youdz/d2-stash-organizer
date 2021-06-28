@@ -3,13 +3,13 @@ import { Stash } from "../scripts/stash/types";
 import "./Actions.css";
 import { useCallback, useState } from "preact/hooks";
 import { organize } from "../scripts/grail/organize";
-import { downloadStash, saveStash } from "./utils/stash";
+import { downloadStash, stashToFile, writeStashFile } from "./utils/stash";
 import { JSXInternal } from "preact/src/jsx";
 import { GrailSummary } from "./GrailSummary";
 
 export interface ActionsProps {
   grailTracker: boolean;
-  stash: Stash | null;
+  stash: Stash | undefined;
   onStashChange: (stash: Stash) => void;
   filter: string;
   setFilter: (value: string) => void;
@@ -34,11 +34,12 @@ export function Actions({
   const handleOrganize = useCallback(async () => {
     if (stash) {
       try {
-        organize(stash, skipPages, emptyPages);
         const clone = { ...stash };
-        await saveStash(clone);
+        organize(clone, skipPages, emptyPages);
+        const file = stashToFile(clone);
+        await writeStashFile(file);
         onStashChange(clone);
-        downloadStash(stash);
+        downloadStash(file);
       } catch (e) {
         if ("message" in e) {
           alert((e as Error).message);
@@ -51,7 +52,7 @@ export function Actions({
   return (
     <>
       <div id="action-bar">
-        <FilePicker onChange={onStashChange} />
+        <FilePicker stash={stash} onChange={onStashChange} />
         {!grailTracker && stash && (
           <>
             <button class="button" disabled={!stash} onClick={handleOrganize}>

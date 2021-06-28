@@ -1,6 +1,6 @@
 import { render } from "preact";
 import { useCallback, useEffect, useMemo, useState } from "preact/hooks";
-import { getStash } from "./utils/stash";
+import { getSavedStash } from "./utils/stash";
 import "./App.css";
 import { Page } from "./Page";
 import { Actions } from "./Actions";
@@ -12,12 +12,18 @@ import { GrailTracker } from "./GrailTracker";
 import { pageName } from "./utils/pageName";
 
 export function App() {
-  const [stash, setStash] = useState(() => getStash());
+  const [stash, setStash] = useState<Stash | undefined>(undefined);
   const [currentPage, setCurrentPage] = useState(0);
   const [filter, setFilter] = useState("");
   const [grailTracker, setGrailTracker] = useState(
     () => window.location.hash === "#grail-tracker"
   );
+
+  useEffect(() => {
+    getSavedStash()
+      .then((stash) => setStash(stash))
+      .catch(() => undefined);
+  }, []);
 
   useEffect(() => {
     const listener = () => setGrailTracker(location.hash === "#grail-tracker");
