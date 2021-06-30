@@ -1,15 +1,12 @@
-import { stashFromFile, writeStashFile } from "./utils/store";
-import { Stash } from "../scripts/stash/types";
-import { useCallback, useRef } from "preact/hooks";
+import { stashFromFile, writeStashFile } from "./store";
+import { useCallback, useContext, useRef } from "preact/hooks";
 import { JSXInternal } from "preact/src/jsx";
+import "./FilePicker.css";
+import { StashContext } from "./stashContext";
 import TargetedEvent = JSXInternal.TargetedEvent;
 
-export interface FilePickerProps {
-  stash: Stash | undefined;
-  onChange?: (stash: Stash) => void;
-}
-
-export function FilePicker({ stash, onChange }: FilePickerProps) {
+export function FilePicker() {
+  const { stash, setStash } = useContext(StashContext);
   const input = useRef<HTMLInputElement>(null);
 
   const handleChange = useCallback(
@@ -18,14 +15,14 @@ export function FilePicker({ stash, onChange }: FilePickerProps) {
       if (file) {
         await writeStashFile(file);
         const parsed = await stashFromFile(file);
-        onChange?.(parsed);
+        setStash(parsed);
       }
     },
-    [onChange]
+    [setStash]
   );
 
   return (
-    <div>
+    <span id="filepicker">
       <button class="button" onClick={() => input.current.click()}>
         {!stash ? "Upload" : "Update"} my stash
       </button>
@@ -36,6 +33,6 @@ export function FilePicker({ stash, onChange }: FilePickerProps) {
         accept=".sss,.d2x"
         onChange={handleChange}
       />
-    </div>
+    </span>
   );
 }

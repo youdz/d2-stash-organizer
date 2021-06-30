@@ -17,6 +17,10 @@ export async function miscToJson() {
       qlevel: Number(line[5]),
       levelReq: Number(line[6]),
     };
+    // Token of absolution name is messed up, has the description at the start
+    if (code === "toa") {
+      misc[code].name = misc[code].name.split("\\n")[1];
+    }
   }
   await writeJson("Misc", misc);
   return misc;

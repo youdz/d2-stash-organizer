@@ -1,23 +1,19 @@
-import { Stash } from "../../scripts/stash/types";
 import { PAGE_SIZE, Pagination } from "./Pagination";
 import { Page } from "./Page";
-import { useEffect, useMemo, useState } from "preact/hooks";
+import { useContext, useEffect, useMemo, useState } from "preact/hooks";
 import { getBase } from "../../scripts/items/getBase";
-import { pageName } from "../utils/pageName";
+import { pageName } from "./utils/pageName";
+import { StashContext } from "../store/stashContext";
 
-export interface StashProps {
-  stash: Stash | undefined;
-  // TODO: move this to stash only, but requires a layout change
-  filter: string;
-}
-
-export function StashView({ stash, filter }: StashProps) {
+export function StashView() {
+  const { stash } = useContext(StashContext);
+  const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(0);
 
   const pages = useMemo(() => {
     let filtered = stash?.pages;
-    if (filter) {
-      const lcFilter = filter.toLocaleLowerCase();
+    if (search) {
+      const lcFilter = search.toLocaleLowerCase();
       filtered = stash?.pages
         .map((page, index) => {
           let items = page.items;
@@ -40,7 +36,7 @@ export function StashView({ stash, filter }: StashProps) {
         .filter(({ items }) => items.length > 0);
     }
     return filtered;
-  }, [stash, filter]);
+  }, [stash, search]);
 
   // Reset to the first page when the stash changes
   useEffect(() => {
@@ -60,14 +56,45 @@ export function StashView({ stash, filter }: StashProps) {
 
   return (
     <>
+      <div class="controls">
+        <div id="search">
+          <p>
+            <label for="search-input">Search for an item or a page:</label>
+          </p>
+          <p>
+            <input
+              id="search-input"
+              type="text"
+              value={search}
+              onInput={({ currentTarget }) => setSearch(currentTarget.value)}
+            />
+          </p>
+        </div>
+        <div id="filter">
+          <p>
+            <label for="filter-select">TODO: filter by mod</label>
+          </p>
+          <p>
+            <select id="filter-select" multiple>
+              <option>Resist all</option>
+              <option>Magic find</option>
+            </select>
+          </p>
+        </div>
+      </div>
       <Pagination
         nbPages={pages.length}
         currentPage={currentPage}
         setPage={setCurrentPage}
       />
-      {pages.slice(currentPage, currentPage + PAGE_SIZE).map((page, index) => (
-        <Page page={page} index={index + currentPage} />
-      ))}
+      {/* Need an extra div because Preact doesn't seem to like maps flat with non-mapped elements */}
+      <div>
+        {pages
+          .slice(currentPage, currentPage + PAGE_SIZE)
+          .map((page, index) => (
+            <Page key={index} page={page} index={index + currentPage} />
+          ))}
+      </div>
       <Pagination
         nbPages={pages.length}
         currentPage={currentPage}

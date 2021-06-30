@@ -1,12 +1,4 @@
-#action-bar {
-    display: flex;
-    flex-flow: row nowrap;
-}
-#action-bar > :not(:first-child) {
-    margin-left: 2em;
-}
-
-#controls {
+.controls {
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch;
@@ -14,19 +6,19 @@
     border-bottom: 1px solid #666666;
 }
 
-#controls > :not(:last-child) {
+.controls > :not(:last-child) {
     border-right: 1px solid #666666;
     padding-right: 2em;
 }
 
-#controls > :not(:first-child) {
+.controls > :not(:first-child) {
     padding-left: 2em;
 }
 
-#controls p:first-child {
+.controls p:first-child {
     margin-top: 0;
 }
 
-#controls p:last-child {
+.controls p:last-child {
     margin-bottom: 0;
 }

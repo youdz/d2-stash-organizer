@@ -67,7 +67,7 @@ export function grailProgress(stash: Stash) {
   return progress;
 }
 
-export function grailSummary(stash: Stash) {
+export function grailSummary(stash: Stash | undefined) {
   const summary = {
     nbNormal: 0,
     totalNormal: 0,
@@ -75,6 +75,9 @@ export function grailSummary(stash: Stash) {
     totalEth: 0,
     nbPerfect: 0,
   };
+  if (!stash) {
+    return summary;
+  }
   for (const tiers of grailProgress(stash).values()) {
     for (const tier of tiers) {
       for (const { normal, ethereal, perfect } of tier) {

@@ -1,4 +1,4 @@
-import { Page } from "../../scripts/stash/types";
+import { Page } from "../../../scripts/stash/types";
 
 const DEFAULT_PERSONAL_NAME = "Personal Page #";
 const DEFAULT_SHARED_NAME = "Shared Page #";

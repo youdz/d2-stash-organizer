@@ -1,0 +1,19 @@
+#navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    border-bottom: 1px solid #666;
+}
+
+.nav-link {
+    color: #AAA;
+    text-decoration: none;
+    margin: 0 1em;
+    padding-bottom: 0.4em;
+}
+
+.nav-link.active {
+    color: white;
+    border-bottom: 1px solid white;
+    margin-bottom: -1px;
+}
+

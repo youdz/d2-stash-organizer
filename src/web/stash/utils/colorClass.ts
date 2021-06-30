@@ -1,5 +1,5 @@
-import { ItemQuality } from "../../scripts/items/types/ItemQuality";
-import { Item } from "../../scripts/items/types/Item";
+import { ItemQuality } from "../../../scripts/items/types/ItemQuality";
+import { Item } from "../../../scripts/items/types/Item";
 
 export function colorClass(item: Item) {
   if (item.runeword) {

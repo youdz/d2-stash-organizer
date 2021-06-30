@@ -2,8 +2,8 @@ import { Page, PageFlags } from "../../scripts/stash/types";
 import { Item } from "./Item";
 import { Item as ItemType } from "../../scripts/items/types/Item";
 import "./Page.css";
-import { isSimpleItem } from "../utils/isSimpleItem";
-import { pageName } from "../utils/pageName";
+import { isSimpleItem } from "./utils/isSimpleItem";
+import { pageName } from "./utils/pageName";
 
 export interface PageProps {
   index: number;
@@ -41,8 +41,8 @@ export function Page({ page, index }: PageProps) {
         <span>{indexText}</span>
       </h3>
       <table class="page">
-        {Array.from(grouped.values()).map(({ item, quantity }) => (
-          <Item item={item} quantity={quantity} />
+        {Array.from(grouped.values()).map(({ item, quantity }, index) => (
+          <Item key={item.id ?? index} item={item} quantity={quantity} />
         ))}
       </table>
     </section>

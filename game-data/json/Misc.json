@@ -1595,7 +1595,7 @@
     "levelReq": 0
   },
   "toa": {
-    "name": "Right-click to reset Stat/Skill Points\\nToken of Absolution",
+    "name": "Token of Absolution",
     "type": "ques",
     "tier": 0,
     "maxSockets": 0,

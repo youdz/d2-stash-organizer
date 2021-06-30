@@ -1,19 +1,22 @@
-import { Stash } from "../../scripts/stash/types";
 import { grailProgress } from "../../scripts/grail/list/grailProgress";
-import { useMemo } from "preact/hooks";
+import { useContext, useMemo } from "preact/hooks";
 import { JSX } from "preact";
 import "./GrailTracker.css";
-
-export interface GrailTrackerProps {
-  stash: Stash;
-}
+import { StashContext } from "../store/stashContext";
+import { GrailSummary } from "./GrailSummary";
 
 const TIER_NAMES = ["Normal", "Exceptional", "Elite"];
 
 const toClassName = (b: boolean) => (b ? "found" : "missing");
 
-export function GrailTracker({ stash }: GrailTrackerProps) {
-  const progress = useMemo(() => grailProgress(stash), [stash]);
+export function GrailTracker() {
+  const { stash } = useContext(StashContext);
+
+  const progress = useMemo(() => stash && grailProgress(stash), [stash]);
+
+  if (!progress) {
+    return null;
+  }
 
   const sections: JSX.Element[] = [];
   for (const [section, tiers] of progress) {
@@ -50,5 +53,12 @@ export function GrailTracker({ stash }: GrailTrackerProps) {
     });
   }
 
-  return <table id="grail-tracker">{sections}</table>;
+  return (
+    <>
+      <div class="controls">
+        <GrailSummary />
+      </div>
+      <table id="grail-tracker">{sections}</table>
+    </>
+  );
 }

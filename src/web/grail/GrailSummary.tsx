@@ -1,19 +1,17 @@
-import { Stash } from "../../scripts/stash/types";
 import { grailSummary } from "../../scripts/grail/list/grailProgress";
-import { useMemo } from "preact/hooks";
+import { useContext, useMemo } from "preact/hooks";
+import { StashContext } from "../store/stashContext";
 
-export interface GrailSummaryProps {
-  stash: Stash;
-}
+export function GrailSummary() {
+  const { stash } = useContext(StashContext);
 
-export function GrailSummary({ stash }: GrailSummaryProps) {
   const { nbNormal, totalNormal, nbEth, totalEth, nbPerfect } = useMemo(
     () => grailSummary(stash),
     [stash]
   );
 
   return (
-    <>
+    <div>
       <p>
         Normal Grail: {nbNormal} / {totalNormal}
       </p>
@@ -23,6 +21,6 @@ export function GrailSummary({ stash }: GrailSummaryProps) {
       <p>
         Perfect Grail: {nbPerfect} / {totalNormal}
       </p>
-    </>
+    </div>
   );
 }
