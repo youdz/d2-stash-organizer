@@ -20,6 +20,7 @@ async function main() {
   //  - when the item is perfect, the 'perfect' text could be in a different color
   //  -  for Eth items, it would be better to have 'Ethereal' tag at the end, so the %perfect tags are aligned nicely
   //  - when you click "next" at the end of the page, it should go to the top of the page
+  // TODO: display ranges for mods directly in the UI
   const buffer = await readFile(INPUT);
   const stash = parseStash(buffer);
   for (const item of stash.pages[0].items) {
