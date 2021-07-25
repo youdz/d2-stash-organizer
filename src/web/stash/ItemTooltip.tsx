@@ -28,9 +28,16 @@ export function ItemTooltip({ item }: { item: Item }) {
     magicMods?.push(<div class="magic">{toDisplay.join(", ")}</div>);
   }
 
-  const setItemMods = item.setModifiers?.flatMap((mods) =>
+  const setItemMods = item.setItemModifiers?.flatMap((mods) =>
     mods.map(
       ({ description }) => description && <div class="set">{description}</div>
+    )
+  );
+
+  const setGlobalMods = item.setGlobalModifiers?.flatMap((mods) =>
+    mods.map(
+      ({ description }) =>
+        description && <div class="unique">{description}</div>
     )
   );
 
@@ -64,7 +71,8 @@ export function ItemTooltip({ item }: { item: Item }) {
         {/* TODO: requirements */}
         {magicMods}
         {setItemMods}
-        {/* TODO: Set mods */}
+        <br />
+        {setGlobalMods}
       </div>
     </span>
   );

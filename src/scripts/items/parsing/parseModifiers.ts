@@ -90,12 +90,12 @@ export function parseModifiers(stream: BinaryStream, item: Item) {
   item.modifiers.push(...parseModsList(stream, item));
 
   if (flags) {
-    item.setModifiers = [];
+    item.setItemModifiers = [];
     for (let i = 0; i < flags.length; i++) {
       if (flags[i] === "1") {
-        item.setModifiers.push(parseModsList(stream, item));
+        item.setItemModifiers.push(parseModsList(stream, item));
       } else {
-        item.setModifiers.push([]);
+        item.setItemModifiers.push([]);
       }
     }
   }

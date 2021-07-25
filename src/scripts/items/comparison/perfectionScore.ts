@@ -92,7 +92,7 @@ export function perfectionScore(item: Item) {
     SET_ITEMS[item.unique!].setModifiers.forEach((ranges, i) => {
       for (const range of ranges) {
         if (range.min !== range.max) {
-          checkRange(range, item.setModifiers![i], addProp);
+          checkRange(range, item.setItemModifiers![i], addProp);
         }
       }
     });

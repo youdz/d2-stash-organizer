@@ -1,18 +1,9 @@
 import { Stash } from "../types";
 import { consolidateMods } from "../../items/post-processing/consolidateMods";
-import { describeSingleMod } from "../../items/post-processing/describeSingleMod";
-import { addModGroups } from "../../items/post-processing/addModGroups";
 import { addSocketedMods } from "../../items/post-processing/addSocketedMods";
 import { ItemQuality } from "../../items/types/ItemQuality";
-import { Modifier } from "../../items/types/Modifier";
-
-// TODO: (low priority) order of charges on Todesfaelle Flamme is wrong
-function sortByPriority(modifiers: Modifier[]) {
-  modifiers.sort(
-    ({ priority: a, param: c }, { priority: b, param: d }) =>
-      b - a || (d ?? 0) - (c ?? 0)
-  );
-}
+import { addSetMods } from "../../items/post-processing/addSetModifiers";
+import { describeMods } from "../../items/post-processing/describeMods";
 
 /**
  * Performs all operations that are not actually parsing, but that we need for our scripts and UI.
@@ -31,30 +22,17 @@ export function postProcess(stash: Stash) {
       if (item.modifiers) {
         consolidateMods(item.modifiers);
         // Generate descriptions only after consolidating
-        for (const mod of item.modifiers) {
-          mod.description = describeSingleMod(mod);
-        }
-        addModGroups(item.modifiers);
-        sortByPriority(item.modifiers);
-        for (const { description } of item.modifiers) {
-          if (description) {
-            item.search += `${description}\n`;
-          }
-        }
+        describeMods(item, item.modifiers);
       }
 
       if (item.quality === ItemQuality.SET) {
-        item.setModifiers?.forEach((mods, i) => {
-          for (const mod of mods) {
-            mod.description = `${describeSingleMod(mod)} (${i + 2} items)`;
-          }
-          addModGroups(mods);
-          sortByPriority(mods);
-          for (const { description } of mods) {
-            if (description) {
-              item.search += `${description}\n`;
-            }
-          }
+        item.setItemModifiers?.forEach((mods, i) => {
+          describeMods(item, mods, ` (${i + 2} items)`);
+        });
+
+        addSetMods(item);
+        item.setGlobalModifiers?.forEach((mods, i) => {
+          describeMods(item, mods, i >= 4 ? "" : ` (${i + 2} items)`);
         });
       }
 

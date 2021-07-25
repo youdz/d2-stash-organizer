@@ -45,7 +45,8 @@ export interface Item {
   quantity?: number;
 
   modifiers?: Modifier[];
-  setModifiers?: Modifier[][];
+  setItemModifiers?: Modifier[][];
+  setGlobalModifiers?: Modifier[][];
 
   // Searcheable description of the item. Right now it's only mods.
   search: string;

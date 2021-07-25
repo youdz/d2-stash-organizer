@@ -17,12 +17,12 @@ export function generateFixedMods(ranges: ModifierRange[]) {
       continue;
     }
     const { stats } = PROPERTIES[prop];
-    for (const { stat, type } of stats) {
+    for (const { stat, type, param: propParam } of stats) {
       // Check if this frequent findIndex impacts performance
       const statId = ITEM_STATS.findIndex(
         (itemStat) => itemStat?.stat === stat
       );
-      if (!statId) {
+      if (statId < 0) {
         throw new Error(`Unknown mod ${stat}`);
       }
       const previous = modifiers[modifiers.length - 1];
@@ -87,8 +87,8 @@ export function generateFixedMods(ranges: ModifierRange[]) {
             param: param
               ? stat === "item_addskill_tab"
                 ? SKILL_TABS[Number(param)].id
-                : Number(param)
-              : undefined,
+                : param
+              : propParam,
           });
       }
     }
