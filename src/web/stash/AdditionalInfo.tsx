@@ -15,14 +15,6 @@ export function AdditionalInfo({ item, quantity }: AdditionalInfoProps) {
     relevant.push(`Quantity: ${quantity}`);
   }
 
-  if (item.ethereal) {
-    relevant.push("Ethereal");
-  }
-
-  if (item.runeword) {
-    relevant.push(getBase(item).name);
-  }
-
   if (
     item.runeword ||
     item.quality === ItemQuality.UNIQUE ||
@@ -33,6 +25,14 @@ export function AdditionalInfo({ item, quantity }: AdditionalInfoProps) {
     } else {
       relevant.push(`${item.perfectionScore}% perfect`);
     }
+  }
+
+  if (item.ethereal) {
+    relevant.push("Ethereal");
+  }
+
+  if (item.runeword) {
+    relevant.push(getBase(item).name);
   }
 
   if (

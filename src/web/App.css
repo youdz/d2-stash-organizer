@@ -1,44 +1,44 @@
 h1 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .button {
-    appearance: none;
-    margin: 0;
-    text-align: initial;
-    cursor: pointer;
-    box-shadow: none;
-    padding: 0.4em 0.8em;
-    border: 2px solid white;
-    border-radius: 0;
-    background: transparent;
-    color: white;
-    font-family: AvQuest, sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-decoration: none;
+  appearance: none;
+  margin: 0;
+  text-align: initial;
+  cursor: pointer;
+  box-shadow: none;
+  padding: 0.4em 0.8em;
+  border: 2px solid white;
+  border-radius: 0;
+  background: transparent;
+  color: white;
+  font-family: AvQuest, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 
 .magic {
-    color: #4169E1;
+  color: rgb(105, 105, 255);
 }
 .rare {
-    color: #FFFF00;
+  color: rgb(255, 255, 100);
 }
 .unique {
-    color: #A59263;
+  color: rgb(199, 179, 119);
 }
 .set {
-    color: #00FF00;
+  color: rgb(0, 255, 0);
 }
 .crafted {
-    color: #FFA500;
+  color: rgb(255, 168, 0);
 }
 .socketed {
-    color: #909090;
+  color: rgb(120, 120, 120);
 }

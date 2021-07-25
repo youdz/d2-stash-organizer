@@ -1,7 +1,7 @@
 import { Item } from "../../scripts/items/types/Item";
-import { colorClass } from "./utils/colorClass";
 import { AdditionalInfo } from "./AdditionalInfo";
 import "./Item.css";
+import { ItemTooltip } from "./ItemTooltip";
 
 export interface ItemProps {
   item: Item;
@@ -11,8 +11,8 @@ export interface ItemProps {
 export function Item({ item, quantity }: ItemProps) {
   return (
     <tr class="item">
-      <th scope="row" class={colorClass(item)}>
-        {item.name}
+      <th scope="row">
+        <ItemTooltip item={item} />
       </th>
       <td>
         <AdditionalInfo item={item} quantity={quantity} />

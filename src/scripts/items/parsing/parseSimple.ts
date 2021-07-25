@@ -28,6 +28,8 @@ export function parseSimple({ raw, readBool, readInt }: BinaryStream) {
       readInt(8),
       readInt(8)
     ).trim(),
+
+    search: "",
   };
 
   if (item.socketed && readInt(3, 108)) {

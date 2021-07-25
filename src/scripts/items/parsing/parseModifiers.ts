@@ -5,6 +5,13 @@ import { ITEM_STATS } from "../../../game-data";
 import { ItemParsingError } from "../../errors/ItemParsingError";
 import { Modifier } from "../types/Modifier";
 
+const ENHANCED_DEF_STATS = [
+  "item_armor_percent",
+  "armorclass",
+  "item_armor_perlevel",
+  "item_armorpercent_perlevel",
+];
+
 /*
  * Parses one list of modifiers at a time. Some items have more than one:
  * - Runewords have one for the base item mods, and one for the runeword itself
@@ -18,6 +25,7 @@ function parseModsList({ readInt }: BinaryStream, item: Item) {
     if (!modInfo) {
       throw new ItemParsingError(item, `Unknown mod ${modId}`);
     }
+
     let mod: Modifier = {
       id: modId,
       stat: modInfo.stat,
@@ -50,6 +58,14 @@ function parseModsList({ readInt }: BinaryStream, item: Item) {
       };
     }
     mods.push(mod);
+
+    // Special mods we want to have easy access to when rendering in the UI
+    if (ENHANCED_DEF_STATS.includes(mod.stat)) {
+      item.enhancedDefense = true;
+    }
+    if (modInfo.stat === "maxdurability") {
+      item.extraDurability = mod.value;
+    }
 
     if (modInfo.followedBy) {
       modId = modInfo.followedBy;

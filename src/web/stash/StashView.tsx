@@ -4,6 +4,21 @@ import { useContext, useEffect, useMemo, useState } from "preact/hooks";
 import { getBase } from "../../scripts/items/getBase";
 import { pageName } from "./utils/pageName";
 import { StashContext } from "../store/stashContext";
+import {
+  ITEM_STATS,
+  ItemStat,
+  STAT_GROUPS,
+  StatDescription,
+} from "../../game-data";
+import { describeSingleMod } from "../../scripts/items/post-processing/describeSingleMod";
+
+const SORTABLE_MOD_FUNCS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 20];
+
+// FIXME: remove magic/elemental min and max damage mods
+const SORTABLE_MODS: StatDescription[] = [
+  ...STAT_GROUPS,
+  ...ITEM_STATS.filter((stat): stat is ItemStat => !!stat),
+].filter((stat) => SORTABLE_MOD_FUNCS.includes(stat.descFunc));
 
 export function StashView() {
   const { stash } = useContext(StashContext);
@@ -13,19 +28,21 @@ export function StashView() {
   const pages = useMemo(() => {
     let filtered = stash?.pages;
     if (search) {
-      const lcFilter = search.toLocaleLowerCase();
+      const lcFilters = search
+        .toLocaleLowerCase()
+        .match(/(?<=")[^"]+(?=")|[^"\s]+/g)!;
       filtered = stash?.pages
         .map((page, index) => {
-          let items = page.items;
-          if (!page.name.toLocaleLowerCase().includes(lcFilter)) {
-            items = page.items.filter((item) => {
-              const base = getBase(item);
-              return (
-                item.name?.toLocaleLowerCase().includes(lcFilter) ||
-                base.name.toLocaleLowerCase().includes(lcFilter)
-              );
-            });
-          }
+          const items = page.items.filter((item) => {
+            const base = getBase(item);
+            return lcFilters.every(
+              (filter) =>
+                page.name.toLocaleLowerCase().includes(filter) ||
+                item.name?.toLocaleLowerCase().includes(filter) ||
+                base.name.toLocaleLowerCase().includes(filter) ||
+                item.search.includes(filter)
+            );
+          });
 
           return {
             ...page,
@@ -70,17 +87,24 @@ export function StashView() {
             />
           </p>
         </div>
-        <div id="filter">
-          <p>
-            <label for="filter-select">TODO: filter by mod</label>
-          </p>
-          <p>
-            <select id="filter-select" multiple>
-              <option>Resist all</option>
-              <option>Magic find</option>
-            </select>
-          </p>
-        </div>
+        {/*<div id="sort-container">*/}
+        {/*  <p>*/}
+        {/*    <label for="sort">TODO: Sort by</label>*/}
+        {/*  </p>*/}
+        {/*  <p>*/}
+        {/*    <select id="sort">*/}
+        {/*      <option value="">Stash order</option>*/}
+        {/*      {SORTABLE_MODS.map((statDesc) => (*/}
+        {/*        <option value={statDesc.stat}>*/}
+        {/*          {describeSingleMod(*/}
+        {/*            { id: -1, priority: -1, stat: statDesc.stat, value: 0 },*/}
+        {/*            statDesc*/}
+        {/*          )?.replace("0", "X")}*/}
+        {/*        </option>*/}
+        {/*      ))}*/}
+        {/*    </select>*/}
+        {/*  </p>*/}
+        {/*</div>*/}
       </div>
       <Pagination
         nbPages={pages.length}

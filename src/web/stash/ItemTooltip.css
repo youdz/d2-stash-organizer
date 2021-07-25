@@ -1,0 +1,29 @@
+.tooltip-container {
+  position: relative;
+}
+
+.tooltip-trigger {
+  cursor: pointer;
+}
+
+.tooltip-content {
+  position: fixed;
+  height: 1px;
+  width: 1px;
+  bottom: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.tooltip-container:hover .tooltip-content,
+.tooltip-container:focus-within .tooltip-content {
+  position: absolute;
+  height: auto;
+  width: auto;
+  bottom: calc(100% + 0.4em);
+  left: 0;
+  border: 2px solid white;
+  padding: 0.4em 0.8em;
+  background: rgba(0, 0, 0, 0.8);
+}

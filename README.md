@@ -72,7 +72,7 @@ The project is organized in the following folders:
 For local development:
 - `npm install` pulls dependency from NPM.
 - `npm run watch` runs the project in watch mode on http://localhost:10001.
-- `npm run start` runs `src/scripts/main.ts` in Node, which is a messy playground used for debugging. Before running it, make sure you modified `src/scripts/main.ts` for your use case.
+- `npm start` runs `src/scripts/main.ts` in Node, which is a messy playground used for debugging. Before running it, make sure you modified `src/scripts/main.ts` for your use case.
 
 Scripts you shouldn't need to run for most contributions:
 - `npm run game-strings` re-generates the JSON containing all game texts, useful if you want to port this tool in a different language and have access to the game's Strings files.

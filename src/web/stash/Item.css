@@ -1,7 +1,8 @@
-.item th, .item td {
-    text-align: left;
+.item th,
+.item td {
+  text-align: left;
 }
 
 .item th {
-    width: 400px;
+  width: 400px;
 }

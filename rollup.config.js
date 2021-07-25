@@ -30,9 +30,10 @@ export default {
     PROD && terser({ ecma: 2020, module: true, warnings: true }),
     // Print bundle summary
     summary(),
-    // Optional: copy any static assets to build directory
+    // Copy any static assets to build directory
     copy({
-      patterns: ["images/**/*"],
+      rootDir: "src/web",
+      patterns: ["assets/**/*"],
     }),
     WATCH && serve({ contentBase: "dist", open: true }),
   ],
