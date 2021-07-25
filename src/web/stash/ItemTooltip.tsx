@@ -2,7 +2,7 @@ import { Item } from "../../scripts/items/types/Item";
 import "./ItemTooltip.css";
 import { getBase } from "../../scripts/items/getBase";
 import { colorClass } from "./utils/colorClass";
-import { useRef, useState } from "preact/hooks";
+import { useState } from "preact/hooks";
 
 let UNIQUE_ID = 0;
 
@@ -40,6 +40,7 @@ export function ItemTooltip({ item }: { item: Item }) {
         description && <div class="unique">{description}</div>
     )
   );
+  setGlobalMods?.unshift(<br />);
 
   return (
     <span class="tooltip-container">
@@ -71,7 +72,6 @@ export function ItemTooltip({ item }: { item: Item }) {
         {/* TODO: requirements */}
         {magicMods}
         {setItemMods}
-        <br />
         {setGlobalMods}
       </div>
     </span>
