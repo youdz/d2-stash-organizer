@@ -2,6 +2,7 @@ import { parseItem } from "../../items/parsing/parseItem";
 import { ItemLocation } from "../../items/types/ItemLocation";
 import { Page } from "../types";
 import { indexOf } from "./indexOf";
+import { Item } from "../../items/types/Item";
 
 export function parsePage(raw: Uint8Array) {
   const header = String.fromCharCode(...raw.slice(0, 2));
@@ -21,14 +22,15 @@ export function parsePage(raw: Uint8Array) {
   // After that comes the first item
   let currentItem = indexOf(raw, "JM", nameEnd + 2);
   while (currentItem >= 0) {
-    let nextItem = indexOf(raw, "JM", currentItem + 2);
+    let nextItem = currentItem;
+    let parsedItem: Item | false = false;
     // Sometimes the item ID will contain "JM", we have to skip over that "JM"
-    while (14 < nextItem - currentItem && nextItem - currentItem < 18) {
+    while (!parsedItem) {
       nextItem = indexOf(raw, "JM", nextItem + 2);
+      parsedItem = parseItem(
+        raw.slice(currentItem, nextItem >= 0 ? nextItem : undefined)
+      );
     }
-    const parsedItem = parseItem(
-      raw.slice(currentItem, nextItem >= 0 ? nextItem : undefined)
-    );
     if (parsedItem.location === ItemLocation.SOCKET) {
       const socketedItem = page.items[page.items.length - 1];
       if (!socketedItem.filledSockets) {

@@ -13,6 +13,10 @@ export function parseItem(raw: Uint8Array) {
   const item = parseSimple(stream);
 
   if (!item.simple) {
+    // If the id is cut short, it means it contained a "JM" which was identified as a boundary
+    if (stream.remainingBits() < 32) {
+      return false;
+    }
     try {
       parseQuality(stream, item);
       parseQuantified(stream, item);
