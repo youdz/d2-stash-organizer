@@ -81,7 +81,7 @@ export function StashView() {
           <p>
             <input
               id="search-input"
-              type="text"
+              type="search"
               value={search}
               onInput={({ currentTarget }) => setSearch(currentTarget.value)}
             />
