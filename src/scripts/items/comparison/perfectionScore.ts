@@ -53,7 +53,10 @@ export function perfectionScore(item: Item) {
   } else if (item.quality === ItemQuality.UNIQUE) {
     ranges = UNIQUE_ITEMS[item.unique!].modifiers;
   } else if (item.quality === ItemQuality.SET) {
-    ranges = SET_ITEMS[item.unique!].baseModifiers;
+    ranges = [
+      ...SET_ITEMS[item.unique!].baseModifiers,
+      ...SET_ITEMS[item.unique!].setModifiers.flat(),
+    ];
   } else {
     throw new Error(
       "Only uniques, sets and runewords have a perfection score."
@@ -98,10 +101,10 @@ export function perfectionScore(item: Item) {
     });
   }
 
-  // % enhanced defense armor always spawn with max def + 1
   if (
     (item.quality === ItemQuality.UNIQUE || item.quality === ItemQuality.SET) &&
     "def" in base &&
+    // % enhanced defense armor always spawn with max def + 1
     !ranges.some(({ prop }) => prop === "ac%")
   ) {
     let defense = item.defense ?? 0;
