@@ -72,7 +72,10 @@ export function perfectionScore(item: Item) {
     if (min === max) {
       return;
     }
-    score = (nbProps * score + (value - min) / (max - min)) / ++nbProps;
+    // % enhanced defense armor always spawn with max def + 1
+    score =
+      (nbProps * score + (Math.min(value, max) - min) / (max - min)) /
+      ++nbProps;
   }
 
   for (const range of ranges) {
@@ -98,11 +101,9 @@ export function perfectionScore(item: Item) {
     });
   }
 
-  // % enhanced defense armor always spawn with max def + 1
   if (
     (item.quality === ItemQuality.UNIQUE || item.quality === ItemQuality.SET) &&
-    "def" in base &&
-    !ranges.some(({ prop }) => prop === "ac%")
+    "def" in base
   ) {
     let defense = item.defense ?? 0;
     if (item.ethereal) {
