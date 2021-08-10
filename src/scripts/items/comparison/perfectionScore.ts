@@ -1,14 +1,13 @@
 import {
   ModifierRange,
   PROPERTIES,
-  RUNEWORDS,
   SET_ITEMS,
   SKILL_TABS,
-  UNIQUE_ITEMS,
 } from "../../../game-data";
 import { Item } from "../types/Item";
 import { ItemQuality } from "../types/ItemQuality";
 import { getBase } from "../getBase";
+import { getRanges } from "../getRanges";
 import { Modifier } from "../types/Modifier";
 
 function checkRange(
@@ -47,21 +46,7 @@ function checkRange(
 export function perfectionScore(item: Item) {
   if (!item.modifiers) return 0;
 
-  let ranges: ModifierRange[];
-  if (item.runeword) {
-    ranges = RUNEWORDS[item.runewordId!].modifiers;
-  } else if (item.quality === ItemQuality.UNIQUE) {
-    ranges = UNIQUE_ITEMS[item.unique!].modifiers;
-  } else if (item.quality === ItemQuality.SET) {
-    ranges = SET_ITEMS[item.unique!].baseModifiers;
-  } else {
-    throw new Error(
-      "Only uniques, sets and runewords have a perfection score."
-    );
-  }
-  // We ignore the "Extra bloody" prop not to confuse people with hidden imperfections
-  ranges = ranges.filter(({ prop }) => prop !== "bloody");
-
+  const ranges = getRanges(item);
   const base = getBase(item);
 
   // Computing an average incrementally
