@@ -1,8 +1,10 @@
 import { Item } from "../../scripts/items/types/Item";
 import "./ItemTooltip.css";
 import { getBase } from "../../scripts/items/getBase";
+import { getRanges } from "../../scripts/items/getRanges";
 import { colorClass } from "./utils/colorClass";
 import { useState } from "preact/hooks";
+import { PROPERTIES } from "../../game-data";
 
 let UNIQUE_ID = 0;
 
@@ -14,18 +16,37 @@ export function ItemTooltip({ item }: { item: Item }) {
     return <span class={className}>{item.name}</span>;
   }
 
+  const rangeMap = getRanges(item).reduce(function(map: {[prop: string]: number[]}, range) {
+    if (range.min && range.max && range.min !== range.max && !["levelup-skill", "death-skill"].includes(range.prop)){
+      const { stats } = PROPERTIES[range.prop];
+      for (const { stat } of stats) {
+        map[stat] = [range.min, range.max];
+      }
+    }
+    return map;
+  }, {});
   const base = getBase(item);
+
+  const getRangeDesc = function (stat: string){
+    const range = rangeMap[stat];
+    return range !== undefined ? ` [${range[0]} - ${range[1]}]` : "";
+  }
+
+  const getSocketsRangeDesc = function (){
+    const range = rangeMap["item_numsockets"];
+    return range !== undefined ? ` [${range[0]} - ${Math.min(range[1]!, base.maxSockets)}]` : "";
+  }
 
   const magicMods =
     item.modifiers?.map(
-      ({ description }) => description && <div class="magic">{description}</div>
+      ({ stat, description }) => description && <div class="magic">{description} <span class="socketed">{getRangeDesc(stat)}</span></div>
     ) ?? [];
   if (item.ethereal || item.sockets) {
     const toDisplay = [
       item.ethereal && "Ethereal",
       item.sockets && `Socketed (${item.sockets})`,
     ].filter((m) => !!m);
-    magicMods?.push(<div class="magic">{toDisplay.join(", ")}</div>);
+    magicMods?.push(<div class="magic">{toDisplay.join(", ")}<span class="socketed">{getSocketsRangeDesc()}</span></div>);
   }
 
   const setItemMods = item.setItemModifiers?.flatMap((mods) =>
@@ -60,6 +81,9 @@ export function ItemTooltip({ item }: { item: Item }) {
             Defense:{" "}
             <span class={item.enhancedDefense ? "magic" : ""}>
               {item.defense}
+              <span class="socketed">
+                {" "}[{base.def[0]} - {base.def[1]}]
+              </span>
             </span>
           </div>
         )}
