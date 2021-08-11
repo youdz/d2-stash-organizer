@@ -16,8 +16,17 @@ export function ItemTooltip({ item }: { item: Item }) {
     return <span class={className}>{item.name}</span>;
   }
 
-  const rangeMap = getRanges(item).reduce(function(map: {[prop: string]: number[]}, range) {
-    if (range.min && range.max && range.min !== range.max && !["levelup-skill", "death-skill"].includes(range.prop)){
+  const rangeMap = getRanges(item).reduce(function (
+    map: { [prop: string]: number[] },
+    range
+  ) {
+    if (
+      range.min &&
+      range.max &&
+      range.min !== range.max &&
+      !range.prop.endsWith("-skill") &&
+      !["skill-rand", "charged"].includes(range.prop)
+    ) {
       const { stats } = PROPERTIES[range.prop];
       for (const { stat } of stats) {
         map[stat] = [range.min, range.max];
@@ -27,7 +36,13 @@ export function ItemTooltip({ item }: { item: Item }) {
   }, {});
   const base = getBase(item);
 
-  const getRangeDesc = function (stat: string){
+  const getRangeDesc = function (stat: string) {
+    if (stat === "group:enhanced-dmg"){
+      stat = [
+        "item_mindamage_percent",
+        "item_maxdamage_percent"
+      ].find(x => rangeMap[x] !== undefined) || "";
+    }
     const range = rangeMap[stat];
     return range !== undefined ? ` [${range[0]} - ${range[1]}]` : "";
   }
