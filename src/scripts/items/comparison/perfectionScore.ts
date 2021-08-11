@@ -107,7 +107,7 @@ export function perfectionScore(item: Item) {
   ) {
     let defense = item.defense ?? 0;
     if (item.ethereal) {
-      defense = defense / 1.5;
+      defense = Math.round(defense / 1.5);
     }
     addProp(defense, base.def[0], base.def[1]);
   }
