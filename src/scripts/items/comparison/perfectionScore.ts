@@ -39,12 +39,21 @@ function checkRange(
         // It's the other property, we just ignore this one not to mess up the score
         continue;
       }
+      if (modifier) {
+        modifier.range = [min!, max!];
+      }
       callback(modifier?.value ?? 0, min!, max!);
+    } else if (type === "all") {
+      // No impact on perfection score, just copying the range too
+      const modifier = modifiers?.find((mod: Modifier) => mod.stat === stat);
+      if (modifier) {
+        modifier.range = [min!, max!];
+      }
     }
   }
 }
 
-export function perfectionScore(item: Item) {
+export function computePerfectionScore(item: Item) {
   if (!item.modifiers) return 0;
 
   let ranges: ModifierRange[];
@@ -85,20 +94,11 @@ export function perfectionScore(item: Item) {
     // Sockets are a special case: sometimes it's min-max, sometimes it's param,
     // and sometimes it's way more than the actual item allows
     if (range.prop === "sock") {
-      addProp(item.sockets!, range.min!, Math.min(range.max!, base.maxSockets));
+      item.socketsRange = [range.min!, Math.min(range.max!, base.maxSockets)];
+      addProp(item.sockets!, ...item.socketsRange);
       continue;
     }
     checkRange(range, item.modifiers, addProp);
-  }
-
-  if (item.quality === ItemQuality.SET) {
-    SET_ITEMS[item.unique!].setModifiers.forEach((ranges, i) => {
-      for (const range of ranges) {
-        if (range.min !== range.max) {
-          checkRange(range, item.setItemModifiers![i], addProp);
-        }
-      }
-    });
   }
 
   if (
@@ -107,12 +107,14 @@ export function perfectionScore(item: Item) {
     // % enhanced defense armor always spawn with max def + 1
     !ranges.some(({ prop }) => prop === "ac%")
   ) {
-    let defense = item.defense ?? 0;
-    if (item.ethereal) {
-      defense = Math.round(defense / 1.5);
-    }
-    addProp(defense, base.def[0], base.def[1]);
+    const defense = item.defense ?? 0;
+    const bonus = item.ethereal ? 1.5 : 1;
+    item.defenseRange = [
+      Math.floor(base.def[0] * bonus),
+      Math.floor(base.def[1] * bonus),
+    ];
+    addProp(defense, ...item.defenseRange);
   }
 
-  return nbProps === 0 ? 100 : Math.floor(100 * score);
+  item.perfectionScore = nbProps === 0 ? 100 : Math.floor(100 * score);
 }

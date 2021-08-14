@@ -21,6 +21,7 @@ export interface Item {
   code: string;
 
   sockets?: number;
+  socketsRange?: [number, number];
   filledSockets?: Item[];
 
   id?: number;
@@ -41,6 +42,7 @@ export interface Item {
   name?: string;
 
   defense?: number;
+  defenseRange?: [number, number];
   durability?: [current: number, max: number];
   quantity?: number;
 

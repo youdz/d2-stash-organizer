@@ -47,6 +47,9 @@ function addGroup(group: StatGroup, allModifiers: Modifier[]) {
     values: mods.map(({ value }) => value ?? 0),
   };
   extraMod.description = describeSingleMod(extraMod, group);
+  if (group.allEqual) {
+    extraMod.range = mods[0].range;
+  }
   allModifiers?.push(extraMod);
 
   // Clear descriptions of items in group so they are not displayed

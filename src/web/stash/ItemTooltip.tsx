@@ -6,6 +6,13 @@ import { useState } from "preact/hooks";
 
 let UNIQUE_ID = 0;
 
+function Range({ range }: { range?: [number, number] }) {
+  if (!range) {
+    return null;
+  }
+  return <span class="sidenote"> [{range.join(" - ")}]</span>;
+}
+
 export function ItemTooltip({ item }: { item: Item }) {
   const [tooltipId] = useState(() => `item-tooltip-${UNIQUE_ID++}`);
   const className = colorClass(item);
@@ -18,14 +25,25 @@ export function ItemTooltip({ item }: { item: Item }) {
 
   const magicMods =
     item.modifiers?.map(
-      ({ description }) => description && <div class="magic">{description}</div>
+      ({ description, range }) =>
+        description && (
+          <div class="magic">
+            {description}
+            <Range range={range} />
+          </div>
+        )
     ) ?? [];
   if (item.ethereal || item.sockets) {
     const toDisplay = [
       item.ethereal && "Ethereal",
       item.sockets && `Socketed (${item.sockets})`,
     ].filter((m) => !!m);
-    magicMods?.push(<div class="magic">{toDisplay.join(", ")}</div>);
+    magicMods?.push(
+      <div class="magic">
+        {toDisplay.join(", ")}
+        <Range range={item.socketsRange} />
+      </div>
+    );
   }
 
   const setItemMods = item.setItemModifiers?.flatMap((mods) =>
@@ -60,6 +78,7 @@ export function ItemTooltip({ item }: { item: Item }) {
             Defense:{" "}
             <span class={item.enhancedDefense ? "magic" : ""}>
               {item.defense}
+              <Range range={item.defenseRange} />
             </span>
           </div>
         )}

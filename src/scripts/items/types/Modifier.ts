@@ -18,4 +18,6 @@ export interface Modifier {
   // that need special treatment for displaying or searching
   values?: number[];
   description?: string;
+  // Not from the game either, this is the possible range for that mod
+  range?: [number, number];
 }

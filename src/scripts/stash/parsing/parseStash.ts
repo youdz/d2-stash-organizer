@@ -2,7 +2,7 @@ import { parsePage } from "./parsePage";
 import { Stash } from "../types";
 import { readInt32LE } from "./readInt32LE";
 import { indexOf } from "./indexOf";
-import { postProcess } from "./postProcess";
+import { postProcessStash } from "./postProcessStash";
 
 // Can't use Node's Buffer because this needs to run in the browser
 export function parseStash(raw: Uint8Array) {
@@ -48,6 +48,6 @@ export function parseStash(raw: Uint8Array) {
     currentPage = nextPage;
   }
   stash.pageFlags = typeof stash.pages[0]?.flags !== "undefined";
-  postProcess(stash);
+  postProcessStash(stash);
   return stash;
 }
