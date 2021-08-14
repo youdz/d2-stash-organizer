@@ -56,17 +56,20 @@ export function StashView() {
 
     const qualityValue = parseInt(quality);
     if (filtered && qualityValue > 0) {
-        filtered = filtered
-            .map((page) => {
-                const items = page.items.filter((item) =>
-                    item.quality === qualityValue || (item.simple && qualityValue === 2));
-                return {
-                    ...page,
-                    name: pageName(page),
-                    items,
-                };
-            })
-            .filter(({ items }) => items.length > 0);
+      filtered = filtered
+        .map((page) => {
+          const items = page.items.filter(
+            (item) =>
+              item.quality === qualityValue ||
+              (item.simple && qualityValue === 2)
+          );
+          return {
+            ...page,
+            name: pageName(page),
+            items,
+          };
+        })
+        .filter(({ items }) => items.length > 0);
     }
 
     return filtered;
@@ -106,23 +109,24 @@ export function StashView() {
         </div>
         <div id="quality">
           <p>
-              <label for="quality-select">Search for a quality:</label>
+            <label for="quality-select">Search for a quality:</label>
           </p>
           <p>
-              <select
-                id="quality-select"
-                value={quality}
-                onChange={({ currentTarget }) => setQuality(currentTarget.value)}>
-                  <option value="0">All</option>
-                  <option value="1">Low</option>
-                  <option value="2">Normal</option>
-                  <option value="3">Superior</option>
-                  <option value="4">Magic</option>
-                  <option value="5">Set</option>
-                  <option value="6">Rare</option>
-                  <option value="7">Unique</option>
-                  <option value="8">Crafted</option>
-              </select>
+            <select
+              id="quality-select"
+              value={quality}
+              onChange={({ currentTarget }) => setQuality(currentTarget.value)}
+            >
+              <option value="0">All</option>
+              <option value="1">Low</option>
+              <option value="2">Normal</option>
+              <option value="3">Superior</option>
+              <option value="4">Magic</option>
+              <option value="5">Set</option>
+              <option value="6">Rare</option>
+              <option value="7">Unique</option>
+              <option value="8">Crafted</option>
+            </select>
           </p>
         </div>
         {/*<div id="sort-container">*/}
