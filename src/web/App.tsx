@@ -1,6 +1,5 @@
 import { render } from "preact";
 import "./App.css";
-import "./Controls.css";
 import { GitHubLink } from "./GitHubLink";
 import { FilePicker } from "./store/FilePicker";
 import { StashProvider } from "./store/stashContext";

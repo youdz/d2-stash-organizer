@@ -11,6 +11,7 @@ import {
   StatDescription,
 } from "../../game-data";
 import { describeSingleMod } from "../../scripts/items/post-processing/describeSingleMod";
+import "./Controls.css";
 
 const SORTABLE_MOD_FUNCS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 20];
 
@@ -31,7 +32,8 @@ export function StashView() {
     if (search) {
       const lcFilters = search
         .toLocaleLowerCase()
-        .match(/(?<=")[^"]+(?=")|[^"\s]+/g)!;
+        .split(/"([^"]*)"|\s+/)
+        .filter(Boolean);
       filtered = stash?.pages
         .map((page, index) => {
           const items = page.items.filter((item) => {

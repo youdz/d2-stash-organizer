@@ -2,11 +2,6 @@ h1 {
   margin-top: 0;
 }
 
-select {
-  height: 21px;
-  width: 177px;
-}
-
 .hidden {
   display: none;
 }

@@ -1,0 +1,29 @@
+.controls {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  padding: 1em 0;
+  border-bottom: 1px solid #666666;
+}
+
+.controls > :not(:last-child) {
+  border-right: 1px solid #666666;
+  padding-right: 2em;
+}
+
+.controls > :not(:first-child) {
+  padding-left: 2em;
+}
+
+.controls p:first-child {
+  margin-top: 0;
+}
+
+.controls p:last-child {
+  margin-bottom: 0;
+}
+
+.controls input,
+.controls select {
+  width: 100%;
+}
