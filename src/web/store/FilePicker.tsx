@@ -16,6 +16,8 @@ export function FilePicker() {
         await writeStashFile(file);
         const parsed = await stashFromFile(file);
         setStash(parsed);
+        // Clear the input so we can re-upload the same file later.
+        currentTarget.value = "";
       }
     },
     [setStash]
