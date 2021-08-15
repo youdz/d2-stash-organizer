@@ -15,7 +15,7 @@ import { organizeUbers } from "./ubers";
 import { addPage } from "../../stash/addPage";
 
 export function organize(stash: Stash, offset = 0, emptyPages = 0) {
-  const before = getAllItems(stash);
+  const before = getAllItems(stash, true);
   const expectedTotal = before.length;
   const toOrganize = deletePages(stash, offset);
   for (let i = 0; i < emptyPages; i++) {
@@ -57,7 +57,7 @@ export function organize(stash: Stash, offset = 0, emptyPages = 0) {
         throw new Error(`Unknown section sectionId`);
     }
   }
-  if (getAllItems(stash).length !== expectedTotal) {
+  if (getAllItems(stash, true).length !== expectedTotal) {
     throw new Error("Lost items in the process, cancelling");
   }
 }

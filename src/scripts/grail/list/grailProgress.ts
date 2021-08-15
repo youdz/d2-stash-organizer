@@ -18,7 +18,7 @@ export interface GrailStatus {
 
 export function grailProgress(stash: Stash) {
   const found = new Map<UniqueItem | SetItem, Item[]>();
-  for (const item of getAllItems(stash)) {
+  for (const item of getAllItems(stash, true)) {
     const grailItem = getGrailItem(item);
     if (!grailItem) continue;
     let existing = found.get(grailItem);

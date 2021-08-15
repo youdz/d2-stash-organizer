@@ -7,8 +7,8 @@ const FIRST_PAGE = 1;
 const LAST_PAGE = 6;
 
 export function triageNewItems(stash: Stash) {
-  const toTriage = getAllItems(stash, FIRST_PAGE, LAST_PAGE + 1);
-  const previouslyFound = getAllItems(stash, LAST_PAGE + 1);
+  const toTriage = getAllItems(stash, false, FIRST_PAGE, LAST_PAGE + 1);
+  const previouslyFound = getAllItems(stash, false, LAST_PAGE + 1);
   const worse = new Set<string>();
   const better = new Set<string>();
   const review = new Map<string, ReturnType<typeof compare>[]>();
