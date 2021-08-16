@@ -10,12 +10,14 @@ import {
   STAT_GROUPS,
   StatDescription,
 } from "../../game-data";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { describeSingleMod } from "../../scripts/items/post-processing/describeSingleMod";
 import "./Controls.css";
 
 const SORTABLE_MOD_FUNCS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 20];
 
 // FIXME: remove magic/elemental min and max damage mods
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const SORTABLE_MODS: StatDescription[] = [
   ...STAT_GROUPS,
   ...ITEM_STATS.filter((stat): stat is ItemStat => !!stat),

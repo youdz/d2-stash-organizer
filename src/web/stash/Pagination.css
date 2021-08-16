@@ -1,11 +1,15 @@
 .pagination {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin: 2em 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 2em 0;
+}
+
+.pagination button:first-child {
+  margin-right: 1em;
 }
 
 .pagination button[disabled] {
-    opacity: 0;
-    cursor: default;
+  opacity: 0;
+  cursor: default;
 }
