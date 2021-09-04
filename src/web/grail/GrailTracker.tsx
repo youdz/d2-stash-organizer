@@ -1,5 +1,5 @@
 import { grailProgress } from "../../scripts/grail/list/grailProgress";
-import { useContext, useMemo } from "preact/hooks";
+import { useContext, useMemo, useState } from "preact/hooks";
 import { JSX } from "preact";
 import "./GrailTracker.css";
 import { StashContext } from "../store/stashContext";
@@ -11,6 +11,7 @@ const toClassName = (b: boolean) => (b ? "found" : "missing");
 
 export function GrailTracker() {
   const { stash } = useContext(StashContext);
+  const [filter, setFilter] = useState("all");
 
   const progress = useMemo(() => stash && grailProgress(stash), [stash]);
 
@@ -23,6 +24,14 @@ export function GrailTracker() {
     tiers.forEach((tier, i) => {
       const items = [];
       for (const { item, normal, ethereal, perfect } of tier) {
+        if (
+          (normal && filter === "missing") ||
+          (perfect && filter === "perfect") ||
+          ((typeof ethereal === "undefined" || ethereal) &&
+            filter === "ethereal")
+        ) {
+          continue;
+        }
         items.push(
           <tr>
             <th scope="row" class={"set" in item ? "set" : "unique"}>
@@ -39,6 +48,9 @@ export function GrailTracker() {
             <td class={toClassName(perfect)}>Perfect</td>
           </tr>
         );
+      }
+      if (items.length === 0) {
+        return;
       }
       const sectionName =
         tiers.length > 1 ? `${TIER_NAMES[i]} ${section.name}` : section.name;
@@ -57,6 +69,23 @@ export function GrailTracker() {
     <>
       <div class="controls">
         <GrailSummary />
+        <div>
+          <p>
+            <label for="grail-filter">Show:</label>
+          </p>
+          <p>
+            <select
+              id="grail-filter"
+              value={filter}
+              onChange={({ currentTarget }) => setFilter(currentTarget.value)}
+            >
+              <option value="all">All items</option>
+              <option value="missing">Missing items</option>
+              <option value="ethereal">Missing ethereal items</option>
+              <option value="perfect">Missing perfect items</option>
+            </select>
+          </p>
+        </div>
       </div>
       <table id="grail-tracker">{sections}</table>
     </>
