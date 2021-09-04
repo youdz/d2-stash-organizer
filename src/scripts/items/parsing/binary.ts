@@ -13,9 +13,8 @@ export function binaryStream(buffer: Uint8Array): BinaryStream {
   const stream = {
     raw: binary,
     read(length: number, position = nextIndex) {
-      const slice = binary.slice(position, position + length);
       nextIndex = position + length;
-      return slice;
+      return binary.slice(position, position + length);
     },
     readInt(size: number, position = nextIndex) {
       return toInt(stream.read(size, position));

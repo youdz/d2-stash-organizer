@@ -13,6 +13,7 @@ export function App() {
         <GitHubLink />
         <h1>
           Diablo 2 PlugY Stash Organizer
+          {/* TODO: move out of the title */}
           <FilePicker />
         </h1>
         <Routes />
