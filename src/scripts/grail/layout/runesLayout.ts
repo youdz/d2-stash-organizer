@@ -18,7 +18,7 @@ export function runesLayout<T extends LayoutItem>([
   let currentRune = 0;
   // 1 = El, 33 = Zod
   for (let i = 1; i < 34; i++) {
-    const group = [];
+    const group: T[] = [];
     while (currentRune < runes.length && runeIndex(runes[currentRune]) === i) {
       group.push(runes[currentRune]);
       currentRune++;

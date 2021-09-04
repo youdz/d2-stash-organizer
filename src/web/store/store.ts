@@ -78,8 +78,8 @@ export async function stashFromFile(file: File) {
     stash.filename = file.name;
     return stash;
   } catch (e) {
-    if ("message" in e) {
-      alert((e as Error).message);
+    if (e instanceof Error) {
+      alert(e.message);
     }
     throw e;
   }

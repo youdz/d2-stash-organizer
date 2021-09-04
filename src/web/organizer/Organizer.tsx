@@ -25,8 +25,8 @@ export function Organizer() {
         setStash(clone);
         downloadStash(file);
       } catch (e) {
-        if ("message" in e) {
-          alert((e as Error).message);
+        if (e instanceof Error) {
+          alert(e.message);
         }
         throw e;
       }

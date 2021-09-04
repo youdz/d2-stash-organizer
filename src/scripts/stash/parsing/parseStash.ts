@@ -38,10 +38,8 @@ export function parseStash(raw: Uint8Array) {
     try {
       stash.pages.push(parsePage(reader));
     } catch (e) {
-      if ("message" in e) {
-        throw new Error(
-          `${(e as Error).message} on page ${stash.pages.length + 1}`
-        );
+      if (e instanceof Error) {
+        throw new Error(`${e.message} on page ${stash.pages.length + 1}`);
       }
     }
   }
