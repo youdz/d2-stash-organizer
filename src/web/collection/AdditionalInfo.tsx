@@ -1,7 +1,7 @@
 import { Item } from "../../scripts/items/types/Item";
 import { ItemQuality } from "../../scripts/items/types/ItemQuality";
 import { getBase } from "../../scripts/items/getBase";
-import { isSimpleItem } from "../stash/utils/isSimpleItem";
+import { isSimpleItem } from "./utils/isSimpleItem";
 
 export interface AdditionalInfoProps {
   item: Item;

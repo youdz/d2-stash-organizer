@@ -1,4 +1,4 @@
-import { PAGE_SIZE, Pagination } from "./Pagination";
+import { Pagination } from "../controls/Pagination";
 import { Page } from "./Page";
 import { useContext, useEffect, useMemo, useState } from "preact/hooks";
 import { getBase } from "../../scripts/items/getBase";
@@ -12,7 +12,7 @@ import {
 } from "../../game-data";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { describeSingleMod } from "../../scripts/items/post-processing/describeSingleMod";
-import "./Controls.css";
+import "../controls/Controls.css";
 
 const SORTABLE_MOD_FUNCS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 20];
 
@@ -22,6 +22,8 @@ const SORTABLE_MODS: StatDescription[] = [
   ...STAT_GROUPS,
   ...ITEM_STATS.filter((stat): stat is ItemStat => !!stat),
 ].filter((stat) => SORTABLE_MOD_FUNCS.includes(stat.descFunc));
+
+const PAGE_SIZE = 10;
 
 export function StashView() {
   const { characters } = useContext(CollectionContext);
@@ -109,6 +111,16 @@ export function StashView() {
     return null;
   }
 
+  const pagination = (
+    <Pagination
+      nbEntries={pages.length}
+      pageSize={PAGE_SIZE}
+      currentPage={currentPage}
+      setPage={setCurrentPage}
+      entryType="Pages"
+    />
+  );
+
   return (
     <>
       <div class="controls">
@@ -182,11 +194,7 @@ export function StashView() {
         {/*  </p>*/}
         {/*</div>*/}
       </div>
-      <Pagination
-        nbPages={pages.length}
-        currentPage={currentPage}
-        setPage={setCurrentPage}
-      />
+      {pagination}
       {/* Need an extra div because Preact doesn't seem to like maps flat with non-mapped elements */}
       <div>
         {pages
@@ -195,11 +203,7 @@ export function StashView() {
             <Page key={index} page={page} index={index + currentPage} />
           ))}
       </div>
-      <Pagination
-        nbPages={pages.length}
-        currentPage={currentPage}
-        setPage={setCurrentPage}
-      />
+      {pagination}
     </>
   );
 }

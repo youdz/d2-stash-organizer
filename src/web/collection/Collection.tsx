@@ -3,6 +3,9 @@ import { useContext, useMemo, useState } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
 import { Item } from "./Item";
 import { groupItems } from "./groupItems";
+import { Pagination } from "../controls/Pagination";
+
+const PAGE_SIZE = 20;
 
 export function Collection() {
   const { allItems } = useContext(CollectionContext);
@@ -13,6 +16,13 @@ export function Collection() {
 
   return (
     <>
+      <Pagination
+        nbEntries={groupedItems.length}
+        pageSize={PAGE_SIZE}
+        currentPage={currentPage}
+        setPage={setCurrentPage}
+        entryType="Items"
+      />
       <table id="collection">
         <thead>
           <tr class="sidenote">
@@ -23,7 +33,7 @@ export function Collection() {
         </thead>
         <tbody>
           {groupedItems
-            .slice(currentPage, currentPage + 20)
+            .slice(currentPage, currentPage + PAGE_SIZE)
             .map(({ item, quantity }, index) => (
               <Item
                 key={item.id ?? index}
