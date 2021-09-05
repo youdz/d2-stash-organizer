@@ -27,7 +27,6 @@ export function parsePage(reader: SaveFileReader) {
 
   const page: Page = {
     flags,
-    // Possibly 4 bytes of flags before the name, and one empty byte at the end
     name: reader.readNullTerminatedString(),
     items: [],
   };

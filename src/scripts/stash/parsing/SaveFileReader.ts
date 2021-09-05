@@ -36,9 +36,12 @@ export class SaveFileReader {
 
   readNullTerminatedString(position = this.nextIndex) {
     const charCodes = [];
-    while (this.raw[position++] > 0) {
+    while (this.raw[position] > 0) {
       charCodes.push(this.raw[position]);
+      position++;
     }
+    // Skip the null
+    position++;
     this.moveTo(position);
     return String.fromCharCode(...charCodes);
   }
