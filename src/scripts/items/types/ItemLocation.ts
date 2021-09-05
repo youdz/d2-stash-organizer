@@ -5,3 +5,10 @@ export const enum ItemLocation {
   CURSOR = 4,
   SOCKET = 6,
 }
+
+export const enum ItemStorageType {
+  NONE = 0,
+  INVENTORY = 1,
+  CUBE = 4,
+  STASH = 5,
+}

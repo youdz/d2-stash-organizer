@@ -54,7 +54,7 @@ export function parsePage(reader: SaveFileReader) {
       if (!socketedItem.filledSockets) {
         throw new Error("Trying to socket a non-socketed item");
       }
-      parsedItem.socketedIn = parsedItem;
+      parsedItem.socketedIn = socketedItem;
       socketedItem.filledSockets.push(parsedItem);
     } else {
       page.items.push(parsedItem);

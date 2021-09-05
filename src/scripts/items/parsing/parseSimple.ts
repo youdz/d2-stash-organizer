@@ -18,6 +18,7 @@ export function parseSimple({ raw, readBool, readInt }: BinaryStream) {
     location: readInt(3, 58),
     // TODO: handle not stored to support character saves
     stored: readInt(3, 73),
+    character: "",
 
     column: readInt(4, 65),
     row: readInt(4, 69),

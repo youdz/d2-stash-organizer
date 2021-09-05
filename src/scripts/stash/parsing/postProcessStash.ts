@@ -1,5 +1,6 @@
 import { Stash } from "../types";
 import { postProcessItem } from "../../items/post-processing/postProcessItem";
+import { characterName } from "../characterName";
 
 /**
  * Performs all operations that are not actually parsing, but that we need for our scripts and UI.
@@ -7,9 +8,11 @@ import { postProcessItem } from "../../items/post-processing/postProcessItem";
  * making mods more searchable or sortable, etc.
  */
 export function postProcessStash(stash: Stash) {
-  for (const { items } of stash.pages) {
+  stash.pages.forEach(({ items }, pageIndex) => {
     for (const item of items) {
+      item.character = characterName(stash);
+      item.page = pageIndex;
       postProcessItem(item);
     }
-  }
+  });
 }

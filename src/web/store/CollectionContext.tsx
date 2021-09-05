@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "preact/hooks";
 import { getSavedStashes } from "./store";
 import { Item } from "../../scripts/items/types/Item";
 import { getAllItems } from "../../scripts/stash/getAllItems";
+import { characterName } from "../../scripts/stash/characterName";
 
 interface Collection {
   characters: Map<
@@ -34,10 +35,7 @@ export function CollectionProvider({ children }: RenderableProps<unknown>) {
   const setCollection = useCallback((stashes: Stash[]) => {
     const characters = new Map(
       stashes
-        .map((stash) => {
-          const charName = stash.personal ? stash.filename.slice(0, -4) : "";
-          return [charName, { stash }] as const;
-        })
+        .map((stash) => [characterName(stash), { stash }] as const)
         .sort(([a], [b]) => a.localeCompare(b))
     );
     const allItems = stashes.flatMap((stash) => getAllItems(stash, true));

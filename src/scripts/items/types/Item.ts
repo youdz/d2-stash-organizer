@@ -1,5 +1,5 @@
 import { ItemQuality } from "./ItemQuality";
-import { ItemLocation } from "./ItemLocation";
+import { ItemLocation, ItemStorageType } from "./ItemLocation";
 import { Modifier } from "./Modifier";
 
 export interface Item {
@@ -13,7 +13,9 @@ export interface Item {
   runeword: boolean;
 
   location: ItemLocation;
-  stored: number;
+  stored: ItemStorageType;
+  character: string;
+  page?: number;
 
   column: number;
   row: number;

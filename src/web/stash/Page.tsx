@@ -1,9 +1,9 @@
 import { Page, PageFlags } from "../../scripts/stash/types";
-import { Item } from "./Item";
-import { Item as ItemType } from "../../scripts/items/types/Item";
+import { Item } from "../collection/Item";
 import "./Page.css";
-import { isSimpleItem } from "./utils/isSimpleItem";
 import { pageName } from "./utils/pageName";
+import { useMemo } from "preact/hooks";
+import { groupItems } from "../collection/groupItems";
 
 export interface PageProps {
   index: number;
@@ -18,21 +18,7 @@ export function Page({ page, index }: PageProps) {
       ? "Index"
       : "";
 
-  // We group simple items together with a quantity, leave others alone
-  const grouped = new Map<string, { item: ItemType; quantity: number }>();
-  let uid = 0;
-  for (const item of page.items) {
-    if (isSimpleItem(item)) {
-      let existing = grouped.get(item.code);
-      if (!existing) {
-        existing = { item, quantity: 0 };
-        grouped.set(item.code, existing);
-      }
-      existing.quantity++;
-    } else {
-      grouped.set(`${uid++}`, { item, quantity: 1 });
-    }
-  }
+  const grouped = useMemo(() => groupItems(page.items), [page.items]);
 
   return (
     <section>
@@ -42,7 +28,12 @@ export function Page({ page, index }: PageProps) {
       </h3>
       <table class="page">
         {Array.from(grouped.values()).map(({ item, quantity }, index) => (
-          <Item key={item.id ?? index} item={item} quantity={quantity} />
+          <Item
+            key={item.id ?? index}
+            item={item}
+            quantity={quantity}
+            withLocation={false}
+          />
         ))}
       </table>
     </section>
