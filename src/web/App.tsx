@@ -11,11 +11,7 @@ export function App() {
     <div id="app">
       <CollectionProvider>
         <GitHubLink />
-        <h1>
-          Diablo 2 Item Manager
-          {/* TODO: move out of the title */}
-          <FilePicker />
-        </h1>
+        <h1>Diablo 2 Item Manager</h1>
         <Routes />
       </CollectionProvider>
     </div>

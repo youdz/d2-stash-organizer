@@ -33,10 +33,12 @@ export function CollectionProvider({ children }: RenderableProps<unknown>) {
 
   const setCollection = useCallback((stashes: Stash[]) => {
     const characters = new Map(
-      stashes.map((stash) => {
-        const charName = stash.personal ? stash.filename.slice(0, -4) : "";
-        return [charName, { stash }];
-      })
+      stashes
+        .map((stash) => {
+          const charName = stash.personal ? stash.filename.slice(0, -4) : "";
+          return [charName, { stash }] as const;
+        })
+        .sort(([a], [b]) => a.localeCompare(b))
     );
     const allItems = stashes.flatMap((stash) => getAllItems(stash, true));
     setInternalCollection({ characters, allItems });

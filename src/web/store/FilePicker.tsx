@@ -4,7 +4,7 @@ import "./FilePicker.css";
 import { CollectionContext } from "./CollectionContext";
 
 export function FilePicker() {
-  const { setCollection } = useContext(CollectionContext);
+  const { characters, setCollection } = useContext(CollectionContext);
   const input = useRef<HTMLInputElement>(null);
 
   const handleChange = useCallback(async () => {
@@ -31,7 +31,7 @@ export function FilePicker() {
   return (
     <span id="filepicker">
       <button class="button" onClick={() => input.current?.click()}>
-        Update my stash
+        {characters.size === 0 ? "Upload" : "Update"} my save files
       </button>
       <input
         class="hidden"

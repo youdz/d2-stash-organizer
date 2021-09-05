@@ -1,0 +1,12 @@
+#save-files {
+  border-collapse: collapse;
+}
+
+#save-files th,
+#save-files td {
+  padding: 0.4em 1em;
+  border: 1px solid #666;
+}
+
+#save-files tr:not(:first-child) {
+}
