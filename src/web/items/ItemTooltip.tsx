@@ -1,7 +1,7 @@
 import { Item } from "../../scripts/items/types/Item";
 import "./ItemTooltip.css";
 import { getBase } from "../../scripts/items/getBase";
-import { colorClass } from "./utils/colorClass";
+import { colorClass } from "../collection/utils/colorClass";
 import { useState } from "preact/hooks";
 
 let UNIQUE_ID = 0;

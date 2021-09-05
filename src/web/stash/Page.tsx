@@ -1,9 +1,9 @@
 import { Page, PageFlags } from "../../scripts/stash/types";
-import { Item } from "../collection/Item";
+import { Item } from "../items/Item";
 import "./Page.css";
 import { pageName } from "./utils/pageName";
 import { useMemo } from "preact/hooks";
-import { groupItems } from "../collection/groupItems";
+import { groupItems } from "../items/groupItems";
 
 export interface PageProps {
   index: number;

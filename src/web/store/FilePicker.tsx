@@ -1,6 +1,5 @@
 import { stashFromFile, writeAllFiles } from "./store";
 import { useCallback, useContext, useRef } from "preact/hooks";
-import "./FilePicker.css";
 import { CollectionContext } from "./CollectionContext";
 
 export function FilePicker() {

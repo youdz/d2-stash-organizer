@@ -1,5 +1,5 @@
 import { Item } from "../../scripts/items/types/Item";
-import { isSimpleItem } from "./utils/isSimpleItem";
+import { isSimpleItem } from "../collection/utils/isSimpleItem";
 import { ItemLocation } from "../../scripts/items/types/ItemLocation";
 
 /**

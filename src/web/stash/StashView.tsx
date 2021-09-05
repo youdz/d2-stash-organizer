@@ -1,27 +1,11 @@
 import { Pagination } from "../controls/Pagination";
 import { Page } from "./Page";
 import { useContext, useEffect, useMemo, useState } from "preact/hooks";
-import { getBase } from "../../scripts/items/getBase";
 import { pageName } from "./utils/pageName";
 import { CollectionContext } from "../store/CollectionContext";
-import {
-  ITEM_STATS,
-  ItemStat,
-  STAT_GROUPS,
-  StatDescription,
-} from "../../game-data";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { describeSingleMod } from "../../scripts/items/post-processing/describeSingleMod";
+import { Search } from "../controls/Search";
 import "../controls/Controls.css";
-
-const SORTABLE_MOD_FUNCS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 19, 20];
-
-// FIXME: remove magic/elemental min and max damage mods
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const SORTABLE_MODS: StatDescription[] = [
-  ...STAT_GROUPS,
-  ...ITEM_STATS.filter((stat): stat is ItemStat => !!stat),
-].filter((stat) => SORTABLE_MOD_FUNCS.includes(stat.descFunc));
+import { searchItems } from "../items/searchItems";
 
 const PAGE_SIZE = 10;
 
@@ -40,29 +24,12 @@ export function StashView() {
   const pages = useMemo(() => {
     let filtered = stash?.pages;
     if (search) {
-      const lcFilters = search
-        .toLocaleLowerCase()
-        .split(/"([^"]*)"|\s+/)
-        .filter(Boolean);
       filtered = stash?.pages
-        .map((page, index) => {
-          const items = page.items.filter((item) => {
-            const base = getBase(item);
-            return lcFilters.every(
-              (filter) =>
-                page.name.toLocaleLowerCase().includes(filter) ||
-                item.name?.toLocaleLowerCase().includes(filter) ||
-                base.name.toLocaleLowerCase().includes(filter) ||
-                item.search.includes(filter)
-            );
-          });
-
-          return {
-            ...page,
-            name: pageName(page).replace("#", `${index + 1}`),
-            items,
-          };
-        })
+        .map((page, index) => ({
+          ...page,
+          name: pageName(page).replace("#", `${index + 1}`),
+          items: searchItems(page.items, search, page.name),
+        }))
         .filter(({ items }) => items.length > 0);
     }
 
@@ -140,19 +107,9 @@ export function StashView() {
             </select>
           </p>
         </div>
-        <div id="search">
-          <p>
-            <label for="search-input">Search for an item or a page:</label>
-          </p>
-          <p>
-            <input
-              id="search-input"
-              type="search"
-              value={search}
-              onInput={({ currentTarget }) => setSearch(currentTarget.value)}
-            />
-          </p>
-        </div>
+        <Search value={search} onChange={setSearch}>
+          Search for an item or a page:
+        </Search>
         <div id="quality">
           <p>
             <label for="quality-select">Search for a quality:</label>
@@ -175,24 +132,6 @@ export function StashView() {
             </select>
           </p>
         </div>
-        {/*<div id="sort-container">*/}
-        {/*  <p>*/}
-        {/*    <label for="sort">TODO: Sort by</label>*/}
-        {/*  </p>*/}
-        {/*  <p>*/}
-        {/*    <select id="sort">*/}
-        {/*      <option value="">Stash order</option>*/}
-        {/*      {SORTABLE_MODS.map((statDesc) => (*/}
-        {/*        <option value={statDesc.stat}>*/}
-        {/*          {describeSingleMod(*/}
-        {/*            { id: -1, priority: -1, stat: statDesc.stat, value: 0 },*/}
-        {/*            statDesc*/}
-        {/*          )?.replace("0", "X")}*/}
-        {/*        </option>*/}
-        {/*      ))}*/}
-        {/*    </select>*/}
-        {/*  </p>*/}
-        {/*</div>*/}
       </div>
       {pagination}
       {/* Need an extra div because Preact doesn't seem to like maps flat with non-mapped elements */}
