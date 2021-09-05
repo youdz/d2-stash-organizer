@@ -5,7 +5,6 @@ import { UniqueSection } from "./uniquesOrder";
 import { listGrailUniques } from "./listGrailUniques";
 import { groupBySet } from "./groupSets";
 import { Stash } from "../../stash/types";
-import { getAllItems } from "../../stash/getAllItems";
 import { canBeEthereal } from "./canBeEthereal";
 
 export interface GrailStatus {
@@ -16,9 +15,9 @@ export interface GrailStatus {
   perfect: boolean;
 }
 
-export function grailProgress(stash: Stash) {
+export function grailProgress(items: Item[]) {
   const found = new Map<UniqueItem | SetItem, Item[]>();
-  for (const item of getAllItems(stash, true)) {
+  for (const item of items) {
     const grailItem = getGrailItem(item);
     if (!grailItem) continue;
     let existing = found.get(grailItem);
@@ -67,7 +66,7 @@ export function grailProgress(stash: Stash) {
   return progress;
 }
 
-export function grailSummary(stash: Stash | undefined) {
+export function grailSummary(items: Item[]) {
   const summary = {
     nbNormal: 0,
     totalNormal: 0,
@@ -75,10 +74,7 @@ export function grailSummary(stash: Stash | undefined) {
     totalEth: 0,
     nbPerfect: 0,
   };
-  if (!stash) {
-    return summary;
-  }
-  for (const tiers of grailProgress(stash).values()) {
+  for (const tiers of grailProgress(items).values()) {
     for (const tier of tiers) {
       for (const { normal, ethereal, perfect } of tier) {
         summary.totalNormal++;
@@ -100,8 +96,8 @@ export function grailSummary(stash: Stash | undefined) {
   return summary;
 }
 
-export function printGrailProgress(stash: Stash) {
-  for (const [section, tiers] of grailProgress(stash)) {
+export function printGrailProgress(items: Item[]) {
+  for (const [section, tiers] of grailProgress(items)) {
     console.log(`\x1b[35m${section.name}\x1b[39m`);
     for (const tier of tiers) {
       for (const { item, normal, ethereal, perfect } of tier) {

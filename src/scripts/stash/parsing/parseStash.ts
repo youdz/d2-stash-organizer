@@ -4,7 +4,10 @@ import { postProcessStash } from "./postProcessStash";
 import { SaveFileReader } from "./SaveFileReader";
 
 // Can't use Node's Buffer because this needs to run in the browser
-export function parseStash(raw: Uint8Array) {
+export function parseStash(
+  raw: Uint8Array,
+  file?: { name: string; lastModified: number }
+) {
   const reader = new SaveFileReader(raw);
   const header = reader.readString(4);
   if (header !== "SSS\0" && header !== "CSTM") {
@@ -13,6 +16,8 @@ export function parseStash(raw: Uint8Array) {
     );
   }
   const stash: Stash = {
+    filename: file?.name ?? "",
+    lastModified: file?.lastModified ?? 0,
     personal: header === "CSTM",
     pageFlags: true,
     gold: 0,

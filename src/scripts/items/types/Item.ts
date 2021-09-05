@@ -23,6 +23,7 @@ export interface Item {
   sockets?: number;
   socketsRange?: [number, number];
   filledSockets?: Item[];
+  socketedIn?: Item;
 
   id?: number;
   level?: number;

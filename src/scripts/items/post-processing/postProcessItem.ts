@@ -39,10 +39,16 @@ export function postProcessItem(item: Item) {
   }
 
   if (item.ethereal) {
-    item.search += "Ethereal";
+    item.search += "Ethereal\n";
   }
   if (item.sockets) {
-    item.search += `Socketed (${item.sockets})`;
+    item.search += `Socketed (${item.sockets})\n`;
+  }
+
+  if (item.filledSockets) {
+    for (const socketed of item.filledSockets) {
+      item.search += `${socketed.name})\n`;
+    }
   }
 
   item.search = item.search.toLowerCase();

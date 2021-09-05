@@ -3,7 +3,7 @@ import { Page } from "./Page";
 import { useContext, useEffect, useMemo, useState } from "preact/hooks";
 import { getBase } from "../../scripts/items/getBase";
 import { pageName } from "./utils/pageName";
-import { StashContext } from "../store/stashContext";
+import { CollectionContext } from "../store/CollectionContext";
 import {
   ITEM_STATS,
   ItemStat,
@@ -24,10 +24,16 @@ const SORTABLE_MODS: StatDescription[] = [
 ].filter((stat) => SORTABLE_MOD_FUNCS.includes(stat.descFunc));
 
 export function StashView() {
-  const { stash } = useContext(StashContext);
+  const { characters } = useContext(CollectionContext);
+  // TODO: if not PlugY, initialize to an actual character because there is no shared stash
+  const [character, setCharacter] = useState("");
   const [search, setSearch] = useState("");
   const [quality, setQuality] = useState("0");
   const [currentPage, setCurrentPage] = useState(0);
+
+  const stash = useMemo(() => {
+    return characters.get(character)?.stash;
+  }, [characters, character]);
 
   const pages = useMemo(() => {
     let filtered = stash?.pages;
@@ -91,6 +97,14 @@ export function StashView() {
     }
   }, [pages?.length, currentPage]);
 
+  const characterOptions = useMemo(() => {
+    const options = [];
+    for (const name of characters.keys()) {
+      options.push(<option value={name}>{name || "Shared stash"}</option>);
+    }
+    return options;
+  }, [characters]);
+
   if (!pages) {
     return null;
   }
@@ -98,6 +112,22 @@ export function StashView() {
   return (
     <>
       <div class="controls">
+        <div id="character">
+          <p>
+            <label for="character-select">Select a character:</label>
+          </p>
+          <p>
+            <select
+              id="character-select"
+              value={character}
+              onChange={({ currentTarget }) =>
+                setCharacter(currentTarget.value)
+              }
+            >
+              {characterOptions}
+            </select>
+          </p>
+        </div>
         <div id="search">
           <p>
             <label for="search-input">Search for an item or a page:</label>

@@ -1,38 +1,47 @@
-import { stashFromFile, writeStashFile } from "./store";
+import { stashFromFile, writeAllFiles } from "./store";
 import { useCallback, useContext, useRef } from "preact/hooks";
-import { JSXInternal } from "preact/src/jsx";
 import "./FilePicker.css";
-import { StashContext } from "./stashContext";
-import TargetedEvent = JSXInternal.TargetedEvent;
+import { CollectionContext } from "./CollectionContext";
 
 export function FilePicker() {
-  const { stash, setStash } = useContext(StashContext);
+  const { setCollection } = useContext(CollectionContext);
   const input = useRef<HTMLInputElement>(null);
 
-  const handleChange = useCallback(
-    async ({ currentTarget }: TargetedEvent<HTMLInputElement>) => {
-      const file = currentTarget.files?.[0];
-      if (file) {
-        await writeStashFile(file);
-        const parsed = await stashFromFile(file);
-        setStash(parsed);
-        // Clear the input so we can re-upload the same file later.
-        currentTarget.value = "";
+  const handleChange = useCallback(async () => {
+    if (input.current?.files) {
+      const usableFiles = [];
+      for (const file of input.current.files) {
+        // Only use the root files in case there is a backup folder
+        if (file.webkitRelativePath.split("/").length > 2) {
+          continue;
+        }
+        if (file.name.endsWith(".sss") || file.name.endsWith(".d2x")) {
+          usableFiles.push(file);
+        }
       }
-    },
-    [setStash]
-  );
+      await writeAllFiles(usableFiles);
+      setCollection(
+        await Promise.all(usableFiles.map((file) => stashFromFile(file)))
+      );
+      // Clear the input so we can re-upload the same file later.
+      input.current.value = "";
+    }
+  }, [setCollection]);
 
   return (
     <span id="filepicker">
-      <button class="button" onClick={() => input.current.click()}>
-        {!stash ? "Upload" : "Update"} my stash
+      <button class="button" onClick={() => input.current?.click()}>
+        Update my stash
       </button>
       <input
         class="hidden"
         ref={input}
         type="file"
         accept=".sss,.d2x"
+        // @ts-expect-error FIXME
+        directory
+        webkitdirectory
+        multiple
         onChange={handleChange}
       />
     </span>

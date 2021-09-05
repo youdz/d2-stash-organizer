@@ -1,13 +1,13 @@
 import { grailSummary } from "../../scripts/grail/list/grailProgress";
 import { useContext, useMemo } from "preact/hooks";
-import { StashContext } from "../store/stashContext";
+import { CollectionContext } from "../store/CollectionContext";
 
 export function GrailSummary() {
-  const { stash } = useContext(StashContext);
+  const { allItems } = useContext(CollectionContext);
 
   const { nbNormal, totalNormal, nbEth, totalEth, nbPerfect } = useMemo(
-    () => grailSummary(stash),
-    [stash]
+    () => grailSummary(allItems),
+    [allItems]
   );
 
   return (

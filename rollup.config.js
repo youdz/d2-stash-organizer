@@ -39,7 +39,8 @@ export default {
   ],
   output: {
     dir: PROD ? "docs" : "dist",
-    entryFileNames: "[name]-[hash].js",
+    entryFileNames: PROD ? "[name]-[hash].js" : "[name].js",
+    chunkFileNames: PROD ? "[name]-[hash].js" : "[name].js",
     manualChunks: {
       "game-data": ["src/game-data/index.ts"],
     },

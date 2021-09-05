@@ -4,6 +4,7 @@ import { GrailTracker } from "../grail/GrailTracker";
 import { StashView } from "../stash/StashView";
 import "./Navigation.css";
 import { Organizer } from "../organizer/Organizer";
+import { Collection } from "../collection/Collection";
 
 function NavLink({
   hash,
@@ -29,20 +30,23 @@ export function Routes() {
 
   const view = useMemo(() => {
     switch (currentHash) {
+      case "#stash":
+        return <StashView />;
       case "#organize":
         return <Organizer />;
       case "#grail-tracker":
         return <GrailTracker />;
       default:
-        return <StashView />;
+        return <Collection />;
     }
   }, [currentHash]);
   return (
     <>
       <nav id="navigation">
-        <NavLink hash="#stash" isHome>
-          My stash
+        <NavLink hash="#collection" isHome>
+          My collection
         </NavLink>
+        <NavLink hash="#stash">My stashes</NavLink>
         <NavLink hash="#organize">Organize</NavLink>
         <NavLink hash="#grail-tracker">Grail tracker</NavLink>
       </nav>
