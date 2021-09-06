@@ -1,12 +1,11 @@
 import { RenderableProps } from "preact";
-import { useContext, useEffect, useMemo, useState } from "preact/hooks";
+import { useEffect, useMemo, useState } from "preact/hooks";
 import { GrailTracker } from "../grail/GrailTracker";
 import { StashView } from "../stash/StashView";
 import "./Navigation.css";
 import { Organizer } from "../organizer/Organizer";
 import { Collection } from "../collection/Collection";
 import { SaveFiles } from "../save-files/SaveFiles";
-import { CollectionContext } from "../store/CollectionContext";
 
 function NavLink({
   hash,
@@ -23,7 +22,6 @@ function NavLink({
 
 export function Routes() {
   const [currentHash, setCurrentHash] = useState(location.hash);
-  const { characters } = useContext(CollectionContext);
 
   useEffect(() => {
     const listener = () => setCurrentHash(location.hash);

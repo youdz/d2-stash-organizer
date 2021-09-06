@@ -44,6 +44,7 @@ export function Organizer() {
             }
           }
         }
+
         organize(
           targetStash,
           fromOtherSources,

@@ -4,7 +4,6 @@ import { getGrailItem } from "./getGrailItem";
 import { UniqueSection } from "./uniquesOrder";
 import { listGrailUniques } from "./listGrailUniques";
 import { groupBySet } from "./groupSets";
-import { Stash } from "../../stash/types";
 import { canBeEthereal } from "./canBeEthereal";
 
 export interface GrailStatus {

@@ -12,8 +12,7 @@ export function groupBySet<T extends Item | SetItem>(items: T[]) {
     }
   }
   for (const item of items) {
-    const setItem =
-      "set" in item ? (item as SetItem) : SET_ITEMS[(item as Item).unique!];
+    const setItem: SetItem = "set" in item ? item : SET_ITEMS[item.unique!];
     bySet.get(SETS[setItem.set])!.push(item);
   }
   return bySet;
