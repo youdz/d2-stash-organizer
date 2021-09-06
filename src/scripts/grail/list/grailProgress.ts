@@ -15,17 +15,28 @@ export interface GrailStatus {
   perfect: boolean;
 }
 
-export function grailProgress(items: Item[]) {
-  const found = new Map<UniqueItem | SetItem, Item[]>();
-  for (const item of items) {
-    const grailItem = getGrailItem(item);
-    if (!grailItem) continue;
+function addToGrail(found: Map<UniqueItem | SetItem, Item[]>, item: Item) {
+  const grailItem = getGrailItem(item);
+  if (grailItem) {
     let existing = found.get(grailItem);
     if (!existing) {
       existing = [];
       found.set(grailItem, existing);
     }
     existing.push(item);
+  }
+}
+
+export function grailProgress(items: Item[]) {
+  const found = new Map<UniqueItem | SetItem, Item[]>();
+
+  for (const item of items) {
+    addToGrail(found, item);
+    if (item.filledSockets) {
+      for (const socketed of item.filledSockets) {
+        addToGrail(found, socketed);
+      }
+    }
   }
 
   const progress = new Map<UniqueSection | Set, GrailStatus[][]>();
