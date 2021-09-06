@@ -15,7 +15,6 @@ const TEST_OUTPUT = "test/saved.sss";
 const DANGER_OUTPUT = INPUT;
 
 async function main() {
-  // TODO: bulk transfer from personal to shared
   // TODO:
   //  - when the item is perfect, the 'perfect' text could be in a different color
   //  -  for Eth items, it would be better to have 'Ethereal' tag at the end, so the %perfect tags are aligned nicely

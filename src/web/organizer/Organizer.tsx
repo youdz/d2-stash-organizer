@@ -2,7 +2,12 @@ import { useCallback, useContext, useMemo, useState } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
 import { JSXInternal } from "preact/src/jsx";
 import { organize } from "../../scripts/grail/organize";
-import { downloadStash, stashToFile, writeAllFiles } from "../store/store";
+import {
+  downloadAllFiles,
+  downloadStash,
+  stashToFile,
+  writeAllFiles,
+} from "../store/store";
 import { ExternalLink } from "../routing/ExternalLink";
 import "./Organizer.css";
 import { deletePages } from "../../scripts/stash/deletePages";
@@ -105,8 +110,7 @@ export function Organizer() {
       await writeAllFiles(saveFiles);
       // Set the state to force a re-render of the app.
       setCollection(Array.from(characters.values()).map(({ stash }) => stash));
-      // TODO: download
-      // downloadStash(file);
+      await downloadAllFiles(saveFiles);
     } catch (e) {
       if (e instanceof Error) {
         alert(e.message);

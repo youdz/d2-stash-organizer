@@ -1,3 +1,4 @@
+import { downloadZip } from "client-zip";
 import { Stash } from "../../scripts/stash/types";
 import { parseStash } from "../../scripts/stash/parsing/parseStash";
 import { generateSaveFile } from "../../scripts/stash/parsing/generateSaveFile";
@@ -145,11 +146,17 @@ export async function getSavedStashes() {
   return files.map((file) => stashFromFile(file));
 }
 
-export function downloadStash(file: File) {
+export function downloadStash(file: Blob, fileName: string) {
   const elem = window.document.createElement("a");
   elem.href = window.URL.createObjectURL(file);
-  elem.download = file.name;
+  elem.download = fileName;
   document.body.appendChild(elem);
   elem.click();
   document.body.removeChild(elem);
+  window.URL.revokeObjectURL(elem.href);
+}
+
+export async function downloadAllFiles(files: File[]) {
+  const blob = await downloadZip(files).blob();
+  downloadStash(blob, "D2Save.zip");
 }

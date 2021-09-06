@@ -16,6 +16,7 @@
   "author": "Eudes Petonnet-Vincent",
   "license": "MIT",
   "dependencies": {
+    "client-zip": "^2.0.0",
     "preact": "^10.5.14"
   },
   "devDependencies": {
