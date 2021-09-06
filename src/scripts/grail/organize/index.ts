@@ -1,4 +1,5 @@
 import { Stash } from "../../stash/types";
+import { Item } from "../../items/types/Item";
 import { deletePages } from "../../stash/deletePages";
 import { groupBySection } from "./groupBySection";
 import { SECTIONS_ORDER } from "./sections";
@@ -14,10 +15,29 @@ import { organizeRespecs } from "./respecs";
 import { organizeUbers } from "./ubers";
 import { addPage } from "../../stash/addPage";
 
-export function organize(stash: Stash, offset = 0, emptyPages = 0) {
-  const before = getAllItems(stash, true);
-  const expectedTotal = before.length;
+/**
+ * Counts every item, even socketed ones.
+ */
+function countEveryItem(items: Item[]) {
+  let total = items.length;
+  for (const item of items) {
+    if (item.filledSockets) {
+      total += item.filledSockets.length;
+    }
+  }
+  return total;
+}
+
+export function organize(
+  stash: Stash,
+  additionalItems: Item[] = [],
+  offset = 0,
+  emptyPages = 0
+) {
+  const expectedTotal =
+    countEveryItem(getAllItems(stash)) + countEveryItem(additionalItems);
   const toOrganize = deletePages(stash, offset);
+  toOrganize.push(...additionalItems);
   for (let i = 0; i < emptyPages; i++) {
     addPage(stash, "Misc");
   }
@@ -57,7 +77,7 @@ export function organize(stash: Stash, offset = 0, emptyPages = 0) {
         throw new Error(`Unknown section sectionId`);
     }
   }
-  if (getAllItems(stash, true).length !== expectedTotal) {
+  if (countEveryItem(getAllItems(stash)) !== expectedTotal) {
     throw new Error("Lost items in the process, cancelling");
   }
 }

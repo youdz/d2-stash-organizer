@@ -1,0 +1,12 @@
+#organizer li {
+  margin-bottom: 1em;
+}
+
+#sources-selector {
+  list-style: none;
+  padding: 0;
+}
+
+#sources-selector li {
+  margin-bottom: 0.4em;
+}

@@ -105,7 +105,6 @@ export function writeAllFiles(files: File[]) {
   return DB.then(
     (db) =>
       new Promise<void>((resolve, reject) => {
-        console.log(files);
         const transaction = db.transaction(STORE, "readwrite");
         const objectStore = transaction.objectStore(STORE);
         objectStore.clear();

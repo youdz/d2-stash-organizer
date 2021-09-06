@@ -2,6 +2,7 @@ import { Stash } from "./types";
 import { Item } from "../items/types/Item";
 import { fromInt } from "../items/parsing/binary";
 import { getBase } from "../items/getBase";
+import { characterName } from "./characterName";
 
 export function collision(a: Item, b: Item) {
   const { width: wa, height: ha } = getBase(a);
@@ -21,6 +22,7 @@ export function moveItem(
   row: number,
   col: number
 ) {
+  // FIXME: does not work if item comes from another stash
   // Remove from the current page
   for (const page of stash.pages) {
     const index = page.items.indexOf(item);
@@ -45,8 +47,11 @@ export function moveItem(
     );
   }
   stash.pages[toPage].items.push(item);
+  item.character = characterName(stash);
+  item.page = toPage;
   item.row = row;
   item.column = col;
+  // TODO: Set item location and storage type if it was not stored before
   item.raw =
     item.raw.slice(0, 65) +
     fromInt(col, 4) +

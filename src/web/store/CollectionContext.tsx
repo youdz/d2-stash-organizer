@@ -38,6 +38,9 @@ export function CollectionProvider({ children }: RenderableProps<unknown>) {
         .map((stash) => [characterName(stash), { stash }] as const)
         .sort(([a], [b]) => a.localeCompare(b))
     );
+    // FIXME: do not list socketed items here, too problematic.
+    //  Move the sockets logic to the grail progress itself.
+    //  Delete the socketed logic from ItemLocationDesc
     const allItems = stashes.flatMap((stash) => getAllItems(stash, true));
     setInternalCollection({ characters, allItems });
   }, []);
