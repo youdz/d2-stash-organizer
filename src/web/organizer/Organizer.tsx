@@ -97,7 +97,7 @@ export function Organizer() {
   }
 
   const nbSources = Object.values(sources).filter(
-    (selected) => selected
+    (source) => source?.selected
   ).length;
 
   return (
@@ -126,7 +126,7 @@ export function Organizer() {
         >
           Download updated save files
         </button>
-        {targetStash && nbSources === 1 && sources[target] && (
+        {targetStash && nbSources === 1 && sources[target]?.selected && (
           <button
             class="button danger"
             onClick={() =>
