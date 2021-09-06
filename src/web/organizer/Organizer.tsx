@@ -1,6 +1,5 @@
-import { useCallback, useContext, useMemo, useState } from "preact/hooks";
+import { useCallback, useContext, useState } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
-import { JSXInternal } from "preact/src/jsx";
 import { organize } from "../../scripts/grail/organize";
 import {
   downloadAllFiles,
@@ -12,120 +11,74 @@ import { ExternalLink } from "../routing/ExternalLink";
 import "./Organizer.css";
 import { deletePages } from "../../scripts/stash/deletePages";
 import { Item } from "../../scripts/items/types/Item";
-
-function numberInputChangeHandler(callback: (value: number) => void) {
-  return function (event: JSXInternal.TargetedEvent<HTMLInputElement>) {
-    callback(Number((event.target as HTMLInputElement).value));
-  };
-}
+import { DOWNLOAD_CONFIRM } from "../store/singleStashConfirmation";
+import { OrganizerSources, SourceSelector } from "./SourceSelector";
+import { TargetSelector } from "./TargetSelector";
 
 export function Organizer() {
   const { characters, setCollection } = useContext(CollectionContext);
 
-  const [sources, setSources] = useState<Record<string, boolean | undefined>>({
-    "": true,
+  const [sources, setSources] = useState<OrganizerSources>({
+    "": { selected: true, skipPages: 1 },
   });
-  const [skipPages, setSkipPages] = useState<
-    Record<string, number | undefined>
-  >({ "": 1 });
 
   const [target, setTarget] = useState("");
   const [emptyPages, setEmptyPages] = useState(0);
 
-  const sourcesSelector = useMemo(() => {
-    const listItems = [];
-    for (const name of characters.keys()) {
-      listItems.push(
-        <li>
-          <label>
-            <input
-              type="checkbox"
-              checked={sources[name]}
-              onChange={() =>
-                setSources((previous) => ({
-                  ...previous,
-                  [name]: !previous[name],
-                }))
-              }
-            />{" "}
-            {name ? (
-              <>
-                <span class="unique">{name}</span>'s stash
-              </>
-            ) : (
-              <span class="magic">Shared stash</span>
-            )}
-          </label>
-          , except the first{" "}
-          <input
-            type="number"
-            min={0}
-            max={99}
-            value={skipPages[name] ?? 0}
-            onChange={numberInputChangeHandler((value) =>
-              setSkipPages((previous) => ({ ...previous, [name]: value }))
-            )}
-          />{" "}
-          pages.
-        </li>
-      );
-    }
-    return listItems;
-  }, [characters, sources, skipPages]);
-
-  const targetSelector = useMemo(() => {
-    const options = [];
-    for (const name of characters.keys()) {
-      options.push(
-        <option value={name}>
-          {name ? `${name}'s stash` : "Shared stash"}
-        </option>
-      );
-    }
-    return options;
-  }, [characters]);
-
   const targetStash = characters.get(target)?.stash;
 
-  const handleOrganize = useCallback(async () => {
-    if (!targetStash) {
-      return;
-    }
-    try {
-      // TODO: backup before doing all this, to roll back if failed
-      const fromOtherSources: Item[] = [];
-      for (const [character, { stash }] of characters.entries()) {
-        if (character !== target && sources[character]) {
-          fromOtherSources.push(
-            ...deletePages(stash, skipPages[character] ?? 0)
-          );
+  const handleOrganize = useCallback(
+    async (singleStash?: boolean) => {
+      if (!targetStash) {
+        return;
+      }
+      try {
+        // TODO: backup before doing all this, to roll back if failed
+        const fromOtherSources: Item[] = [];
+        if (!singleStash) {
+          for (const [character, { stash }] of characters.entries()) {
+            if (character !== target && sources[character]?.selected) {
+              fromOtherSources.push(
+                ...deletePages(stash, sources[character]?.skipPages ?? 0)
+              );
+            }
+          }
         }
-      }
-      organize(targetStash, fromOtherSources, skipPages[target], emptyPages);
+        organize(
+          targetStash,
+          fromOtherSources,
+          sources[target]?.skipPages,
+          emptyPages
+        );
 
-      const saveFiles = [];
-      for (const [character, { stash }] of characters.entries()) {
-        saveFiles.push(stashToFile(stash));
+        const saveFiles = [];
+        let targetFile: File | undefined;
+        for (const [character, { stash }] of characters.entries()) {
+          const file = stashToFile(stash);
+          saveFiles.push(file);
+          if (character === target) {
+            targetFile = file;
+          }
+        }
+        await writeAllFiles(saveFiles);
+        // Set the state to force a re-render of the app.
+        setCollection(
+          Array.from(characters.values()).map(({ stash }) => stash)
+        );
+        if (singleStash && targetFile) {
+          downloadStash(targetFile, targetFile.name);
+        } else {
+          await downloadAllFiles(saveFiles);
+        }
+      } catch (e) {
+        if (e instanceof Error) {
+          alert(e.message);
+        }
+        throw e;
       }
-      await writeAllFiles(saveFiles);
-      // Set the state to force a re-render of the app.
-      setCollection(Array.from(characters.values()).map(({ stash }) => stash));
-      await downloadAllFiles(saveFiles);
-    } catch (e) {
-      if (e instanceof Error) {
-        alert(e.message);
-      }
-      throw e;
-    }
-  }, [
-    characters,
-    emptyPages,
-    setCollection,
-    skipPages,
-    sources,
-    target,
-    targetStash,
-  ]);
+    },
+    [characters, emptyPages, setCollection, sources, target, targetStash]
+  );
 
   // Doesn't do anything right now, since we only read PlugY stash files
   if (!characters.has("")) {
@@ -142,35 +95,46 @@ export function Organizer() {
     );
   }
 
+  const nbSources = Object.values(sources).filter(
+    (selected) => selected
+  ).length;
+
   return (
     <ol id="organizer">
       <li>
-        Take all items from:
-        <ul id="sources-selector">{sourcesSelector}</ul>
+        <SourceSelector
+          sources={sources}
+          setSources={setSources}
+          target={target}
+        />
       </li>
       <li>
-        Move them to{" "}
-        <select
-          id="character-select"
-          value={target}
-          onChange={({ currentTarget }) => setTarget(currentTarget.value)}
+        <TargetSelector
+          target={target}
+          setTarget={setTarget}
+          emptyPages={emptyPages}
+          setEmptyPages={setEmptyPages}
+        />
+      </li>
+      <li>Organize the items for me</li>
+      <li>
+        <button
+          class="button"
+          disabled={!targetStash}
+          onClick={() => handleOrganize()}
         >
-          {targetSelector}
-        </select>
-        , leaving{" "}
-        <input
-          type="number"
-          min={0}
-          max={99}
-          value={emptyPages}
-          onChange={numberInputChangeHandler(setEmptyPages)}
-        />{" "}
-        empty page{emptyPages === 1 ? "" : "s"} at the start
-      </li>
-      <li>
-        <button class="button" disabled={!targetStash} onClick={handleOrganize}>
-          Organize my items
+          Download updated save files
         </button>
+        {targetStash && nbSources === 1 && sources[target] && (
+          <button
+            class="button danger"
+            onClick={() =>
+              window.confirm(DOWNLOAD_CONFIRM) && handleOrganize(true)
+            }
+          >
+            Download a single stash
+          </button>
+        )}
       </li>
     </ol>
   );

@@ -1,7 +1,8 @@
-import { useContext, useMemo } from "preact/hooks";
+import { useContext, useMemo, useState } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
-import { FilePicker } from "../store/FilePicker";
+import { FilePicker } from "./FilePicker";
 import "./SaveFiles.css";
+import { UPLOAD_CONFIRM } from "../store/singleStashConfirmation";
 
 const dateFormatter = Intl.DateTimeFormat(undefined, {
   dateStyle: "long",
@@ -10,6 +11,7 @@ const dateFormatter = Intl.DateTimeFormat(undefined, {
 
 export function SaveFiles() {
   const { characters } = useContext(CollectionContext);
+  const [allowSingleFile, setAllowSingleFile] = useState(false);
 
   const charactersDetail = useMemo(() => {
     const details = [];
@@ -31,7 +33,24 @@ export function SaveFiles() {
         items on every character and in every stash.
       </p>
       <p>
-        <FilePicker />
+        <FilePicker folder={true}>
+          {characters.size === 0 ? "Upload" : "Refresh"} all my save files
+        </FilePicker>
+        {!allowSingleFile && (
+          <button
+            class="button sidenote"
+            onClick={() =>
+              window.confirm(UPLOAD_CONFIRM) && setAllowSingleFile(true)
+            }
+          >
+            Let me select a single file
+          </button>
+        )}
+        {allowSingleFile && (
+          <FilePicker folder={false}>
+            {characters.size === 0 ? "Upload" : "Update"} a single stash
+          </FilePicker>
+        )}
       </p>
       <table id="save-files">
         <tr>

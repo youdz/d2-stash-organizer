@@ -18,12 +18,14 @@ interface Collection {
 
 export interface CollectionContextValue extends Collection {
   setCollection: (stashes: Stash[]) => void;
+  setSingleStash: (stash: Stash) => void;
 }
 
 export const CollectionContext = createContext<CollectionContextValue>({
   characters: new Map(),
   allItems: [],
   setCollection: () => undefined,
+  setSingleStash: () => undefined,
 });
 
 export function CollectionProvider({ children }: RenderableProps<unknown>) {
@@ -42,9 +44,20 @@ export function CollectionProvider({ children }: RenderableProps<unknown>) {
     setInternalCollection({ characters, allItems });
   }, []);
 
+  const setSingleStash = useCallback((stash: Stash) => {
+    setInternalCollection((previous) => {
+      const characters = new Map(previous.characters);
+      characters.set(characterName(stash), { stash });
+      const allItems = Array.from(characters.values()).flatMap(({ stash }) =>
+        getAllItems(stash)
+      );
+      return { characters, allItems };
+    });
+  }, []);
+
   const value = useMemo(
-    () => ({ ...collection, setCollection }),
-    [collection, setCollection]
+    () => ({ ...collection, setCollection, setSingleStash }),
+    [collection, setCollection, setSingleStash]
   );
 
   // Initialize with the stash found in storage

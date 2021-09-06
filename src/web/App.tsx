@@ -1,7 +1,6 @@
 import { render } from "preact";
 import "./App.css";
 import { GitHubLink } from "./GitHubLink";
-import { FilePicker } from "./store/FilePicker";
 import { CollectionProvider } from "./store/CollectionContext";
 import { Routes } from "./routing/Routes";
 

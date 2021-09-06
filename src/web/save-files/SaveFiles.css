@@ -10,3 +10,7 @@
 
 #save-files tr:not(:first-child) {
 }
+
+.filepicker:first-child {
+  margin-right: 1em;
+}

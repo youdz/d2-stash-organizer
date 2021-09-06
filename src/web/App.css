@@ -13,7 +13,7 @@ h1 {
   cursor: pointer;
   box-shadow: none;
   padding: 0.4em 0.8em;
-  border: 2px solid white;
+  border: 2px solid initial;
   border-radius: 0;
   background: transparent;
   color: white;
@@ -42,4 +42,8 @@ h1 {
 .socketed,
 .sidenote {
   color: rgb(120, 120, 120);
+}
+
+.danger {
+  color: rgb(255, 111, 111);
 }

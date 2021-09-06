@@ -10,3 +10,7 @@
 #sources-selector li {
   margin-bottom: 0.4em;
 }
+
+#organizer .button.danger {
+  margin-left: 1em;
+}
