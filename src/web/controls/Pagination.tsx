@@ -1,46 +1,53 @@
-import { StateUpdater } from "preact/hooks";
+import { StateUpdater, useEffect } from "preact/hooks";
 import "./Pagination.css";
 
 export interface PaginationProps {
   nbEntries: number;
   pageSize: number;
-  currentPage: number;
-  setPage: StateUpdater<number>;
+  currentEntry: number;
+  onChange: StateUpdater<number>;
   entryType: string;
 }
 
 export function Pagination({
   nbEntries,
   pageSize,
-  currentPage,
-  setPage,
+  currentEntry,
+  onChange,
   entryType,
 }: PaginationProps) {
-  const lastPossible = Math.floor((nbEntries - 1) / 10) * 10;
+  const lastPossible = Math.floor((nbEntries - 1) / pageSize) * pageSize;
+
+  // Make sure we never go page the last page
+  useEffect(() => {
+    if (currentEntry >= nbEntries) {
+      onChange(0);
+    }
+  }, [nbEntries, currentEntry, onChange]);
 
   return (
     <div class="pagination">
-      <div style={{ visibility: currentPage === 0 ? "hidden" : "visible" }}>
-        <button class="button" onClick={() => setPage(0)}>
+      <div style={{ visibility: currentEntry === 0 ? "hidden" : "visible" }}>
+        <button class="button" onClick={() => onChange(0)}>
           First
         </button>
-        <button class="button" onClick={() => setPage((n) => n - pageSize)}>
+        <button class="button" onClick={() => onChange((n) => n - pageSize)}>
           Previous
         </button>
       </div>
       <span>
-        {entryType} {currentPage + 1} -{" "}
-        {Math.min(currentPage + pageSize, nbEntries)} out of {nbEntries}
+        {entryType} {currentEntry + 1} -{" "}
+        {Math.min(currentEntry + pageSize, nbEntries)} out of {nbEntries}
       </span>
       <div
         style={{
-          visibility: currentPage >= lastPossible ? "hidden" : "visible",
+          visibility: currentEntry >= lastPossible ? "hidden" : "visible",
         }}
       >
-        <button class="button" onClick={() => setPage((n) => n + pageSize)}>
+        <button class="button" onClick={() => onChange((n) => n + pageSize)}>
           Next
         </button>
-        <button class="button" onClick={() => setPage(lastPossible)}>
+        <button class="button" onClick={() => onChange(lastPossible)}>
           Last
         </button>
       </div>
