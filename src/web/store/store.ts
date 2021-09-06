@@ -30,8 +30,6 @@ const DB = new Promise<IDBDatabase>((resolve, reject) => {
   };
   request.onupgradeneeded = function (e) {
     const db = this.result;
-    // FIXME: important! backward compatibility with the stash previously stored at 0,
-    //  should be deleted and re-stored.
     const storeCreation = db.createObjectStore(STORE, {
       keyPath: "name",
     });

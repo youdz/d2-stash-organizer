@@ -13,7 +13,7 @@ export function Search({
   children,
 }: RenderableProps<SearchProps>) {
   return (
-    <div id="search">
+    <div>
       <p>
         <label for="search-input">{children}</label>
       </p>

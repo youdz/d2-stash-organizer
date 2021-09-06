@@ -37,7 +37,7 @@ export function FilePicker() {
         ref={input}
         type="file"
         accept=".sss,.d2x"
-        // @ts-expect-error FIXME
+        // @ts-expect-error Non-standard attributes
         directory
         webkitdirectory
         multiple

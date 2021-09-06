@@ -68,7 +68,7 @@ export function StashView() {
   return (
     <>
       <div class="controls">
-        <div id="character">
+        <div>
           <p>
             <label for="character-select">Select a character:</label>
           </p>

@@ -20,7 +20,7 @@ export interface QualityFilterProps {
 
 export function QualityFilter({ value, onChange }: QualityFilterProps) {
   return (
-    <div id="quality">
+    <div>
       <p>
         <label for="quality-select">Filter by quality:</label>
       </p>

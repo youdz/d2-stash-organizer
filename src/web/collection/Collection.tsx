@@ -12,12 +12,11 @@ import {
   QualityFilterValue,
 } from "../controls/QualityFilter";
 
-const PAGE_SIZE = 20;
-
 export function Collection() {
   const { allItems } = useContext(CollectionContext);
   const [search, setSearch] = useState("");
   const [quality, setQuality] = useState<QualityFilterValue>("all");
+  const [pageSize, setPageSize] = useState(20);
   const [firstItem, setFirstItem] = useState(0);
 
   const filteredItems = useMemo(
@@ -43,11 +42,30 @@ export function Collection() {
           Search for an item:
         </Search>
         <QualityFilter value={quality} onChange={setQuality} />
+        <div>
+          <p>
+            <label for="page-size-select">Items per page:</label>
+          </p>
+          <p>
+            <select
+              id="page-size-select"
+              value={pageSize}
+              onChange={({ currentTarget }) =>
+                setPageSize(Number(currentTarget.value))
+              }
+            >
+              <option value={10}>10</option>
+              <option value={20}>20</option>
+              <option value={50}>50</option>
+              <option value={100}>100</option>
+            </select>
+          </p>
+        </div>
       </div>
 
       <Pagination
         nbEntries={groupedItems.length}
-        pageSize={PAGE_SIZE}
+        pageSize={pageSize}
         currentEntry={firstItem}
         onChange={setFirstItem}
         entryType="Items"
@@ -62,7 +80,7 @@ export function Collection() {
         </thead>
         <tbody>
           {groupedItems
-            .slice(firstItem, firstItem + PAGE_SIZE)
+            .slice(firstItem, firstItem + pageSize)
             .map(({ item, quantity }, index) => (
               <Item
                 key={item.id ?? index}
