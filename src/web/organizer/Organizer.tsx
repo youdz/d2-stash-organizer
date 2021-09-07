@@ -117,7 +117,7 @@ export function Organizer() {
           setEmptyPages={setEmptyPages}
         />
       </li>
-      <li>Organize the items for me</li>
+      <li>Organize the items for me.</li>
       <li>
         <button
           class="button"

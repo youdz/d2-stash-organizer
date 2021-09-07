@@ -1,7 +1,11 @@
 import { indexOf } from "./indexOf";
 
 export class SaveFileReader {
-  constructor(private raw: Uint8Array) {}
+  constructor(private raw: Uint8Array) {
+    this.dataView = new DataView(this.raw.buffer);
+  }
+
+  private dataView: DataView;
 
   public peek = false;
   public nextIndex = 0;
@@ -48,16 +52,16 @@ export class SaveFileReader {
 
   readInt8(position = this.nextIndex) {
     this.moveTo(this.nextIndex + 1);
-    return this.raw[position];
+    return this.dataView.getUint8(position);
+  }
+
+  readInt16LE(position = this.nextIndex) {
+    this.moveTo(this.nextIndex + 2);
+    return this.dataView.getUint16(position, true);
   }
 
   readInt32LE(position = this.nextIndex) {
     this.moveTo(this.nextIndex + 4);
-    return (
-      this.raw[position] |
-      (this.raw[position + 1] << 8) |
-      (this.raw[position + 2] << 16) |
-      (this.raw[position + 3] << 24)
-    );
+    return this.dataView.getUint32(position, true);
   }
 }

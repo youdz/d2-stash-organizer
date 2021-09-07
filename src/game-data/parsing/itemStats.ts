@@ -6,11 +6,7 @@ export async function itemStatsToJson() {
   const table = await readGameFile("ItemStatCost");
   const itemStats: ItemStat[] = [];
   for (const line of table) {
-    if (
-      line[0].startsWith("unused") ||
-      line[0].endsWith("_bytime") ||
-      !line[21]
-    ) {
+    if (line[0].startsWith("unused") || line[0].endsWith("_bytime")) {
       continue;
     }
     const id = Number(line[1]);
@@ -18,6 +14,7 @@ export async function itemStatsToJson() {
       stat: line[0].trim(),
       encode: Number(line[14]),
       size: Number(line[21]),
+      charSize: line[9] ? Number(line[9]) : undefined,
       bias: Number(line[22]),
       paramSize: Number(line[23]),
       descPriority: Number(line[39]),

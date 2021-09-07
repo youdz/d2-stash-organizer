@@ -33,9 +33,12 @@ export function parseSimple({ raw, readBool, readInt }: BinaryStream) {
     search: "",
   };
 
-  if (item.socketed && readInt(3, 108)) {
-    // Array to store socketed items
-    item.filledSockets = [];
+  if (item.socketed) {
+    item.nbFilledSockets = readInt(3, 108);
+    if (item.nbFilledSockets > 0) {
+      // Array to store socketed items
+      item.filledSockets = [];
+    }
   }
 
   // These items seem to sometimes be simple, sometimes not, at random

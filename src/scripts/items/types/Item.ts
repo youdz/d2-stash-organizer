@@ -24,6 +24,7 @@ export interface Item {
 
   sockets?: number;
   socketsRange?: [number, number];
+  nbFilledSockets?: number;
   filledSockets?: Item[];
   socketedIn?: Item;
 

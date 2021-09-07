@@ -39,7 +39,7 @@ export function TargetSelector({
         value={emptyPages}
         onChange={numberInputChangeHandler(setEmptyPages)}
       />{" "}
-      empty page{emptyPages === 1 ? "" : "s"} at the start
+      empty page{emptyPages === 1 ? "" : "s"} at the start.
     </>
   );
 }

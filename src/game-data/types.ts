@@ -101,6 +101,7 @@ export interface StatDescription {
 
 export interface ItemStat extends StatDescription {
   size: number;
+  charSize?: number;
   encode: number;
   bias: number;
   paramSize: number;
