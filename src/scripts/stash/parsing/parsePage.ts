@@ -1,5 +1,5 @@
 import { Page } from "../types";
-import { SaveFileReader } from "./SaveFileReader";
+import { SaveFileReader } from "../../save-file/SaveFileReader";
 import { parseItemList } from "../../items/parsing/parseItemList";
 
 export function parsePage(reader: SaveFileReader): Page {

@@ -1,10 +1,14 @@
-import { Stash } from "./types";
+import { isStash, ItemsOwner } from "../save-file/ownership";
 
-// from inclusive, to exclusive
-export function getAllItems(stash: Stash, from = 0, to = stash.pages.length) {
-  const all = [];
-  for (const { items } of stash.pages.slice(from, to)) {
-    all.push(...items);
+export function getAllItems(owner: ItemsOwner, skipPages = 0) {
+  if (isStash(owner)) {
+    const all = [];
+    for (const { items } of owner.pages.slice(skipPages)) {
+      all.push(...items);
+    }
+    return all;
+  } else {
+    // No pages to skip for characters
+    return owner.items;
   }
-  return all;
 }

@@ -1,5 +1,5 @@
 import { Item } from "../types/Item";
-import { BinaryStream } from "./binary";
+import { BinaryStream } from "../../save-file/binary";
 import { getBase } from "../getBase";
 import { RESPECS } from "../../grail/organize/respecs";
 import { UBERS } from "../../grail/organize/ubers";
@@ -16,9 +16,8 @@ export function parseSimple({ raw, readBool, readInt }: BinaryStream) {
     runeword: readBool(42),
 
     location: readInt(3, 58),
-    // TODO: handle not stored to support character saves
     stored: readInt(3, 73),
-    character: "",
+    owner: "",
 
     column: readInt(4, 65),
     row: readInt(4, 69),

@@ -1,7 +1,7 @@
 import { parsePage } from "./parsePage";
 import { Stash } from "../types";
 import { postProcessStash } from "./postProcessStash";
-import { SaveFileReader } from "./SaveFileReader";
+import { SaveFileReader } from "../../save-file/SaveFileReader";
 
 // Can't use Node's Buffer because this needs to run in the browser
 export function parseStash(

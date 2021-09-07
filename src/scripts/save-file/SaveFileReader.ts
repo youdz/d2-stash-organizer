@@ -1,4 +1,4 @@
-import { indexOf } from "./indexOf";
+import { indexOf } from "../stash/parsing/indexOf";
 
 export class SaveFileReader {
   constructor(private raw: Uint8Array) {

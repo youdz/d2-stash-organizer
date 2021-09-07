@@ -1,4 +1,4 @@
-import { SaveFileReader } from "../../stash/parsing/SaveFileReader";
+import { SaveFileReader } from "../../save-file/SaveFileReader";
 import { parseItemList } from "../../items/parsing/parseItemList";
 
 export function parseMercenary(reader: SaveFileReader) {
@@ -6,6 +6,9 @@ export function parseMercenary(reader: SaveFileReader) {
   if (header !== "jf") {
     throw new Error(`Unexpected header ${header} for mercenary data`);
   }
-  // TODO: add field to track that this is on a mercenary, not equipped on the character.
-  return parseItemList(reader);
+  const items = parseItemList(reader);
+  for (const item of items) {
+    item.mercenary = true;
+  }
+  return items;
 }

@@ -14,7 +14,7 @@ import {
 const PAGE_SIZE = 10;
 
 export function StashView() {
-  const { characters } = useContext(CollectionContext);
+  const { owner } = useContext(CollectionContext);
   // TODO: if not PlugY, initialize to an actual character because there is no shared stash
   const [character, setCharacter] = useState("");
   const [search, setSearch] = useState("");
@@ -22,8 +22,8 @@ export function StashView() {
   const [currentPage, setCurrentPage] = useState(0);
 
   const stash = useMemo(() => {
-    return characters.get(character)?.stash;
-  }, [characters, character]);
+    return owner.get(character)?.stash;
+  }, [owner, character]);
 
   const pages = useMemo(() => {
     return stash?.pages
@@ -45,11 +45,11 @@ export function StashView() {
 
   const characterOptions = useMemo(() => {
     const options = [];
-    for (const name of characters.keys()) {
+    for (const name of owner.keys()) {
       options.push(<option value={name}>{name || "Shared stash"}</option>);
     }
     return options;
-  }, [characters]);
+  }, [owner]);
 
   if (!pages) {
     return null;

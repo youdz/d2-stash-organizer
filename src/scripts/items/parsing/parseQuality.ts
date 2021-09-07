@@ -1,5 +1,5 @@
 import { Item } from "../types/Item";
-import { BinaryStream } from "./binary";
+import { BinaryStream } from "../../save-file/binary";
 import { ItemQuality } from "../types/ItemQuality";
 import {
   MAGIC_PREFIXES,

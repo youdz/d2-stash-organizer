@@ -1,6 +1,6 @@
-import { binaryStream } from "../../items/parsing/binary";
+import { binaryStream } from "../../save-file/binary";
 import { ITEM_STATS } from "../../../game-data";
-import { SaveFileReader } from "../../stash/parsing/SaveFileReader";
+import { SaveFileReader } from "../../save-file/SaveFileReader";
 
 export function parseAttributes(reader: SaveFileReader) {
   const header = reader.readString(2, 765);

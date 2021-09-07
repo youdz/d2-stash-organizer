@@ -16,7 +16,7 @@ import { OrganizerSources, SourceSelector } from "./SourceSelector";
 import { TargetSelector } from "./TargetSelector";
 
 export function Organizer() {
-  const { characters, setCollection } = useContext(CollectionContext);
+  const { owner, setCollection } = useContext(CollectionContext);
 
   const [sources, setSources] = useState<OrganizerSources>({
     "": { selected: true, skipPages: 1 },
@@ -25,7 +25,7 @@ export function Organizer() {
   const [target, setTarget] = useState("");
   const [emptyPages, setEmptyPages] = useState(0);
 
-  const targetStash = characters.get(target)?.stash;
+  const targetStash = owner.get(target)?.stash;
 
   const handleOrganize = useCallback(
     async (singleStash?: boolean) => {
@@ -36,7 +36,7 @@ export function Organizer() {
         // TODO: backup before doing all this, to roll back if failed
         const fromOtherSources: Item[] = [];
         if (!singleStash) {
-          for (const [character, { stash }] of characters.entries()) {
+          for (const [character, { stash }] of owner.entries()) {
             if (character !== target && sources[character]?.selected) {
               fromOtherSources.push(
                 ...deletePages(stash, sources[character]?.skipPages ?? 0)
@@ -54,7 +54,7 @@ export function Organizer() {
 
         const saveFiles = [];
         let targetFile: File | undefined;
-        for (const [character, { stash }] of characters.entries()) {
+        for (const [character, { stash }] of owner.entries()) {
           const file = stashToFile(stash);
           saveFiles.push(file);
           if (character === target) {
@@ -63,9 +63,7 @@ export function Organizer() {
         }
         await writeAllFiles(saveFiles);
         // Set the state to force a re-render of the app.
-        setCollection(
-          Array.from(characters.values()).map(({ stash }) => stash)
-        );
+        setCollection(Array.from(owner.values()).map(({ stash }) => stash));
         if (singleStash && targetFile) {
           downloadStash(targetFile, targetFile.name);
         } else {
@@ -78,11 +76,11 @@ export function Organizer() {
         throw e;
       }
     },
-    [characters, emptyPages, setCollection, sources, target, targetStash]
+    [owner, emptyPages, setCollection, sources, target, targetStash]
   );
 
   // Doesn't do anything right now, since we only read PlugY stash files
-  if (!characters.has("")) {
+  if (!owner.has("")) {
     return (
       <p>
         This feature requires{" "}

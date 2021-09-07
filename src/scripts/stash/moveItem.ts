@@ -1,8 +1,8 @@
 import { Stash } from "./types";
 import { Item } from "../items/types/Item";
-import { fromInt } from "../items/parsing/binary";
+import { fromInt } from "../save-file/binary";
 import { getBase } from "../items/getBase";
-import { characterName } from "./characterName";
+import { ownerName } from "../save-file/ownership";
 
 export function collision(a: Item, b: Item) {
   const { width: wa, height: ha } = getBase(a);
@@ -47,7 +47,7 @@ export function moveItem(
     );
   }
   stash.pages[toPage].items.push(item);
-  item.character = characterName(stash);
+  item.owner = ownerName(stash);
   item.page = toPage;
   item.row = row;
   item.column = col;

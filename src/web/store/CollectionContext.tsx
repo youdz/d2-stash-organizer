@@ -1,63 +1,58 @@
 import { createContext, RenderableProps } from "preact";
-import { Stash } from "../../scripts/stash/types";
 import { useCallback, useEffect, useMemo, useState } from "preact/hooks";
 import { getSavedStashes } from "./store";
 import { Item } from "../../scripts/items/types/Item";
 import { getAllItems } from "../../scripts/stash/getAllItems";
-import { characterName } from "../../scripts/stash/characterName";
+import { ItemsOwner, ownerName } from "../../scripts/save-file/ownership";
 
 interface Collection {
-  characters: Map<
-    string,
-    {
-      stash: Stash;
-    }
-  >;
+  // TODO: can this just be an array?
+  owner: Map<string, ItemsOwner>;
   allItems: Item[];
 }
 
 export interface CollectionContextValue extends Collection {
-  setCollection: (stashes: Stash[]) => void;
-  setSingleStash: (stash: Stash) => void;
+  setCollection: (owners: ItemsOwner[]) => void;
+  setSingleFile: (owner: ItemsOwner) => void;
 }
 
 export const CollectionContext = createContext<CollectionContextValue>({
-  characters: new Map(),
+  owner: new Map(),
   allItems: [],
   setCollection: () => undefined,
-  setSingleStash: () => undefined,
+  setSingleFile: () => undefined,
 });
 
 export function CollectionProvider({ children }: RenderableProps<unknown>) {
   const [collection, setInternalCollection] = useState<Collection>({
-    characters: new Map(),
+    owner: new Map(),
     allItems: [],
   });
 
-  const setCollection = useCallback((stashes: Stash[]) => {
+  const setCollection = useCallback((owners: ItemsOwner[]) => {
     const characters = new Map(
-      stashes
-        .map((stash) => [characterName(stash), { stash }] as const)
+      owners
+        .map((owner) => [ownerName(owner), owner] as const)
         .sort(([a], [b]) => a.localeCompare(b))
     );
-    const allItems = stashes.flatMap((stash) => getAllItems(stash));
-    setInternalCollection({ characters, allItems });
+    const allItems = owners.flatMap((owner) => getAllItems(owner));
+    setInternalCollection({ owner: characters, allItems });
   }, []);
 
-  const setSingleStash = useCallback((stash: Stash) => {
+  const setSingleFile = useCallback((owner: ItemsOwner) => {
     setInternalCollection((previous) => {
-      const characters = new Map(previous.characters);
-      characters.set(characterName(stash), { stash });
-      const allItems = Array.from(characters.values()).flatMap(({ stash }) =>
-        getAllItems(stash)
+      const owners = new Map(previous.owner);
+      owners.set(ownerName(owner), owner);
+      const allItems = Array.from(owners.values()).flatMap((o) =>
+        getAllItems(o)
       );
-      return { characters, allItems };
+      return { owner: owners, allItems };
     });
   }, []);
 
   const value = useMemo(
-    () => ({ ...collection, setCollection, setSingleStash }),
-    [collection, setCollection, setSingleStash]
+    () => ({ ...collection, setCollection, setSingleFile }),
+    [collection, setCollection, setSingleFile]
   );
 
   // Initialize with the stash found in storage

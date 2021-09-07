@@ -15,7 +15,7 @@ export function ItemLocationDesc({ item }: ItemLocationDescProps) {
     item.location === ItemLocation.STORED &&
     item.stored === ItemStorageType.STASH
   ) {
-    location = item.character ? `${item.character}'s stash` : "Shared stash";
+    location = item.owner ? `${item.owner}'s stash` : "Shared stash";
     if (typeof item.page !== "undefined") {
       page = `, page ${item.page + 1}`;
     }

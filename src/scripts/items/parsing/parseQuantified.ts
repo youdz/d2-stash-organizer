@@ -1,4 +1,4 @@
-import { BinaryStream } from "./binary";
+import { BinaryStream } from "../../save-file/binary";
 import { Item } from "../types/Item";
 import { ARMORS, WEAPONS } from "../../../game-data";
 

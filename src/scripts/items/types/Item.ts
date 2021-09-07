@@ -14,7 +14,8 @@ export interface Item {
 
   location: ItemLocation;
   stored: ItemStorageType;
-  character: string;
+  owner: string;
+  mercenary?: boolean;
   page?: number;
 
   column: number;

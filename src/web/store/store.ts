@@ -2,6 +2,7 @@ import { downloadZip } from "client-zip";
 import { Stash } from "../../scripts/stash/types";
 import { parseStash } from "../../scripts/stash/parsing/parseStash";
 import { generateSaveFile } from "../../scripts/stash/parsing/generateSaveFile";
+import { parseCharacter } from "../../scripts/character/parsing/parseCharacter";
 
 const DEFAULT_SHARED_FILENAME = "_LOD_SharedStashSave.sss";
 const DEFAULT_PERSONAL_FILENAME = "CharacterName.d2x";
@@ -124,7 +125,12 @@ export function writeAllFiles(files: File[]) {
 
 export async function stashFromFile(file: File) {
   try {
-    return parseStash(new Uint8Array(await file.arrayBuffer()), file);
+    const raw = new Uint8Array(await file.arrayBuffer());
+    if (file.name.endsWith(".d2s")) {
+      return parseCharacter(raw, file);
+    } else {
+      return parseStash(raw, file);
+    }
   } catch (e) {
     if (e instanceof Error) {
       alert(e.message);

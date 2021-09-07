@@ -1,6 +1,6 @@
 import { ItemQuality } from "../types/ItemQuality";
 import { parseSimple } from "./parseSimple";
-import { binaryStream } from "./binary";
+import { binaryStream } from "../../save-file/binary";
 import { parseQuality } from "./parseQuality";
 import { parseQuantified } from "./parseQuantified";
 import { parseModifiers } from "./parseModifiers";

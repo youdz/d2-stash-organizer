@@ -11,7 +11,7 @@ export function FilePicker({
   folder,
   children,
 }: RenderableProps<FilePickerProps>) {
-  const { setCollection, setSingleStash } = useContext(CollectionContext);
+  const { setCollection, setSingleFile } = useContext(CollectionContext);
   const input = useRef<HTMLInputElement>(null);
 
   const handleChange = useCallback(async () => {
@@ -34,12 +34,12 @@ export function FilePicker({
       } else {
         const file = usableFiles[0];
         await writeStashFile(file);
-        setSingleStash(await stashFromFile(file));
+        setSingleFile(await stashFromFile(file));
       }
       // Clear the input so we can re-upload the same file later.
       input.current.value = "";
     }
-  }, [folder, setCollection, setSingleStash]);
+  }, [folder, setCollection, setSingleFile]);
 
   const inputAttrs = folder
     ? { directory: true, webkitdirectory: true, multiple: true }

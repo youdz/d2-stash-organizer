@@ -1,4 +1,4 @@
-import { SaveFileReader } from "../../stash/parsing/SaveFileReader";
+import { SaveFileReader } from "../../save-file/SaveFileReader";
 import { Item } from "../types/Item";
 import { parseItem } from "./parseItem";
 import { ItemLocation } from "../types/ItemLocation";

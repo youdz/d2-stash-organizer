@@ -1,4 +1,4 @@
-import { BinaryStream } from "./binary";
+import { BinaryStream } from "../../save-file/binary";
 import { Item } from "../types/Item";
 import { ItemQuality } from "../types/ItemQuality";
 import { ITEM_STATS } from "../../../game-data";

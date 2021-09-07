@@ -22,7 +22,7 @@ export function SourceSelector({
   setSources,
   target,
 }: SourceSelectorProps) {
-  const { characters } = useContext(CollectionContext);
+  const { owner } = useContext(CollectionContext);
 
   const toggleSelected = useCallback(
     (source: string, value?: boolean) => {
@@ -49,7 +49,7 @@ export function SourceSelector({
     <>
       Take all items from:
       <ul id="sources-selector">
-        {Array.from(characters.keys()).map((name) => (
+        {Array.from(owner.keys()).map((name) => (
           <li>
             <label>
               <input

@@ -1,4 +1,4 @@
-import { SaveFileReader } from "../../stash/parsing/SaveFileReader";
+import { SaveFileReader } from "../../save-file/SaveFileReader";
 import { Character } from "../types";
 import { parseAttributes } from "./parseAttributes";
 import { parseItemList } from "../../items/parsing/parseItemList";
@@ -36,6 +36,8 @@ export function parseCharacter(
   if (expansionChar) {
     character.items.push(...parseMercenary(reader));
   }
+
+  // TODO: post-process items
 
   return character;
 }

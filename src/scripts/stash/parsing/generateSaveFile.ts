@@ -1,8 +1,8 @@
 import { Stash } from "../types";
-import { writeString } from "./writeString";
-import { writeInt32LE } from "./writeInt32LE";
-import { writeInt16LE } from "./writeInt16LE";
-import { fromBinary } from "../../items/parsing/binary";
+import { writeString } from "../../save-file/writeString";
+import { writeInt32LE } from "../../save-file/writeInt32LE";
+import { writeInt16LE } from "../../save-file/writeInt16LE";
+import { fromBinary } from "../../save-file/binary";
 
 export function generateSaveFile(stash: Stash) {
   const saveFile: number[] = [];

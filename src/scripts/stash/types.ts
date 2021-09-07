@@ -1,4 +1,5 @@
 import { Item } from "../items/types/Item";
+import { SaveFile } from "../save-file/types";
 
 export const enum PageFlags {
   NONE = 0,
@@ -13,9 +14,7 @@ export interface Page {
   items: Item[];
 }
 
-export interface Stash {
-  filename: string;
-  lastModified: number;
+export interface Stash extends SaveFile {
   personal: boolean;
   pageFlags: boolean;
   gold: number;

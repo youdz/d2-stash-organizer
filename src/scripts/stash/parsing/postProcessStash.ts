@@ -1,6 +1,6 @@
 import { Stash } from "../types";
 import { postProcessItem } from "../../items/post-processing/postProcessItem";
-import { characterName } from "../characterName";
+import { ownerName } from "../../save-file/ownership";
 
 /**
  * Performs all operations that are not actually parsing, but that we need for our scripts and UI.
@@ -8,9 +8,10 @@ import { characterName } from "../characterName";
  * making mods more searchable or sortable, etc.
  */
 export function postProcessStash(stash: Stash) {
+  const stashName = ownerName(stash);
   stash.pages.forEach(({ items }, pageIndex) => {
     for (const item of items) {
-      item.character = characterName(stash);
+      item.owner = stashName;
       item.page = pageIndex;
       postProcessItem(item);
     }
