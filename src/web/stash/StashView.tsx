@@ -16,7 +16,7 @@ import { characterPages } from "./characterPages";
 const PAGE_SIZE = 10;
 
 export function StashView() {
-  const { owners } = useContext(CollectionContext);
+  const { owners, lastActivePlugyStashPage } = useContext(CollectionContext);
   const [ownerIndex, setOwnerIndex] = useState(0);
   const [search, setSearch] = useState("");
   const [quality, setQuality] = useState<QualityFilterValue>("all");
@@ -31,9 +31,9 @@ export function StashView() {
     if (isStash(owner)) {
       return owner.pages;
     } else {
-      return characterPages(owner);
+      return characterPages(owner, !!lastActivePlugyStashPage?.get(owner));
     }
-  }, [owner]);
+  }, [owner, lastActivePlugyStashPage]);
 
   const filteredPages = useMemo(() => {
     return (

@@ -3,11 +3,23 @@ import { useCallback, useEffect, useMemo, useState } from "preact/hooks";
 import { getSavedStashes } from "./store";
 import { Item } from "../../scripts/items/types/Item";
 import { getAllItems } from "../../scripts/stash/getAllItems";
-import { ItemsOwner, ownerName } from "../../scripts/save-file/ownership";
+import {
+  isStash,
+  ItemsOwner,
+  ownerName,
+} from "../../scripts/save-file/ownership";
+import { Character } from "../../scripts/character/types";
+import { Stash } from "../../scripts/stash/types";
+import { findDuplicates } from "./plugyDuplicates";
 
 interface Collection {
   owners: ItemsOwner[];
   allItems: Item[];
+  /*
+   * PlugY copies the last active stash page to the .d2s file on save, which results in duplicates for us.
+   * If we find a PlugY stash for a character, we ignore the character's stash items.
+   */
+  lastActivePlugyStashPage?: Map<Character, [Stash, number]>;
 }
 
 export interface CollectionContextValue extends Collection {
@@ -22,6 +34,20 @@ export const CollectionContext = createContext<CollectionContextValue>({
   setSingleFile: () => undefined,
 });
 
+function formatCollection(owners: ItemsOwner[]): Collection {
+  owners.sort((a, b) => ownerName(a).localeCompare(ownerName(b)));
+  const hasPlugY = owners.some((owner) => isStash(owner));
+  const lastActivePlugyStashPage = hasPlugY
+    ? findDuplicates(owners)
+    : undefined;
+  const allItems = owners.flatMap((owner) =>
+    !isStash(owner) && lastActivePlugyStashPage?.has(owner)
+      ? []
+      : getAllItems(owner)
+  );
+  return { owners, allItems, lastActivePlugyStashPage };
+}
+
 export function CollectionProvider({ children }: RenderableProps<unknown>) {
   const [collection, setInternalCollection] = useState<Collection>({
     owners: [],
@@ -29,10 +55,7 @@ export function CollectionProvider({ children }: RenderableProps<unknown>) {
   });
 
   const setCollection = useCallback((owners: ItemsOwner[]) => {
-    owners.sort((a, b) => ownerName(a).localeCompare(ownerName(b)));
-    // FIXME: items are duplicated between the character file and the first page of the PlugY stash!
-    const allItems = owners.flatMap((owner) => getAllItems(owner));
-    setInternalCollection({ owners, allItems });
+    setInternalCollection(formatCollection(owners));
   }, []);
 
   const setSingleFile = useCallback((owner: ItemsOwner) => {
@@ -46,8 +69,7 @@ export function CollectionProvider({ children }: RenderableProps<unknown>) {
       } else {
         newOwners.push(owner);
       }
-      const allItems = newOwners.flatMap((o) => getAllItems(o));
-      return { owners: newOwners, allItems };
+      return formatCollection(newOwners);
     });
   }, []);
 

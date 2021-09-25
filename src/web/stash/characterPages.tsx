@@ -41,7 +41,10 @@ function findPage(item: Item): PageName {
   }
 }
 
-export function characterPages(character: Character): Page[] {
+export function characterPages(
+  character: Character,
+  ignoreStash: boolean
+): Page[] {
   const pages = new Map<PageName, Page>();
   function addItem(page: PageName, item: Item) {
     let existing = pages.get(page);
@@ -57,6 +60,6 @@ export function characterPages(character: Character): Page[] {
   }
 
   return PAGE_NAMES.map((name) => pages.get(name)).filter(
-    (page): page is Page => !!page
+    (page): page is Page => !!page && (!ignoreStash || page.name !== "Stash")
   );
 }
