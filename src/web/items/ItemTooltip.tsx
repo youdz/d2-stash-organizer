@@ -48,7 +48,12 @@ export function ItemTooltip({ item }: { item: Item }) {
 
   const setItemMods = item.setItemModifiers?.flatMap((mods) =>
     mods.map(
-      ({ description }) => description && <div class="set">{description}</div>
+      ({ description, range }) =>
+        description && (
+          <div class="set">
+            {description} <Range range={range} />
+          </div>
+        )
     )
   );
 

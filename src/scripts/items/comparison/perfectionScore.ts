@@ -57,6 +57,7 @@ export function computePerfectionScore(item: Item) {
   if (!item.modifiers) return 0;
 
   let ranges: ModifierRange[];
+  let allModifiers = item.modifiers;
   if (item.runeword) {
     ranges = RUNEWORDS[item.runewordId!].modifiers;
   } else if (item.quality === ItemQuality.UNIQUE) {
@@ -66,6 +67,7 @@ export function computePerfectionScore(item: Item) {
       ...SET_ITEMS[item.unique!].baseModifiers,
       ...SET_ITEMS[item.unique!].setModifiers.flat(),
     ];
+    allModifiers = [...item.modifiers, ...item.setItemModifiers!.flat()];
   } else {
     throw new Error(
       "Only uniques, sets and runewords have a perfection score."
@@ -98,7 +100,7 @@ export function computePerfectionScore(item: Item) {
       addProp(item.sockets!, ...item.socketsRange);
       continue;
     }
-    checkRange(range, item.modifiers, addProp);
+    checkRange(range, allModifiers, addProp);
   }
 
   if (
