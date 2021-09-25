@@ -1,10 +1,11 @@
+import { EndOfStreamError } from "../../errors/EndOfStreamError";
+
 export interface BinaryStream {
   readonly raw: string;
   // If position is not specified, calls to these read the stream in sequence
   read(size: number, position?: number): string;
   readInt(size: number, position?: number): number;
   readBool(position?: number): boolean;
-  remainingBits(): number;
 }
 
 export function binaryStream(buffer: Uint8Array): BinaryStream {
@@ -13,6 +14,9 @@ export function binaryStream(buffer: Uint8Array): BinaryStream {
   const stream = {
     raw: binary,
     read(length: number, position = nextIndex) {
+      if (position + length > binary.length) {
+        throw new EndOfStreamError();
+      }
       nextIndex = position + length;
       return binary.slice(position, position + length);
     },
@@ -21,9 +25,6 @@ export function binaryStream(buffer: Uint8Array): BinaryStream {
     },
     readBool(position = nextIndex) {
       return stream.read(1, position) === "1";
-    },
-    remainingBits() {
-      return binary.length - nextIndex;
     },
   };
   return stream;
