@@ -5,11 +5,16 @@ import {
   ItemStorageType,
 } from "../../scripts/items/types/ItemLocation";
 
+export interface GroupedItem {
+  item: Item;
+  quantity: number;
+}
+
 /**
  * Groups simple items together with a quantity, leaves others alone
  */
 export function groupItems(items: Item[]) {
-  const grouped = new Map<string, { item: Item; quantity: number }>();
+  const grouped = new Map<string, GroupedItem>();
   let uid = 0;
   for (const item of items) {
     if (isSimpleItem(item)) {

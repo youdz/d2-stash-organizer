@@ -12,6 +12,7 @@ import {
 } from "../controls/QualityFilter";
 import { isStash, ownerName } from "../../scripts/save-file/ownership";
 import { characterPages } from "./characterPages";
+import { SelectAll } from "../controls/SelectAll";
 
 const PAGE_SIZE = 10;
 
@@ -50,6 +51,11 @@ export function StashView() {
     );
   }, [rawPages, search, quality]);
 
+  const filteredItems = useMemo(
+    () => filteredPages.flatMap(({ items }) => items),
+    [filteredPages]
+  );
+
   // Reset to the first page when the owner changes
   useEffect(() => {
     setCurrentPage(0);
@@ -61,7 +67,9 @@ export function StashView() {
       pageSize={PAGE_SIZE}
       currentEntry={currentPage}
       onChange={setCurrentPage}
-      entryType="Pages"
+      text={(first, last) =>
+        `Pages ${first} - ${last} out of ${filteredPages.length}`
+      }
     />
   );
 
@@ -90,6 +98,7 @@ export function StashView() {
           Search for an item or a page:
         </Search>
         <QualityFilter value={quality} onChange={setQuality} />
+        <SelectAll items={filteredItems} />
       </div>
       {pagination}
       {/* Need an extra div because Preact doesn't seem to like maps flat with non-mapped elements */}

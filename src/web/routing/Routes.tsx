@@ -1,11 +1,13 @@
 import { RenderableProps } from "preact";
-import { useEffect, useMemo, useState } from "preact/hooks";
+import { useContext, useEffect, useMemo, useState } from "preact/hooks";
 import { GrailTracker } from "../grail/GrailTracker";
 import { StashView } from "../stash/StashView";
 import "./Navigation.css";
 import { Organizer } from "../organizer/Organizer";
 import { Collection } from "../collection/Collection";
 import { SaveFiles } from "../save-files/SaveFiles";
+import { SelectionContext } from "../move/SelectionContext";
+import { MoveItems } from "../move/MoveItems";
 
 function NavLink({
   hash,
@@ -22,6 +24,7 @@ function NavLink({
 
 export function Routes() {
   const [currentHash, setCurrentHash] = useState(location.hash);
+  const { selectedItems } = useContext(SelectionContext);
 
   useEffect(() => {
     const listener = () => setCurrentHash(location.hash);
@@ -35,6 +38,8 @@ export function Routes() {
         return <Collection />;
       case "#characters":
         return <StashView />;
+      case "#move":
+        return <MoveItems />;
       case "#organize":
         return <Organizer />;
       case "#grail-tracker":
@@ -51,6 +56,7 @@ export function Routes() {
         </NavLink>
         <NavLink hash="#collection">Collection</NavLink>
         <NavLink hash="#characters">Characters</NavLink>
+        <NavLink hash="#move">Move {selectedItems.size} items</NavLink>
         <NavLink hash="#organize">Organize</NavLink>
         <NavLink hash="#grail-tracker">Grail tracker</NavLink>
       </nav>

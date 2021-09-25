@@ -32,6 +32,7 @@ export function Page({ page, index }: PageProps) {
             key={item.id ?? index}
             item={item}
             quantity={quantity}
+            selectable={true}
             withLocation={false}
           />
         ))}

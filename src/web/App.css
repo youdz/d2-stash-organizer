@@ -6,6 +6,15 @@ h1 {
   display: none;
 }
 
+.sr-only {
+  position: fixed;
+  top: -1px;
+  left: -1px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
 .button {
   appearance: none;
   margin: 0;

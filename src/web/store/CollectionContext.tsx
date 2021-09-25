@@ -11,6 +11,7 @@ import {
 import { Character } from "../../scripts/character/types";
 import { Stash } from "../../scripts/stash/types";
 import { findDuplicates } from "./plugyDuplicates";
+import { ItemStorageType } from "../../scripts/items/types/ItemLocation";
 
 interface Collection {
   owners: ItemsOwner[];
@@ -42,11 +43,13 @@ function formatCollection(owners: ItemsOwner[]): Collection {
   const lastActivePlugyStashPage = hasPlugY
     ? findDuplicates(owners)
     : undefined;
-  const allItems = owners.flatMap((owner) =>
-    !isStash(owner) && lastActivePlugyStashPage?.has(owner)
-      ? []
-      : getAllItems(owner)
-  );
+  const allItems = owners.flatMap((owner) => {
+    let items = getAllItems(owner);
+    if (!isStash(owner) && lastActivePlugyStashPage?.has(owner)) {
+      items = items.filter((item) => item.stored !== ItemStorageType.STASH);
+    }
+    return items;
+  });
   return { owners, allItems, hasPlugY, lastActivePlugyStashPage };
 }
 

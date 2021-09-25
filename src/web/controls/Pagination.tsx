@@ -1,3 +1,4 @@
+import { ComponentChild } from "preact";
 import { StateUpdater, useEffect } from "preact/hooks";
 import "./Pagination.css";
 
@@ -6,7 +7,7 @@ export interface PaginationProps {
   pageSize: number;
   currentEntry: number;
   onChange: StateUpdater<number>;
-  entryType: string;
+  text: (first: number, last: number) => ComponentChild;
 }
 
 export function Pagination({
@@ -14,7 +15,7 @@ export function Pagination({
   pageSize,
   currentEntry,
   onChange,
-  entryType,
+  text,
 }: PaginationProps) {
   const lastPossible = Math.floor((nbEntries - 1) / pageSize) * pageSize;
 
@@ -40,8 +41,7 @@ export function Pagination({
         </button>
       </div>
       <span>
-        {entryType} {currentEntry + 1} -{" "}
-        {Math.min(currentEntry + pageSize, nbEntries)} out of {nbEntries}
+        {text(currentEntry + 1, Math.min(currentEntry + pageSize, nbEntries))}
       </span>
       <div
         style={{

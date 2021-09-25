@@ -1,9 +1,6 @@
 import "./Collection.css";
-import { useContext, useEffect, useMemo, useState } from "preact/hooks";
+import { useContext, useMemo, useState } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
-import { Item } from "../items/Item";
-import { groupItems } from "../items/groupItems";
-import { Pagination } from "../controls/Pagination";
 import "../controls/Controls.css";
 import { Search, searchItems } from "../controls/Search";
 import {
@@ -11,29 +8,19 @@ import {
   QualityFilter,
   QualityFilterValue,
 } from "../controls/QualityFilter";
+import { ItemsTable } from "./ItemsTable";
+import { SelectAll } from "../controls/SelectAll";
 
 export function Collection() {
   const { allItems } = useContext(CollectionContext);
   const [search, setSearch] = useState("");
   const [quality, setQuality] = useState<QualityFilterValue>("all");
   const [pageSize, setPageSize] = useState(20);
-  const [firstItem, setFirstItem] = useState(0);
 
   const filteredItems = useMemo(
     () => filterItemsByQuality(searchItems(allItems, search), quality),
     [allItems, search, quality]
   );
-
-  // We group simple items together with a quantity, leave others alone
-  const groupedItems = useMemo(
-    () => groupItems(filteredItems),
-    [filteredItems]
-  );
-
-  // Reset to the first page when the collection changes
-  useEffect(() => {
-    setFirstItem(0);
-  }, [allItems]);
 
   return (
     <>
@@ -61,36 +48,10 @@ export function Collection() {
             </select>
           </p>
         </div>
+        <SelectAll items={filteredItems} />
       </div>
 
-      <Pagination
-        nbEntries={groupedItems.length}
-        pageSize={pageSize}
-        currentEntry={firstItem}
-        onChange={setFirstItem}
-        entryType="Items"
-      />
-      <table id="collection">
-        <thead>
-          <tr class="sidenote">
-            <th>Item</th>
-            <th>Characteristics</th>
-            <th>Location</th>
-          </tr>
-        </thead>
-        <tbody>
-          {groupedItems
-            .slice(firstItem, firstItem + pageSize)
-            .map(({ item, quantity }, index) => (
-              <Item
-                key={item.id ?? index}
-                item={item}
-                quantity={quantity}
-                withLocation={true}
-              />
-            ))}
-        </tbody>
-      </table>
+      <ItemsTable items={filteredItems} selectable={true} pageSize={pageSize} />
     </>
   );
 }

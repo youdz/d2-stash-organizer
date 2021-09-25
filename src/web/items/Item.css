@@ -6,3 +6,7 @@
 .item th {
   width: 400px;
 }
+
+.item td:first-child {
+  width: 2em;
+}

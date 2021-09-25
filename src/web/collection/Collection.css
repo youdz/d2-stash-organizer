@@ -7,7 +7,7 @@
   padding-bottom: 0.4em;
 }
 
-#collection .item td {
+#collection .item td:not(:first-child) {
   padding: 0 2em;
 }
 
