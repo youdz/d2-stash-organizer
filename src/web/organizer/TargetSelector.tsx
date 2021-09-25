@@ -1,17 +1,18 @@
 import { StateUpdater, useContext } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
 import { numberInputChangeHandler } from "./numberInputChangeHandler";
+import { isStash, ownerName } from "../../scripts/save-file/ownership";
 
 export interface TargetSelectorProps {
-  target: string;
-  setTarget: StateUpdater<string>;
+  targetIndex: number;
+  setTargetIndex: StateUpdater<number>;
   emptyPages: number;
   setEmptyPages: StateUpdater<number>;
 }
 
 export function TargetSelector({
-  target,
-  setTarget,
+  targetIndex,
+  setTargetIndex,
   emptyPages,
   setEmptyPages,
 }: TargetSelectorProps) {
@@ -22,13 +23,13 @@ export function TargetSelector({
       Move them to{" "}
       <select
         id="character-select"
-        value={target}
-        onChange={({ currentTarget }) => setTarget(currentTarget.value)}
+        value={targetIndex}
+        onChange={({ currentTarget }) =>
+          setTargetIndex(Number(currentTarget.value))
+        }
       >
-        {Array.from(owners.keys()).map((name) => (
-          <option value={name}>
-            {name ? `${name}'s stash` : "Shared stash"}
-          </option>
+        {owners.filter(isStash).map((stash, i) => (
+          <option value={i}>{ownerName(stash)}</option>
         ))}
       </select>
       , leaving{" "}

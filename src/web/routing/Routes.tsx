@@ -36,7 +36,7 @@ export function Routes() {
       case "#characters":
         return <StashView />;
       case "#organize":
-      // return <Organizer />;
+        return <Organizer />;
       case "#grail-tracker":
         return <GrailTracker />;
       default:

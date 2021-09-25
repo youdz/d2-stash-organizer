@@ -3,7 +3,7 @@ import { CollectionContext } from "../store/CollectionContext";
 import { FilePicker } from "./FilePicker";
 import "./SaveFiles.css";
 import { UPLOAD_CONFIRM } from "../store/singleStashConfirmation";
-import { isStash, ownerName } from "../../scripts/save-file/ownership";
+import { PrettyOwnerName } from "./PrettyOwnerName";
 
 const dateFormatter = Intl.DateTimeFormat(undefined, {
   dateStyle: "long",
@@ -19,8 +19,8 @@ export function SaveFiles() {
     for (const owner of owners) {
       details.push(
         <tr>
-          <td class={isStash(owner) && !owner.personal ? "magic" : "unique"}>
-            {ownerName(owner)}
+          <td>
+            <PrettyOwnerName owner={owner} />
           </td>
           <td>{dateFormatter.format(new Date(owner.lastModified))}</td>
         </tr>

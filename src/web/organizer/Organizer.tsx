@@ -14,62 +14,62 @@ import { Item } from "../../scripts/items/types/Item";
 import { DOWNLOAD_CONFIRM } from "../store/singleStashConfirmation";
 import { OrganizerSources, SourceSelector } from "./SourceSelector";
 import { TargetSelector } from "./TargetSelector";
-import { isStash } from "../../scripts/save-file/ownership";
+import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
 
 export function Organizer() {
-  const { owners, setCollection } = useContext(CollectionContext);
+  const { owners, setCollection, hasPlugY } = useContext(CollectionContext);
 
-  const [sources, setSources] = useState<OrganizerSources>({
-    "": { selected: true, skipPages: 1 },
-  });
+  // TODO: initialize with the shared stash selected
+  const [sources, setSources] = useState<OrganizerSources>([]);
 
-  const [target, setTarget] = useState("");
+  // TODO: initialize with the shared stash selected
+  const [targetIndex, setTargetIndex] = useState(-1);
   const [emptyPages, setEmptyPages] = useState(0);
-
-  const targetStash = owners.get(target);
 
   const handleOrganize = useCallback(
     async (singleStash?: boolean) => {
-      if (!targetStash || !isStash(targetStash)) {
+      const target = owners[targetIndex];
+      if (!target || !isStash(target)) {
         return;
       }
       try {
         // TODO: backup before doing all this, to roll back if failed
         const fromOtherSources: Item[] = [];
         if (!singleStash) {
-          for (const [name, owner] of owners.entries()) {
+          owners.forEach((owner, i) => {
             // TODO: take items from characters
             if (!isStash(owner)) {
-              continue;
+              return;
             }
-            if (name !== target && sources[name]?.selected) {
+            if (i !== targetIndex && sources[i]?.selected) {
               fromOtherSources.push(
-                ...deletePages(owner, sources[name]?.skipPages ?? 0)
+                ...deletePages(owner, sources[i]?.skipPages ?? 0)
               );
             }
-          }
+          });
         }
 
         organize(
-          targetStash,
+          target,
           fromOtherSources,
-          sources[target]?.skipPages,
+          sources[targetIndex]?.skipPages,
           emptyPages
         );
 
-        const saveFiles = [];
         let targetFile: File | undefined;
-        for (const [name, owner] of owners.entries()) {
-          // TODO
-          if (!isStash(owner)) {
-            continue;
-          }
-          const file = stashToFile(owner);
-          saveFiles.push(file);
-          if (name === target) {
-            targetFile = file;
-          }
-        }
+        const saveFiles = owners
+          .map((owner, i) => {
+            // TODO: Support writing character files
+            if (!isStash(owner)) {
+              return;
+            }
+            const file = stashToFile(owner);
+            if (i === targetIndex) {
+              targetFile = file;
+            }
+            return file;
+          })
+          .filter((file): file is File => !!file);
         await writeAllFiles(saveFiles);
         // Set the state to force a re-render of the app.
         setCollection(Array.from(owners.values()));
@@ -85,11 +85,10 @@ export function Organizer() {
         throw e;
       }
     },
-    [owners, emptyPages, setCollection, sources, target, targetStash]
+    [owners, emptyPages, setCollection, sources, targetIndex]
   );
 
-  // Doesn't do anything right now, since we only read PlugY stash files
-  if (!owners.has("")) {
+  if (!hasPlugY) {
     return (
       <p>
         This feature requires{" "}
@@ -113,13 +112,13 @@ export function Organizer() {
         <SourceSelector
           sources={sources}
           setSources={setSources}
-          target={target}
+          targetIndex={targetIndex}
         />
       </li>
       <li>
         <TargetSelector
-          target={target}
-          setTarget={setTarget}
+          targetIndex={targetIndex}
+          setTargetIndex={setTargetIndex}
           emptyPages={emptyPages}
           setEmptyPages={setEmptyPages}
         />
@@ -128,12 +127,12 @@ export function Organizer() {
       <li>
         <button
           class="button"
-          disabled={!targetStash}
+          disabled={targetIndex < 0}
           onClick={() => handleOrganize()}
         >
           Download updated save files
         </button>
-        {targetStash && nbSources === 1 && sources[target]?.selected && (
+        {targetIndex >= 0 && nbSources === 1 && sources[targetIndex]?.selected && (
           <button
             class="button danger"
             onClick={() =>

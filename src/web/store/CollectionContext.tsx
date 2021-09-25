@@ -15,6 +15,7 @@ import { findDuplicates } from "./plugyDuplicates";
 interface Collection {
   owners: ItemsOwner[];
   allItems: Item[];
+  hasPlugY: boolean;
   /*
    * PlugY copies the last active stash page to the .d2s file on save, which results in duplicates for us.
    * If we find a PlugY stash for a character, we ignore the character's stash items.
@@ -30,6 +31,7 @@ export interface CollectionContextValue extends Collection {
 export const CollectionContext = createContext<CollectionContextValue>({
   owners: [],
   allItems: [],
+  hasPlugY: false,
   setCollection: () => undefined,
   setSingleFile: () => undefined,
 });
@@ -45,13 +47,14 @@ function formatCollection(owners: ItemsOwner[]): Collection {
       ? []
       : getAllItems(owner)
   );
-  return { owners, allItems, lastActivePlugyStashPage };
+  return { owners, allItems, hasPlugY, lastActivePlugyStashPage };
 }
 
 export function CollectionProvider({ children }: RenderableProps<unknown>) {
   const [collection, setInternalCollection] = useState<Collection>({
     owners: [],
     allItems: [],
+    hasPlugY: false,
   });
 
   const setCollection = useCallback((owners: ItemsOwner[]) => {
