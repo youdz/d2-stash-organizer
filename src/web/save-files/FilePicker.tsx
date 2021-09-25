@@ -22,7 +22,11 @@ export function FilePicker({
         if (file.webkitRelativePath.split("/").length > 2) {
           continue;
         }
-        if (file.name.endsWith(".sss") || file.name.endsWith(".d2x")) {
+        if (
+          file.name.endsWith(".sss") ||
+          file.name.endsWith(".d2x") ||
+          file.name.endsWith(".d2s")
+        ) {
           usableFiles.push(file);
         }
       }

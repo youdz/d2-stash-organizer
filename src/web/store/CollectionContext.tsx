@@ -7,7 +7,7 @@ import { ItemsOwner, ownerName } from "../../scripts/save-file/ownership";
 
 interface Collection {
   // TODO: can this just be an array?
-  owner: Map<string, ItemsOwner>;
+  owners: Map<string, ItemsOwner>;
   allItems: Item[];
 }
 
@@ -17,7 +17,7 @@ export interface CollectionContextValue extends Collection {
 }
 
 export const CollectionContext = createContext<CollectionContextValue>({
-  owner: new Map(),
+  owners: new Map(),
   allItems: [],
   setCollection: () => undefined,
   setSingleFile: () => undefined,
@@ -25,7 +25,7 @@ export const CollectionContext = createContext<CollectionContextValue>({
 
 export function CollectionProvider({ children }: RenderableProps<unknown>) {
   const [collection, setInternalCollection] = useState<Collection>({
-    owner: new Map(),
+    owners: new Map(),
     allItems: [],
   });
 
@@ -35,18 +35,19 @@ export function CollectionProvider({ children }: RenderableProps<unknown>) {
         .map((owner) => [ownerName(owner), owner] as const)
         .sort(([a], [b]) => a.localeCompare(b))
     );
+    // FIXME: items are duplicated between the character file and the first page of the PlugY stash!
     const allItems = owners.flatMap((owner) => getAllItems(owner));
-    setInternalCollection({ owner: characters, allItems });
+    setInternalCollection({ owners: characters, allItems });
   }, []);
 
   const setSingleFile = useCallback((owner: ItemsOwner) => {
     setInternalCollection((previous) => {
-      const owners = new Map(previous.owner);
+      const owners = new Map(previous.owners);
       owners.set(ownerName(owner), owner);
       const allItems = Array.from(owners.values()).flatMap((o) =>
         getAllItems(o)
       );
-      return { owner: owners, allItems };
+      return { owners: owners, allItems };
     });
   }, []);
 

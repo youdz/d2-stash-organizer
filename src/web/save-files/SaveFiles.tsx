@@ -10,21 +10,21 @@ const dateFormatter = Intl.DateTimeFormat(undefined, {
 });
 
 export function SaveFiles() {
-  const { owner } = useContext(CollectionContext);
+  const { owners } = useContext(CollectionContext);
   const [allowSingleFile, setAllowSingleFile] = useState(false);
 
   const charactersDetail = useMemo(() => {
     const details = [];
-    for (const [name, { stash }] of owner.entries()) {
+    for (const [name, owner] of owners.entries()) {
       details.push(
         <tr>
           <td class={name ? "unique" : "magic"}>{name || "Shared stash"}</td>
-          <td>{dateFormatter.format(new Date(stash.lastModified))}</td>
+          <td>{dateFormatter.format(new Date(owner.lastModified))}</td>
         </tr>
       );
     }
     return details;
-  }, [owner]);
+  }, [owners]);
 
   return (
     <>
@@ -34,7 +34,7 @@ export function SaveFiles() {
       </p>
       <p>
         <FilePicker folder={true}>
-          {owner.size === 0 ? "Upload" : "Refresh"} all my save files
+          {owners.size === 0 ? "Upload" : "Refresh"} all my save files
         </FilePicker>
         {!allowSingleFile && (
           <button
@@ -48,7 +48,7 @@ export function SaveFiles() {
         )}
         {allowSingleFile && (
           <FilePicker folder={false}>
-            {owner.size === 0 ? "Upload" : "Update"} a single stash
+            {owners.size === 0 ? "Upload" : "Update"} a single stash
           </FilePicker>
         )}
       </p>

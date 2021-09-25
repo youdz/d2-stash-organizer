@@ -10,11 +10,12 @@ import {
   QualityFilter,
   QualityFilterValue,
 } from "../controls/QualityFilter";
+import { isStash } from "../../scripts/save-file/ownership";
 
 const PAGE_SIZE = 10;
 
 export function StashView() {
-  const { owner } = useContext(CollectionContext);
+  const { owners } = useContext(CollectionContext);
   // TODO: if not PlugY, initialize to an actual character because there is no shared stash
   const [character, setCharacter] = useState("");
   const [search, setSearch] = useState("");
@@ -22,8 +23,12 @@ export function StashView() {
   const [currentPage, setCurrentPage] = useState(0);
 
   const stash = useMemo(() => {
-    return owner.get(character)?.stash;
-  }, [owner, character]);
+    const owner = owners.get(character);
+    if (owner && isStash(owner)) {
+      return owner;
+    }
+    return;
+  }, [owners, character]);
 
   const pages = useMemo(() => {
     return stash?.pages
@@ -45,11 +50,11 @@ export function StashView() {
 
   const characterOptions = useMemo(() => {
     const options = [];
-    for (const name of owner.keys()) {
+    for (const name of owners.keys()) {
       options.push(<option value={name}>{name || "Shared stash"}</option>);
     }
     return options;
-  }, [owner]);
+  }, [owners]);
 
   if (!pages) {
     return null;

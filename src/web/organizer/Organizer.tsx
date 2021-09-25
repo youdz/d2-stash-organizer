@@ -14,9 +14,10 @@ import { Item } from "../../scripts/items/types/Item";
 import { DOWNLOAD_CONFIRM } from "../store/singleStashConfirmation";
 import { OrganizerSources, SourceSelector } from "./SourceSelector";
 import { TargetSelector } from "./TargetSelector";
+import { isStash } from "../../scripts/save-file/ownership";
 
 export function Organizer() {
-  const { owner, setCollection } = useContext(CollectionContext);
+  const { owners, setCollection } = useContext(CollectionContext);
 
   const [sources, setSources] = useState<OrganizerSources>({
     "": { selected: true, skipPages: 1 },
@@ -25,21 +26,25 @@ export function Organizer() {
   const [target, setTarget] = useState("");
   const [emptyPages, setEmptyPages] = useState(0);
 
-  const targetStash = owner.get(target)?.stash;
+  const targetStash = owners.get(target);
 
   const handleOrganize = useCallback(
     async (singleStash?: boolean) => {
-      if (!targetStash) {
+      if (!targetStash || !isStash(targetStash)) {
         return;
       }
       try {
         // TODO: backup before doing all this, to roll back if failed
         const fromOtherSources: Item[] = [];
         if (!singleStash) {
-          for (const [character, { stash }] of owner.entries()) {
-            if (character !== target && sources[character]?.selected) {
+          for (const [name, owner] of owners.entries()) {
+            // TODO: take items from characters
+            if (!isStash(owner)) {
+              continue;
+            }
+            if (name !== target && sources[name]?.selected) {
               fromOtherSources.push(
-                ...deletePages(stash, sources[character]?.skipPages ?? 0)
+                ...deletePages(owner, sources[name]?.skipPages ?? 0)
               );
             }
           }
@@ -54,16 +59,20 @@ export function Organizer() {
 
         const saveFiles = [];
         let targetFile: File | undefined;
-        for (const [character, { stash }] of owner.entries()) {
-          const file = stashToFile(stash);
+        for (const [name, owner] of owners.entries()) {
+          // TODO
+          if (!isStash(owner)) {
+            continue;
+          }
+          const file = stashToFile(owner);
           saveFiles.push(file);
-          if (character === target) {
+          if (name === target) {
             targetFile = file;
           }
         }
         await writeAllFiles(saveFiles);
         // Set the state to force a re-render of the app.
-        setCollection(Array.from(owner.values()).map(({ stash }) => stash));
+        setCollection(Array.from(owners.values()));
         if (singleStash && targetFile) {
           downloadStash(targetFile, targetFile.name);
         } else {
@@ -76,11 +85,11 @@ export function Organizer() {
         throw e;
       }
     },
-    [owner, emptyPages, setCollection, sources, target, targetStash]
+    [owners, emptyPages, setCollection, sources, target, targetStash]
   );
 
   // Doesn't do anything right now, since we only read PlugY stash files
-  if (!owner.has("")) {
+  if (!owners.has("")) {
     return (
       <p>
         This feature requires{" "}

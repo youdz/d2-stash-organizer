@@ -3,6 +3,7 @@ import { Character } from "../types";
 import { parseAttributes } from "./parseAttributes";
 import { parseItemList } from "../../items/parsing/parseItemList";
 import { parseMercenary } from "./parseMercenary";
+import { postProcessCharacter } from "./postProcessCharacter";
 
 // Can't use Node's Buffer because this needs to run in the browser
 export function parseCharacter(
@@ -37,7 +38,6 @@ export function parseCharacter(
     character.items.push(...parseMercenary(reader));
   }
 
-  // TODO: post-process items
-
+  postProcessCharacter(character);
   return character;
 }

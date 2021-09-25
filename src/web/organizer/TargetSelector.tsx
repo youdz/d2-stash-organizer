@@ -15,7 +15,7 @@ export function TargetSelector({
   emptyPages,
   setEmptyPages,
 }: TargetSelectorProps) {
-  const { owner } = useContext(CollectionContext);
+  const { owners } = useContext(CollectionContext);
 
   return (
     <>
@@ -25,7 +25,7 @@ export function TargetSelector({
         value={target}
         onChange={({ currentTarget }) => setTarget(currentTarget.value)}
       >
-        {Array.from(owner.keys()).map((name) => (
+        {Array.from(owners.keys()).map((name) => (
           <option value={name}>
             {name ? `${name}'s stash` : "Shared stash"}
           </option>
