@@ -6,8 +6,7 @@ import { getAllItems } from "../../scripts/stash/getAllItems";
 import { ItemsOwner, ownerName } from "../../scripts/save-file/ownership";
 
 interface Collection {
-  // TODO: can this just be an array?
-  owners: Map<string, ItemsOwner>;
+  owners: ItemsOwner[];
   allItems: Item[];
 }
 
@@ -17,7 +16,7 @@ export interface CollectionContextValue extends Collection {
 }
 
 export const CollectionContext = createContext<CollectionContextValue>({
-  owners: new Map(),
+  owners: [],
   allItems: [],
   setCollection: () => undefined,
   setSingleFile: () => undefined,
@@ -25,29 +24,30 @@ export const CollectionContext = createContext<CollectionContextValue>({
 
 export function CollectionProvider({ children }: RenderableProps<unknown>) {
   const [collection, setInternalCollection] = useState<Collection>({
-    owners: new Map(),
+    owners: [],
     allItems: [],
   });
 
   const setCollection = useCallback((owners: ItemsOwner[]) => {
-    const characters = new Map(
-      owners
-        .map((owner) => [ownerName(owner), owner] as const)
-        .sort(([a], [b]) => a.localeCompare(b))
-    );
+    owners.sort((a, b) => ownerName(a).localeCompare(ownerName(b)));
     // FIXME: items are duplicated between the character file and the first page of the PlugY stash!
     const allItems = owners.flatMap((owner) => getAllItems(owner));
-    setInternalCollection({ owners: characters, allItems });
+    setInternalCollection({ owners, allItems });
   }, []);
 
   const setSingleFile = useCallback((owner: ItemsOwner) => {
     setInternalCollection((previous) => {
-      const owners = new Map(previous.owners);
-      owners.set(ownerName(owner), owner);
-      const allItems = Array.from(owners.values()).flatMap((o) =>
-        getAllItems(o)
+      const newOwners = [...previous.owners];
+      const existing = newOwners.findIndex(
+        (o) => o.filename === owner.filename
       );
-      return { owners: owners, allItems };
+      if (existing >= 0) {
+        newOwners.splice(existing, 1, owner);
+      } else {
+        newOwners.push(owner);
+      }
+      const allItems = newOwners.flatMap((o) => getAllItems(o));
+      return { owners: newOwners, allItems };
     });
   }, []);
 

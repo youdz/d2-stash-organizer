@@ -25,6 +25,10 @@ export function Pagination({
     }
   }, [nbEntries, currentEntry, onChange]);
 
+  if (lastPossible <= 0) {
+    return null;
+  }
+
   return (
     <div class="pagination">
       <div style={{ visibility: currentEntry === 0 ? "hidden" : "visible" }}>

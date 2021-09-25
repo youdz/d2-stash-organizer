@@ -1,6 +1,9 @@
 import { Item } from "../../scripts/items/types/Item";
 import { isSimpleItem } from "../collection/utils/isSimpleItem";
-import { ItemLocation } from "../../scripts/items/types/ItemLocation";
+import {
+  ItemLocation,
+  ItemStorageType,
+} from "../../scripts/items/types/ItemLocation";
 
 /**
  * Groups simple items together with a quantity, leaves others alone
@@ -15,8 +18,10 @@ export function groupItems(items: Item[]) {
         existing = { item, quantity: 0 };
         grouped.set(item.code, existing);
       } else if (
-        existing.item.location !== ItemLocation.STORED &&
-        item.location === ItemLocation.STORED
+        (existing.item.location !== ItemLocation.STORED &&
+          item.location === ItemLocation.STORED) ||
+        (existing.item.stored !== ItemStorageType.STASH &&
+          item.stored === ItemStorageType.STASH)
       ) {
         existing.item = item;
       }

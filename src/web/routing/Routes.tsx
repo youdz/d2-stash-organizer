@@ -33,10 +33,10 @@ export function Routes() {
     switch (currentHash) {
       case "#collection":
         return <Collection />;
-      case "#stash":
+      case "#characters":
         return <StashView />;
       case "#organize":
-        return <Organizer />;
+      // return <Organizer />;
       case "#grail-tracker":
         return <GrailTracker />;
       default:
@@ -50,7 +50,7 @@ export function Routes() {
           Save files
         </NavLink>
         <NavLink hash="#collection">Collection</NavLink>
-        <NavLink hash="#stash">Stashes</NavLink>
+        <NavLink hash="#characters">Characters</NavLink>
         <NavLink hash="#organize">Organize</NavLink>
         <NavLink hash="#grail-tracker">Grail tracker</NavLink>
       </nav>

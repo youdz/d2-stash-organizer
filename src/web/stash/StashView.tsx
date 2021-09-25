@@ -10,59 +10,54 @@ import {
   QualityFilter,
   QualityFilterValue,
 } from "../controls/QualityFilter";
-import { isStash } from "../../scripts/save-file/ownership";
+import { isStash, ownerName } from "../../scripts/save-file/ownership";
+import { characterPages } from "./characterPages";
 
 const PAGE_SIZE = 10;
 
 export function StashView() {
   const { owners } = useContext(CollectionContext);
-  // TODO: if not PlugY, initialize to an actual character because there is no shared stash
-  const [character, setCharacter] = useState("");
+  const [ownerIndex, setOwnerIndex] = useState(0);
   const [search, setSearch] = useState("");
   const [quality, setQuality] = useState<QualityFilterValue>("all");
   const [currentPage, setCurrentPage] = useState(0);
 
-  const stash = useMemo(() => {
-    const owner = owners.get(character);
-    if (owner && isStash(owner)) {
-      return owner;
+  const owner = owners[ownerIndex];
+
+  const rawPages = useMemo(() => {
+    if (!owner) {
+      return [];
     }
-    return;
-  }, [owners, character]);
+    if (isStash(owner)) {
+      return owner.pages;
+    } else {
+      return characterPages(owner);
+    }
+  }, [owner]);
 
-  const pages = useMemo(() => {
-    return stash?.pages
-      .map((page, index) => ({
-        ...page,
-        name: pageName(page).replace("#", `${index + 1}`),
-        items: filterItemsByQuality(
-          searchItems(page.items, search, page.name),
-          quality
-        ),
-      }))
-      .filter(({ items }) => items.length > 0);
-  }, [stash, search, quality]);
+  const filteredPages = useMemo(() => {
+    return (
+      rawPages
+        .map((page, index) => ({
+          ...page,
+          name: pageName(page).replace("#", `${index + 1}`),
+          items: filterItemsByQuality(
+            searchItems(page.items, search, page.name),
+            quality
+          ),
+        }))
+        .filter(({ items }) => items.length > 0) ?? []
+    );
+  }, [rawPages, search, quality]);
 
-  // Reset to the first page when the stash changes
+  // Reset to the first page when the owner changes
   useEffect(() => {
     setCurrentPage(0);
-  }, [stash]);
-
-  const characterOptions = useMemo(() => {
-    const options = [];
-    for (const name of owners.keys()) {
-      options.push(<option value={name}>{name || "Shared stash"}</option>);
-    }
-    return options;
-  }, [owners]);
-
-  if (!pages) {
-    return null;
-  }
+  }, [owner]);
 
   const pagination = (
     <Pagination
-      nbEntries={pages.length}
+      nbEntries={filteredPages.length}
       pageSize={PAGE_SIZE}
       currentEntry={currentPage}
       onChange={setCurrentPage}
@@ -80,12 +75,14 @@ export function StashView() {
           <p>
             <select
               id="character-select"
-              value={character}
+              value={ownerIndex}
               onChange={({ currentTarget }) =>
-                setCharacter(currentTarget.value)
+                setOwnerIndex(Number(currentTarget.value))
               }
             >
-              {characterOptions}
+              {owners.map((owner, i) => (
+                <option value={i}>{ownerName(owner)}</option>
+              ))}
             </select>
           </p>
         </div>
@@ -97,7 +94,7 @@ export function StashView() {
       {pagination}
       {/* Need an extra div because Preact doesn't seem to like maps flat with non-mapped elements */}
       <div>
-        {pages
+        {filteredPages
           .slice(currentPage, currentPage + PAGE_SIZE)
           .map((page, index) => (
             <Page key={index} page={page} index={index + currentPage} />
