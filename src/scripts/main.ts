@@ -21,7 +21,7 @@ async function main() {
   const character = parseCharacter(await readFile(CHAR));
   const stash = parseStash(await readFile(STASH));
   for (const item of stash.pages[0].items) {
-    if (!transferItem(item, stash, character, ItemStorageType.CUBE)) {
+    if (!transferItem(item, stash, ItemStorageType.CUBE)) {
       break;
     }
     console.log(`${item.name} at ${item.column}, ${item.row}`);

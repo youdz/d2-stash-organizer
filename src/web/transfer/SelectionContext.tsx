@@ -7,6 +7,7 @@ interface SelectionContext {
   toggleItem(item: Item): void;
   selectAll(items: Item[]): void;
   unselectAll(items: Item[]): void;
+  resetSelection(): void;
 }
 
 export const SelectionContext = createContext<SelectionContext>({
@@ -14,6 +15,7 @@ export const SelectionContext = createContext<SelectionContext>({
   toggleItem: () => undefined,
   selectAll: () => undefined,
   unselectAll: () => undefined,
+  resetSelection: () => undefined,
 });
 
 export function SelectionProvider({ children }: RenderableProps<unknown>) {
@@ -44,14 +46,19 @@ export function SelectionProvider({ children }: RenderableProps<unknown>) {
     []
   );
 
+  const resetSelection = useCallback(() => {
+    setSelectedItems(new Set());
+  }, []);
+
   const value = useMemo(
     () => ({
       selectedItems,
       toggleItem,
       selectAll: toggleAll(true),
       unselectAll: toggleAll(false),
+      resetSelection,
     }),
-    [selectedItems, toggleItem, toggleAll]
+    [selectedItems, toggleItem, toggleAll, resetSelection]
   );
 
   return (

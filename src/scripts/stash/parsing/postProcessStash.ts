@@ -8,10 +8,9 @@ import { ownerName } from "../../save-file/ownership";
  * making mods more searchable or sortable, etc.
  */
 export function postProcessStash(stash: Stash) {
-  const stashName = ownerName(stash);
   stash.pages.forEach(({ items }, pageIndex) => {
     for (const item of items) {
-      item.owner = stashName;
+      item.owner = stash;
       item.page = pageIndex;
       postProcessItem(item);
     }

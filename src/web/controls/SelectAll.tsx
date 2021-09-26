@@ -1,6 +1,6 @@
 import { Item } from "../../scripts/items/types/Item";
 import { useContext, useMemo } from "preact/hooks";
-import { SelectionContext } from "../move/SelectionContext";
+import { SelectionContext } from "../transfer/SelectionContext";
 
 export interface SelectAllProps {
   items: Item[];

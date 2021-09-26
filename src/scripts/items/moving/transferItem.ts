@@ -11,9 +11,12 @@ import { positionItem } from "./positionItem";
 import { PAGE_HEIGHT, PAGE_WIDTH } from "../../stash/dimensions";
 import { fromInt } from "../../save-file/binary";
 
-function takeItemFrom(item: Item, owner: ItemsOwner) {
-  if (isStash(owner)) {
-    for (const page of owner.pages) {
+function takeItemFromCurrentOwner(item: Item) {
+  if (!item.owner) {
+    return;
+  }
+  if (isStash(item.owner)) {
+    for (const page of item.owner.pages) {
       const index = page.items.indexOf(item);
       if (index >= 0) {
         page.items.splice(index, 1);
@@ -21,9 +24,9 @@ function takeItemFrom(item: Item, owner: ItemsOwner) {
       }
     }
   } else {
-    const index = owner.items.indexOf(item);
+    const index = item.owner.items.indexOf(item);
     if (index >= 0) {
-      owner.items.splice(index, 1);
+      item.owner.items.splice(index, 1);
     }
   }
 }
@@ -33,12 +36,7 @@ function giveItemTo(
   owner: ItemsOwner,
   storageType: ItemStorageType
 ) {
-  if (isStash(owner)) {
-    // TODO: where to add to the stash
-  } else {
-    owner.items.push(item);
-  }
-  item.owner = ownerName(owner);
+  item.owner = owner;
   item.location = ItemLocation.STORED;
   item.equippedInSlot = ItemEquipSlot.NONE;
   item.stored = storageType;
@@ -55,7 +53,6 @@ function giveItemTo(
 
 export function transferItem(
   item: Item,
-  from: ItemsOwner,
   to: ItemsOwner,
   storageType = ItemStorageType.STASH,
   pageIndex?: number
@@ -63,16 +60,13 @@ export function transferItem(
   // Try to position first, so we don't reach a state with no owner if there is no room
   if (isStash(to)) {
     // TODO: insert a new page right after with the same name if it overflows.
-    const position = findSpot(
-      item,
-      to.pages[pageIndex ?? 0].items,
-      PAGE_HEIGHT,
-      PAGE_WIDTH
-    );
+    const page = to.pages[pageIndex ?? 0];
+    const position = findSpot(item, page.items, PAGE_HEIGHT, PAGE_WIDTH);
     if (!position) {
       return false;
     }
     positionItem(item, position);
+    page.items.push(item);
     item.page = pageIndex;
   } else {
     const itemsInSameStorage = to.items.filter(
@@ -84,11 +78,12 @@ export function transferItem(
       return false;
     }
     positionItem(item, position);
+    to.items.push(item);
     // TODO: this will need to be smarter for D2R stash
     delete item.page;
   }
 
-  takeItemFrom(item, from);
+  takeItemFromCurrentOwner(item);
   giveItemTo(item, to, storageType);
   return true;
 }

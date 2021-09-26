@@ -6,8 +6,8 @@ import "./Navigation.css";
 import { Organizer } from "../organizer/Organizer";
 import { Collection } from "../collection/Collection";
 import { SaveFiles } from "../save-files/SaveFiles";
-import { SelectionContext } from "../move/SelectionContext";
-import { MoveItems } from "../move/MoveItems";
+import { SelectionContext } from "../transfer/SelectionContext";
+import { TransferItems } from "../transfer/TransferItems";
 
 function NavLink({
   hash,
@@ -38,8 +38,8 @@ export function Routes() {
         return <Collection />;
       case "#characters":
         return <StashView />;
-      case "#move":
-        return <MoveItems />;
+      case "#transfer":
+        return <TransferItems />;
       case "#organize":
         return <Organizer />;
       case "#grail-tracker":
@@ -56,8 +56,10 @@ export function Routes() {
         </NavLink>
         <NavLink hash="#collection">Collection</NavLink>
         <NavLink hash="#characters">Characters</NavLink>
-        <NavLink hash="#move">Move {selectedItems.size} items</NavLink>
-        <NavLink hash="#organize">Organize</NavLink>
+        <NavLink hash="#transfer">
+          Transfer {selectedItems.size ? selectedItems.size : ""} items
+        </NavLink>
+        <NavLink hash="#organize">Organize PlugY stash</NavLink>
         <NavLink hash="#grail-tracker">Grail tracker</NavLink>
       </nav>
       {view}

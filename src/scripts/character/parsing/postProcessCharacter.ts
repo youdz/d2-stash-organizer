@@ -8,15 +8,15 @@ import { ownerName } from "../../save-file/ownership";
  * making mods more searchable or sortable, etc.
  */
 export function postProcessCharacter(character: Character) {
-  const characterName = ownerName(character);
   for (const item of character.items) {
-    if (item.corpse) {
-      item.owner = `${characterName}'s corpse`;
-    } else if (item.mercenary) {
-      item.owner = `${characterName}'s mercenary`;
-    } else {
-      item.owner = characterName;
-    }
+    item.owner = character;
+    // if (item.corpse) {
+    //   item.owner = `${characterName}'s corpse`;
+    // } else if (item.mercenary) {
+    //   item.owner = `${characterName}'s mercenary`;
+    // } else {
+    //   item.owner = characterName;
+    // }
     postProcessItem(item);
   }
 }

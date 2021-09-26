@@ -1,0 +1,33 @@
+#transfer-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#transfer-items .selectors {
+  display: flex;
+  align-items: center;
+}
+
+.selectors .arrow {
+  font-size: 2em;
+  margin: 0 2em;
+}
+
+#source-selector {
+  flex: 0 0 auto;
+}
+
+#transfer-items .error {
+  margin-left: 2em;
+}
+
+#transfer-items h4 {
+  padding-top: 0.4em;
+  margin-top: 3em;
+  border-top: 1px solid #666;
+}
+
+#transfer-items .pagination {
+  margin-top: 0;
+}

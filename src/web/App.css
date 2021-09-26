@@ -15,6 +15,12 @@ h1 {
   overflow: hidden;
 }
 
+a,
+a:visited {
+  color: rgb(199, 179, 119);
+  text-decoration: none;
+}
+
 .button {
   appearance: none;
   margin: 0;

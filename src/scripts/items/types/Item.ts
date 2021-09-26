@@ -1,6 +1,7 @@
 import { ItemQuality } from "./ItemQuality";
 import { ItemEquipSlot, ItemLocation, ItemStorageType } from "./ItemLocation";
 import { Modifier } from "./Modifier";
+import { ItemsOwner } from "../../save-file/ownership";
 
 export interface Item {
   raw: string;
@@ -15,7 +16,7 @@ export interface Item {
   location: ItemLocation;
   equippedInSlot: ItemEquipSlot;
   stored: ItemStorageType;
-  owner: string;
+  owner?: ItemsOwner;
   corpse?: boolean;
   mercenary?: boolean;
   page?: number;

@@ -2,7 +2,7 @@ import { render } from "preact";
 import "./App.css";
 import { GitHubLink } from "./GitHubLink";
 import { CollectionProvider } from "./store/CollectionContext";
-import { SelectionProvider } from "./move/SelectionContext";
+import { SelectionProvider } from "./transfer/SelectionContext";
 import { Routes } from "./routing/Routes";
 
 export function App() {

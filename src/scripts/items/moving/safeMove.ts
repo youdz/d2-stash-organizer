@@ -36,7 +36,7 @@ export function moveItem(
     );
   }
   stash.pages[toPage].items.push(item);
-  item.owner = ownerName(stash);
+  item.owner = stash;
   item.page = toPage;
   positionItem(item, [col, row]);
 }

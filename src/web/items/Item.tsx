@@ -4,7 +4,7 @@ import "./Item.css";
 import { ItemTooltip } from "./ItemTooltip";
 import { ItemLocationDesc } from "./ItemLocationDesc";
 import { useContext } from "preact/hooks";
-import { SelectionContext } from "../move/SelectionContext";
+import { SelectionContext } from "../transfer/SelectionContext";
 
 export interface ItemProps {
   item: Item;

@@ -18,7 +18,6 @@ export function parseSimple({ raw, readBool, readInt }: BinaryStream) {
     location: readInt(3, 58),
     equippedInSlot: readInt(4, 61),
     stored: readInt(3, 73),
-    owner: "",
 
     column: readInt(4, 65),
     row: readInt(4, 69),
