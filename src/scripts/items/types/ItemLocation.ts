@@ -12,3 +12,19 @@ export const enum ItemStorageType {
   CUBE = 4,
   STASH = 5,
 }
+
+export const enum ItemEquipSlot {
+  NONE = 0,
+  HEAD,
+  NECK,
+  TORSO,
+  RIGHT_HAND,
+  LEFT_HAND,
+  RIGHT_FINGER,
+  LEFT_FINGER,
+  WAIST,
+  FEET,
+  HANDS,
+  ALT_RIGHT_HAND,
+  ALT_LEFT_HAND,
+}

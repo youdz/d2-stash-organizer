@@ -16,6 +16,7 @@ export function parseSimple({ raw, readBool, readInt }: BinaryStream) {
     runeword: readBool(42),
 
     location: readInt(3, 58),
+    equippedInSlot: readInt(4, 61),
     stored: readInt(3, 73),
     owner: "",
 

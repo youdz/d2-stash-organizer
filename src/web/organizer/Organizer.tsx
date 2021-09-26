@@ -1,12 +1,7 @@
 import { useCallback, useContext, useState } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
 import { organize } from "../../scripts/grail/organize";
-import {
-  downloadAllFiles,
-  downloadStash,
-  stashToFile,
-  writeAllFiles,
-} from "../store/store";
+import { writeAllFiles } from "../store/store";
 import { ExternalLink } from "../routing/ExternalLink";
 import "./Organizer.css";
 import { deletePages } from "../../scripts/stash/deletePages";
@@ -15,6 +10,8 @@ import { DOWNLOAD_CONFIRM } from "../store/singleStashConfirmation";
 import { OrganizerSources, SourceSelector } from "./SourceSelector";
 import { TargetSelector } from "./TargetSelector";
 import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
+import { toSaveFile } from "../store/parser";
+import { downloadAllFiles, downloadStash } from "../store/downloader";
 
 export function Organizer() {
   const { owners, setCollection, hasPlugY } = useContext(CollectionContext);
@@ -60,11 +57,7 @@ export function Organizer() {
         let targetFile: File | undefined;
         const saveFiles = owners
           .map((owner, i) => {
-            // TODO: Support writing character files
-            if (!isStash(owner)) {
-              return;
-            }
-            const file = stashToFile(owner);
+            const file = toSaveFile(owner);
             if (i === targetIndex) {
               targetFile = file;
             }

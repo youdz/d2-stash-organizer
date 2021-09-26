@@ -1,7 +1,8 @@
-import { stashFromFile, writeAllFiles, writeStashFile } from "../store/store";
+import { writeAllFiles, writeSaveFile } from "../store/store";
 import { RenderableProps } from "preact";
 import { useCallback, useContext, useRef } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
+import { parseSaveFile } from "../store/parser";
 
 export interface FilePickerProps {
   folder: boolean;
@@ -33,12 +34,12 @@ export function FilePicker({
       if (folder) {
         await writeAllFiles(usableFiles);
         setCollection(
-          await Promise.all(usableFiles.map((file) => stashFromFile(file)))
+          await Promise.all(usableFiles.map((file) => parseSaveFile(file)))
         );
       } else {
         const file = usableFiles[0];
-        await writeStashFile(file);
-        setSingleFile(await stashFromFile(file));
+        await writeSaveFile(file);
+        setSingleFile(await parseSaveFile(file));
       }
       // Clear the input so we can re-upload the same file later.
       input.current.value = "";

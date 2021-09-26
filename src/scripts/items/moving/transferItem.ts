@@ -1,10 +1,15 @@
 import { Item } from "../types/Item";
 import { isStash, ItemsOwner, ownerName } from "../../save-file/ownership";
-import { ItemLocation, ItemStorageType } from "../types/ItemLocation";
+import {
+  ItemEquipSlot,
+  ItemLocation,
+  ItemStorageType,
+} from "../types/ItemLocation";
 import { findSpot } from "./findSpot";
 import { getDimensions } from "../../character/dimensions";
 import { positionItem } from "./positionItem";
 import { PAGE_HEIGHT, PAGE_WIDTH } from "../../stash/dimensions";
+import { fromInt } from "../../save-file/binary";
 
 function takeItemFrom(item: Item, owner: ItemsOwner) {
   if (isStash(owner)) {
@@ -35,7 +40,15 @@ function giveItemTo(
   }
   item.owner = ownerName(owner);
   item.location = ItemLocation.STORED;
+  item.equippedInSlot = ItemEquipSlot.NONE;
   item.stored = storageType;
+  item.raw =
+    item.raw.slice(0, 58) +
+    fromInt(item.location, 3) +
+    fromInt(item.equippedInSlot, 4) +
+    item.raw.slice(65, 73) +
+    fromInt(item.stored, 3) +
+    item.raw.slice(76);
   item.mercenary = false;
 }
 

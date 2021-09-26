@@ -1,5 +1,5 @@
 import { ItemQuality } from "./ItemQuality";
-import { ItemLocation, ItemStorageType } from "./ItemLocation";
+import { ItemEquipSlot, ItemLocation, ItemStorageType } from "./ItemLocation";
 import { Modifier } from "./Modifier";
 
 export interface Item {
@@ -13,6 +13,7 @@ export interface Item {
   runeword: boolean;
 
   location: ItemLocation;
+  equippedInSlot: ItemEquipSlot;
   stored: ItemStorageType;
   owner: string;
   mercenary?: boolean;

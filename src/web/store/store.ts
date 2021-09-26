@@ -1,11 +1,4 @@
-import { downloadZip } from "client-zip";
-import { Stash } from "../../scripts/stash/types";
-import { parseStash } from "../../scripts/stash/parsing/parseStash";
-import { stashToSaveFile } from "../../scripts/stash/parsing/stashToSaveFile";
-import { parseCharacter } from "../../scripts/character/parsing/parseCharacter";
-
-const DEFAULT_SHARED_FILENAME = "_LOD_SharedStashSave.sss";
-const DEFAULT_PERSONAL_FILENAME = "CharacterName.d2x";
+import { parseSaveFile, toSaveFile } from "./parser";
 
 if (!window.indexedDB) {
   alert(
@@ -43,7 +36,7 @@ const DB = new Promise<IDBDatabase>((resolve, reject) => {
           // Small code duplication, but this is just legacy support that will go away
           db.transaction(STORE, "readwrite")
             .objectStore(STORE)
-            .add(stashToFile(JSON.parse(oldSave)));
+            .add(toSaveFile(JSON.parse(oldSave)));
         };
       }
     } else if (e.oldVersion < 2) {
@@ -67,7 +60,7 @@ const DB = new Promise<IDBDatabase>((resolve, reject) => {
   };
 });
 
-function readSaveFiles() {
+export function readSaveFiles() {
   return DB.then(
     (db) =>
       new Promise<File[]>((resolve, reject) => {
@@ -76,7 +69,7 @@ function readSaveFiles() {
           .objectStore(STORE)
           .getAll();
         request.onerror = function () {
-          reject("Unable to read stash.");
+          reject("Unable to read save files.");
         };
         request.onsuccess = function () {
           resolve(this.result);
@@ -85,7 +78,7 @@ function readSaveFiles() {
   );
 }
 
-export function writeStashFile(stash: File) {
+export function writeSaveFile(stash: File) {
   return DB.then(
     (db) =>
       new Promise<void>((resolve, reject) => {
@@ -94,7 +87,7 @@ export function writeStashFile(stash: File) {
           .objectStore(STORE)
           .put(stash);
         request.onerror = function () {
-          reject("Unable to save stash.");
+          reject("Unable to store save file.");
         };
         request.onsuccess = function () {
           resolve();
@@ -114,7 +107,7 @@ export function writeAllFiles(files: File[]) {
           objectStore.add(file);
         }
         transaction.onerror = function () {
-          reject("Unable to save files.");
+          reject("Unable to store save files.");
         };
         transaction.oncomplete = function () {
           resolve();
@@ -123,46 +116,7 @@ export function writeAllFiles(files: File[]) {
   );
 }
 
-export async function stashFromFile(file: File) {
-  try {
-    const raw = new Uint8Array(await file.arrayBuffer());
-    if (file.name.endsWith(".d2s")) {
-      return parseCharacter(raw, file);
-    } else {
-      return parseStash(raw, file);
-    }
-  } catch (e) {
-    if (e instanceof Error) {
-      alert(e.message);
-    }
-    throw e;
-  }
-}
-
-export function stashToFile(stash: Stash) {
-  return new File(
-    [new Blob([stashToSaveFile(stash).buffer])],
-    stash.filename ||
-      (stash.personal ? DEFAULT_PERSONAL_FILENAME : DEFAULT_SHARED_FILENAME)
-  );
-}
-
 export async function getSavedStashes() {
   const files = await readSaveFiles();
-  return files.map((file) => stashFromFile(file));
-}
-
-export function downloadStash(file: Blob, fileName: string) {
-  const elem = window.document.createElement("a");
-  elem.href = window.URL.createObjectURL(file);
-  elem.download = fileName;
-  document.body.appendChild(elem);
-  elem.click();
-  document.body.removeChild(elem);
-  window.URL.revokeObjectURL(elem.href);
-}
-
-export async function downloadAllFiles(files: File[]) {
-  const blob = await downloadZip(files).blob();
-  downloadStash(blob, "D2Save.zip");
+  return files.map((file) => parseSaveFile(file));
 }
