@@ -8,17 +8,24 @@ import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
 import { ItemStorageType } from "../../scripts/items/types/ItemLocation";
 import { addPage } from "../../scripts/stash/addPage";
 import { transferItem } from "../../scripts/items/moving/transferItem";
+import { useUpdateCollection } from "../store/useUpdateCollection";
+import { numberInputChangeHandler } from "../organizer/numberInputChangeHandler";
+import { organize } from "../../scripts/grail/organize";
 
 export function TransferItems() {
   const { owners, lastActivePlugyStashPage } = useContext(CollectionContext);
+  const updateCollection = useUpdateCollection();
   const { selectedItems, resetSelection } = useContext(SelectionContext);
   const [target, setTarget] = useState<ItemsOwner>();
   const [targetStorage, setTargetStorage] = useState<ItemStorageType>();
   const [error, setError] = useState<string>();
 
+  const [withOrganize, setWithOrganize] = useState<boolean>(false);
+  const [skipPages, setSkipPages] = useState(0);
+
   const items = useMemo(() => Array.from(selectedItems), [selectedItems]);
 
-  const transferItems = useCallback(() => {
+  const transferItems = useCallback(async () => {
     if (!target) {
       setError("Please select where you want to transfer the items.");
       return;
@@ -30,29 +37,50 @@ export function TransferItems() {
       return;
     }
     setError(undefined);
-    if (isStash(target)) {
-      let pageIndex = target.pages.length;
-      addPage(target, "Transferred");
-      for (const item of items) {
-        if (!transferItem(item, target, ItemStorageType.STASH, pageIndex)) {
-          // We ran out of space, we insert a new page
-          addPage(target, "Transferred");
-          pageIndex++;
-          // Don't forget to re-transfer the failed item
-          transferItem(item, target, ItemStorageType.STASH, pageIndex);
+    try {
+      if (isStash(target)) {
+        let pageIndex = target.pages.length;
+        addPage(target, "Transferred");
+        for (const item of items) {
+          if (!transferItem(item, target, ItemStorageType.STASH, pageIndex)) {
+            // We ran out of space, we insert a new page
+            addPage(target, "Transferred");
+            pageIndex++;
+            // Don't forget to re-transfer the failed item
+            transferItem(item, target, ItemStorageType.STASH, pageIndex);
+          }
+        }
+      } else {
+        for (const item of items) {
+          if (!transferItem(item, target, targetStorage)) {
+            setError("Not enough space to transfer all the selected items.");
+            return;
+          }
         }
       }
-    } else {
-      for (const item of items) {
-        if (!transferItem(item, target, targetStorage)) {
-          setError("Not enough space to transfer all the selected items.");
-          return;
-        }
+      // FIXME: After a PlugY stash transfer, the character still has the items.
+      if (isStash(target) && withOrganize) {
+        organize(target, [], skipPages);
+      }
+      await updateCollection();
+      resetSelection();
+      // TODO: navigate
+    } catch (e) {
+      if (e instanceof Error) {
+        setError(e.message);
+      } else {
+        throw e;
       }
     }
-    // TODO: download and success
-    resetSelection();
-  }, [items, target, targetStorage, resetSelection]);
+  }, [
+    items,
+    resetSelection,
+    skipPages,
+    target,
+    targetStorage,
+    updateCollection,
+    withOrganize,
+  ]);
 
   if (items.length === 0) {
     return (
@@ -119,13 +147,45 @@ export function TransferItems() {
           </ul>
         )}
         {target && isStash(target) && (
-          <p>
-            These items will be added in new pages after the last page of{" "}
-            {target.personal ? "" : "the"} <PrettyOwnerName owner={target} />.
-          </p>
+          <ul id="organize-selector">
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="organize"
+                  checked={!withOrganize}
+                  onChange={() => setWithOrganize(false)}
+                />{" "}
+                Just add the items at the end of {target.personal ? "" : "the"}{" "}
+                <PrettyOwnerName owner={target} />.
+              </label>
+            </li>
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="organize"
+                  checked={withOrganize}
+                  onChange={() => setWithOrganize(true)}
+                />{" "}
+                Organize {target.personal ? "" : "the"}{" "}
+                <PrettyOwnerName owner={target} /> for me
+              </label>
+              , except the first{" "}
+              <input
+                type="number"
+                min={0}
+                max={99}
+                value={skipPages}
+                onChange={numberInputChangeHandler((value) =>
+                  setSkipPages(value)
+                )}
+              />{" "}
+              pages.
+            </li>
+          </ul>
         )}
       </div>
-      {/* TODO: offer to organize the target if it's a PlugY stash */}
       <p>
         <button class="button" onClick={transferItems}>
           Transfer my items

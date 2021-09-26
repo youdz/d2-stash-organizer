@@ -55,18 +55,16 @@ export function Organizer() {
         );
 
         let targetFile: File | undefined;
-        const saveFiles = owners
-          .map((owner, i) => {
-            const file = toSaveFile(owner);
-            if (i === targetIndex) {
-              targetFile = file;
-            }
-            return file;
-          })
-          .filter((file): file is File => !!file);
+        const saveFiles = owners.map((owner, i) => {
+          const file = toSaveFile(owner);
+          if (i === targetIndex) {
+            targetFile = file;
+          }
+          return file;
+        });
         await writeAllFiles(saveFiles);
-        // Set the state to force a re-render of the app.
-        setCollection(Array.from(owners.values()));
+        // Set the collection to force a re-render of components that use it.
+        setCollection(owners);
         if (singleStash && targetFile) {
           downloadStash(targetFile, targetFile.name);
         } else {
