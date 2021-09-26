@@ -36,8 +36,13 @@ export function parseCharacter(
 
   // Items on the character or in stash
   character.items.push(...parseItemList(reader));
+
   // Items on a corpse
-  character.items.push(...parseItemList(reader));
+  const corpseItems = parseItemList(reader);
+  for (const item of corpseItems) {
+    item.corpse = true;
+  }
+  character.items.push(...corpseItems);
 
   // TODO: classic characters
   const expansionChar = true;

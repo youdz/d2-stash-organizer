@@ -11,10 +11,12 @@ export function characterToSaveFile(character: Character) {
   writer.write(character.characterData);
   writeItemList(
     writer,
-    character.items.filter((item) => !item.mercenary)
+    character.items.filter((item) => !item.mercenary && !item.corpse)
   );
-  // TODO: corpse items
-  writeItemList(writer, []);
+  writeItemList(
+    writer,
+    character.items.filter((item) => item.corpse)
+  );
 
   // TODO: classic characters
   const expansionChar = true;

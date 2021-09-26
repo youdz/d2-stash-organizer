@@ -49,6 +49,7 @@ function giveItemTo(
     item.raw.slice(65, 73) +
     fromInt(item.stored, 3) +
     item.raw.slice(76);
+  item.corpse = false;
   item.mercenary = false;
 }
 

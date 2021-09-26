@@ -16,6 +16,7 @@ export interface Item {
   equippedInSlot: ItemEquipSlot;
   stored: ItemStorageType;
   owner: string;
+  corpse?: boolean;
   mercenary?: boolean;
   page?: number;
 

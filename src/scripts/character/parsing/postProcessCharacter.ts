@@ -10,9 +10,13 @@ import { ownerName } from "../../save-file/ownership";
 export function postProcessCharacter(character: Character) {
   const characterName = ownerName(character);
   for (const item of character.items) {
-    item.owner = item.mercenary
-      ? `${characterName}'s mercenary`
-      : characterName;
+    if (item.corpse) {
+      item.owner = `${characterName}'s corpse`;
+    } else if (item.mercenary) {
+      item.owner = `${characterName}'s mercenary`;
+    } else {
+      item.owner = characterName;
+    }
     postProcessItem(item);
   }
 }

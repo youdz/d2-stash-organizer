@@ -9,7 +9,7 @@ import { Item } from "../../scripts/items/types/Item";
 import { DOWNLOAD_CONFIRM } from "../store/singleStashConfirmation";
 import { OrganizerSources, SourceSelector } from "./SourceSelector";
 import { TargetSelector } from "./TargetSelector";
-import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
+import { isStash } from "../../scripts/save-file/ownership";
 import { toSaveFile } from "../store/parser";
 import { downloadAllFiles, downloadStash } from "../store/downloader";
 
