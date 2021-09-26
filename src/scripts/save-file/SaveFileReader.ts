@@ -50,6 +50,11 @@ export class SaveFileReader {
     return String.fromCharCode(...charCodes);
   }
 
+  readRemaining(position = this.nextIndex) {
+    this.moveTo(this.raw.length);
+    return this.raw.slice(position, this.raw.length);
+  }
+
   readInt8(position = this.nextIndex) {
     this.moveTo(position + 1);
     return this.dataView.getUint8(position);

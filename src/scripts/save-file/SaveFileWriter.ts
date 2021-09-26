@@ -7,22 +7,31 @@ export class SaveFileWriter {
   public nextIndex = 0;
 
   done() {
-    return this.raw.slice(0, this.nextIndex);
+    this.raw = this.raw.slice(0, this.nextIndex);
+    this.dataView = new DataView(this.raw.buffer);
+    return this.raw;
+  }
+
+  get length() {
+    return this.raw.length;
   }
 
   skip(bytes: number) {
     this.nextIndex += bytes;
   }
 
-  write(values: number[], position = this.nextIndex) {
-    if (position + values.length > this.raw.length) {
-      const extended = new Uint8Array(this.raw.length + CHUNK_SIZE);
+  write(values: number[] | Uint8Array, position = this.nextIndex) {
+    const end = position + values.length;
+    if (end > this.raw.length) {
+      const extended = new Uint8Array(
+        Math.max(this.raw.length + CHUNK_SIZE, end)
+      );
       extended.set(this.raw);
       this.raw = extended;
       this.dataView = new DataView(this.raw.buffer);
     }
     this.raw.set(values, position);
-    this.nextIndex = position + values.length;
+    this.nextIndex = end;
   }
 
   writeString(value: string, position = this.nextIndex) {
@@ -41,5 +50,17 @@ export class SaveFileWriter {
   writeInt32LE(value: number, position = this.nextIndex) {
     this.write(new Array(4).fill(0), position);
     this.dataView.setUint32(position, value, true);
+  }
+
+  computeChecksum() {
+    let checksum = 0;
+    for (const byte of this.raw) {
+      // rotate left once
+      checksum = (checksum << 1) | (checksum >>> 31);
+      checksum += byte;
+      // Convert back to uint32
+      checksum >>>= 0;
+    }
+    return checksum;
   }
 }

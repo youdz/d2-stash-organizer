@@ -1,8 +1,8 @@
 import { Stash } from "../types";
-import { fromBinary } from "../../save-file/binary";
 import { SaveFileWriter } from "../../save-file/SaveFileWriter";
+import { writeItemList } from "../../items/parsing/writeItemList";
 
-export function generateSaveFile(stash: Stash) {
+export function stashToSaveFile(stash: Stash) {
   const writer = new SaveFileWriter();
   if (stash.personal) {
     writer.writeString("CSTM");
@@ -23,14 +23,7 @@ export function generateSaveFile(stash: Stash) {
     }
     writer.writeString(page.name);
     writer.skip(1);
-    writer.writeString("JM");
-    writer.writeInt16LE(page.items.length);
-    for (const item of page.items) {
-      writer.write(fromBinary(item.raw));
-      for (const socket of item.filledSockets ?? []) {
-        writer.write(fromBinary(socket.raw));
-      }
-    }
+    writeItemList(writer, page.items);
   }
   return writer.done();
 }

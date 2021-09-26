@@ -1,7 +1,7 @@
 import { downloadZip } from "client-zip";
 import { Stash } from "../../scripts/stash/types";
 import { parseStash } from "../../scripts/stash/parsing/parseStash";
-import { generateSaveFile } from "../../scripts/stash/parsing/generateSaveFile";
+import { stashToSaveFile } from "../../scripts/stash/parsing/stashToSaveFile";
 import { parseCharacter } from "../../scripts/character/parsing/parseCharacter";
 
 const DEFAULT_SHARED_FILENAME = "_LOD_SharedStashSave.sss";
@@ -141,7 +141,7 @@ export async function stashFromFile(file: File) {
 
 export function stashToFile(stash: Stash) {
   return new File(
-    [new Blob([generateSaveFile(stash).buffer])],
+    [new Blob([stashToSaveFile(stash).buffer])],
     stash.filename ||
       (stash.personal ? DEFAULT_PERSONAL_FILENAME : DEFAULT_SHARED_FILENAME)
   );

@@ -26,6 +26,7 @@ export function Organizer() {
   const [targetIndex, setTargetIndex] = useState(-1);
   const [emptyPages, setEmptyPages] = useState(0);
 
+  // FIXME: transfers to personal stash when shared stash is selected
   const handleOrganize = useCallback(
     async (singleStash?: boolean) => {
       const target = owners[targetIndex];

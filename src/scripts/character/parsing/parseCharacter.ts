@@ -15,11 +15,15 @@ export function parseCharacter(
   if (header !== "aa55aa55") {
     throw new Error("This does not look like a Diablo 2 character save (.d2s)");
   }
+
   const character: Character = {
     filename: file?.name ?? "",
     lastModified: file?.lastModified ?? 0,
+    version: reader.readInt32LE(4),
     name: reader.readNullTerminatedString(20),
     class: reader.readInt8(40),
+    characterData: new Uint8Array(),
+    golem: new Uint8Array(),
     items: [],
   };
 
@@ -28,14 +32,18 @@ export function parseCharacter(
   // Skip over skills
   reader.readString(32);
 
+  character.characterData = reader.read(reader.nextIndex - 16, 16);
+
   // Items on the character or in stash
   character.items.push(...parseItemList(reader));
   // Items on a corpse
   character.items.push(...parseItemList(reader));
 
+  // TODO: classic characters
   const expansionChar = true;
   if (expansionChar) {
     character.items.push(...parseMercenary(reader));
+    character.golem = reader.readRemaining();
   }
 
   postProcessCharacter(character);
