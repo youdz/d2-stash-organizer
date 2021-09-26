@@ -1,14 +1,16 @@
 import { toSaveFile } from "./parser";
-import { writeAllFiles } from "./store";
-import { downloadAllFiles } from "./downloader";
+import { writeAllFiles, writeSaveFile } from "./store";
+import { downloadAllFiles, downloadFile } from "./downloader";
 import { useCallback, useContext } from "preact/hooks";
 import { CollectionContext } from "./CollectionContext";
+import { ItemsOwner } from "../../scripts/save-file/ownership";
 
 export function useUpdateCollection() {
-  const { owners, setCollection } = useContext(CollectionContext);
+  const { owners, setCollection, setSingleFile } =
+    useContext(CollectionContext);
 
-  return useCallback(
-    async function updateCollection() {
+  const updateAllFiles = useCallback(
+    async function () {
       const saveFiles = owners.map((owner) => toSaveFile(owner));
       await writeAllFiles(saveFiles);
       await downloadAllFiles(saveFiles);
@@ -17,4 +19,17 @@ export function useUpdateCollection() {
     },
     [owners, setCollection]
   );
+
+  const updateSingleFile = useCallback(
+    async function (owner: ItemsOwner) {
+      const saveFile = toSaveFile(owner);
+      await writeSaveFile(saveFile);
+      downloadFile(saveFile, saveFile.name);
+      // Set the state to force a re-render of the app.
+      setSingleFile(owner);
+    },
+    [setSingleFile]
+  );
+
+  return { updateAllFiles, updateSingleFile };
 }

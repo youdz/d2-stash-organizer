@@ -1,7 +1,7 @@
 import { useCallback, useContext, useMemo, useState } from "preact/hooks";
 import { SelectionContext } from "./SelectionContext";
 import { ItemsTable } from "../collection/ItemsTable";
-import "./MoveItems.css";
+import "./TransferItems.css";
 import { CollectionContext } from "../store/CollectionContext";
 import { PrettyOwnerName } from "../save-files/PrettyOwnerName";
 import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
@@ -11,10 +11,11 @@ import { transferItem } from "../../scripts/items/moving/transferItem";
 import { useUpdateCollection } from "../store/useUpdateCollection";
 import { numberInputChangeHandler } from "../organizer/numberInputChangeHandler";
 import { organize } from "../../scripts/grail/organize";
+import { OwnerSelector } from "../save-files/OwnerSelector";
 
 export function TransferItems() {
-  const { owners, lastActivePlugyStashPage } = useContext(CollectionContext);
-  const updateCollection = useUpdateCollection();
+  const { lastActivePlugyStashPage } = useContext(CollectionContext);
+  const { updateAllFiles } = useUpdateCollection();
   const { selectedItems, resetSelection } = useContext(SelectionContext);
   const [target, setTarget] = useState<ItemsOwner>();
   const [targetStorage, setTargetStorage] = useState<ItemStorageType>();
@@ -53,6 +54,7 @@ export function TransferItems() {
       } else {
         for (const item of items) {
           if (!transferItem(item, target, targetStorage)) {
+            // TODO: The previous items have already been transferred, we need to roll back
             setError("Not enough space to transfer all the selected items.");
             return;
           }
@@ -62,7 +64,7 @@ export function TransferItems() {
       if (isStash(target) && withOrganize) {
         organize(target, [], skipPages);
       }
-      await updateCollection();
+      await updateAllFiles();
       resetSelection();
       // TODO: navigate
     } catch (e) {
@@ -78,7 +80,7 @@ export function TransferItems() {
     skipPages,
     target,
     targetStorage,
-    updateCollection,
+    updateAllFiles,
     withOrganize,
   ]);
 
@@ -109,21 +111,7 @@ export function TransferItems() {
       </p>
       <p>Select where you want to transfer them:</p>
       <div class="selectors">
-        <ul id="source-selector">
-          {owners.map((owner) => (
-            <li>
-              <label>
-                <input
-                  type="radio"
-                  name="target"
-                  checked={target === owner}
-                  onChange={() => setTarget(owner)}
-                />{" "}
-                <PrettyOwnerName owner={owner} />
-              </label>
-            </li>
-          ))}
-        </ul>
+        <OwnerSelector selected={target} onChange={setTarget} />
         {target && <div class="arrow">&#8594;</div>}
         {supportedStorageTypes && (
           <ul id="storage-selector">

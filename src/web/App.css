@@ -39,6 +39,11 @@ a:visited {
   text-decoration: none;
 }
 
+li input[type="radio"] {
+  vertical-align: -12%;
+  margin-bottom: 0.6em;
+}
+
 .magic {
   color: rgb(105, 105, 255);
 }

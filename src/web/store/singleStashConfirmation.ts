@@ -1,7 +1,7 @@
 export const UPLOAD_CONFIRM = `\
 Uploading a single stash at a time is not recommended, \
-as you might run into inconsistencies if you have moved items between characters, \
-and even risk losing items with the Organize feature.
+because you risk losing items that were moved between characters \
+since the last upload or download.
 
 Are you sure you want to proceed?`;
 

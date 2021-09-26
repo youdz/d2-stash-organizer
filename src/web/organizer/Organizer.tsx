@@ -1,84 +1,36 @@
 import { useCallback, useContext, useState } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
 import { organize } from "../../scripts/grail/organize";
-import { writeAllFiles } from "../store/store";
 import { ExternalLink } from "../routing/ExternalLink";
 import "./Organizer.css";
-import { deletePages } from "../../scripts/stash/deletePages";
-import { Item } from "../../scripts/items/types/Item";
-import { DOWNLOAD_CONFIRM } from "../store/singleStashConfirmation";
-import { OrganizerSources, SourceSelector } from "./SourceSelector";
-import { TargetSelector } from "./TargetSelector";
-import { isStash } from "../../scripts/save-file/ownership";
-import { toSaveFile } from "../store/parser";
-import { downloadAllFiles, downloadStash } from "../store/downloader";
+import { numberInputChangeHandler } from "./numberInputChangeHandler";
+import { OwnerSelector } from "../save-files/OwnerSelector";
+import { useUpdateCollection } from "../store/useUpdateCollection";
+import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
 
 export function Organizer() {
-  const { owners, setCollection, hasPlugY } = useContext(CollectionContext);
+  const { hasPlugY } = useContext(CollectionContext);
+  const { updateSingleFile } = useUpdateCollection();
 
-  // TODO: initialize with the shared stash selected
-  const [sources, setSources] = useState<OrganizerSources>([]);
-
-  // TODO: initialize with the shared stash selected
-  const [targetIndex, setTargetIndex] = useState(-1);
+  const [stash, setStash] = useState<ItemsOwner>();
+  const [skipPages, setSkipPages] = useState(1);
   const [emptyPages, setEmptyPages] = useState(0);
 
-  // FIXME: transfers to personal stash when shared stash is selected
-  const handleOrganize = useCallback(
-    async (singleStash?: boolean) => {
-      const target = owners[targetIndex];
-      if (!target || !isStash(target)) {
-        return;
-      }
+  const handleOrganize = useCallback(async () => {
+    if (stash && isStash(stash)) {
       try {
-        // TODO: backup before doing all this, to roll back if failed
-        const fromOtherSources: Item[] = [];
-        if (!singleStash) {
-          owners.forEach((owner, i) => {
-            // TODO: take items from characters
-            if (!isStash(owner)) {
-              return;
-            }
-            if (i !== targetIndex && sources[i]?.selected) {
-              fromOtherSources.push(
-                ...deletePages(owner, sources[i]?.skipPages ?? 0)
-              );
-            }
-          });
-        }
-
-        organize(
-          target,
-          fromOtherSources,
-          sources[targetIndex]?.skipPages,
-          emptyPages
-        );
-
-        let targetFile: File | undefined;
-        const saveFiles = owners.map((owner, i) => {
-          const file = toSaveFile(owner);
-          if (i === targetIndex) {
-            targetFile = file;
-          }
-          return file;
-        });
-        await writeAllFiles(saveFiles);
-        // Set the collection to force a re-render of components that use it.
-        setCollection(owners);
-        if (singleStash && targetFile) {
-          downloadStash(targetFile, targetFile.name);
-        } else {
-          await downloadAllFiles(saveFiles);
-        }
+        organize(stash, [], skipPages, emptyPages);
+        await updateSingleFile(stash);
       } catch (e) {
         if (e instanceof Error) {
           alert(e.message);
+          // TODO: rollback using storage
+        } else {
+          throw e;
         }
-        throw e;
       }
-    },
-    [owners, emptyPages, setCollection, sources, targetIndex]
-  );
+    }
+  }, [emptyPages, skipPages, stash, updateSingleFile]);
 
   if (!hasPlugY) {
     return (
@@ -94,47 +46,41 @@ export function Organizer() {
     );
   }
 
-  const nbSources = Object.values(sources).filter(
-    (source) => source?.selected
-  ).length;
-
   return (
-    <ol id="organizer">
-      <li>
-        <SourceSelector
-          sources={sources}
-          setSources={setSources}
-          targetIndex={targetIndex}
-        />
-      </li>
-      <li>
-        <TargetSelector
-          targetIndex={targetIndex}
-          setTargetIndex={setTargetIndex}
-          emptyPages={emptyPages}
-          setEmptyPages={setEmptyPages}
-        />
-      </li>
-      <li>Organize the items for me.</li>
-      <li>
-        <button
-          class="button"
-          disabled={targetIndex < 0}
-          onClick={() => handleOrganize()}
-        >
-          Download updated save files
+    <>
+      <p>Select a stash to organize:</p>
+      <OwnerSelector selected={stash} onChange={setStash} onlyStashes={true} />
+      <p>
+        <label>
+          Do not touch the first{" "}
+          <input
+            type="number"
+            min={0}
+            max={99}
+            value={skipPages}
+            onChange={numberInputChangeHandler(setSkipPages)}
+          />{" "}
+          page{skipPages === 1 ? "" : "s"}.
+        </label>
+      </p>
+      <p>
+        <label>
+          Leave{" "}
+          <input
+            type="number"
+            min={0}
+            max={99}
+            value={emptyPages}
+            onChange={numberInputChangeHandler(setEmptyPages)}
+          />{" "}
+          empty page{emptyPages === 1 ? "" : "s"} at the start.
+        </label>
+      </p>
+      <p>
+        <button class="button" disabled={!stash} onClick={handleOrganize}>
+          Organize my stash
         </button>
-        {targetIndex >= 0 && nbSources === 1 && sources[targetIndex]?.selected && (
-          <button
-            class="button danger"
-            onClick={() =>
-              window.confirm(DOWNLOAD_CONFIRM) && handleOrganize(true)
-            }
-          >
-            Download a single stash
-          </button>
-        )}
-      </li>
-    </ol>
+      </p>
+    </>
   );
 }
