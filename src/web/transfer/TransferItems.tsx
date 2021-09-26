@@ -15,11 +15,12 @@ import { OwnerSelector } from "../save-files/OwnerSelector";
 
 export function TransferItems() {
   const { lastActivePlugyStashPage } = useContext(CollectionContext);
-  const { updateAllFiles } = useUpdateCollection();
+  const { updateAllFiles, rollback } = useUpdateCollection();
   const { selectedItems, resetSelection } = useContext(SelectionContext);
   const [target, setTarget] = useState<ItemsOwner>();
   const [targetStorage, setTargetStorage] = useState<ItemStorageType>();
   const [error, setError] = useState<string>();
+  const [success, setSuccess] = useState<string>();
 
   const [withOrganize, setWithOrganize] = useState<boolean>(false);
   const [skipPages, setSkipPages] = useState(0);
@@ -54,8 +55,9 @@ export function TransferItems() {
       } else {
         for (const item of items) {
           if (!transferItem(item, target, targetStorage)) {
-            // TODO: The previous items have already been transferred, we need to roll back
             setError("Not enough space to transfer all the selected items.");
+            await rollback();
+            setTarget(undefined);
             return;
           }
         }
@@ -65,11 +67,14 @@ export function TransferItems() {
         organize(target, [], skipPages);
       }
       await updateAllFiles();
+      setSuccess(`${items.length} items transferred!`);
       resetSelection();
       // TODO: navigate
     } catch (e) {
       if (e instanceof Error) {
         setError(e.message);
+        await rollback();
+        setTarget(undefined);
       } else {
         throw e;
       }
@@ -81,10 +86,11 @@ export function TransferItems() {
     target,
     targetStorage,
     updateAllFiles,
+    rollback,
     withOrganize,
   ]);
 
-  if (items.length === 0) {
+  if (items.length === 0 && !error && !success) {
     return (
       <p>
         You have not selected any items yet. Go through your{" "}
@@ -179,6 +185,7 @@ export function TransferItems() {
           Transfer my items
         </button>
         <span class="error danger">{error}</span>
+        <span class="success">{success}</span>
       </p>
 
       <h4>Selected items</h4>

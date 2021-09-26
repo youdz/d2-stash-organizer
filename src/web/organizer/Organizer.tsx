@@ -10,7 +10,7 @@ import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
 
 export function Organizer() {
   const { hasPlugY } = useContext(CollectionContext);
-  const { updateSingleFile } = useUpdateCollection();
+  const { updateSingleFile, rollback } = useUpdateCollection();
 
   const [stash, setStash] = useState<ItemsOwner>();
   const [skipPages, setSkipPages] = useState(1);
@@ -23,14 +23,15 @@ export function Organizer() {
         await updateSingleFile(stash);
       } catch (e) {
         if (e instanceof Error) {
+          await rollback();
+          setStash(undefined);
           alert(e.message);
-          // TODO: rollback using storage
         } else {
           throw e;
         }
       }
     }
-  }, [emptyPages, skipPages, stash, updateSingleFile]);
+  }, [emptyPages, skipPages, stash, updateSingleFile, rollback]);
 
   if (!hasPlugY) {
     return (

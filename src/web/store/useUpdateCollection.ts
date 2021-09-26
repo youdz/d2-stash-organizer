@@ -1,13 +1,15 @@
 import { toSaveFile } from "./parser";
-import { writeAllFiles, writeSaveFile } from "./store";
+import { getSavedStashes, writeAllFiles, writeSaveFile } from "./store";
 import { downloadAllFiles, downloadFile } from "./downloader";
 import { useCallback, useContext } from "preact/hooks";
 import { CollectionContext } from "./CollectionContext";
 import { ItemsOwner } from "../../scripts/save-file/ownership";
+import { SelectionContext } from "../transfer/SelectionContext";
 
 export function useUpdateCollection() {
   const { owners, setCollection, setSingleFile } =
     useContext(CollectionContext);
+  const { resetSelection } = useContext(SelectionContext);
 
   const updateAllFiles = useCallback(
     async function () {
@@ -31,5 +33,12 @@ export function useUpdateCollection() {
     [setSingleFile]
   );
 
-  return { updateAllFiles, updateSingleFile };
+  const rollback = useCallback(() => {
+    resetSelection();
+    return getSavedStashes()
+      .then((stashes) => Promise.all(stashes).then(setCollection))
+      .catch(() => undefined);
+  }, [resetSelection, setCollection]);
+
+  return { updateAllFiles, updateSingleFile, rollback };
 }

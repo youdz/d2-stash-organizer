@@ -22,6 +22,11 @@
   margin-left: 2em;
 }
 
+#transfer-items .success {
+  margin-left: 2em;
+  color: #6fb76f;
+}
+
 #transfer-items h4 {
   padding-top: 0.4em;
   margin-top: 3em;
