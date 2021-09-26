@@ -51,17 +51,17 @@ export class SaveFileReader {
   }
 
   readInt8(position = this.nextIndex) {
-    this.moveTo(this.nextIndex + 1);
+    this.moveTo(position + 1);
     return this.dataView.getUint8(position);
   }
 
   readInt16LE(position = this.nextIndex) {
-    this.moveTo(this.nextIndex + 2);
+    this.moveTo(position + 2);
     return this.dataView.getUint16(position, true);
   }
 
   readInt32LE(position = this.nextIndex) {
-    this.moveTo(this.nextIndex + 4);
+    this.moveTo(position + 4);
     return this.dataView.getUint32(position, true);
   }
 }

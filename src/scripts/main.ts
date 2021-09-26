@@ -23,10 +23,10 @@ async function main() {
     }
     console.log(`${item.name} at ${item.column}, ${item.row}`);
   }
-  console.log("CHARACTER");
-  console.log(character.items.map(({ name }) => name));
-  console.log("STASH");
-  console.log(stash.pages[0].items.map(({ name }) => name));
+  // console.log("CHARACTER");
+  // console.log(character.items.map(({ name }) => name));
+  // console.log("STASH");
+  // console.log(stash.pages[0].items.map(({ name }) => name));
 
   // triageNewItems(stash);
   // organize(stash, 1, 5);

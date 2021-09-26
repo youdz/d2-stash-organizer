@@ -1,39 +1,36 @@
 import { Stash } from "../types";
-import { writeString } from "../../save-file/writeString";
-import { writeInt32LE } from "../../save-file/writeInt32LE";
-import { writeInt16LE } from "../../save-file/writeInt16LE";
 import { fromBinary } from "../../save-file/binary";
+import { SaveFileWriter } from "../../save-file/SaveFileWriter";
 
 export function generateSaveFile(stash: Stash) {
-  const saveFile: number[] = [];
-  let offset = 0;
+  const writer = new SaveFileWriter();
   if (stash.personal) {
-    offset = writeString(saveFile, "CSTM", offset);
-    offset = writeString(saveFile, "01", offset);
-    offset += 4;
+    writer.writeString("CSTM");
+    writer.writeString("01");
+    writer.skip(4);
   } else {
-    offset = writeString(saveFile, "SSS\0", offset);
-    offset = writeString(saveFile, "02", offset);
-    offset = writeInt32LE(saveFile, stash.gold, offset);
+    writer.writeString("SSS\0");
+    writer.writeString("02");
+    writer.writeInt32LE(stash.gold);
   }
-  offset = writeInt32LE(saveFile, stash.pages.length, offset);
+  writer.writeInt32LE(stash.pages.length);
 
   for (const page of stash.pages) {
-    offset = writeString(saveFile, "ST", offset);
+    writer.writeString("ST");
     if (stash.pageFlags) {
-      saveFile[offset] = page.flags!;
-      offset += 4;
+      writer.write([page.flags!]);
+      writer.skip(3);
     }
-    offset = writeString(saveFile, page.name, offset);
-    offset++;
-    offset = writeString(saveFile, "JM", offset);
-    offset = writeInt16LE(saveFile, page.items.length, offset);
+    writer.writeString(page.name);
+    writer.skip(1);
+    writer.writeString("JM");
+    writer.writeInt16LE(page.items.length);
     for (const item of page.items) {
-      offset = saveFile.push(...fromBinary(item.raw));
+      writer.write(fromBinary(item.raw));
       for (const socket of item.filledSockets ?? []) {
-        offset = saveFile.push(...fromBinary(socket.raw));
+        writer.write(fromBinary(socket.raw));
       }
     }
   }
-  return Uint8Array.from(saveFile);
+  return writer.done();
 }
