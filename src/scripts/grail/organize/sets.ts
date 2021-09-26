@@ -1,7 +1,6 @@
 import { Item } from "../../items/types/Item";
 import { layout, LayoutResult } from "../layout";
 import { Stash } from "../../stash/types";
-import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { Set, SET_ITEMS, SetItem, SETS } from "../../../game-data";
 import { EQUIPMENT_TYPES } from "../list/uniquesOrder";
@@ -10,6 +9,7 @@ import { fillTemplate } from "./fillTemplate";
 import { getBase } from "../../items/getBase";
 import { groupBySet } from "../list/groupSets";
 import { addPage } from "../../stash/addPage";
+import { moveItem } from "../../items/moving/safeMove";
 
 function createTemplates() {
   const allItems = groupBySet(SET_ITEMS);

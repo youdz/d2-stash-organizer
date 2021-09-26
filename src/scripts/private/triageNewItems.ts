@@ -7,7 +7,9 @@ const FIRST_PAGE = 1;
 const LAST_PAGE = 6;
 
 export function triageNewItems(stash: Stash) {
-  const toTriage = getAllItems(stash, FIRST_PAGE, LAST_PAGE + 1);
+  const toTriage = stash.pages
+    .slice(FIRST_PAGE, LAST_PAGE + 1)
+    .flatMap(({ items }) => items);
   const previouslyFound = getAllItems(stash, LAST_PAGE + 1);
   const worse = new Set<string>();
   const better = new Set<string>();

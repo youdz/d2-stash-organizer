@@ -1,7 +1,6 @@
 import { Item } from "../../items/types/Item";
 import { layout, LayoutResult } from "../layout";
 import { Stash } from "../../stash/types";
-import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { UNIQUE_ITEMS, UniqueItem } from "../../../game-data";
 import { UNIQUES_ORDER, UniqueSection } from "../list/uniquesOrder";
@@ -11,6 +10,7 @@ import { groupUniquesBySection } from "../list/groupUniques";
 import { listGrailUniques } from "../list/listGrailUniques";
 import { canBeEthereal } from "../list/canBeEthereal";
 import { addPage } from "../../stash/addPage";
+import { moveItem } from "../../items/moving/safeMove";
 
 function createTemplates(eth: boolean) {
   const uniques = listGrailUniques(eth);

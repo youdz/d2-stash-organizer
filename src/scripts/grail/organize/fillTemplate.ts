@@ -3,7 +3,7 @@ import { Item } from "../../items/types/Item";
 import { SetItem, UniqueItem } from "../../../game-data";
 import { LayoutResult } from "../layout";
 import { getGrailItem } from "../list/getGrailItem";
-import { moveItem } from "../../stash/moveItem";
+import { moveItem } from "../../items/moving/safeMove";
 
 export function fillTemplate(
   stash: Stash,

@@ -1,10 +1,10 @@
 import { Item } from "../../items/types/Item";
 import { layout } from "../layout";
 import { Stash } from "../../stash/types";
-import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { sortAndGroupBy } from "./sortAndGroupBy";
 import { addPage } from "../../stash/addPage";
+import { moveItem } from "../../items/moving/safeMove";
 
 // Order to display them in
 export const RESPECS = ["tes", "ceh", "bet", "fed", "toa"];

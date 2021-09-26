@@ -1,9 +1,9 @@
 import { Item } from "../../items/types/Item";
 import { layout } from "../layout";
 import { Stash } from "../../stash/types";
-import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { addPage } from "../../stash/addPage";
+import { moveItem } from "../../items/moving/safeMove";
 
 export function organizeRunes(stash: Stash, items: Item[]) {
   const offset = stash.pages.length;

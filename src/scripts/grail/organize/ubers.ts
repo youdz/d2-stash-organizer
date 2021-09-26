@@ -1,10 +1,10 @@
 import { Item } from "../../items/types/Item";
 import { layout } from "../layout";
 import { Stash } from "../../stash/types";
-import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { sortAndGroupBy } from "./sortAndGroupBy";
 import { addPage } from "../../stash/addPage";
+import { moveItem } from "../../items/moving/safeMove";
 
 // Order to display them in
 export const UBERS = ["pk1", "pk2", "pk3", "dhn", "bey", "mbr", "std"];

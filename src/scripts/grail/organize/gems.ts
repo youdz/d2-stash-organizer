@@ -1,11 +1,11 @@
 import { Item } from "../../items/types/Item";
 import { layout } from "../layout";
 import { Stash } from "../../stash/types";
-import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { MISC } from "../../../game-data";
 import { sortAndGroupBy } from "./sortAndGroupBy";
 import { addPage } from "../../stash/addPage";
+import { moveItem } from "../../items/moving/safeMove";
 
 const ORDER = ["gsy", "gsv", "gsb", "gsr", "gsg", "gsw", "sku"];
 const GEM_TYPES = ORDER.map((code) => MISC[code]!.type);

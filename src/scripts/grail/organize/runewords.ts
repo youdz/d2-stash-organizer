@@ -1,12 +1,12 @@
 import { Item } from "../../items/types/Item";
 import { layout } from "../layout";
 import { Stash } from "../../stash/types";
-import { moveItem } from "../../stash/moveItem";
 import { makeIndex } from "../../stash/makeIndex";
 import { RUNEWORDS } from "../../../game-data";
 import { getBase } from "../../items/getBase";
 import { EQUIPMENT_TYPES } from "../list/uniquesOrder";
 import { addPage } from "../../stash/addPage";
+import { moveItem } from "../../items/moving/safeMove";
 
 function runewordsOrder(a: Item, b: Item) {
   return RUNEWORDS[a.runewordId!].levelReq - RUNEWORDS[b.runewordId!].levelReq;
