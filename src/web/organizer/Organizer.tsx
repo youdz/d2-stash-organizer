@@ -7,9 +7,10 @@ import { numberInputChangeHandler } from "./numberInputChangeHandler";
 import { OwnerSelector } from "../save-files/OwnerSelector";
 import { useUpdateCollection } from "../store/useUpdateCollection";
 import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
+import { updateCharacterStashes } from "../store/plugyDuplicates";
 
 export function Organizer() {
-  const { hasPlugY } = useContext(CollectionContext);
+  const { lastActivePlugyStashPage, hasPlugY } = useContext(CollectionContext);
   const { updateSingleFile, rollback } = useUpdateCollection();
 
   const [stash, setStash] = useState<ItemsOwner>();
@@ -20,6 +21,9 @@ export function Organizer() {
     if (stash && isStash(stash)) {
       try {
         organize(stash, [], skipPages, emptyPages);
+        if (lastActivePlugyStashPage) {
+          updateCharacterStashes(lastActivePlugyStashPage);
+        }
         await updateSingleFile(stash);
       } catch (e) {
         if (e instanceof Error) {

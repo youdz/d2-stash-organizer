@@ -40,3 +40,14 @@ export function findDuplicates(owners: ItemsOwner[]) {
     return duplicates;
   }
 }
+
+export function updateCharacterStashes(
+  duplicates: Map<Character, [Stash, number]>
+) {
+  for (const [character, [stash, pageIndex]] of duplicates.entries()) {
+    character.items = character.items.filter(
+      ({ stored }) => stored !== ItemStorageType.STASH
+    );
+    character.items.push(...(stash.pages[pageIndex]?.items ?? []));
+  }
+}

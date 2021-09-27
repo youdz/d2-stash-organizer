@@ -12,6 +12,7 @@ import { useUpdateCollection } from "../store/useUpdateCollection";
 import { numberInputChangeHandler } from "../organizer/numberInputChangeHandler";
 import { organize } from "../../scripts/grail/organize";
 import { OwnerSelector } from "../save-files/OwnerSelector";
+import { updateCharacterStashes } from "../store/plugyDuplicates";
 
 export function TransferItems() {
   const { lastActivePlugyStashPage } = useContext(CollectionContext);
@@ -62,14 +63,15 @@ export function TransferItems() {
           }
         }
       }
-      // FIXME: After a PlugY stash transfer, the character still has the items.
       if (isStash(target) && withOrganize) {
         organize(target, [], skipPages);
+      }
+      if (lastActivePlugyStashPage) {
+        updateCharacterStashes(lastActivePlugyStashPage);
       }
       await updateAllFiles();
       setSuccess(`${items.length} items transferred!`);
       resetSelection();
-      // TODO: navigate
     } catch (e) {
       if (e instanceof Error) {
         setError(e.message);
@@ -88,6 +90,7 @@ export function TransferItems() {
     updateAllFiles,
     rollback,
     withOrganize,
+    lastActivePlugyStashPage,
   ]);
 
   if (items.length === 0 && !error && !success) {
