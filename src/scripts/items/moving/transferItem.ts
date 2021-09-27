@@ -59,7 +59,6 @@ export function transferItem(
 ) {
   // Try to position first, so we don't reach a state with no owner if there is no room
   if (isStash(to)) {
-    // TODO: insert a new page right after with the same name if it overflows.
     const page = to.pages[pageIndex ?? 0];
     const position = findSpot(item, page.items, PAGE_HEIGHT, PAGE_WIDTH);
     if (!position) {
