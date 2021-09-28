@@ -49,11 +49,11 @@ export function ItemsTable({ items, pageSize, selectable }: ItemsTableProps) {
         <tbody>
           {groupedItems
             .slice(firstItem, firstItem + pageSize)
-            .map(({ item, quantity }, index) => (
+            .map((items, index) => (
               <Item
-                key={item.id ?? index}
-                item={item}
-                quantity={quantity}
+                key={items[0].id ?? index}
+                item={items[0]}
+                duplicates={items}
                 selectable={selectable}
                 withLocation={true}
               />

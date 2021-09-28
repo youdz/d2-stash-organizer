@@ -3,18 +3,36 @@ import { AdditionalInfo } from "./AdditionalInfo";
 import "./Item.css";
 import { ItemTooltip } from "./ItemTooltip";
 import { ItemLocationDesc } from "./ItemLocationDesc";
-import { useContext } from "preact/hooks";
+import { useCallback, useContext } from "preact/hooks";
 import { SelectionContext } from "../transfer/SelectionContext";
 
 export interface ItemProps {
   item: Item;
-  quantity: number;
+  duplicates?: Item[];
   selectable: boolean;
   withLocation: boolean;
 }
 
-export function Item({ item, quantity, selectable, withLocation }: ItemProps) {
-  const { selectedItems, toggleItem } = useContext(SelectionContext);
+export function Item({
+  item,
+  duplicates,
+  selectable,
+  withLocation,
+}: ItemProps) {
+  const { selectedItems, toggleItem, selectAll, unselectAll } =
+    useContext(SelectionContext);
+
+  const handleSelect = useCallback(() => {
+    if (!duplicates) {
+      toggleItem(item);
+    } else {
+      if (selectedItems.has(item)) {
+        unselectAll(duplicates);
+      } else {
+        selectAll(duplicates);
+      }
+    }
+  }, [duplicates, item, selectAll, selectedItems, toggleItem, unselectAll]);
 
   return (
     <tr class="item">
@@ -23,7 +41,7 @@ export function Item({ item, quantity, selectable, withLocation }: ItemProps) {
           <input
             type="checkbox"
             checked={selectedItems.has(item)}
-            onChange={() => toggleItem(item)}
+            onChange={handleSelect}
             aria-label={item.name}
           />
         </td>
@@ -32,7 +50,7 @@ export function Item({ item, quantity, selectable, withLocation }: ItemProps) {
         <ItemTooltip item={item} />
       </th>
       <td>
-        <AdditionalInfo item={item} quantity={quantity} />
+        <AdditionalInfo item={item} quantity={duplicates?.length} />
       </td>
       {withLocation && (
         <td>

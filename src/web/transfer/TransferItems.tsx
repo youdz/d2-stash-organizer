@@ -17,7 +17,7 @@ import { updateCharacterStashes } from "../store/plugyDuplicates";
 export function TransferItems() {
   const { lastActivePlugyStashPage } = useContext(CollectionContext);
   const { updateAllFiles, rollback } = useUpdateCollection();
-  const { selectedItems, resetSelection } = useContext(SelectionContext);
+  const { selectedItems } = useContext(SelectionContext);
   const [target, setTarget] = useState<ItemsOwner>();
   const [targetStorage, setTargetStorage] = useState<ItemStorageType>();
   const [error, setError] = useState<string>();
@@ -63,15 +63,14 @@ export function TransferItems() {
           }
         }
       }
-      if (isStash(target) && withOrganize) {
+      if (isStash(target) && (withOrganize || target.nonPlugY)) {
         organize(target, [], skipPages);
       }
       if (lastActivePlugyStashPage) {
         updateCharacterStashes(lastActivePlugyStashPage);
       }
-      await updateAllFiles();
+      await updateAllFiles(target);
       setSuccess(`${items.length} items transferred!`);
-      resetSelection();
     } catch (e) {
       if (e instanceof Error) {
         setError(e.message);
@@ -83,7 +82,6 @@ export function TransferItems() {
     }
   }, [
     items,
-    resetSelection,
     skipPages,
     target,
     targetStorage,
@@ -121,7 +119,9 @@ export function TransferItems() {
       <p>Select where you want to transfer them:</p>
       <div class="selectors">
         <OwnerSelector selected={target} onChange={setTarget} />
-        {target && <div class="arrow">&#8594;</div>}
+        {target && (!isStash(target) || !target.nonPlugY) && (
+          <div class="arrow">&#8594;</div>
+        )}
         {supportedStorageTypes && (
           <ul id="storage-selector">
             {supportedStorageTypes.map((storage) => (
@@ -143,7 +143,7 @@ export function TransferItems() {
             ))}
           </ul>
         )}
-        {target && isStash(target) && (
+        {target && isStash(target) && !target.nonPlugY && (
           <ul id="organize-selector">
             <li>
               <label>

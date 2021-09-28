@@ -6,7 +6,7 @@ import { SaveFileReader } from "../../save-file/SaveFileReader";
 // Can't use Node's Buffer because this needs to run in the browser
 export function parseStash(
   raw: Uint8Array,
-  file?: { name: string; lastModified: number }
+  file?: { name: string; lastModified?: number }
 ) {
   const reader = new SaveFileReader(raw);
   const header = reader.readString(4);
@@ -23,6 +23,9 @@ export function parseStash(
     gold: 0,
     pages: [],
   };
+  // Our current convention is that .d2x shared stashes do not come from PlugY
+  stash.nonPlugY = !stash.personal && file?.name.endsWith(".d2x");
+
   let firstPage = 10;
   const version = reader.readString(2);
   if (version === "01") {

@@ -1,8 +1,19 @@
-import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
+import {
+  isStash,
+  ItemsOwner,
+  SHARED_STASH_NAME,
+} from "../../scripts/save-file/ownership";
 import { PrettyOwnerName } from "./PrettyOwnerName";
-import { useContext } from "preact/hooks";
+import {
+  useCallback,
+  useContext,
+  useMemo,
+  useRef,
+  useState,
+} from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
 import "./OwnerSelector.css";
+import { Stash } from "../../scripts/stash/types";
 
 export interface OwnerSelectorProps {
   selected?: ItemsOwner;
@@ -15,15 +26,32 @@ export function OwnerSelector({
   onChange,
   onlyStashes,
 }: OwnerSelectorProps) {
-  let { owners } = useContext(CollectionContext);
+  const { owners, hasPlugY } = useContext(CollectionContext);
 
+  // Using state so it's stable
+  const [newStash] = useState<Stash>(() => ({
+    filename: "SharedStash.d2x",
+    lastModified: Date.now(),
+    personal: false,
+    nonPlugY: true,
+    gold: 0,
+    pageFlags: true,
+    pages: [],
+  }));
+
+  const sharedStashExists = useMemo(
+    () => owners.some((owner) => isStash(owner) && owner.nonPlugY),
+    [owners]
+  );
+
+  let possible = owners;
   if (onlyStashes) {
-    owners = owners.filter(isStash);
+    possible = owners.filter(isStash);
   }
 
   return (
     <ul class="owner-selector">
-      {owners.map((owner) => (
+      {possible.map((owner) => (
         <li>
           <label>
             <input
@@ -36,6 +64,19 @@ export function OwnerSelector({
           </label>
         </li>
       ))}
+      {!hasPlugY && !sharedStashExists && (
+        <li>
+          <label>
+            <input
+              type="radio"
+              name="target"
+              checked={selected === newStash}
+              onChange={() => onChange(newStash)}
+            />{" "}
+            Create a new <span class="magic">{SHARED_STASH_NAME}</span> for me
+          </label>
+        </li>
+      )}
     </ul>
   );
 }

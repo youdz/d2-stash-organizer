@@ -4,20 +4,22 @@ import { downloadAllFiles, downloadFile } from "./downloader";
 import { useCallback, useContext } from "preact/hooks";
 import { CollectionContext } from "./CollectionContext";
 import { ItemsOwner } from "../../scripts/save-file/ownership";
-import { SelectionContext } from "../transfer/SelectionContext";
 
 export function useUpdateCollection() {
   const { owners, setCollection, setSingleFile } =
     useContext(CollectionContext);
-  const { resetSelection } = useContext(SelectionContext);
 
   const updateAllFiles = useCallback(
-    async function () {
-      const saveFiles = owners.map((owner) => toSaveFile(owner));
+    async function (newOwner?: ItemsOwner) {
+      const allOwners = [...owners];
+      // Avoid duplicates if the owner already exists
+      if (newOwner && !allOwners.includes(newOwner)) {
+        allOwners.push(newOwner);
+      }
+      const saveFiles = allOwners.map((owner) => toSaveFile(owner));
       await writeAllFiles(saveFiles);
       await downloadAllFiles(saveFiles);
-      // Set the state to force a re-render of the app.
-      setCollection(owners);
+      setCollection(allOwners);
     },
     [owners, setCollection]
   );
@@ -34,11 +36,10 @@ export function useUpdateCollection() {
   );
 
   const rollback = useCallback(() => {
-    resetSelection();
     return getSavedStashes()
       .then((stashes) => Promise.all(stashes).then(setCollection))
       .catch(() => undefined);
-  }, [resetSelection, setCollection]);
+  }, [setCollection]);
 
   return { updateAllFiles, updateSingleFile, rollback };
 }

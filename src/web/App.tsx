@@ -9,15 +9,15 @@ export function App() {
   return (
     // Need a root div to properly replace the loading text.
     <div id="app">
-      <CollectionProvider>
-        <SelectionProvider>
+      <SelectionProvider>
+        <CollectionProvider>
           <GitHubLink />
           <h1>Diablo 2 Item Manager</h1>
           {/* TODO: Help section */}
           {/* TODO: Ethical analytics */}
           <Routes />
-        </SelectionProvider>
-      </CollectionProvider>
+        </CollectionProvider>
+      </SelectionProvider>
     </div>
   );
 }

@@ -18,7 +18,12 @@ const PAGE_SIZE = 10;
 
 export function StashView() {
   const { owners, lastActivePlugyStashPage } = useContext(CollectionContext);
-  const [ownerIndex, setOwnerIndex] = useState(0);
+  const [ownerIndex, setOwnerIndex] = useState(() =>
+    Math.max(
+      0,
+      owners.findIndex((owner) => isStash(owner) && !owner.personal)
+    )
+  );
   const [search, setSearch] = useState("");
   const [quality, setQuality] = useState<QualityFilterValue>("all");
   const [currentPage, setCurrentPage] = useState(0);

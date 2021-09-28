@@ -3,7 +3,6 @@ import { parseStash } from "../../scripts/stash/parsing/parseStash";
 import { stashToSaveFile } from "../../scripts/stash/parsing/stashToSaveFile";
 import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
 import { characterToSaveFile } from "../../scripts/character/parsing/characterToSaveFile";
-import { readSaveFiles } from "./store";
 
 const DEFAULT_SHARED_FILENAME = "_LOD_SharedStashSave.sss";
 const DEFAULT_PERSONAL_FILENAME = "CharacterName.d2x";

@@ -16,6 +16,8 @@ export interface Page {
 
 export interface Stash extends SaveFile {
   personal: boolean;
+  // Indicates if the stash was created through this tool instead of PlugY
+  nonPlugY?: boolean;
   pageFlags: boolean;
   gold: number;
   pages: Page[];

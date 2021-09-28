@@ -5,7 +5,7 @@ import { isSimpleItem } from "../collection/utils/isSimpleItem";
 
 export interface AdditionalInfoProps {
   item: Item;
-  quantity: number;
+  quantity?: number;
 }
 
 export function AdditionalInfo({ item, quantity }: AdditionalInfoProps) {
