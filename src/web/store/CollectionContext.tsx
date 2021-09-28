@@ -102,9 +102,12 @@ export function CollectionProvider({ children }: RenderableProps<unknown>) {
 
   // Initialize with the stash found in storage
   useEffect(() => {
-    getSavedStashes()
-      .then((stashes) => Promise.all(stashes).then(setCollection))
-      .catch(() => undefined);
+    void getSavedStashes().then((owners) => {
+      setCollection(owners);
+      if (!window.location.hash) {
+        window.location.hash = "#saves";
+      }
+    });
   }, [setCollection]);
 
   return (

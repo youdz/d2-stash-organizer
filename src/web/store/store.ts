@@ -118,5 +118,5 @@ export function writeAllFiles(files: File[]) {
 
 export async function getSavedStashes() {
   const files = await readSaveFiles();
-  return files.map((file) => parseSaveFile(file));
+  return Promise.all(files.map((file) => parseSaveFile(file)));
 }

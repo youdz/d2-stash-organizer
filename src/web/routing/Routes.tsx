@@ -8,6 +8,7 @@ import { Collection } from "../collection/Collection";
 import { SaveFiles } from "../save-files/SaveFiles";
 import { SelectionContext } from "../transfer/SelectionContext";
 import { TransferItems } from "../transfer/TransferItems";
+import { Help } from "../help/Help";
 
 function NavLink({
   hash,
@@ -34,6 +35,8 @@ export function Routes() {
 
   const view = useMemo(() => {
     switch (currentHash) {
+      case "#saves":
+        return <SaveFiles />;
       case "#collection":
         return <Collection />;
       case "#characters":
@@ -44,16 +47,15 @@ export function Routes() {
         return <Organizer />;
       case "#grail-tracker":
         return <GrailTracker />;
+      case "#help":
       default:
-        return <SaveFiles />;
+        return <Help />;
     }
   }, [currentHash]);
   return (
     <>
-      <nav id="navigation">
-        <NavLink hash="#saves" isHome>
-          Save files
-        </NavLink>
+      <nav id="navigation" data-nosnippet={true}>
+        <NavLink hash="#saves">Save files</NavLink>
         <NavLink hash="#collection">Collection</NavLink>
         <NavLink hash="#characters">Characters</NavLink>
         <NavLink hash="#transfer">
@@ -62,7 +64,7 @@ export function Routes() {
         <NavLink hash="#organize">Organize PlugY stash</NavLink>
         <NavLink hash="#grail-tracker">Grail tracker</NavLink>
       </nav>
-      {view}
+      <main>{view}</main>
     </>
   );
 }

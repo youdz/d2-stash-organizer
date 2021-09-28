@@ -1,0 +1,14 @@
+#help-link {
+  box-sizing: border-box;
+  float: right;
+  margin-right: 18px;
+  display: block;
+  border: 2px solid initial;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 26px;
+  line-height: 28px;
+  padding-left: 6px;
+  padding-top: 2px;
+}

@@ -4,6 +4,7 @@ import { GitHubLink } from "./GitHubLink";
 import { CollectionProvider } from "./store/CollectionContext";
 import { SelectionProvider } from "./transfer/SelectionContext";
 import { Routes } from "./routing/Routes";
+import { HelpLink } from "./help/HelpLink";
 
 export function App() {
   return (
@@ -12,6 +13,7 @@ export function App() {
       <SelectionProvider>
         <CollectionProvider>
           <GitHubLink />
+          <HelpLink />
           <h1>Diablo 2 Item Manager</h1>
           {/* TODO: Help section */}
           {/* TODO: Ethical analytics */}

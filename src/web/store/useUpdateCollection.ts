@@ -36,9 +36,7 @@ export function useUpdateCollection() {
   );
 
   const rollback = useCallback(() => {
-    return getSavedStashes()
-      .then((stashes) => Promise.all(stashes).then(setCollection))
-      .catch(() => undefined);
+    return getSavedStashes().then(setCollection);
   }, [setCollection]);
 
   return { updateAllFiles, updateSingleFile, rollback };
