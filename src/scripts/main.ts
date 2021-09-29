@@ -8,7 +8,7 @@ import { SaveFileWriter } from "./save-file/SaveFileWriter";
 import { saveCharacter } from "./character/saveCharacter";
 import { saveStash } from "./stash/saveStash";
 
-const CHAR = "test/Alpha.d2s";
+const CHAR = "test/WithCorpse.d2s";
 const STASH = "test/_LOD_SharedStashSave.sss";
 const TEST_OUTPUT = "test/saved.sss";
 const DANGER_OUTPUT = STASH;
@@ -19,19 +19,19 @@ async function main() {
   //  -  for Eth items, it would be better to have 'Ethereal' tag at the end, so the %perfect tags are aligned nicely
   //  - when you click "next" at the end of the page, it should go to the top of the page
   const character = parseCharacter(await readFile(CHAR));
-  const stash = parseStash(await readFile(STASH));
-  for (const item of stash.pages[0].items) {
-    if (!transferItem(item, stash, ItemStorageType.CUBE)) {
-      break;
-    }
-    console.log(`${item.name} at ${item.column}, ${item.row}`);
-  }
-  // console.log("CHARACTER");
-  // console.log(character.items.map(({ name }) => name));
+  // const stash = parseStash(await readFile(STASH));
+  // for (const item of stash.pages[0].items) {
+  //   if (!transferItem(item, stash, ItemStorageType.CUBE)) {
+  //     break;
+  //   }
+  //   console.log(`${item.name} at ${item.column}, ${item.row}`);
+  // }
+  console.log("CHARACTER");
+  console.log(character.items.filter(({ corpse }) => corpse));
   // console.log("STASH");
   // console.log(stash.pages[0].items.map(({ name }) => name));
-  await saveCharacter(character, CHAR);
-  await saveStash(stash, STASH);
+  // await saveCharacter(character, CHAR);
+  // await saveStash(stash, STASH);
 
   // triageNewItems(stash);
   // organize(stash, 1, 5);

@@ -1,12 +1,13 @@
 # d2-stash-organizer
 Diablo 2 Plugy stash organizer
 
-Web-based PlugY stash organizer and grail tracker hosted at: https://youdz.github.io/d2-stash-organizer/
+Web-based collection manager, muling utility, stash organizer and grail tracker hosted at: https://youdz.github.io/d2-stash-organizer/
 
 ## Features
-- It reads your whole shared stash file (.sss) in one click, and lets you search easily for items in it. 
-  No more "Where did I put my spare 35% Spirit?". Just type "Spirit" in the search box, see which pages have a Spirit, and even which one is the perfect one.
-- It organizes your entire stash for you in one click too, and lets you download the cleaned up stash file to use directly in game. 
+- It reads your whole save folder in one click, and lets you search easily for items in your entire collection. 
+  No more "Where did I put my spare 35% Spirit?". Just type "Spirit" in the search box, see where all your Spirits are, and even which one is the perfect one.
+- It allows you to mule and transfer items between characters or to a shared stash, either in bulk or a few at a time.
+- It organizes your entire PlugY stash for you in one click too, and lets you download the cleaned up stash file to use directly in game. 
   It names pages nicely, adds indices between sections, and even lays out sets nicely on their own page.
 - It tracks grail progress, even eth grail and perfect grail if you're that kind of crazy.
 
@@ -14,7 +15,7 @@ Web-based PlugY stash organizer and grail tracker hosted at: https://youdz.githu
 Everything runs in the browser: no installation required, no coding, no security risks for your computer. 
 
 Your data is your data, the tool does not send anything to the server. It works fully offline once loaded.
-This means your save files will never be sent or shared anywhere, and it does not track any kind of statistics.
+This means your save files will never be sent or shared anywhere.
 
 Finally, this tool will never lose any of your items. There is a hard check at the end of the organization logic
 that will throw an error and prevent generating a new save file if even one potion is missing. It will also

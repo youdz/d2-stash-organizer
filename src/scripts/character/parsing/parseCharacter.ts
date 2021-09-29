@@ -36,9 +36,11 @@ export function parseCharacter(
 
   // Items on the character or in stash
   character.items.push(...parseItemList(reader));
+  console.log("So far so good");
 
   // Items on a corpse
   const corpseItems = parseItemList(reader);
+  console.log("Corpse ok");
   for (const item of corpseItems) {
     item.corpse = true;
   }

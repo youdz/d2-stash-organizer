@@ -43,6 +43,7 @@ export function postProcessItem(item: Item) {
   }
   if (item.sockets) {
     item.search += `Socketed (${item.sockets})\n`;
+    item.search += `${item.sockets} sockets\n`;
   }
 
   if (item.filledSockets) {
