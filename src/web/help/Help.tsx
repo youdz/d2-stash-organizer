@@ -2,7 +2,6 @@ import { ExternalLink } from "../routing/ExternalLink";
 import { FaqSection } from "./FaqSection";
 
 export function Help() {
-  // TODO: add images
   return (
     <dl id="faq">
       <FaqSection
