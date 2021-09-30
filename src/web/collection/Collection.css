@@ -1,6 +1,7 @@
 #collection {
   width: 100%;
   border-collapse: collapse;
+  margin-top: 2em;
 }
 
 #collection thead th {

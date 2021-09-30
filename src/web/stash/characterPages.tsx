@@ -6,7 +6,6 @@ import {
 } from "../../scripts/items/types/ItemLocation";
 import { Item } from "../../scripts/items/types/Item";
 
-// TODO: corpse
 const PAGE_NAMES = [
   "Equipped",
   "Corpse",

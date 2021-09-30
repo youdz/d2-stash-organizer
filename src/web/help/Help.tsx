@@ -1,12 +1,14 @@
-import "./Help.css";
 import { ExternalLink } from "../routing/ExternalLink";
+import { FaqSection } from "./FaqSection";
 
 export function Help() {
-  // TODO: expand/collapse
+  // TODO: add images
   return (
-    <>
-      <h2 class="faq-question">I'm new here, what's this website?</h2>
-      <div class="faq-answer">
+    <dl id="faq">
+      <FaqSection
+        question="I'm new here, what's this website?"
+        startExpanded={true}
+      >
         <p>
           This tool is a collection manager for all of your single-player items
           in Diablo 2. You <a href="#saves">select your save folder</a>, the
@@ -36,12 +38,9 @@ export function Help() {
           manually update. Simply refresh your save files and you will
           immediately see your progress.
         </p>
-      </div>
+      </FaqSection>
 
-      <h2 class="faq-question">
-        When you say "easily searchable", what can I search for?
-      </h2>
-      <div class="faq-answer">
+      <FaqSection question='When you say "easily searchable", what can I search for?'>
         <p>When searching in your collection, you can search for:</p>
         <ul>
           <li>Item names: "Tal Rasha"</li>
@@ -59,10 +58,9 @@ export function Help() {
           perfect match. You can combine this to create advanced searches like:
         </p>
         <blockquote>"4 sockets" "15% enhanced"</blockquote>
-      </div>
+      </FaqSection>
 
-      <h2 class="faq-question">Where am I uploading my save files?</h2>
-      <p class="faq-answer">
+      <FaqSection question="Where am I uploading my save files?">
         Nowhere! Your data is yours, this website does not send anything to the
         server. In fact, once the page has been loaded, the tool works fully
         offline if you want to. If you're not convinced, the entire source code
@@ -71,20 +69,16 @@ export function Help() {
           open-source on GitHub
         </ExternalLink>
         .
-      </p>
+      </FaqSection>
 
-      <h2 class="faq-question">Is this compatible with PlugY?</h2>
-      <p class="faq-answer">
+      <FaqSection question="Is this compatible with PlugY?">
         Not only is it fully compatible with PlugY stashes, it also lets you{" "}
         <a href="#organize">fully sort and organize</a> them in one click. We
         all know how long we've been putting off cleaning our stash, well now we
         don't have to!
-      </p>
+      </FaqSection>
 
-      <h2 class="faq-question">
-        How will this sort my very large PlugY stash?
-      </h2>
-      <div class="faq-answer">
+      <FaqSection question="How will this sort my very large PlugY stash?">
         <p>
           That's a pretty long answer, but you asked for it. Not that you cannot
           configure the sort order, but you can tell the organizer to leave
@@ -141,26 +135,20 @@ export function Help() {
             </li>
           </ol>
         </ol>
-        {/* TODO: add images */}
-      </div>
+      </FaqSection>
 
-      <h2 class="faq-question">
-        Is this compatible with Diablo 2 Resurrected?
-      </h2>
-      <p class="faq-answer">
+      <FaqSection question="Is this compatible with Diablo 2 Resurrected?">
         As soon as a single dev with limited free time can handle it. It's
         obviously the current highest priority.
-      </p>
+      </FaqSection>
 
-      <h2 class="faq-question">Can this be used to edit, hack or mod items?</h2>
-      <p class="faq-answer">
+      <FaqSection question="Can this be used to edit, hack or mod items?">
         The tool does not have the capability to modify item stats, skills or
         properties. The only fields that can be modified at the moment are the
         ones related to the item's location.
-      </p>
+      </FaqSection>
 
-      <h2 class="faq-question">How do I transfer many items at once?</h2>
-      <p class="faq-answer">
+      <FaqSection question="How do I transfer many items at once?">
         Go to <a href="#collection">your collection</a> or a specific{" "}
         <a href="#characters">character or stash page</a>. Search for the items
         you want (or do not search if you want to transfer all items), and click
@@ -168,20 +156,16 @@ export function Help() {
         the search. After that, simply go to the{" "}
         <a href="#characters">transfer page</a> and select where you want to
         send them.
-      </p>
+      </FaqSection>
 
-      <h2 class="faq-question">
-        How do I transfer all items in a single stash page?
-      </h2>
-      <p class="faq-answer">
+      <FaqSection question="How do I transfer all items in a single stash page?">
         Go to <a href="#characters">that stash</a>, and search for the exact
         page name (for instance, "Shared Page 42"). Click the "Select all items"
         button, the <a href="#characters">transfer page</a> will now transfer
         exactly the items in that page.
-      </p>
+      </FaqSection>
 
-      <h2 class="faq-question">How do I get help or report a bug?</h2>
-      <div class="faq-answer">
+      <FaqSection question="How do I get help or report a bug?">
         <p>
           First, check if someone else already{" "}
           <ExternalLink href="https://github.com/youdz/d2-stash-organizer/issues">
@@ -204,7 +188,7 @@ export function Help() {
             Reddit
           </ExternalLink>
         </p>
-      </div>
-    </>
+      </FaqSection>
+    </dl>
   );
 }

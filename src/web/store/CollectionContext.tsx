@@ -104,7 +104,7 @@ export function CollectionProvider({ children }: RenderableProps<unknown>) {
   useEffect(() => {
     void getSavedStashes().then((owners) => {
       setCollection(owners);
-      if (!window.location.hash) {
+      if (!window.location.hash && owners.length > 0) {
         window.location.hash = "#saves";
       }
     });

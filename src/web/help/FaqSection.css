@@ -1,0 +1,40 @@
+.faq-question .button {
+  font-size: 18px;
+  border: none;
+  padding: 0.5em 0.4em;
+  color: rgb(199, 179, 119);
+}
+
+.faq-question .button::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.5em;
+  transition: transform 0.4s;
+}
+
+.faq-question.expanded .button::before {
+  transform: rotateZ(90deg);
+}
+
+.faq-answer {
+  overflow: hidden;
+  height: 0;
+  margin-left: 0.75em;
+  padding-left: 1em;
+  border-left: 1px solid rgb(199, 179, 119);
+  /* The D2 font is just too painful to read for large paragraphs */
+  font-family: fantasy;
+  font-weight: initial;
+  letter-spacing: initial;
+}
+
+.faq-answer.expanded {
+  height: auto;
+}
+
+.faq-answer > :first-child {
+  margin-top: 0;
+}
+.faq-answer > :last-child {
+  margin-bottom: 0;
+}
