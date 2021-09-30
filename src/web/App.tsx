@@ -16,6 +16,7 @@ export function App() {
           <HelpLink />
           <h1>Diablo 2 Item Manager</h1>
           {/* TODO: Ethical analytics */}
+          {/* TODO: Update dependencies */}
           <Routes />
         </CollectionProvider>
       </SelectionProvider>

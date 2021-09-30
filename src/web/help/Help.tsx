@@ -13,9 +13,11 @@ export function Help() {
           This tool is a collection manager for all of your single-player items
           in Diablo 2. You <a href="#saves">select your save folder</a>, the
           tool reads every single character file and stash in it, turning it
-          into an <a href="#collection">easily searchable collection</a>. When
-          searching for an item, the tool gives a precise location to help you
-          find it: "Worn by Hammerdin's Mercenary", or "In Fishymancer's Cube".
+          into an <a href="#collection">easily searchable collection</a>. Each
+          item is evaluated with a perfection score, so you can quickly identify
+          your 35% Spirit without inspecting all of them. When searching for an
+          item, the tool gives a precise location to help you find it: "Worn by
+          Hammerdin's Mercenary", or "In Fishymancer's Cube".
         </p>
         <p>
           You can also use this website as a replacement for GoMule. It allow
@@ -58,6 +60,38 @@ export function Help() {
           perfect match. You can combine this to create advanced searches like:
         </p>
         <blockquote>"4 sockets" "15% enhanced"</blockquote>
+        <p>
+          To help you find your items in-game, the search results indicate very
+          precisely where each item is:
+        </p>
+        <p>
+          <img
+            src="examples/item-finder.png"
+            style="max-width"
+            alt="Three Andariel's Visages, one worn by a mercenary, one in a cube, and one on page 48 of the shared stash"
+          />
+        </p>
+      </FaqSection>
+
+      <FaqSection question='What do you mean by "perfection score"?'>
+        <p>
+          Many unique and set items have can roll properties and modifiers
+          within a range. For instance, Tal Rasha's Lidless Eye can drop +1 or
+          +2 to each elemental mastery. This is displayed using brackets next to
+          each property that can vary:
+        </p>
+        <p>
+          <img
+            src="examples/item-info.png"
+            style="max-width"
+            alt="Three Andariel's Visages, one worn by a mercenary, one in a cube, and one on page 48 of the shared stash"
+          />
+        </p>
+        <p>
+          In this case, it dropped with +1 Cold Mastery, +2 Lightning Mastery
+          and +2 Fire Mastery. As such, it has 2 perfect rolls out of 3, which
+          makes it "66% perfect".
+        </p>
       </FaqSection>
 
       <FaqSection question="Where am I uploading my save files?">
@@ -135,6 +169,25 @@ export function Help() {
             </li>
           </ol>
         </ol>
+        <p>Here are some example pages after organization:</p>
+        <p>
+          <img
+            src="examples/armor.png"
+            alt="Unique normal armors organized by level"
+          />
+          <img
+            src="examples/runes.png"
+            alt="Low-level runes layed out line by line"
+          />
+          <img
+            src="examples/cathan.png"
+            alt="Cathan's Traps set nicely layed out on a single page"
+          />
+          <img
+            src="examples/sigon.png"
+            alt="Sigon's Complete Steel set nicely layed out on a single page"
+          />
+        </p>
       </FaqSection>
 
       <FaqSection question="Is this compatible with Diablo 2 Resurrected?">
@@ -149,13 +202,27 @@ export function Help() {
       </FaqSection>
 
       <FaqSection question="How do I transfer many items at once?">
-        Go to <a href="#collection">your collection</a> or a specific{" "}
-        <a href="#characters">character or stash page</a>. Search for the items
-        you want (or do not search if you want to transfer all items), and click
-        the "Select all items" button. This will select all items returned by
-        the search. After that, simply go to the{" "}
-        <a href="#characters">transfer page</a> and select where you want to
-        send them.
+        <p>
+          Go to <a href="#collection">your collection</a> or a specific{" "}
+          <a href="#characters">character or stash page</a>. Search for the
+          items you want (or do not search if you want to transfer all items),
+          and click the "Select all items" button. This will select all items
+          returned by the search. After that, simply go to the{" "}
+          <a href="#characters">transfer page</a> and select where you want to
+          send them.
+        </p>
+        <p>
+          There is no limit to how many items you can transfer at once, provided
+          you have enough room at the destination. For instance, you can
+          transfer thousands of items in one click from a personal PlugY stash
+          to the shared stash:
+        </p>
+        <p>
+          <img
+            src="examples/bulk-transfer.png"
+            alt="Unique normal armors organized by level"
+          />
+        </p>
       </FaqSection>
 
       <FaqSection question="How do I transfer all items in a single stash page?">

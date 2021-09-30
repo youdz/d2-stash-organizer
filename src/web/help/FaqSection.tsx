@@ -25,7 +25,6 @@ export function FaqSection({
         {
           duration: 400,
           easing: "ease-in-out",
-          fill: "both",
           direction: previous ? "reverse" : "normal",
         }
       );

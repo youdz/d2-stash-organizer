@@ -35,6 +35,9 @@ export default {
       rootDir: "src/web",
       patterns: ["assets/**/*"],
     }),
+    copy({
+      patterns: ["examples/**/*"],
+    }),
     WATCH && serve({ contentBase: "dist", open: true }),
   ],
   output: {
