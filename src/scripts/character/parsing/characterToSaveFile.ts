@@ -13,19 +13,28 @@ export function characterToSaveFile(character: Character) {
     writer,
     character.items.filter((item) => !item.mercenary && !item.corpse)
   );
-  writeItemList(
-    writer,
-    character.items.filter((item) => item.corpse)
-  );
+
+  // Corpse data
+  writer.writeString("JM");
+  writer.writeInt16LE(character.hasCorpse ? 1 : 0);
+  if (character.hasCorpse) {
+    writer.skip(12);
+    writeItemList(
+      writer,
+      character.items.filter((item) => item.corpse)
+    );
+  }
 
   // TODO: classic characters
   const expansionChar = true;
   if (expansionChar) {
     writer.writeString("jf");
-    writeItemList(
-      writer,
-      character.items.filter((item) => item.mercenary)
-    );
+    if (character.hasMercenary) {
+      writeItemList(
+        writer,
+        character.items.filter((item) => item.mercenary)
+      );
+    }
     writer.write(character.golem);
   }
 

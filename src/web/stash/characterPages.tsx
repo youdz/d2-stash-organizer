@@ -9,6 +9,7 @@ import { Item } from "../../scripts/items/types/Item";
 // TODO: corpse
 const PAGE_NAMES = [
   "Equipped",
+  "Corpse",
   "Mercenary",
   "Inventory",
   "Cube",
@@ -38,6 +39,8 @@ function findPage(item: Item): PageName {
     case ItemLocation.EQUIPPED:
       if (item.mercenary) {
         return "Mercenary";
+      } else if (item.corpse) {
+        return "Corpse";
       } else {
         return "Equipped";
       }

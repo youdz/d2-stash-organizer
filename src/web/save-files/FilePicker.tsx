@@ -48,7 +48,7 @@ export function FilePicker({
 
   const inputAttrs = folder
     ? { directory: true, webkitdirectory: true, multiple: true }
-    : { accept: ".sss,.d2x" };
+    : { accept: ".sss,.d2x,.d2s" };
 
   return (
     <span class="filepicker">

@@ -16,9 +16,9 @@ export function parseItemList(reader: SaveFileReader) {
   while (remainingItems > 0) {
     const currentItemRaw = [];
     let parsedItem: Item | false = false;
-    // Sometimes the item ID will contain "JM" or "ST", we have to skip over that
+    // Sometimes the item ID will contain a significant header, we have to skip over that
     while (!parsedItem) {
-      currentItemRaw.push(...reader.readUntil(["JM", "ST"], 2));
+      currentItemRaw.push(...reader.readUntil(["JM", "ST", "jf", "kf"], 2));
       parsedItem = parseItem(Uint8Array.from(currentItemRaw));
     }
     if (parsedItem.location === ItemLocation.SOCKET) {

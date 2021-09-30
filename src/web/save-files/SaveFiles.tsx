@@ -51,7 +51,7 @@ export function SaveFiles() {
         )}
         {allowSingleFile && (
           <FilePicker folder={false}>
-            {owners.length === 0 ? "Upload" : "Update"} a single stash
+            {owners.length === 0 ? "Upload" : "Update"} a single file
           </FilePicker>
         )}
       </p>

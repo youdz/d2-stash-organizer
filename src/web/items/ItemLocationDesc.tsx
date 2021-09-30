@@ -13,8 +13,7 @@ function locationString(item: Item) {
   if (!item.owner) {
     return "Unknown location";
   }
-  // TODO: corpse
-  let name = ownerName(item.owner);
+  const name = ownerName(item.owner);
   switch (item.location) {
     case ItemLocation.STORED:
       switch (item.stored) {
@@ -35,9 +34,12 @@ function locationString(item: Item) {
       return `In ${name}'s belt`;
     case ItemLocation.EQUIPPED:
       if (item.mercenary) {
-        name = `${name}'s mercenary`;
+        return `Worn by ${name}'s mercenary`;
+      } else if (item.corpse) {
+        return `On ${name}'s corpse`;
+      } else {
+        return `Worn by ${name}`;
       }
-      return `Worn by ${name}`;
     default:
       return "Unknown location";
   }

@@ -4,6 +4,7 @@ import { parseAttributes } from "./parseAttributes";
 import { parseItemList } from "../../items/parsing/parseItemList";
 import { parseMercenary } from "./parseMercenary";
 import { postProcessCharacter } from "./postProcessCharacter";
+import { parseCorpses } from "./parseCorpses";
 
 // Can't use Node's Buffer because this needs to run in the browser
 export function parseCharacter(
@@ -22,6 +23,8 @@ export function parseCharacter(
     version: reader.readInt32LE(4),
     name: reader.readNullTerminatedString(20),
     class: reader.readInt8(40),
+    hasCorpse: false,
+    hasMercenary: !!reader.readInt32LE(179),
     characterData: new Uint8Array(),
     golem: new Uint8Array(),
     items: [],
@@ -36,20 +39,14 @@ export function parseCharacter(
 
   // Items on the character or in stash
   character.items.push(...parseItemList(reader));
-  console.log("So far so good");
 
   // Items on a corpse
-  const corpseItems = parseItemList(reader);
-  console.log("Corpse ok");
-  for (const item of corpseItems) {
-    item.corpse = true;
-  }
-  character.items.push(...corpseItems);
+  parseCorpses(reader, character);
 
   // TODO: classic characters
   const expansionChar = true;
   if (expansionChar) {
-    character.items.push(...parseMercenary(reader));
+    parseMercenary(reader, character);
     character.golem = reader.readRemaining();
   }
 

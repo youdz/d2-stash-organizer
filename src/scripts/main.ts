@@ -1,14 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { readFile } from "fs/promises";
-import { parseStash } from "./stash/parsing/parseStash";
 import { parseCharacter } from "./character/parsing/parseCharacter";
-import { transferItem } from "./items/moving/transferItem";
-import { ItemStorageType } from "./items/types/ItemLocation";
-import { SaveFileWriter } from "./save-file/SaveFileWriter";
 import { saveCharacter } from "./character/saveCharacter";
-import { saveStash } from "./stash/saveStash";
 
-const CHAR = "test/WithCorpse.d2s";
+const CHAR = "test/output.d2s";
 const STASH = "test/_LOD_SharedStashSave.sss";
 const TEST_OUTPUT = "test/saved.sss";
 const DANGER_OUTPUT = STASH;
@@ -26,11 +21,15 @@ async function main() {
   //   }
   //   console.log(`${item.name} at ${item.column}, ${item.row}`);
   // }
-  console.log("CHARACTER");
-  console.log(character.items.filter(({ corpse }) => corpse));
+  // console.log("CHARACTER");
+  // console.log(
+  //   character.items
+  //     .filter(({ stored, corpse }) => corpse)
+  //     .map(({ name }) => name)
+  // );
   // console.log("STASH");
   // console.log(stash.pages[0].items.map(({ name }) => name));
-  // await saveCharacter(character, CHAR);
+  // await saveCharacter(character, "test/output.d2s");
   // await saveStash(stash, STASH);
 
   // triageNewItems(stash);
