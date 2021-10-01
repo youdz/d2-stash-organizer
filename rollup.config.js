@@ -13,12 +13,27 @@ import postcss from "rollup-plugin-postcss";
 const PROD = !!process.env.PROD;
 const WATCH = !!process.env.ROLLUP_WATCH;
 
+const ANALYTICS_SCRIPT = `
+<script>
+    window.addEventListener('hashchange', function(e) {
+        window.goatcounter.count({
+            path: location.pathname + location.search + location.hash,
+        })
+    })
+</script>
+<script data-goatcounter="https://eudes.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+`;
+
 export default {
   input: "src/web/index.html",
   plugins: [
     // Entry point for application build; can specify a glob to build multiple
     // HTML files for non-SPA app
-    html(),
+    html({
+      transformHtml: (html) =>
+        PROD ? html.replace("</body>", `${ANALYTICS_SCRIPT}</body>`) : html,
+    }),
     // Resolve bare module specifiers to relative paths
     resolve(),
     json({ compact: true }),

@@ -1,5 +1,5 @@
 import { Item } from "../types/Item";
-import { isStash, ItemsOwner, ownerName } from "../../save-file/ownership";
+import { isStash, ItemsOwner } from "../../save-file/ownership";
 import {
   ItemEquipSlot,
   ItemLocation,

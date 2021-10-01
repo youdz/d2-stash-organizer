@@ -4,13 +4,7 @@ import {
   SHARED_STASH_NAME,
 } from "../../scripts/save-file/ownership";
 import { PrettyOwnerName } from "./PrettyOwnerName";
-import {
-  useCallback,
-  useContext,
-  useMemo,
-  useRef,
-  useState,
-} from "preact/hooks";
+import { useContext, useMemo, useState } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
 import "./OwnerSelector.css";
 import { Stash } from "../../scripts/stash/types";

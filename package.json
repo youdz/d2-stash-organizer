@@ -8,7 +8,7 @@
     "game-data": "ts-node src/game-data/generate-all.ts",
     "format": "prettier --write './**/*.{ts,tsx,.css}'",
     "lint": "eslint './**/*.{ts,tsx}'",
-    "lint:fix": "eslint --fix './**/*.ts'",
+    "lint:fix": "eslint --fix './**/*.{ts,tsx}'",
     "build": "npm run format && npm run lint -- --max-warnings 0 && rm -r ./docs && rollup -c --environment PROD",
     "watch": "rollup -cwm"
   },

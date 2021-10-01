@@ -1,6 +1,5 @@
 import { Stash } from "../../stash/types";
 import { Item } from "../types/Item";
-import { ownerName } from "../../save-file/ownership";
 import { collision } from "./collision";
 import { positionItem } from "./positionItem";
 

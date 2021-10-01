@@ -35,7 +35,14 @@ export function Organizer() {
         }
       }
     }
-  }, [emptyPages, skipPages, stash, updateSingleFile, rollback]);
+  }, [
+    stash,
+    skipPages,
+    emptyPages,
+    lastActivePlugyStashPage,
+    updateSingleFile,
+    rollback,
+  ]);
 
   if (!hasPlugY) {
     return (

@@ -1,6 +1,5 @@
 import { Character } from "../types";
 import { postProcessItem } from "../../items/post-processing/postProcessItem";
-import { ownerName } from "../../save-file/ownership";
 
 /**
  * Performs all operations that are not actually parsing, but that we need for our scripts and UI.
