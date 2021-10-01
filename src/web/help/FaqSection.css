@@ -23,7 +23,7 @@
   padding-left: 1em;
   border-left: 1px solid rgb(199, 179, 119);
   /* The D2 font is just too painful to read for large paragraphs */
-  font-family: fantasy;
+  font-family: sans-serif;
   font-weight: initial;
   letter-spacing: initial;
 }
