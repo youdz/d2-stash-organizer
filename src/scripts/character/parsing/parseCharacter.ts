@@ -38,7 +38,7 @@ export function parseCharacter(
   character.characterData = reader.read(reader.nextIndex - 16, 16);
 
   // Items on the character or in stash
-  character.items.push(...parseItemList(reader));
+  character.items.push(...parseItemList(reader, character.version));
 
   // Items on a corpse
   parseCorpses(reader, character);

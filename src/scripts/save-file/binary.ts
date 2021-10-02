@@ -2,18 +2,23 @@ import { SaveFileReader } from "./SaveFileReader";
 
 export interface BinaryStream {
   // If position is not specified, calls to these read the stream in sequence
+  skip(size: number): false;
   read(size: number, position?: number): string;
   readInt(size: number, position?: number): number;
   readBool(position?: number): boolean;
   raw(): string;
 }
 
-export function binaryStream(reader: SaveFileReader): BinaryStream {
+export function binaryStream(reader: SaveFileReader) {
   // Trying not to convert the entire stash for every item, that would be too heavy
   let binary = "";
 
   let nextIndex = 0;
-  const stream = {
+  const stream: BinaryStream = {
+    skip(length: number) {
+      nextIndex = nextIndex + length;
+      return false;
+    },
     read(length: number, position = nextIndex) {
       const missingBits = position + length - binary.length;
       if (missingBits > 0) {

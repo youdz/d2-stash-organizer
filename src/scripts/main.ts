@@ -5,7 +5,7 @@ import { saveCharacter } from "./character/saveCharacter";
 import { parseStash } from "./stash/parsing/parseStash";
 import { saveStash } from "./stash/saveStash";
 
-const CHAR = "test/WithCorpse.d2s";
+const CHAR = "test/d2r/D2Sorc.d2s";
 const STASH = "test/_LOD_SharedStashSave.sss";
 const TEST_OUTPUT = "test/saved.sss";
 const DANGER_OUTPUT = STASH;
@@ -15,8 +15,8 @@ async function main() {
   //  - when the item is perfect, the 'perfect' text could be in a different color
   //  -  for Eth items, it would be better to have 'Ethereal' tag at the end, so the %perfect tags are aligned nicely
   //  - when you click "next" at the end of the page, it should go to the top of the page
-  const character = parseCharacter(await readFile(CHAR));
-  // const stash = parseStash(await readFile(STASH));
+  // const character = parseCharacter(await readFile(CHAR));
+  const stash = parseStash(await readFile(STASH));
   // for (const item of stash.pages[0].items) {
   //   if (!transferItem(item, stash, ItemStorageType.CUBE)) {
   //     break;
@@ -24,23 +24,19 @@ async function main() {
   //   console.log(`${item.name} at ${item.column}, ${item.row}`);
   // }
   // console.log("CHARACTER");
-  // console.log(
-  //   character.items
-  //     .filter(({ stored, corpse }) => corpse)
-  //     .map(({ name }) => name)
-  // );
+  // console.log(character.items[0]);
   // console.log("STASH");
-  // console.log(stash.pages[0].items.map(({ name }) => name));
-  await saveCharacter(character, "test/output.d2s");
+  console.log(stash.pages[0].items.map(({ name }) => name));
+  // await saveCharacter(character, "test/output.d2s");
   // await saveStash(stash, "test/output.sss");
 
-  // const original = await readFile(STASH);
-  // const output = await readFile("test/output.sss");
-  // original.forEach((byte, i) => {
-  //   if (output[i] !== byte) {
-  //     console.log("Mismatch!");
-  //   }
-  // });
+  const original = await readFile(STASH);
+  const output = await readFile("test/output.sss");
+  original.forEach((byte, i) => {
+    if (output[i] !== byte) {
+      console.log("Mismatch!");
+    }
+  });
 
   // triageNewItems(stash);
   // organize(stash, 1, 5);

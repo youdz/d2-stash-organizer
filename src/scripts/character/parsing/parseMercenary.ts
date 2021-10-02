@@ -9,7 +9,7 @@ export function parseMercenary(reader: SaveFileReader, character: Character) {
   }
   // If the player has never had a mercenary, there is no item list
   if (character.hasMercenary) {
-    const items = parseItemList(reader);
+    const items = parseItemList(reader, character.version);
     for (const item of items) {
       item.mercenary = true;
     }

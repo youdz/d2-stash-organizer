@@ -3,7 +3,7 @@ import { Item } from "../types/Item";
 import { parseItem } from "./parseItem";
 import { ItemLocation } from "../types/ItemLocation";
 
-export function parseItemList(reader: SaveFileReader) {
+export function parseItemList(reader: SaveFileReader, version: number) {
   const header = reader.readString(2);
   if (header !== "JM") {
     throw new Error(`Unexpected header ${header} for an item list`);
@@ -14,7 +14,7 @@ export function parseItemList(reader: SaveFileReader) {
 
   // After that comes the first item
   while (remainingItems > 0) {
-    const parsedItem = parseItem(reader);
+    const parsedItem = parseItem(reader, version);
     if (parsedItem.location === ItemLocation.SOCKET) {
       const socketedItem = items[items.length - 1];
       if (!socketedItem.filledSockets) {

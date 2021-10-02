@@ -1,6 +1,7 @@
 import { Page } from "../types";
 import { SaveFileReader } from "../../save-file/SaveFileReader";
 import { parseItemList } from "../../items/parsing/parseItemList";
+import { LAST_LEGACY } from "../../character/parsing/versions";
 
 export function parsePage(reader: SaveFileReader): Page {
   const header = reader.readString(2);
@@ -26,6 +27,6 @@ export function parsePage(reader: SaveFileReader): Page {
   return {
     flags,
     name: reader.readNullTerminatedString(),
-    items: parseItemList(reader),
+    items: parseItemList(reader, LAST_LEGACY),
   };
 }

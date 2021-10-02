@@ -17,7 +17,7 @@ export function parseQuality(
   { read, readBool, readInt }: BinaryStream,
   item: Item
 ) {
-  item.id = readInt(32, 111);
+  item.id = readInt(32);
   item.level = readInt(7);
   item.quality = readInt(4);
 
