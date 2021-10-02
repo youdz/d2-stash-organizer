@@ -24,6 +24,7 @@ export async function armorsToJson() {
       height: Number(line[29]),
       qlevel: Number(line[13]),
       levelReq: Number(line[14]),
+      stackable: line[45] === "1",
     };
   }
   await writeJson("Armor", armors);

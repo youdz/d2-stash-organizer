@@ -4,6 +4,7 @@ import { ItemQuality } from "../types/ItemQuality";
 import {
   MAGIC_PREFIXES,
   MAGIC_SUFFIXES,
+  MISC,
   RARE_NAMES,
   RUNEWORDS,
   SET_ITEMS,
@@ -94,7 +95,10 @@ export function parseQuality(
     item.name = `${charName}'s ${item.name}`;
   }
 
-  // TODO: handle tomes
+  if (MISC[item.code]?.type === "book") {
+    // Skip 5 unknown bits for tomes
+    read(5);
+  }
 
   // Skip unknown "timestamp" bit
   read(1);

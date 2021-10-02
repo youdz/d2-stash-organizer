@@ -1,4 +1,3 @@
-import { ItemQuality } from "../types/ItemQuality";
 import { parseSimple } from "./parseSimple";
 import { binaryStream } from "../../save-file/binary";
 import { parseQuality } from "./parseQuality";

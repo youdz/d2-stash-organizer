@@ -14,6 +14,7 @@ export interface Equipment {
   height: number;
   qlevel: number;
   levelReq: number;
+  stackable: boolean;
 }
 
 export interface Armor extends Equipment {
@@ -22,7 +23,6 @@ export interface Armor extends Equipment {
 }
 
 export interface Weapon extends Equipment {
-  stackable: boolean;
   twoHanded: boolean;
 }
 

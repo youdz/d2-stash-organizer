@@ -12,7 +12,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 1,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "skp": {
     "name": "Skull Cap",
@@ -27,7 +28,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 5,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "hlm": {
     "name": "Helm",
@@ -42,7 +44,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 11,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "fhl": {
     "name": "Full Helm",
@@ -57,7 +60,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 15,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "ghm": {
     "name": "Great Helm",
@@ -72,7 +76,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 23,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "crn": {
     "name": "Crown",
@@ -87,7 +92,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 29,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "msk": {
     "name": "Mask",
@@ -102,7 +108,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 19,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "qui": {
     "name": "Quilted Armor",
@@ -117,7 +124,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 1,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "lea": {
     "name": "Leather Armor",
@@ -132,7 +140,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 3,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "hla": {
     "name": "Hard Leather Armor",
@@ -147,7 +156,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 5,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "stu": {
     "name": "Studded Leather",
@@ -162,7 +172,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 8,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "rng": {
     "name": "Ring Mail",
@@ -177,7 +188,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 11,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "scl": {
     "name": "Scale Mail",
@@ -192,7 +204,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 13,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "chn": {
     "name": "Chain Mail",
@@ -207,7 +220,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 15,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "brs": {
     "name": "Breast Plate",
@@ -222,7 +236,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 18,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "spl": {
     "name": "Splint Mail",
@@ -237,7 +252,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 20,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "plt": {
     "name": "Plate Mail",
@@ -252,7 +268,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 24,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "fld": {
     "name": "Field Plate",
@@ -267,7 +284,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 28,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "gth": {
     "name": "Gothic Plate",
@@ -282,7 +300,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 32,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "ful": {
     "name": "Full Plate Mail",
@@ -297,7 +316,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 37,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "aar": {
     "name": "Ancient Armor",
@@ -312,7 +332,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 40,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "ltp": {
     "name": "Light Plate",
@@ -327,7 +348,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 35,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "buc": {
     "name": "Buckler",
@@ -342,7 +364,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 1,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "sml": {
     "name": "Small Shield",
@@ -357,7 +380,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 5,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "lrg": {
     "name": "Large Shield",
@@ -372,7 +396,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 11,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "kit": {
     "name": "Kite Shield",
@@ -387,7 +412,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 15,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "tow": {
     "name": "Tower Shield",
@@ -402,7 +428,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 22,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "gts": {
     "name": "Gothic Shield",
@@ -417,7 +444,8 @@
     "width": 2,
     "height": 4,
     "qlevel": 30,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "lgl": {
     "name": "Leather Gloves",
@@ -432,7 +460,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 3,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "vgl": {
     "name": "Heavy Gloves",
@@ -447,7 +476,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 7,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "mgl": {
     "name": "Chain Gloves",
@@ -462,7 +492,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 12,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "tgl": {
     "name": "Light Gauntlets",
@@ -477,7 +508,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 20,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "hgl": {
     "name": "Gauntlets",
@@ -492,7 +524,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 27,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "lbt": {
     "name": "Boots",
@@ -507,7 +540,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 3,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "vbt": {
     "name": "Heavy Boots",
@@ -522,7 +556,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 7,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "mbt": {
     "name": "Chain Boots",
@@ -537,7 +572,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 12,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "tbt": {
     "name": "Light Plated Boots",
@@ -552,7 +588,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 20,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "hbt": {
     "name": "Greaves",
@@ -567,7 +604,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 27,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "lbl": {
     "name": "Sash",
@@ -582,7 +620,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 3,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "vbl": {
     "name": "Light Belt",
@@ -597,7 +636,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 7,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "mbl": {
     "name": "Belt",
@@ -612,7 +652,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 12,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "tbl": {
     "name": "Heavy Belt",
@@ -627,7 +668,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 20,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "hbl": {
     "name": "Plated Belt",
@@ -642,7 +684,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 27,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "bhm": {
     "name": "Bone Helm",
@@ -657,7 +700,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 22,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "bsh": {
     "name": "Bone Shield",
@@ -672,7 +716,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 19,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "spk": {
     "name": "Spiked Shield",
@@ -687,7 +732,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 11,
-    "levelReq": 0
+    "levelReq": 0,
+    "stackable": false
   },
   "xap": {
     "name": "War Hat",
@@ -702,7 +748,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 34,
-    "levelReq": 22
+    "levelReq": 22,
+    "stackable": false
   },
   "xkp": {
     "name": "Sallet",
@@ -717,7 +764,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 37,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xlm": {
     "name": "Casque",
@@ -732,7 +780,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 42,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xhl": {
     "name": "Basinet",
@@ -747,7 +796,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 45,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xhm": {
     "name": "Winged Helm",
@@ -762,7 +812,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 51,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xrn": {
     "name": "Grand Crown",
@@ -777,7 +828,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 55,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xsk": {
     "name": "Death Mask",
@@ -792,7 +844,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 48,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xui": {
     "name": "Ghost Armor",
@@ -807,7 +860,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 34,
-    "levelReq": 22
+    "levelReq": 22,
+    "stackable": false
   },
   "xea": {
     "name": "Serpentskin Armor",
@@ -822,7 +876,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 36,
-    "levelReq": 24
+    "levelReq": 24,
+    "stackable": false
   },
   "xla": {
     "name": "Demonhide Armor",
@@ -837,7 +892,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 37,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xtu": {
     "name": "Trellised Armor",
@@ -852,7 +908,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 40,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xng": {
     "name": "Linked Mail",
@@ -867,7 +924,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 42,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xcl": {
     "name": "Tigulated Mail",
@@ -882,7 +940,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 43,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xhn": {
     "name": "Mesh Armor",
@@ -897,7 +956,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 45,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xrs": {
     "name": "Cuirass",
@@ -912,7 +972,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 47,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xpl": {
     "name": "Russet Armor",
@@ -927,7 +988,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 49,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xlt": {
     "name": "Templar Coat",
@@ -942,7 +1004,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 52,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xld": {
     "name": "Sharktooth Armor",
@@ -957,7 +1020,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 55,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xth": {
     "name": "Embossed Plate",
@@ -972,7 +1036,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 58,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xul": {
     "name": "Chaos Armor",
@@ -987,7 +1052,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 61,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xar": {
     "name": "Ornate Plate",
@@ -1002,7 +1068,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 64,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xtp": {
     "name": "Mage Plate",
@@ -1017,7 +1084,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 60,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xuc": {
     "name": "Defender",
@@ -1032,7 +1100,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 34,
-    "levelReq": 22
+    "levelReq": 22,
+    "stackable": false
   },
   "xml": {
     "name": "Round Shield",
@@ -1047,7 +1116,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 37,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xrg": {
     "name": "Scutum",
@@ -1062,7 +1132,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 42,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xit": {
     "name": "Dragon Shield",
@@ -1077,7 +1148,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 45,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xow": {
     "name": "Pavise",
@@ -1092,7 +1164,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 50,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xts": {
     "name": "Ancient Shield",
@@ -1107,7 +1180,8 @@
     "width": 2,
     "height": 4,
     "qlevel": 56,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xlg": {
     "name": "Demonhide Gloves",
@@ -1122,7 +1196,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 33,
-    "levelReq": 21
+    "levelReq": 21,
+    "stackable": false
   },
   "xvg": {
     "name": "Sharkskin Gloves",
@@ -1137,7 +1212,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 39,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xmg": {
     "name": "Heavy Bracers",
@@ -1152,7 +1228,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 43,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xtg": {
     "name": "Battle Gauntlets",
@@ -1167,7 +1244,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 49,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xhg": {
     "name": "War Gauntlets",
@@ -1182,7 +1260,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 54,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xlb": {
     "name": "Demonhide Boots",
@@ -1197,7 +1276,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 36,
-    "levelReq": 24
+    "levelReq": 24,
+    "stackable": false
   },
   "xvb": {
     "name": "Sharkskin Boots",
@@ -1212,7 +1292,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 39,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xmb": {
     "name": "Mesh Boots",
@@ -1227,7 +1308,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 43,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xtb": {
     "name": "Battle Boots",
@@ -1242,7 +1324,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 49,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xhb": {
     "name": "War Boots",
@@ -1257,7 +1340,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 54,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "zlb": {
     "name": "Demonhide Sash",
@@ -1272,7 +1356,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 36,
-    "levelReq": 24
+    "levelReq": 24,
+    "stackable": false
   },
   "zvb": {
     "name": "Sharkskin Belt",
@@ -1287,7 +1372,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 39,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "zmb": {
     "name": "Mesh Belt",
@@ -1302,7 +1388,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 43,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "ztb": {
     "name": "Battle Belt",
@@ -1317,7 +1404,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 49,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "zhb": {
     "name": "War Belt",
@@ -1332,7 +1420,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 54,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xh9": {
     "name": "Grim Helm",
@@ -1347,7 +1436,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 50,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xsh": {
     "name": "Grim Shield",
@@ -1362,7 +1452,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 48,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "xpk": {
     "name": "Barbed Shield",
@@ -1377,7 +1468,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 42,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "dr1": {
     "name": "Wolf Head",
@@ -1392,7 +1484,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 4,
-    "levelReq": 3
+    "levelReq": 3,
+    "stackable": false
   },
   "dr2": {
     "name": "Hawk Helm",
@@ -1407,7 +1500,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 8,
-    "levelReq": 6
+    "levelReq": 6,
+    "stackable": false
   },
   "dr3": {
     "name": "Antlers",
@@ -1422,7 +1516,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 16,
-    "levelReq": 12
+    "levelReq": 12,
+    "stackable": false
   },
   "dr4": {
     "name": "Falcon Mask",
@@ -1437,7 +1532,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 20,
-    "levelReq": 15
+    "levelReq": 15,
+    "stackable": false
   },
   "dr5": {
     "name": "Spirit Mask",
@@ -1452,7 +1548,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 24,
-    "levelReq": 18
+    "levelReq": 18,
+    "stackable": false
   },
   "ba1": {
     "name": "Jawbone Cap",
@@ -1467,7 +1564,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 4,
-    "levelReq": 3
+    "levelReq": 3,
+    "stackable": false
   },
   "ba2": {
     "name": "Fanged Helm",
@@ -1482,7 +1580,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 8,
-    "levelReq": 6
+    "levelReq": 6,
+    "stackable": false
   },
   "ba3": {
     "name": "Horned Helm",
@@ -1497,7 +1596,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 16,
-    "levelReq": 12
+    "levelReq": 12,
+    "stackable": false
   },
   "ba4": {
     "name": "Assault Helmet",
@@ -1512,7 +1612,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 20,
-    "levelReq": 15
+    "levelReq": 15,
+    "stackable": false
   },
   "ba5": {
     "name": "Avenger Guard",
@@ -1527,7 +1628,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 24,
-    "levelReq": 18
+    "levelReq": 18,
+    "stackable": false
   },
   "pa1": {
     "name": "Targe",
@@ -1542,7 +1644,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 4,
-    "levelReq": 3
+    "levelReq": 3,
+    "stackable": false
   },
   "pa2": {
     "name": "Rondache",
@@ -1557,7 +1660,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 8,
-    "levelReq": 6
+    "levelReq": 6,
+    "stackable": false
   },
   "pa3": {
     "name": "Heraldic Shield",
@@ -1572,7 +1676,8 @@
     "width": 2,
     "height": 4,
     "qlevel": 16,
-    "levelReq": 12
+    "levelReq": 12,
+    "stackable": false
   },
   "pa4": {
     "name": "Aerin Shield",
@@ -1587,7 +1692,8 @@
     "width": 2,
     "height": 4,
     "qlevel": 20,
-    "levelReq": 15
+    "levelReq": 15,
+    "stackable": false
   },
   "pa5": {
     "name": "Crown Shield",
@@ -1602,7 +1708,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 24,
-    "levelReq": 18
+    "levelReq": 18,
+    "stackable": false
   },
   "ne1": {
     "name": "Preserved Head",
@@ -1617,7 +1724,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 4,
-    "levelReq": 3
+    "levelReq": 3,
+    "stackable": false
   },
   "ne2": {
     "name": "Zombie Head",
@@ -1632,7 +1740,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 8,
-    "levelReq": 6
+    "levelReq": 6,
+    "stackable": false
   },
   "ne3": {
     "name": "Unraveller Head",
@@ -1647,7 +1756,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 16,
-    "levelReq": 12
+    "levelReq": 12,
+    "stackable": false
   },
   "ne4": {
     "name": "Gargoyle Head",
@@ -1662,7 +1772,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 20,
-    "levelReq": 15
+    "levelReq": 15,
+    "stackable": false
   },
   "ne5": {
     "name": "Demon Head",
@@ -1677,7 +1788,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 24,
-    "levelReq": 18
+    "levelReq": 18,
+    "stackable": false
   },
   "ci0": {
     "name": "Circlet",
@@ -1692,7 +1804,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 24,
-    "levelReq": 16
+    "levelReq": 16,
+    "stackable": false
   },
   "ci1": {
     "name": "Coronet",
@@ -1707,7 +1820,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 52,
-    "levelReq": 39
+    "levelReq": 39,
+    "stackable": false
   },
   "ci2": {
     "name": "Tiara",
@@ -1722,7 +1836,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 70,
-    "levelReq": 52
+    "levelReq": 52,
+    "stackable": false
   },
   "ci3": {
     "name": "Diadem",
@@ -1737,7 +1852,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 85,
-    "levelReq": 64
+    "levelReq": 64,
+    "stackable": false
   },
   "uap": {
     "name": "Shako",
@@ -1752,7 +1868,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 58,
-    "levelReq": 43
+    "levelReq": 43,
+    "stackable": false
   },
   "ukp": {
     "name": "Hydraskull",
@@ -1767,7 +1884,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 63,
-    "levelReq": 47
+    "levelReq": 47,
+    "stackable": false
   },
   "ulm": {
     "name": "Armet",
@@ -1782,7 +1900,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 68,
-    "levelReq": 51
+    "levelReq": 51,
+    "stackable": false
   },
   "uhl": {
     "name": "Giant Conch",
@@ -1797,7 +1916,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 54,
-    "levelReq": 40
+    "levelReq": 40,
+    "stackable": false
   },
   "uhm": {
     "name": "Spired Helm",
@@ -1812,7 +1932,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 79,
-    "levelReq": 59
+    "levelReq": 59,
+    "stackable": false
   },
   "urn": {
     "name": "Corona",
@@ -1827,7 +1948,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 85,
-    "levelReq": 66
+    "levelReq": 66,
+    "stackable": false
   },
   "usk": {
     "name": "Demonhead",
@@ -1842,7 +1964,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 74,
-    "levelReq": 55
+    "levelReq": 55,
+    "stackable": false
   },
   "uui": {
     "name": "Dusk Shroud",
@@ -1857,7 +1980,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 65,
-    "levelReq": 49
+    "levelReq": 49,
+    "stackable": false
   },
   "uea": {
     "name": "Wyrmhide",
@@ -1872,7 +1996,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 67,
-    "levelReq": 50
+    "levelReq": 50,
+    "stackable": false
   },
   "ula": {
     "name": "Scarab Husk",
@@ -1887,7 +2012,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 68,
-    "levelReq": 51
+    "levelReq": 51,
+    "stackable": false
   },
   "utu": {
     "name": "Wire Fleece",
@@ -1902,7 +2028,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 70,
-    "levelReq": 53
+    "levelReq": 53,
+    "stackable": false
   },
   "ung": {
     "name": "Diamond Mail",
@@ -1917,7 +2044,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 72,
-    "levelReq": 54
+    "levelReq": 54,
+    "stackable": false
   },
   "ucl": {
     "name": "Loricated Mail",
@@ -1932,7 +2060,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 73,
-    "levelReq": 55
+    "levelReq": 55,
+    "stackable": false
   },
   "uhn": {
     "name": "Boneweave",
@@ -1947,7 +2076,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 62,
-    "levelReq": 47
+    "levelReq": 47,
+    "stackable": false
   },
   "urs": {
     "name": "Great Hauberk",
@@ -1962,7 +2092,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 75,
-    "levelReq": 56
+    "levelReq": 56,
+    "stackable": false
   },
   "upl": {
     "name": "Balrog Skin",
@@ -1977,7 +2108,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 76,
-    "levelReq": 57
+    "levelReq": 57,
+    "stackable": false
   },
   "ult": {
     "name": "Hellforge Plate",
@@ -1992,7 +2124,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 78,
-    "levelReq": 59
+    "levelReq": 59,
+    "stackable": false
   },
   "uld": {
     "name": "Kraken Shell",
@@ -2007,7 +2140,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 81,
-    "levelReq": 61
+    "levelReq": 61,
+    "stackable": false
   },
   "uth": {
     "name": "Lacquered Plate",
@@ -2022,7 +2156,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 82,
-    "levelReq": 62
+    "levelReq": 62,
+    "stackable": false
   },
   "uul": {
     "name": "Shadow Plate",
@@ -2037,7 +2172,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 83,
-    "levelReq": 64
+    "levelReq": 64,
+    "stackable": false
   },
   "uar": {
     "name": "Sacred Armor",
@@ -2052,7 +2188,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 85,
-    "levelReq": 66
+    "levelReq": 66,
+    "stackable": false
   },
   "utp": {
     "name": "Archon Plate",
@@ -2067,7 +2204,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 84,
-    "levelReq": 63
+    "levelReq": 63,
+    "stackable": false
   },
   "uuc": {
     "name": "Heater",
@@ -2082,7 +2220,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 58,
-    "levelReq": 43
+    "levelReq": 43,
+    "stackable": false
   },
   "uml": {
     "name": "Luna",
@@ -2097,7 +2236,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 61,
-    "levelReq": 45
+    "levelReq": 45,
+    "stackable": false
   },
   "urg": {
     "name": "Hyperion",
@@ -2112,7 +2252,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 64,
-    "levelReq": 48
+    "levelReq": 48,
+    "stackable": false
   },
   "uit": {
     "name": "Monarch",
@@ -2127,7 +2268,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 72,
-    "levelReq": 54
+    "levelReq": 54,
+    "stackable": false
   },
   "uow": {
     "name": "Aegis",
@@ -2142,7 +2284,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 79,
-    "levelReq": 59
+    "levelReq": 59,
+    "stackable": false
   },
   "uts": {
     "name": "Ward",
@@ -2157,7 +2300,8 @@
     "width": 2,
     "height": 4,
     "qlevel": 84,
-    "levelReq": 63
+    "levelReq": 63,
+    "stackable": false
   },
   "ulg": {
     "name": "Bramble Mitts",
@@ -2172,7 +2316,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 57,
-    "levelReq": 42
+    "levelReq": 42,
+    "stackable": false
   },
   "uvg": {
     "name": "Vampirebone Gloves",
@@ -2187,7 +2332,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 63,
-    "levelReq": 47
+    "levelReq": 47,
+    "stackable": false
   },
   "umg": {
     "name": "Vambraces",
@@ -2202,7 +2348,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 69,
-    "levelReq": 51
+    "levelReq": 51,
+    "stackable": false
   },
   "utg": {
     "name": "Crusader Gauntlets",
@@ -2217,7 +2364,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 76,
-    "levelReq": 57
+    "levelReq": 57,
+    "stackable": false
   },
   "uhg": {
     "name": "Ogre Gauntlets",
@@ -2232,7 +2380,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 85,
-    "levelReq": 64
+    "levelReq": 64,
+    "stackable": false
   },
   "ulb": {
     "name": "Wyrmhide Boots",
@@ -2247,7 +2396,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 60,
-    "levelReq": 45
+    "levelReq": 45,
+    "stackable": false
   },
   "uvb": {
     "name": "Scarabshell Boots",
@@ -2262,7 +2412,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 66,
-    "levelReq": 49
+    "levelReq": 49,
+    "stackable": false
   },
   "umb": {
     "name": "Boneweave Boots",
@@ -2277,7 +2428,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 72,
-    "levelReq": 54
+    "levelReq": 54,
+    "stackable": false
   },
   "utb": {
     "name": "Mirrored Boots",
@@ -2292,7 +2444,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 81,
-    "levelReq": 60
+    "levelReq": 60,
+    "stackable": false
   },
   "uhb": {
     "name": "Myrmidon Greaves",
@@ -2307,7 +2460,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 85,
-    "levelReq": 65
+    "levelReq": 65,
+    "stackable": false
   },
   "ulc": {
     "name": "Spiderweb Sash",
@@ -2322,7 +2476,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 61,
-    "levelReq": 46
+    "levelReq": 46,
+    "stackable": false
   },
   "uvc": {
     "name": "Vampirefang Belt",
@@ -2337,7 +2492,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 68,
-    "levelReq": 51
+    "levelReq": 51,
+    "stackable": false
   },
   "umc": {
     "name": "Mithril Coil",
@@ -2352,7 +2508,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 75,
-    "levelReq": 56
+    "levelReq": 56,
+    "stackable": false
   },
   "utc": {
     "name": "Troll Belt",
@@ -2367,7 +2524,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 82,
-    "levelReq": 62
+    "levelReq": 62,
+    "stackable": false
   },
   "uhc": {
     "name": "Colossus Girdle",
@@ -2382,7 +2540,8 @@
     "width": 2,
     "height": 1,
     "qlevel": 85,
-    "levelReq": 67
+    "levelReq": 67,
+    "stackable": false
   },
   "uh9": {
     "name": "Bone Visage",
@@ -2397,7 +2556,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 84,
-    "levelReq": 63
+    "levelReq": 63,
+    "stackable": false
   },
   "ush": {
     "name": "Troll Nest",
@@ -2412,7 +2572,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 76,
-    "levelReq": 57
+    "levelReq": 57,
+    "stackable": false
   },
   "upk": {
     "name": "Blade Barrier",
@@ -2427,7 +2588,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 68,
-    "levelReq": 51
+    "levelReq": 51,
+    "stackable": false
   },
   "dr6": {
     "name": "Alpha Helm",
@@ -2442,7 +2604,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 35,
-    "levelReq": 26
+    "levelReq": 26,
+    "stackable": false
   },
   "dr7": {
     "name": "Griffon Headdress",
@@ -2457,7 +2620,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 40,
-    "levelReq": 30
+    "levelReq": 30,
+    "stackable": false
   },
   "dr8": {
     "name": "Hunter's Guise",
@@ -2472,7 +2636,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 46,
-    "levelReq": 29
+    "levelReq": 29,
+    "stackable": false
   },
   "dr9": {
     "name": "Sacred Feathers",
@@ -2487,7 +2652,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 50,
-    "levelReq": 32
+    "levelReq": 32,
+    "stackable": false
   },
   "dra": {
     "name": "Totemic Mask",
@@ -2502,7 +2668,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 55,
-    "levelReq": 41
+    "levelReq": 41,
+    "stackable": false
   },
   "ba6": {
     "name": "Jawbone Visor",
@@ -2517,7 +2684,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 33,
-    "levelReq": 25
+    "levelReq": 25,
+    "stackable": false
   },
   "ba7": {
     "name": "Lion Helm",
@@ -2532,7 +2700,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 38,
-    "levelReq": 29
+    "levelReq": 29,
+    "stackable": false
   },
   "ba8": {
     "name": "Rage Mask",
@@ -2547,7 +2716,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 44,
-    "levelReq": 29
+    "levelReq": 29,
+    "stackable": false
   },
   "ba9": {
     "name": "Savage Helmet",
@@ -2562,7 +2732,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 49,
-    "levelReq": 32
+    "levelReq": 32,
+    "stackable": false
   },
   "baa": {
     "name": "Slayer Guard",
@@ -2577,7 +2748,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 54,
-    "levelReq": 40
+    "levelReq": 40,
+    "stackable": false
   },
   "pa6": {
     "name": "Akaran Targe",
@@ -2592,7 +2764,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 35,
-    "levelReq": 26
+    "levelReq": 26,
+    "stackable": false
   },
   "pa7": {
     "name": "Akaran Rondache",
@@ -2607,7 +2780,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 40,
-    "levelReq": 30
+    "levelReq": 30,
+    "stackable": false
   },
   "pa8": {
     "name": "Protector Shield",
@@ -2622,7 +2796,8 @@
     "width": 2,
     "height": 4,
     "qlevel": 46,
-    "levelReq": 34
+    "levelReq": 34,
+    "stackable": false
   },
   "pa9": {
     "name": "Gilded Shield",
@@ -2637,7 +2812,8 @@
     "width": 2,
     "height": 4,
     "qlevel": 51,
-    "levelReq": 38
+    "levelReq": 38,
+    "stackable": false
   },
   "paa": {
     "name": "Royal Shield",
@@ -2652,7 +2828,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 55,
-    "levelReq": 41
+    "levelReq": 41,
+    "stackable": false
   },
   "ne6": {
     "name": "Mummified Trophy",
@@ -2667,7 +2844,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 33,
-    "levelReq": 24
+    "levelReq": 24,
+    "stackable": false
   },
   "ne7": {
     "name": "Fetish Trophy",
@@ -2682,7 +2860,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 39,
-    "levelReq": 29
+    "levelReq": 29,
+    "stackable": false
   },
   "ne8": {
     "name": "Sexton Trophy",
@@ -2697,7 +2876,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 45,
-    "levelReq": 33
+    "levelReq": 33,
+    "stackable": false
   },
   "ne9": {
     "name": "Cantor Trophy",
@@ -2712,7 +2892,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 49,
-    "levelReq": 36
+    "levelReq": 36,
+    "stackable": false
   },
   "nea": {
     "name": "Hierophant Trophy",
@@ -2727,7 +2908,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 54,
-    "levelReq": 40
+    "levelReq": 40,
+    "stackable": false
   },
   "drb": {
     "name": "Blood Spirit",
@@ -2742,7 +2924,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 62,
-    "levelReq": 46
+    "levelReq": 46,
+    "stackable": false
   },
   "drc": {
     "name": "Sun Spirit",
@@ -2757,7 +2940,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 69,
-    "levelReq": 51
+    "levelReq": 51,
+    "stackable": false
   },
   "drd": {
     "name": "Earth Spirit",
@@ -2772,7 +2956,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 76,
-    "levelReq": 57
+    "levelReq": 57,
+    "stackable": false
   },
   "dre": {
     "name": "Sky Spirit",
@@ -2787,7 +2972,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 83,
-    "levelReq": 62
+    "levelReq": 62,
+    "stackable": false
   },
   "drf": {
     "name": "Dream Spirit",
@@ -2802,7 +2988,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 85,
-    "levelReq": 66
+    "levelReq": 66,
+    "stackable": false
   },
   "bab": {
     "name": "Carnage Helm",
@@ -2817,7 +3004,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 60,
-    "levelReq": 45
+    "levelReq": 45,
+    "stackable": false
   },
   "bac": {
     "name": "Fury Visor",
@@ -2832,7 +3020,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 66,
-    "levelReq": 49
+    "levelReq": 49,
+    "stackable": false
   },
   "bad": {
     "name": "Destroyer Helm",
@@ -2847,7 +3036,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 73,
-    "levelReq": 54
+    "levelReq": 54,
+    "stackable": false
   },
   "bae": {
     "name": "Conqueror Crown",
@@ -2862,7 +3052,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 80,
-    "levelReq": 60
+    "levelReq": 60,
+    "stackable": false
   },
   "baf": {
     "name": "Guardian Crown",
@@ -2877,7 +3068,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 85,
-    "levelReq": 65
+    "levelReq": 65,
+    "stackable": false
   },
   "pab": {
     "name": "Sacred Targe",
@@ -2892,7 +3084,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 63,
-    "levelReq": 47
+    "levelReq": 47,
+    "stackable": false
   },
   "pac": {
     "name": "Sacred Rondache",
@@ -2907,7 +3100,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 70,
-    "levelReq": 52
+    "levelReq": 52,
+    "stackable": false
   },
   "pad": {
     "name": "Kurast Shield",
@@ -2922,7 +3116,8 @@
     "width": 2,
     "height": 4,
     "qlevel": 74,
-    "levelReq": 55
+    "levelReq": 55,
+    "stackable": false
   },
   "pae": {
     "name": "Zakarum Shield",
@@ -2937,7 +3132,8 @@
     "width": 2,
     "height": 4,
     "qlevel": 82,
-    "levelReq": 61
+    "levelReq": 61,
+    "stackable": false
   },
   "paf": {
     "name": "Vortex Shield",
@@ -2952,7 +3148,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 85,
-    "levelReq": 66
+    "levelReq": 66,
+    "stackable": false
   },
   "neb": {
     "name": "Minion Skull",
@@ -2967,7 +3164,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 59,
-    "levelReq": 44
+    "levelReq": 44,
+    "stackable": false
   },
   "neg": {
     "name": "Hellspawn Skull",
@@ -2982,7 +3180,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 67,
-    "levelReq": 50
+    "levelReq": 50,
+    "stackable": false
   },
   "ned": {
     "name": "Overseer Skull",
@@ -2997,7 +3196,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 66,
-    "levelReq": 49
+    "levelReq": 49,
+    "stackable": false
   },
   "nee": {
     "name": "Succubus Skull",
@@ -3012,7 +3212,8 @@
     "width": 2,
     "height": 2,
     "qlevel": 81,
-    "levelReq": 60
+    "levelReq": 60,
+    "stackable": false
   },
   "nef": {
     "name": "Bloodlord Skull",
@@ -3027,6 +3228,7 @@
     "width": 2,
     "height": 2,
     "qlevel": 85,
-    "levelReq": 65
+    "levelReq": 65,
+    "stackable": false
   }
 }

@@ -1,10 +1,12 @@
 import { BinaryStream } from "../../save-file/binary";
 import { Item } from "../types/Item";
-import { ARMORS, WEAPONS } from "../../../game-data";
+import { ARMORS, MISC, WEAPONS } from "../../../game-data";
 
 export function parseQuantified({ read, readInt }: BinaryStream, item: Item) {
   const baseArmor = ARMORS[item.code];
   const baseWeapon = WEAPONS[item.code];
+  const baseMisc = MISC[item.code];
+
   if (baseArmor) {
     // NOTE:
     // Any piece of armor that spawns with +% Enhanced Defense
@@ -22,7 +24,7 @@ export function parseQuantified({ read, readInt }: BinaryStream, item: Item) {
     }
   }
 
-  if (baseWeapon?.stackable) {
+  if (baseArmor?.stackable || baseWeapon?.stackable || baseMisc?.stackable) {
     item.quantity = readInt(9);
   }
 
