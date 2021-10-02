@@ -94,6 +94,8 @@ export function parseQuality(
     item.name = `${charName}'s ${item.name}`;
   }
 
+  // TODO: handle tomes
+
   // Skip unknown "timestamp" bit
   read(1);
 }

@@ -2,8 +2,10 @@
 import { readFile } from "fs/promises";
 import { parseCharacter } from "./character/parsing/parseCharacter";
 import { saveCharacter } from "./character/saveCharacter";
+import { parseStash } from "./stash/parsing/parseStash";
+import { saveStash } from "./stash/saveStash";
 
-const CHAR = "test/output.d2s";
+const CHAR = "test/WithCorpse.d2s";
 const STASH = "test/_LOD_SharedStashSave.sss";
 const TEST_OUTPUT = "test/saved.sss";
 const DANGER_OUTPUT = STASH;
@@ -29,8 +31,16 @@ async function main() {
   // );
   // console.log("STASH");
   // console.log(stash.pages[0].items.map(({ name }) => name));
-  // await saveCharacter(character, "test/output.d2s");
-  // await saveStash(stash, STASH);
+  await saveCharacter(character, "test/output.d2s");
+  // await saveStash(stash, "test/output.sss");
+
+  // const original = await readFile(STASH);
+  // const output = await readFile("test/output.sss");
+  // original.forEach((byte, i) => {
+  //   if (output[i] !== byte) {
+  //     console.log("Mismatch!");
+  //   }
+  // });
 
   // triageNewItems(stash);
   // organize(stash, 1, 5);

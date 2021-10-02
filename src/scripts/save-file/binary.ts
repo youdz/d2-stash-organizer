@@ -1,22 +1,23 @@
-import { EndOfStreamError } from "../errors/EndOfStreamError";
+import { SaveFileReader } from "./SaveFileReader";
 
 export interface BinaryStream {
-  readonly raw: string;
   // If position is not specified, calls to these read the stream in sequence
   read(size: number, position?: number): string;
   readInt(size: number, position?: number): number;
   readBool(position?: number): boolean;
-  remainingBits(): number;
+  raw(): string;
 }
 
-export function binaryStream(buffer: Uint8Array): BinaryStream {
-  const binary = toBinary(buffer);
+export function binaryStream(reader: SaveFileReader): BinaryStream {
+  // Trying not to convert the entire stash for every item, that would be too heavy
+  let binary = "";
+
   let nextIndex = 0;
   const stream = {
-    raw: binary,
     read(length: number, position = nextIndex) {
-      if (position + length > binary.length) {
-        throw new EndOfStreamError();
+      const missingBits = position + length - binary.length;
+      if (missingBits > 0) {
+        binary += toBinary(reader.read(Math.ceil(missingBits / 8)));
       }
       nextIndex = position + length;
       return binary.slice(position, position + length);
@@ -27,8 +28,9 @@ export function binaryStream(buffer: Uint8Array): BinaryStream {
     readBool(position = nextIndex) {
       return stream.read(1, position) === "1";
     },
-    remainingBits() {
-      return binary.length - nextIndex;
+
+    raw() {
+      return binary;
     },
   };
   return stream;

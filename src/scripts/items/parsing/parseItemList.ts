@@ -14,13 +14,7 @@ export function parseItemList(reader: SaveFileReader) {
 
   // After that comes the first item
   while (remainingItems > 0) {
-    const currentItemRaw = [];
-    let parsedItem: Item | false = false;
-    // Sometimes the item ID will contain a significant header, we have to skip over that
-    while (!parsedItem) {
-      currentItemRaw.push(...reader.readUntil(["JM", "ST", "jf", "kf"], 2));
-      parsedItem = parseItem(Uint8Array.from(currentItemRaw));
-    }
+    const parsedItem = parseItem(reader);
     if (parsedItem.location === ItemLocation.SOCKET) {
       const socketedItem = items[items.length - 1];
       if (!socketedItem.filledSockets) {
