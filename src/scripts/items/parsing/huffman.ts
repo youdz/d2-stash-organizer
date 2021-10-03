@@ -19,7 +19,7 @@ function populateLookups(encoding: HuffmanEncoding | undefined, path = "") {
 }
 populateLookups(HUFFMAN);
 
-export function readHuffman(stream: BinaryStream, nbChars: number) {
+export function decodeHuffman(stream: BinaryStream, nbChars: number) {
   let result = "";
   for (let i = 0; i < nbChars; i++) {
     let char = HUFFMAN;
@@ -30,4 +30,17 @@ export function readHuffman(stream: BinaryStream, nbChars: number) {
     result += char;
   }
   return result;
+}
+
+export function encodeHuffman(value: string) {
+  return value
+    .split("")
+    .map((char) => {
+      const encoded = WRITE_LOOKUP.get(char);
+      if (typeof encoded === "undefined") {
+        throw new Error(`Failed to huffman encode ${value}.`);
+      }
+      return encoded;
+    })
+    .join("");
 }

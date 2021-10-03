@@ -2,8 +2,9 @@ import { SaveFileReader } from "../../save-file/SaveFileReader";
 import { Item } from "../types/Item";
 import { parseItem } from "./parseItem";
 import { ItemLocation } from "../types/ItemLocation";
+import { ItemsOwner } from "../../save-file/ownership";
 
-export function parseItemList(reader: SaveFileReader, version: number) {
+export function parseItemList(reader: SaveFileReader, owner: ItemsOwner) {
   const header = reader.readString(2);
   if (header !== "JM") {
     throw new Error(`Unexpected header ${header} for an item list`);
@@ -14,7 +15,7 @@ export function parseItemList(reader: SaveFileReader, version: number) {
 
   // After that comes the first item
   while (remainingItems > 0) {
-    const parsedItem = parseItem(reader, version);
+    const parsedItem = parseItem(reader, owner);
     if (parsedItem.location === ItemLocation.SOCKET) {
       const socketedItem = items[items.length - 1];
       if (!socketedItem.filledSockets) {

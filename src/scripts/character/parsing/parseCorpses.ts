@@ -14,7 +14,7 @@ export function parseCorpses(reader: SaveFileReader, character: Character) {
   for (let i = 0; i < nbCorpses; i++) {
     // Corpse position, we don't care
     reader.read(12);
-    const items = parseItemList(reader, character.version);
+    const items = parseItemList(reader, character);
     for (const item of items) {
       item.corpse = true;
     }

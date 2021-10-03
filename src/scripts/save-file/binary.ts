@@ -6,7 +6,7 @@ export interface BinaryStream {
   read(size: number, position?: number): string;
   readInt(size: number, position?: number): number;
   readBool(position?: number): boolean;
-  raw(): string;
+  done(): string;
 }
 
 export function binaryStream(reader: SaveFileReader) {
@@ -34,8 +34,8 @@ export function binaryStream(reader: SaveFileReader) {
       return stream.read(1, position) === "1";
     },
 
-    raw() {
-      return binary;
+    done() {
+      return binary.slice(0, nextIndex);
     },
   };
   return stream;
@@ -47,6 +47,13 @@ function toInt(binary: string) {
 
 export function fromInt(n: number, size: number) {
   return n.toString(2).padStart(size, "0").split("").reverse().join("");
+}
+
+export function fromString(s: string) {
+  return s
+    .split("")
+    .map((char) => fromInt(char.charCodeAt(0), 8))
+    .join("");
 }
 
 function toBinary(buffer: Uint8Array) {

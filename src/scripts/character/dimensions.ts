@@ -6,6 +6,7 @@ export const INVENTORY_WIDTH = 10;
 export const CUBE_HEIGHT = 4;
 export const CUBE_WIDTH = 3;
 
+// TODO: different values for D2R
 export const STASH_HEIGHT = 8;
 export const STASH_WIDTH = 6;
 

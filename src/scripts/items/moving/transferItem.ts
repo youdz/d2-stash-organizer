@@ -10,6 +10,8 @@ import { getDimensions } from "../../character/dimensions";
 import { positionItem } from "./positionItem";
 import { PAGE_HEIGHT, PAGE_WIDTH } from "../../stash/dimensions";
 import { fromInt } from "../../save-file/binary";
+import { FIRST_D2R } from "../../character/parsing/versions";
+import { D2R_OFFSET, toD2, toD2R } from "./conversion";
 
 function takeItemFromCurrentOwner(item: Item) {
   if (!item.owner) {
@@ -36,17 +38,26 @@ function giveItemTo(
   owner: ItemsOwner,
   storageType: ItemStorageType
 ) {
+  if (item.owner.version !== owner.version) {
+    if (owner.version >= FIRST_D2R) {
+      toD2R(item);
+    } else {
+      toD2(item);
+    }
+  }
+
   item.owner = owner;
   item.location = ItemLocation.STORED;
   item.equippedInSlot = ItemEquipSlot.NONE;
   item.stored = storageType;
+  const offset = owner.version >= FIRST_D2R ? D2R_OFFSET : 0;
   item.raw =
-    item.raw.slice(0, 58) +
+    item.raw.slice(0, 58 + offset) +
     fromInt(item.location, 3) +
     fromInt(item.equippedInSlot, 4) +
-    item.raw.slice(65, 73) +
+    item.raw.slice(65 + offset, 73 + offset) +
     fromInt(item.stored, 3) +
-    item.raw.slice(76);
+    item.raw.slice(76 + offset);
   item.corpse = false;
   item.mercenary = false;
 }

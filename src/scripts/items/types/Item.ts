@@ -5,6 +5,8 @@ import { ItemsOwner } from "../../save-file/ownership";
 
 export interface Item {
   raw: string;
+  owner: ItemsOwner;
+  version: string;
 
   identified: boolean;
   socketed: boolean;
@@ -16,7 +18,6 @@ export interface Item {
   location: ItemLocation;
   equippedInSlot: ItemEquipSlot;
   stored: ItemStorageType;
-  owner?: ItemsOwner;
   corpse?: boolean;
   mercenary?: boolean;
   page?: number;

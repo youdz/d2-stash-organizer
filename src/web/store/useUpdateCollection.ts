@@ -10,7 +10,7 @@ export function useUpdateCollection() {
     useContext(CollectionContext);
 
   const updateAllFiles = useCallback(
-    async function (newOwner?: ItemsOwner) {
+    async function (newOwner: ItemsOwner) {
       const allOwners = [...owners];
       // Avoid duplicates if the owner already exists
       if (newOwner && !allOwners.includes(newOwner)) {

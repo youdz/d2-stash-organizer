@@ -1,9 +1,8 @@
-import { Page } from "../types";
+import { Page, Stash } from "../types";
 import { SaveFileReader } from "../../save-file/SaveFileReader";
 import { parseItemList } from "../../items/parsing/parseItemList";
-import { LAST_LEGACY } from "../../character/parsing/versions";
 
-export function parsePage(reader: SaveFileReader): Page {
+export function parsePage(reader: SaveFileReader, stash: Stash): Page {
   const header = reader.readString(2);
   if (header !== "ST") {
     throw new Error(`Unexpected header ${header} for a stash page`);
@@ -27,6 +26,6 @@ export function parsePage(reader: SaveFileReader): Page {
   return {
     flags,
     name: reader.readNullTerminatedString(),
-    items: parseItemList(reader, LAST_LEGACY),
+    items: parseItemList(reader, stash),
   };
 }

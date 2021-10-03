@@ -8,6 +8,7 @@ import { useContext, useMemo, useState } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
 import "./OwnerSelector.css";
 import { Stash } from "../../scripts/stash/types";
+import { LAST_LEGACY } from "../../scripts/character/parsing/versions";
 
 export interface OwnerSelectorProps {
   selected?: ItemsOwner;
@@ -26,6 +27,7 @@ export function OwnerSelector({
   const [newStash] = useState<Stash>(() => ({
     filename: "SharedStash.d2x",
     lastModified: Date.now(),
+    version: LAST_LEGACY,
     personal: false,
     nonPlugY: true,
     gold: 0,

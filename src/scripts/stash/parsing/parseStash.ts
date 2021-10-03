@@ -2,6 +2,7 @@ import { parsePage } from "./parsePage";
 import { Stash } from "../types";
 import { postProcessStash } from "./postProcessStash";
 import { SaveFileReader } from "../../save-file/SaveFileReader";
+import { LAST_LEGACY } from "../../character/parsing/versions";
 
 // Can't use Node's Buffer because this needs to run in the browser
 export function parseStash(
@@ -18,6 +19,7 @@ export function parseStash(
   const stash: Stash = {
     filename: file?.name ?? "",
     lastModified: file?.lastModified ?? 0,
+    version: LAST_LEGACY,
     personal: header === "CSTM",
     pageFlags: true,
     gold: 0,
@@ -44,7 +46,7 @@ export function parseStash(
   reader.read(0, firstPage);
   while (!reader.done) {
     try {
-      stash.pages.push(parsePage(reader));
+      stash.pages.push(parsePage(reader, stash));
     } catch (e) {
       if (e instanceof Error) {
         throw new Error(`${e.message} on page ${stash.pages.length + 1}`);
