@@ -26,7 +26,8 @@ export function FilePicker({
         if (
           file.name.endsWith(".sss") ||
           file.name.endsWith(".d2x") ||
-          file.name.endsWith(".d2s")
+          file.name.endsWith(".d2s") ||
+          file.name.endsWith(".d2i")
         ) {
           usableFiles.push(file);
         }
@@ -48,7 +49,7 @@ export function FilePicker({
 
   const inputAttrs = folder
     ? { directory: true, webkitdirectory: true, multiple: true }
-    : { accept: ".sss,.d2x,.d2s" };
+    : { accept: ".sss,.d2x,.d2s,.d2i" };
 
   return (
     <span class="filepicker">

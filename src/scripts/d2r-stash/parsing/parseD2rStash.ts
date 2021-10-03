@@ -12,7 +12,9 @@ export function parseD2rStash(
   reader.peek = true;
   const header = reader.readInt32LE().toString(16);
   if (header !== "aa55aa55") {
-    throw new Error("This does not look like a Diablo 2 stash save (.d2i)");
+    throw new Error(
+      "This does not look like a Diablo 2 shared stash save (.d2i)"
+    );
   }
 
   const stash: D2rStash = {

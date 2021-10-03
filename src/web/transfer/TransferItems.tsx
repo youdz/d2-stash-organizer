@@ -101,9 +101,11 @@ export function TransferItems() {
       <p>Select where you want to transfer them:</p>
       <div class="selectors">
         <OwnerSelector selected={target} onChange={setTarget} />
-        {target && (!isPlugyStash(target) || !target.nonPlugY) && (
-          <div class="arrow">&#8594;</div>
-        )}
+        {target &&
+          (isCharacter(target) ||
+            (isPlugyStash(target) && !target.nonPlugY)) && (
+            <div class="arrow">&#8594;</div>
+          )}
         {supportedStorageTypes && (
           <ul id="storage-selector">
             {supportedStorageTypes.map((storage) => (
@@ -135,7 +137,7 @@ export function TransferItems() {
                   checked={!withOrganize}
                   onChange={() => setWithOrganize(false)}
                 />{" "}
-                Just add the items at the end of {target.personal ? "" : "the"}{" "}
+                Just add the items at the end of {target.personal ? "" : "my"}{" "}
                 <PrettyOwnerName owner={target} />.
               </label>
             </li>
@@ -147,7 +149,7 @@ export function TransferItems() {
                   checked={withOrganize}
                   onChange={() => setWithOrganize(true)}
                 />{" "}
-                Organize {target.personal ? "" : "the"}{" "}
+                Organize {target.personal ? "" : "my"}{" "}
                 <PrettyOwnerName owner={target} /> for me
               </label>
               , except the first{" "}

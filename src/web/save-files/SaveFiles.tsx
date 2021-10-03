@@ -4,6 +4,7 @@ import { FilePicker } from "./FilePicker";
 import "./SaveFiles.css";
 import { UPLOAD_CONFIRM } from "../store/singleStashConfirmation";
 import { PrettyOwnerName } from "./PrettyOwnerName";
+import { LAST_LEGACY } from "../../scripts/character/parsing/versions";
 
 const dateFormatter = Intl.DateTimeFormat(undefined, {
   dateStyle: "long",
@@ -22,7 +23,11 @@ export function SaveFiles() {
           <td>
             <PrettyOwnerName owner={owner} />
           </td>
-          {/* TODO: display version */}
+          <td>
+            {owner.version <= LAST_LEGACY
+              ? "Legacy Diablo 2"
+              : "Diablo 2 Resurrected"}
+          </td>
           <td>{dateFormatter.format(new Date(owner.lastModified))}</td>
         </tr>
       );
@@ -59,6 +64,7 @@ export function SaveFiles() {
       <table id="save-files">
         <tr>
           <th>Character name</th>
+          <th>Game version</th>
           <th>Save date</th>
         </tr>
         {charactersDetail}
