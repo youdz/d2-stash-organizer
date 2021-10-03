@@ -82,14 +82,13 @@ export function transferItem(
     const itemsInSameStorage = to.items.filter(
       (item) => item.stored === storageType
     );
-    const { height, width } = getDimensions(storageType);
+    const { height, width } = getDimensions(storageType, to);
     const position = findSpot(item, itemsInSameStorage, height, width);
     if (!position) {
       return false;
     }
     positionItem(item, position);
     to.items.push(item);
-    // TODO: this will need to be smarter for D2R stash
     delete item.page;
   }
 
