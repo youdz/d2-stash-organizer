@@ -1,11 +1,11 @@
 import {
-  isStash,
+  isPlugyStash,
   ItemsOwner,
   SHARED_STASH_NAME,
 } from "../../scripts/save-file/ownership";
 
 export function PrettyOwnerName({ owner }: { owner: ItemsOwner }) {
-  if (isStash(owner)) {
+  if (isPlugyStash(owner)) {
     if (owner.personal) {
       return (
         <>

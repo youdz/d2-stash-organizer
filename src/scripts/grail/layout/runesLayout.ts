@@ -1,5 +1,5 @@
 import { Position } from "./position";
-import { PAGE_HEIGHT, PAGE_WIDTH } from "../../stash/dimensions";
+import { PAGE_HEIGHT, PAGE_WIDTH } from "../../plugy-stash/dimensions";
 import { LayoutItem, LayoutResult } from "./types";
 
 function runeIndex(rune: LayoutItem) {

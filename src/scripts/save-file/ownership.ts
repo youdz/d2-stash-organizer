@@ -1,16 +1,16 @@
-import { Stash } from "../stash/types";
+import { PlugyStash } from "../plugy-stash/types";
 import { Character } from "../character/types";
 
 export const SHARED_STASH_NAME = "Shared stash";
 
-export type ItemsOwner = Character | Stash;
+export type ItemsOwner = Character | PlugyStash;
 
-export function isStash(owner: ItemsOwner): owner is Stash {
-  return "pages" in owner;
+export function isPlugyStash(owner: ItemsOwner): owner is PlugyStash {
+  return "personal" in owner;
 }
 
 export function ownerName(owner: ItemsOwner) {
-  if (isStash(owner)) {
+  if (isPlugyStash(owner)) {
     return owner.personal
       ? `${owner.filename.slice(0, -4)}'s stash`
       : SHARED_STASH_NAME;

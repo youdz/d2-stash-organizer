@@ -8,17 +8,17 @@ export const enum PageFlags {
   MAIN_INDEX = 4,
 }
 
-export interface Page {
+export interface PlugyPage {
   flags?: number;
   name: string;
   items: Item[];
 }
 
-export interface Stash extends SaveFile {
+export interface PlugyStash extends SaveFile {
   personal: boolean;
   // Indicates if the stash was created through this tool instead of PlugY
   nonPlugY?: boolean;
   pageFlags: boolean;
   gold: number;
-  pages: Page[];
+  pages: PlugyPage[];
 }

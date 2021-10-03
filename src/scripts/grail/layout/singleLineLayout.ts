@@ -1,6 +1,6 @@
 import { Position } from "./position";
 import { getBase } from "../../items/getBase";
-import { ALL_ROWS, PAGE_WIDTH } from "../../stash/dimensions";
+import { ALL_ROWS, PAGE_WIDTH } from "../../plugy-stash/dimensions";
 import { LayoutItem, LayoutResult } from "./types";
 
 export function singleLineLayout<T extends LayoutItem>(

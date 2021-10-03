@@ -1,5 +1,5 @@
 import {
-  isStash,
+  isPlugyStash,
   ItemsOwner,
   SHARED_STASH_NAME,
 } from "../../scripts/save-file/ownership";
@@ -7,7 +7,7 @@ import { PrettyOwnerName } from "./PrettyOwnerName";
 import { useContext, useMemo, useState } from "preact/hooks";
 import { CollectionContext } from "../store/CollectionContext";
 import "./OwnerSelector.css";
-import { Stash } from "../../scripts/stash/types";
+import { PlugyStash } from "../../scripts/plugy-stash/types";
 import { LAST_LEGACY } from "../../scripts/character/parsing/versions";
 
 export interface OwnerSelectorProps {
@@ -24,7 +24,7 @@ export function OwnerSelector({
   const { owners, hasPlugY } = useContext(CollectionContext);
 
   // Using state so it's stable
-  const [newStash] = useState<Stash>(() => ({
+  const [newStash] = useState<PlugyStash>(() => ({
     filename: "SharedStash.d2x",
     lastModified: Date.now(),
     version: LAST_LEGACY,
@@ -36,13 +36,13 @@ export function OwnerSelector({
   }));
 
   const sharedStashExists = useMemo(
-    () => owners.some((owner) => isStash(owner) && owner.nonPlugY),
+    () => owners.some((owner) => isPlugyStash(owner) && owner.nonPlugY),
     [owners]
   );
 
   let possible = owners;
   if (onlyStashes) {
-    possible = owners.filter(isStash);
+    possible = owners.filter(isPlugyStash);
   }
 
   return (

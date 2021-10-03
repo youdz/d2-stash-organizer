@@ -1,10 +1,10 @@
-import { Stash } from "../../stash/types";
+import { PlugyStash } from "../../plugy-stash/types";
 import { Item } from "../types/Item";
 import { collision } from "./collision";
 import { positionItem } from "./positionItem";
 
 export function moveItem(
-  stash: Stash,
+  stash: PlugyStash,
   item: Item,
   toPage: number,
   row: number,

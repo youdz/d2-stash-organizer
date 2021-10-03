@@ -1,6 +1,6 @@
-import { Page, PageFlags } from "./types";
+import { PlugyPage, PageFlags } from "./types";
 
-export function makeIndex(page: Page, main?: boolean) {
+export function makeIndex(page: PlugyPage, main?: boolean) {
   if (typeof page.flags === "undefined") {
     return;
   }

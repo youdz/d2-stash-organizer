@@ -10,7 +10,7 @@ import {
   QualityFilter,
   QualityFilterValue,
 } from "../controls/QualityFilter";
-import { isStash, ownerName } from "../../scripts/save-file/ownership";
+import { isPlugyStash, ownerName } from "../../scripts/save-file/ownership";
 import { characterPages } from "./characterPages";
 import { SelectAll } from "../controls/SelectAll";
 
@@ -21,7 +21,7 @@ export function StashView() {
   const [ownerIndex, setOwnerIndex] = useState(() =>
     Math.max(
       0,
-      owners.findIndex((owner) => isStash(owner) && !owner.personal)
+      owners.findIndex((owner) => isPlugyStash(owner) && !owner.personal)
     )
   );
   const [search, setSearch] = useState("");
@@ -34,7 +34,7 @@ export function StashView() {
     if (!owner) {
       return [];
     }
-    if (isStash(owner)) {
+    if (isPlugyStash(owner)) {
       return owner.pages;
     } else {
       return characterPages(owner, !!lastActivePlugyStashPage?.get(owner));

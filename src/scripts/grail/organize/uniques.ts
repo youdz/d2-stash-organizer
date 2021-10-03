@@ -1,7 +1,7 @@
 import { Item } from "../../items/types/Item";
 import { layout, LayoutResult } from "../layout";
-import { Stash } from "../../stash/types";
-import { makeIndex } from "../../stash/makeIndex";
+import { PlugyStash } from "../../plugy-stash/types";
+import { makeIndex } from "../../plugy-stash/makeIndex";
 import { UNIQUE_ITEMS, UniqueItem } from "../../../game-data";
 import { UNIQUES_ORDER, UniqueSection } from "../list/uniquesOrder";
 import { fillTemplate } from "./fillTemplate";
@@ -9,7 +9,7 @@ import { getBase } from "../../items/getBase";
 import { groupUniquesBySection } from "../list/groupUniques";
 import { listGrailUniques } from "../list/listGrailUniques";
 import { canBeEthereal } from "../list/canBeEthereal";
-import { addPage } from "../../stash/addPage";
+import { addPage } from "../../plugy-stash/addPage";
 import { moveItem } from "../../items/moving/safeMove";
 
 function createTemplates(eth: boolean) {
@@ -37,7 +37,7 @@ function extrasOrder(a: Item, b: Item) {
   );
 }
 
-export function organizeUniques(stash: Stash, items: Item[]) {
+export function organizeUniques(stash: PlugyStash, items: Item[]) {
   const bySection = groupUniquesBySection(items, false);
   const normalTemplates = createTemplates(false);
   const ethTemplates = createTemplates(true);

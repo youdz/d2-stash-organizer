@@ -1,12 +1,12 @@
-import { Stash } from "../stash/types";
-import { getAllItems } from "../stash/getAllItems";
+import { PlugyStash } from "../plugy-stash/types";
+import { getAllItems } from "../plugy-stash/getAllItems";
 import { compare } from "../items/comparison/compare";
 import { ItemQuality } from "../items/types/ItemQuality";
 
 const FIRST_PAGE = 1;
 const LAST_PAGE = 6;
 
-export function triageNewItems(stash: Stash) {
+export function triageNewItems(stash: PlugyStash) {
   const toTriage = stash.pages
     .slice(FIRST_PAGE, LAST_PAGE + 1)
     .flatMap(({ items }) => items);

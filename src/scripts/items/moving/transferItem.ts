@@ -1,5 +1,5 @@
 import { Item } from "../types/Item";
-import { isStash, ItemsOwner } from "../../save-file/ownership";
+import { isPlugyStash, ItemsOwner } from "../../save-file/ownership";
 import {
   ItemEquipSlot,
   ItemLocation,
@@ -8,7 +8,7 @@ import {
 import { findSpot } from "./findSpot";
 import { getDimensions } from "../../character/dimensions";
 import { positionItem } from "./positionItem";
-import { PAGE_HEIGHT, PAGE_WIDTH } from "../../stash/dimensions";
+import { PAGE_HEIGHT, PAGE_WIDTH } from "../../plugy-stash/dimensions";
 import { fromInt } from "../../save-file/binary";
 import { FIRST_D2R } from "../../character/parsing/versions";
 import { D2R_OFFSET, toD2, toD2R } from "./conversion";
@@ -17,7 +17,7 @@ function takeItemFromCurrentOwner(item: Item) {
   if (!item.owner) {
     return;
   }
-  if (isStash(item.owner)) {
+  if (isPlugyStash(item.owner)) {
     for (const page of item.owner.pages) {
       const index = page.items.indexOf(item);
       if (index >= 0) {
@@ -69,7 +69,7 @@ export function transferItem(
   pageIndex?: number
 ) {
   // Try to position first, so we don't reach a state with no owner if there is no room
-  if (isStash(to)) {
+  if (isPlugyStash(to)) {
     const page = to.pages[pageIndex ?? 0];
     const position = findSpot(item, page.items, PAGE_HEIGHT, PAGE_WIDTH);
     if (!position) {

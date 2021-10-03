@@ -1,11 +1,11 @@
 import { parsePage } from "./parsePage";
-import { Stash } from "../types";
+import { PlugyStash } from "../types";
 import { postProcessStash } from "./postProcessStash";
 import { SaveFileReader } from "../../save-file/SaveFileReader";
 import { LAST_LEGACY } from "../../character/parsing/versions";
 
 // Can't use Node's Buffer because this needs to run in the browser
-export function parseStash(
+export function parsePlugyStash(
   raw: Uint8Array,
   file?: { name: string; lastModified?: number }
 ) {
@@ -16,7 +16,7 @@ export function parseStash(
       "This does not look like a plugy stash file (.sss or .d2x)"
     );
   }
-  const stash: Stash = {
+  const stash: PlugyStash = {
     filename: file?.name ?? "",
     lastModified: file?.lastModified ?? 0,
     version: LAST_LEGACY,

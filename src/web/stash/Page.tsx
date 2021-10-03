@@ -1,4 +1,4 @@
-import { Page, PageFlags } from "../../scripts/stash/types";
+import { PlugyPage, PageFlags } from "../../scripts/plugy-stash/types";
 import { Item } from "../items/Item";
 import "./Page.css";
 import { pageName } from "./utils/pageName";
@@ -7,7 +7,7 @@ import { groupItems } from "../items/groupItems";
 
 export interface PageProps {
   index: number;
-  page: Page;
+  page: PlugyPage;
 }
 
 export function Page({ page, index }: PageProps) {

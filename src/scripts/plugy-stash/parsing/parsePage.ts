@@ -1,8 +1,11 @@
-import { Page, Stash } from "../types";
+import { PlugyPage, PlugyStash } from "../types";
 import { SaveFileReader } from "../../save-file/SaveFileReader";
 import { parseItemList } from "../../items/parsing/parseItemList";
 
-export function parsePage(reader: SaveFileReader, stash: Stash): Page {
+export function parsePage(
+  reader: SaveFileReader,
+  stash: PlugyStash
+): PlugyPage {
   const header = reader.readString(2);
   if (header !== "ST") {
     throw new Error(`Unexpected header ${header} for a stash page`);

@@ -1,11 +1,11 @@
 import { Item } from "../../items/types/Item";
 import { layout } from "../layout";
-import { Stash } from "../../stash/types";
-import { makeIndex } from "../../stash/makeIndex";
-import { addPage } from "../../stash/addPage";
+import { PlugyStash } from "../../plugy-stash/types";
+import { makeIndex } from "../../plugy-stash/makeIndex";
+import { addPage } from "../../plugy-stash/addPage";
 import { moveItem } from "../../items/moving/safeMove";
 
-export function organizeRunes(stash: Stash, items: Item[]) {
+export function organizeRunes(stash: PlugyStash, items: Item[]) {
   const offset = stash.pages.length;
   const { nbPages, positions } = layout("runes", [items]);
   for (let i = 0; i < nbPages; i++) {

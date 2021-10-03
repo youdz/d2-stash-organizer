@@ -6,7 +6,7 @@ import "./Organizer.css";
 import { numberInputChangeHandler } from "./numberInputChangeHandler";
 import { OwnerSelector } from "../save-files/OwnerSelector";
 import { useUpdateCollection } from "../store/useUpdateCollection";
-import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
+import { isPlugyStash, ItemsOwner } from "../../scripts/save-file/ownership";
 import { updateCharacterStashes } from "../store/plugyDuplicates";
 
 export function Organizer() {
@@ -18,7 +18,7 @@ export function Organizer() {
   const [emptyPages, setEmptyPages] = useState(0);
 
   const handleOrganize = useCallback(async () => {
-    if (stash && isStash(stash)) {
+    if (stash && isPlugyStash(stash)) {
       try {
         organize(stash, [], skipPages, emptyPages);
         if (lastActivePlugyStashPage) {

@@ -1,4 +1,4 @@
-import { Stash } from "../types";
+import { PlugyStash } from "../types";
 import { postProcessItem } from "../../items/post-processing/postProcessItem";
 
 /**
@@ -6,7 +6,7 @@ import { postProcessItem } from "../../items/post-processing/postProcessItem";
  * This includes generating human-friendly descriptions for the items,
  * making mods more searchable or sortable, etc.
  */
-export function postProcessStash(stash: Stash) {
+export function postProcessStash(stash: PlugyStash) {
   stash.pages.forEach(({ items }, pageIndex) => {
     for (const item of items) {
       item.owner = stash;

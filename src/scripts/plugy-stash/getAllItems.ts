@@ -1,7 +1,7 @@
-import { isStash, ItemsOwner } from "../save-file/ownership";
+import { isPlugyStash, ItemsOwner } from "../save-file/ownership";
 
 export function getAllItems(owner: ItemsOwner, skipPages = 0) {
-  if (isStash(owner)) {
+  if (isPlugyStash(owner)) {
     const all = [];
     for (const { items } of owner.pages.slice(skipPages)) {
       all.push(...items);

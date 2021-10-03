@@ -1,14 +1,14 @@
 import { Item } from "../../items/types/Item";
 import { layout, LayoutResult } from "../layout";
-import { Stash } from "../../stash/types";
-import { makeIndex } from "../../stash/makeIndex";
+import { PlugyStash } from "../../plugy-stash/types";
+import { makeIndex } from "../../plugy-stash/makeIndex";
 import { Set, SET_ITEMS, SetItem, SETS } from "../../../game-data";
 import { EQUIPMENT_TYPES } from "../list/uniquesOrder";
 import { SETS_ORDER } from "../list/setsOrder";
 import { fillTemplate } from "./fillTemplate";
 import { getBase } from "../../items/getBase";
 import { groupBySet } from "../list/groupSets";
-import { addPage } from "../../stash/addPage";
+import { addPage } from "../../plugy-stash/addPage";
 import { moveItem } from "../../items/moving/safeMove";
 
 function createTemplates() {
@@ -27,7 +27,7 @@ function extrasOrder(a: Item, b: Item) {
   );
 }
 
-export function organizeSets(stash: Stash, items: Item[]) {
+export function organizeSets(stash: PlugyStash, items: Item[]) {
   const bySet = groupBySet(items);
   const templates = createTemplates();
   let offset = stash.pages.length;

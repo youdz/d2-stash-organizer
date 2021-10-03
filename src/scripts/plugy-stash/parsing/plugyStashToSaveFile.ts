@@ -1,8 +1,8 @@
-import { Stash } from "../types";
+import { PlugyStash } from "../types";
 import { SaveFileWriter } from "../../save-file/SaveFileWriter";
 import { writeItemList } from "../../items/parsing/writeItemList";
 
-export function stashToSaveFile(stash: Stash) {
+export function plugyStashToSaveFile(stash: PlugyStash) {
   const writer = new SaveFileWriter();
   if (stash.personal) {
     writer.writeString("CSTM");

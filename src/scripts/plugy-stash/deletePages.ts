@@ -1,8 +1,8 @@
-import { Stash } from "./types";
+import { PlugyStash } from "./types";
 
 // Deletes a range of pages and returns all the items they contained
 export function deletePages(
-  stash: Stash,
+  stash: PlugyStash,
   from: number,
   to = stash.pages.length
 ) {

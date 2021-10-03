@@ -1,4 +1,4 @@
-import { Stash } from "../../stash/types";
+import { PlugyStash } from "../../plugy-stash/types";
 import { Item } from "../../items/types/Item";
 import { SetItem, UniqueItem } from "../../../game-data";
 import { LayoutResult } from "../layout";
@@ -6,7 +6,7 @@ import { getGrailItem } from "../list/getGrailItem";
 import { moveItem } from "../../items/moving/safeMove";
 
 export function fillTemplate(
-  stash: Stash,
+  stash: PlugyStash,
   items: Item[],
   { positions }: LayoutResult<UniqueItem | SetItem>,
   pageOffset: number

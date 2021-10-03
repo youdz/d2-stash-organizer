@@ -1,10 +1,10 @@
 import { Item } from "../../items/types/Item";
 import { layout } from "../layout";
-import { Stash } from "../../stash/types";
-import { makeIndex } from "../../stash/makeIndex";
+import { PlugyStash } from "../../plugy-stash/types";
+import { makeIndex } from "../../plugy-stash/makeIndex";
 import { MISC } from "../../../game-data";
 import { sortAndGroupBy } from "./sortAndGroupBy";
-import { addPage } from "../../stash/addPage";
+import { addPage } from "../../plugy-stash/addPage";
 import { moveItem } from "../../items/moving/safeMove";
 
 const ORDER = ["gsy", "gsv", "gsb", "gsr", "gsg", "gsw", "sku"];
@@ -17,7 +17,7 @@ function qualityChar(skulls = false) {
   return (item: Item) => QUALITIES.indexOf(item.code.charAt(skulls ? 2 : 1));
 }
 
-export function organizeGems(stash: Stash, items: Item[]) {
+export function organizeGems(stash: PlugyStash, items: Item[]) {
   if (items.length === 0) return;
 
   const byType = ORDER.map<Item[]>(() => []);

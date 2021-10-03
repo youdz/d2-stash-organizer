@@ -1,6 +1,6 @@
-import { PageFlags, Stash } from "./types";
+import { PageFlags, PlugyStash } from "./types";
 
-export function addPage(stash: Stash, pageName: string, index?: number) {
+export function addPage(stash: PlugyStash, pageName: string, index?: number) {
   const page = {
     name: `# ${pageName}`,
     items: [],

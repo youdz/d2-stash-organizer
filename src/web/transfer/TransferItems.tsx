@@ -4,9 +4,9 @@ import { ItemsTable } from "../collection/ItemsTable";
 import "./TransferItems.css";
 import { CollectionContext } from "../store/CollectionContext";
 import { PrettyOwnerName } from "../save-files/PrettyOwnerName";
-import { isStash, ItemsOwner } from "../../scripts/save-file/ownership";
+import { isPlugyStash, ItemsOwner } from "../../scripts/save-file/ownership";
 import { ItemStorageType } from "../../scripts/items/types/ItemLocation";
-import { addPage } from "../../scripts/stash/addPage";
+import { addPage } from "../../scripts/plugy-stash/addPage";
 import { transferItem } from "../../scripts/items/moving/transferItem";
 import { useUpdateCollection } from "../store/useUpdateCollection";
 import { numberInputChangeHandler } from "../organizer/numberInputChangeHandler";
@@ -33,7 +33,7 @@ export function TransferItems() {
       setError("Please select where you want to transfer the items.");
       return;
     }
-    if (!isStash(target) && !targetStorage) {
+    if (!isPlugyStash(target) && !targetStorage) {
       setError(
         "Please select where you want to store the items on your character."
       );
@@ -41,7 +41,7 @@ export function TransferItems() {
     }
     setError(undefined);
     try {
-      if (isStash(target)) {
+      if (isPlugyStash(target)) {
         let pageIndex = target.pages.length;
         addPage(target, "Transferred");
         for (const item of items) {
@@ -63,7 +63,7 @@ export function TransferItems() {
           }
         }
       }
-      if (isStash(target) && (withOrganize || target.nonPlugY)) {
+      if (isPlugyStash(target) && (withOrganize || target.nonPlugY)) {
         organize(target, [], skipPages);
       }
       if (lastActivePlugyStashPage) {
@@ -103,7 +103,7 @@ export function TransferItems() {
   }
 
   let supportedStorageTypes: ItemStorageType[] | undefined;
-  if (target && !isStash(target)) {
+  if (target && !isPlugyStash(target)) {
     supportedStorageTypes = [ItemStorageType.INVENTORY, ItemStorageType.CUBE];
     if (!lastActivePlugyStashPage?.has(target)) {
       supportedStorageTypes.push(ItemStorageType.STASH);
@@ -119,7 +119,7 @@ export function TransferItems() {
       <p>Select where you want to transfer them:</p>
       <div class="selectors">
         <OwnerSelector selected={target} onChange={setTarget} />
-        {target && (!isStash(target) || !target.nonPlugY) && (
+        {target && (!isPlugyStash(target) || !target.nonPlugY) && (
           <div class="arrow">&#8594;</div>
         )}
         {supportedStorageTypes && (
@@ -143,7 +143,7 @@ export function TransferItems() {
             ))}
           </ul>
         )}
-        {target && isStash(target) && !target.nonPlugY && (
+        {target && isPlugyStash(target) && !target.nonPlugY && (
           <ul id="organize-selector">
             <li>
               <label>

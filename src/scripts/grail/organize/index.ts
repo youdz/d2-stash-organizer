@@ -1,10 +1,10 @@
-import { Stash } from "../../stash/types";
+import { PlugyStash } from "../../plugy-stash/types";
 import { Item } from "../../items/types/Item";
-import { deletePages } from "../../stash/deletePages";
+import { deletePages } from "../../plugy-stash/deletePages";
 import { groupBySection } from "./groupBySection";
 import { SECTIONS_ORDER } from "./sections";
 import { organizeUnknown } from "./unknown";
-import { getAllItems } from "../../stash/getAllItems";
+import { getAllItems } from "../../plugy-stash/getAllItems";
 import { organizeRejuvs } from "./rejuvs";
 import { organizeGems } from "./gems";
 import { organizeRunes } from "./runes";
@@ -13,7 +13,7 @@ import { organizeSets } from "./sets";
 import { organizeUniques } from "./uniques";
 import { organizeRespecs } from "./respecs";
 import { organizeUbers } from "./ubers";
-import { addPage } from "../../stash/addPage";
+import { addPage } from "../../plugy-stash/addPage";
 
 /**
  * Counts every item, even socketed ones.
@@ -29,7 +29,7 @@ function countEveryItem(items: Item[]) {
 }
 
 export function organize(
-  stash: Stash,
+  stash: PlugyStash,
   additionalItems: Item[] = [],
   offset = 0,
   emptyPages = 0

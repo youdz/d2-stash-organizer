@@ -3,7 +3,7 @@ import {
   ItemLocation,
   ItemStorageType,
 } from "../../scripts/items/types/ItemLocation";
-import { isStash, ownerName } from "../../scripts/save-file/ownership";
+import { isPlugyStash, ownerName } from "../../scripts/save-file/ownership";
 
 export interface ItemLocationDescProps {
   item: Item;
@@ -19,7 +19,7 @@ function locationString(item: Item) {
       switch (item.stored) {
         case ItemStorageType.STASH:
           // This is the case where the item is in a non-PlugY stash
-          if (!isStash(item.owner)) {
+          if (!isPlugyStash(item.owner)) {
             return `In ${name}'s stash`;
           }
           return name;

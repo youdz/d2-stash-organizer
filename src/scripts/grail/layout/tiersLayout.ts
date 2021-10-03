@@ -1,6 +1,6 @@
 import { Position } from "./position";
 import { getBase } from "../../items/getBase";
-import { PAGE_HEIGHT, PAGE_WIDTH } from "../../stash/dimensions";
+import { PAGE_HEIGHT, PAGE_WIDTH } from "../../plugy-stash/dimensions";
 import { LayoutItem, LayoutResult } from "./types";
 
 export function tiersLayout<T extends LayoutItem>(

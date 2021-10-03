@@ -1,5 +1,5 @@
 import { Character } from "../../scripts/character/types";
-import { Page } from "../../scripts/stash/types";
+import { PlugyPage } from "../../scripts/plugy-stash/types";
 import {
   ItemLocation,
   ItemStorageType,
@@ -52,8 +52,8 @@ function findPage(item: Item): PageName {
 export function characterPages(
   character: Character,
   ignoreStash: boolean
-): Page[] {
-  const pages = new Map<PageName, Page>();
+): PlugyPage[] {
+  const pages = new Map<PageName, PlugyPage>();
   function addItem(page: PageName, item: Item) {
     let existing = pages.get(page);
     if (!existing) {
@@ -68,6 +68,7 @@ export function characterPages(
   }
 
   return PAGE_NAMES.map((name) => pages.get(name)).filter(
-    (page): page is Page => !!page && (!ignoreStash || page.name !== "Stash")
+    (page): page is PlugyPage =>
+      !!page && (!ignoreStash || page.name !== "Stash")
   );
 }

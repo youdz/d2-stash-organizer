@@ -1,5 +1,5 @@
-import { isStash, ItemsOwner } from "../../save-file/ownership";
-import { addPage } from "../../stash/addPage";
+import { isPlugyStash, ItemsOwner } from "../../save-file/ownership";
+import { addPage } from "../../plugy-stash/addPage";
 import { transferItem } from "./transferItem";
 import { ItemStorageType } from "../types/ItemLocation";
 import { Item } from "../types/Item";
@@ -9,7 +9,7 @@ export function bulkTransfer(
   items: Item[],
   storageType = ItemStorageType.STASH
 ) {
-  if (isStash(target)) {
+  if (isPlugyStash(target)) {
     let pageIndex = target.pages.length;
     addPage(target, "Transferred");
     for (const item of items) {

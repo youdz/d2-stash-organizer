@@ -1,15 +1,15 @@
 import { Item } from "../../items/types/Item";
 import { layout } from "../layout";
-import { Stash } from "../../stash/types";
-import { makeIndex } from "../../stash/makeIndex";
+import { PlugyStash } from "../../plugy-stash/types";
+import { makeIndex } from "../../plugy-stash/makeIndex";
 import { sortAndGroupBy } from "./sortAndGroupBy";
-import { addPage } from "../../stash/addPage";
+import { addPage } from "../../plugy-stash/addPage";
 import { moveItem } from "../../items/moving/safeMove";
 
 // Order to display them in
 export const RESPECS = ["tes", "ceh", "bet", "fed", "toa"];
 
-export function organizeRespecs(stash: Stash, items: Item[]) {
+export function organizeRespecs(stash: PlugyStash, items: Item[]) {
   if (items.length === 0) return;
 
   const groups = sortAndGroupBy(items, (item) => RESPECS.indexOf(item.code));

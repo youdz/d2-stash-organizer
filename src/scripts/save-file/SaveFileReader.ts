@@ -1,5 +1,3 @@
-import { indexOf } from "../stash/parsing/indexOf";
-
 export class SaveFileReader {
   constructor(private raw: Uint8Array) {
     this.dataView = new DataView(this.raw.buffer);
@@ -27,15 +25,6 @@ export class SaveFileReader {
 
   readString(length: number, position = this.nextIndex) {
     return String.fromCharCode(...this.read(length, position));
-  }
-
-  readUntil(stopAt: string[], minLength = 0, position = this.nextIndex) {
-    let end = indexOf(this.raw, stopAt, position + minLength);
-    if (end < 0) {
-      end = this.raw.length;
-    }
-    this.moveTo(end);
-    return this.raw.slice(position, end);
   }
 
   readNullTerminatedString(position = this.nextIndex) {

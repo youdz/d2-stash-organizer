@@ -2,16 +2,16 @@
 import { readFile } from "fs/promises";
 import { parseCharacter } from "./character/parsing/parseCharacter";
 import { saveCharacter } from "./character/saveCharacter";
-import { parseStash } from "./stash/parsing/parseStash";
-import { saveStash } from "./stash/saveStash";
+import { parsePlugyStash } from "./plugy-stash/parsing/parsePlugyStash";
+import { savePlugyStash } from "./plugy-stash/savePlugyStash";
 import { toD2 } from "./items/moving/conversion";
 import { LAST_LEGACY } from "./character/parsing/versions";
-import { addPage } from "./stash/addPage";
+import { addPage } from "./plugy-stash/addPage";
 import { transferItem } from "./items/moving/transferItem";
 import { ItemStorageType } from "./items/types/ItemLocation";
 
 const CHAR = "test/d2r/D2rSorc.d2s";
-const STASH = "test/output.sss";
+const STASH = "test/d2r/SharedStashSoftCoreV2_pot_page1_2x2.d2i";
 const TEST_OUTPUT = "test/saved.sss";
 const DANGER_OUTPUT = STASH;
 
@@ -20,7 +20,9 @@ async function main() {
   //  - when the item is perfect, the 'perfect' text could be in a different color
   //  -  for Eth items, it would be better to have 'Ethereal' tag at the end, so the %perfect tags are aligned nicely
   //  - when you click "next" at the end of the page, it should go to the top of the page
-  const stash = parseStash(await readFile(STASH));
+  const stash = parsePlugyStash(await readFile(STASH));
+  console.log(stash);
+
   // const character = parseCharacter(await readFile(CHAR));
   //
   // const stash = {
