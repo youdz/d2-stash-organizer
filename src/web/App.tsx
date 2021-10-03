@@ -14,7 +14,7 @@ export function App() {
         <CollectionProvider>
           <GitHubLink />
           <HelpLink />
-          <h1>Diablo 2 Item Manager</h1>
+          <h1>Diablo 2 Collection Manager</h1>
           <Routes />
         </CollectionProvider>
       </SelectionProvider>

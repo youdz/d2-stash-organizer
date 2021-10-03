@@ -41,6 +41,12 @@ export function Help() {
         </p>
       </FaqSection>
 
+      <FaqSection question="Is this compatible with Diablo 2 Resurrected?">
+        Yes! You can seamlessly transfer items between legacy D2 and D2
+        Resurrected characters, for instance using your legacy PlugY stash as an
+        offline D2R stash.
+      </FaqSection>
+
       <FaqSection question='When you say "easily searchable", what can I search for?'>
         <p>When searching in your collection, you can search for:</p>
         <ul>
@@ -187,11 +193,6 @@ export function Help() {
             alt="Sigon's Complete Steel set nicely layed out on a single page"
           />
         </p>
-      </FaqSection>
-
-      <FaqSection question="Is this compatible with Diablo 2 Resurrected?">
-        As soon as a single dev with limited free time can handle it. It's
-        obviously the current highest priority.
       </FaqSection>
 
       <FaqSection question="Can this be used to edit, hack or mod items?">
