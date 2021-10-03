@@ -1,9 +1,10 @@
 import { PlugyStash } from "../plugy-stash/types";
 import { Character } from "../character/types";
+import { D2rStash } from "../d2r-stash/types";
 
 export const SHARED_STASH_NAME = "Shared stash";
 
-export type ItemsOwner = Character | PlugyStash;
+export type ItemsOwner = Character | D2rStash | PlugyStash;
 
 export function isPlugyStash(owner: ItemsOwner): owner is PlugyStash {
   return "personal" in owner;
