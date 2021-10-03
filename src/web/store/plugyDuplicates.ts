@@ -1,5 +1,9 @@
 import { Item } from "../../scripts/items/types/Item";
-import { isPlugyStash, ItemsOwner } from "../../scripts/save-file/ownership";
+import {
+  isCharacter,
+  isPlugyStash,
+  ItemsOwner,
+} from "../../scripts/save-file/ownership";
 import { PlugyStash } from "../../scripts/plugy-stash/types";
 import { Character } from "../../scripts/character/types";
 import { ItemStorageType } from "../../scripts/items/types/ItemLocation";
@@ -27,7 +31,7 @@ export function findDuplicates(owners: ItemsOwner[]) {
 
   const duplicates = new Map<Character, [PlugyStash, number]>();
   for (const owner of owners) {
-    if (!isPlugyStash(owner)) {
+    if (isCharacter(owner)) {
       const duplicate = byString.get(
         stringifyPage(
           owner.items.filter(({ stored }) => stored === ItemStorageType.STASH)

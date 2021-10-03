@@ -1,12 +1,19 @@
 import { parseCharacter } from "../../scripts/character/parsing/parseCharacter";
 import { parsePlugyStash } from "../../scripts/plugy-stash/parsing/parsePlugyStash";
 import { plugyStashToSaveFile } from "../../scripts/plugy-stash/parsing/plugyStashToSaveFile";
-import { isPlugyStash, ItemsOwner } from "../../scripts/save-file/ownership";
+import {
+  isCharacter,
+  isPlugyStash,
+  ItemsOwner,
+} from "../../scripts/save-file/ownership";
 import { characterToSaveFile } from "../../scripts/character/parsing/characterToSaveFile";
+import { d2rStashToSaveFile } from "../../scripts/d2r-stash/parsing/d2rStashToSaveFile";
 
 const DEFAULT_SHARED_FILENAME = "_LOD_SharedStashSave.sss";
 const DEFAULT_PERSONAL_FILENAME = "CharacterName.d2x";
 const DEFAULT_CHARACTER_FILENAME = "CharacterName.d2s";
+// TODO
+const DEFAULT_D2R_SHARED_FILENAME = "SharedStash.d2i";
 
 export async function parseSaveFile(file: File) {
   try {
@@ -25,16 +32,19 @@ export async function parseSaveFile(file: File) {
 }
 
 export function toSaveFile(owner: ItemsOwner) {
+  let raw: Uint8Array;
+  let defaultName: string;
   if (isPlugyStash(owner)) {
-    return new File(
-      [new Blob([plugyStashToSaveFile(owner).buffer])],
-      owner.filename ||
-        (owner.personal ? DEFAULT_PERSONAL_FILENAME : DEFAULT_SHARED_FILENAME)
-    );
+    raw = plugyStashToSaveFile(owner);
+    defaultName = owner.personal
+      ? DEFAULT_PERSONAL_FILENAME
+      : DEFAULT_SHARED_FILENAME;
+  } else if (isCharacter(owner)) {
+    raw = characterToSaveFile(owner);
+    defaultName = DEFAULT_CHARACTER_FILENAME;
   } else {
-    return new File(
-      [new Blob([characterToSaveFile(owner).buffer])],
-      owner.filename || DEFAULT_CHARACTER_FILENAME
-    );
+    raw = d2rStashToSaveFile(owner);
+    defaultName = DEFAULT_CHARACTER_FILENAME;
   }
+  return new File([new Blob([raw.buffer])], owner.filename || defaultName);
 }

@@ -10,6 +10,7 @@ import { getSavedStashes } from "./store";
 import { Item } from "../../scripts/items/types/Item";
 import { getAllItems } from "../../scripts/plugy-stash/getAllItems";
 import {
+  isCharacter,
   isPlugyStash,
   ItemsOwner,
   ownerName,
@@ -54,7 +55,7 @@ function formatCollection(owners: ItemsOwner[]): Collection {
     : undefined;
   const allItems = owners.flatMap((owner) => {
     let items = getAllItems(owner);
-    if (!isPlugyStash(owner) && lastActivePlugyStashPage?.has(owner)) {
+    if (isCharacter(owner) && lastActivePlugyStashPage?.has(owner)) {
       items = items.filter((item) => item.stored !== ItemStorageType.STASH);
     }
     return items;

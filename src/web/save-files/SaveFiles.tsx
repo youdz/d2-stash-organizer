@@ -22,6 +22,7 @@ export function SaveFiles() {
           <td>
             <PrettyOwnerName owner={owner} />
           </td>
+          {/* TODO: display version */}
           <td>{dateFormatter.format(new Date(owner.lastModified))}</td>
         </tr>
       );

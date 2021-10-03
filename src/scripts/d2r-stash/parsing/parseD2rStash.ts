@@ -18,7 +18,7 @@ export function parseD2rStash(
   const stash: D2rStash = {
     filename: file?.name ?? "",
     lastModified: file?.lastModified ?? 0,
-    // TODO: can different pages have different versions?
+    // Can different pages have different versions?
     version: reader.readInt32LE(8),
     pages: [],
   };

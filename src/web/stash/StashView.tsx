@@ -10,7 +10,11 @@ import {
   QualityFilter,
   QualityFilterValue,
 } from "../controls/QualityFilter";
-import { isPlugyStash, ownerName } from "../../scripts/save-file/ownership";
+import {
+  isPlugyStash,
+  isStash,
+  ownerName,
+} from "../../scripts/save-file/ownership";
 import { characterPages } from "./characterPages";
 import { SelectAll } from "../controls/SelectAll";
 
@@ -34,7 +38,7 @@ export function StashView() {
     if (!owner) {
       return [];
     }
-    if (isPlugyStash(owner)) {
+    if (isStash(owner)) {
       return owner.pages;
     } else {
       return characterPages(owner, !!lastActivePlugyStashPage?.get(owner));
@@ -48,7 +52,7 @@ export function StashView() {
           ...page,
           name: pageName(page).replace("#", `${index + 1}`),
           items: filterItemsByQuality(
-            searchItems(page.items, search, page.name),
+            searchItems(page.items, search, "name" in page ? page.name : ""),
             quality
           ),
         }))

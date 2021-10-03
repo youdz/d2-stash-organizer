@@ -4,15 +4,18 @@ import { ItemsTable } from "../collection/ItemsTable";
 import "./TransferItems.css";
 import { CollectionContext } from "../store/CollectionContext";
 import { PrettyOwnerName } from "../save-files/PrettyOwnerName";
-import { isPlugyStash, ItemsOwner } from "../../scripts/save-file/ownership";
+import {
+  isCharacter,
+  isPlugyStash,
+  ItemsOwner,
+} from "../../scripts/save-file/ownership";
 import { ItemStorageType } from "../../scripts/items/types/ItemLocation";
-import { addPage } from "../../scripts/plugy-stash/addPage";
-import { transferItem } from "../../scripts/items/moving/transferItem";
 import { useUpdateCollection } from "../store/useUpdateCollection";
 import { numberInputChangeHandler } from "../organizer/numberInputChangeHandler";
 import { organize } from "../../scripts/grail/organize";
 import { OwnerSelector } from "../save-files/OwnerSelector";
 import { updateCharacterStashes } from "../store/plugyDuplicates";
+import { bulkTransfer } from "../../scripts/items/moving/bulkTransfer";
 
 export function TransferItems() {
   const { lastActivePlugyStashPage } = useContext(CollectionContext);
@@ -41,28 +44,7 @@ export function TransferItems() {
     }
     setError(undefined);
     try {
-      if (isPlugyStash(target)) {
-        let pageIndex = target.pages.length;
-        addPage(target, "Transferred");
-        for (const item of items) {
-          if (!transferItem(item, target, ItemStorageType.STASH, pageIndex)) {
-            // We ran out of space, we insert a new page
-            addPage(target, "Transferred");
-            pageIndex++;
-            // Don't forget to re-transfer the failed item
-            transferItem(item, target, ItemStorageType.STASH, pageIndex);
-          }
-        }
-      } else {
-        for (const item of items) {
-          if (!transferItem(item, target, targetStorage)) {
-            setError("Not enough space to transfer all the selected items.");
-            await rollback();
-            setTarget(undefined);
-            return;
-          }
-        }
-      }
+      bulkTransfer(target, items, targetStorage);
       if (isPlugyStash(target) && (withOrganize || target.nonPlugY)) {
         organize(target, [], skipPages);
       }
@@ -103,7 +85,7 @@ export function TransferItems() {
   }
 
   let supportedStorageTypes: ItemStorageType[] | undefined;
-  if (target && !isPlugyStash(target)) {
+  if (target && isCharacter(target)) {
     supportedStorageTypes = [ItemStorageType.INVENTORY, ItemStorageType.CUBE];
     if (!lastActivePlugyStashPage?.has(target)) {
       supportedStorageTypes.push(ItemStorageType.STASH);

@@ -1,7 +1,7 @@
 import {
   isPlugyStash,
   ItemsOwner,
-  SHARED_STASH_NAME,
+  NON_PLUGY_SHARED_STASH_NAME,
 } from "../../scripts/save-file/ownership";
 import { PrettyOwnerName } from "./PrettyOwnerName";
 import { useContext, useMemo, useState } from "preact/hooks";
@@ -69,7 +69,8 @@ export function OwnerSelector({
               checked={selected === newStash}
               onChange={() => onChange(newStash)}
             />{" "}
-            Create a new <span class="magic">{SHARED_STASH_NAME}</span> for me
+            Create a new{" "}
+            <span class="magic">{NON_PLUGY_SHARED_STASH_NAME}</span> for me
           </label>
         </li>
       )}
