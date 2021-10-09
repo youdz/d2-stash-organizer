@@ -3,6 +3,7 @@
   border: none;
   padding: 0.5em 0.4em;
   color: rgb(199, 179, 119);
+  font-size: 1.2em;
 }
 
 .faq-question .button::before {
@@ -22,14 +23,11 @@
   margin-left: 0.75em;
   padding-left: 1em;
   border-left: 1px solid rgb(199, 179, 119);
-  /* The D2 font is just too painful to read for large paragraphs */
-  font-family: sans-serif;
-  font-weight: initial;
-  letter-spacing: initial;
 }
 
 .faq-answer.expanded {
   height: auto;
+  padding-bottom: 0.5em;
 }
 
 .faq-answer > :first-child {

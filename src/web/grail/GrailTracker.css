@@ -1,28 +1,29 @@
 .found {
-    color: #6FB76F;
+  color: #6fb76f;
 }
 .found::after {
-    content: " ✔"
+  content: " ✔";
 }
 
 .missing {
-    color: #FF6F6F;
+  color: #ff6f6f;
 }
 .missing::after {
-    content: " ✘"
+  content: " ✘";
 }
 
 #grail-tracker {
-    margin-top: 1em;
+  margin-top: 1em;
 }
 
 #grail-tracker th {
-    text-align: left;
+  text-align: left;
+  font-weight: inherit;
 }
 #grail-tracker td {
-    padding: 0 1em;
+  padding: 0 1em;
 }
 #grail-tracker td[colspan] {
-    text-align: center;
-    padding-top: 1em
+  text-align: center;
+  padding-top: 1em;
 }

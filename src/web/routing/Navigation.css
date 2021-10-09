@@ -1,6 +1,7 @@
 #navigation {
   display: flex;
   flex-flow: row nowrap;
+  align-items: flex-end;
   border-bottom: 1px solid #666;
 }
 

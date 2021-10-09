@@ -9,6 +9,7 @@ import { SaveFiles } from "../save-files/SaveFiles";
 import { SelectionContext } from "../transfer/SelectionContext";
 import { TransferItems } from "../transfer/TransferItems";
 import { Help } from "../help/Help";
+import { Settings } from "../settings/Settings";
 
 function NavLink({
   hash,
@@ -47,6 +48,8 @@ export function Routes() {
         return <Organizer />;
       case "#grail-tracker":
         return <GrailTracker />;
+      case "#settings":
+        return <Settings />;
       case "#help":
       default:
         return <Help />;
@@ -63,6 +66,7 @@ export function Routes() {
         </NavLink>
         <NavLink hash="#organize">Organize PlugY stash</NavLink>
         <NavLink hash="#grail-tracker">Grail tracker</NavLink>
+        <NavLink hash="#settings">Settings</NavLink>
       </nav>
       <main>{view}</main>
     </>

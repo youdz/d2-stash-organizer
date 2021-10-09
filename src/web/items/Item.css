@@ -5,6 +5,7 @@
 
 .item th {
   width: 400px;
+  font-weight: inherit;
 }
 
 .item td:first-child {

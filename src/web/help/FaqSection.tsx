@@ -46,7 +46,7 @@ export function FaqSection({
       </dt>
       <dd
         ref={contentRef}
-        class={`faq-answer ${expanded ? "expanded" : ""}`}
+        class={`faq-answer accessible-font ${expanded ? "expanded" : ""}`}
         id={id}
       >
         {children}
