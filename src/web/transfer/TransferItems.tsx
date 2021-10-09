@@ -7,6 +7,7 @@ import { PrettyOwnerName } from "../save-files/PrettyOwnerName";
 import {
   isCharacter,
   isPlugyStash,
+  isStash,
   ItemsOwner,
 } from "../../scripts/save-file/ownership";
 import { ItemStorageType } from "../../scripts/items/types/ItemLocation";
@@ -36,7 +37,7 @@ export function TransferItems() {
       setError("Please select where you want to transfer the items.");
       return;
     }
-    if (!isPlugyStash(target) && !targetStorage) {
+    if (!isStash(target) && !targetStorage) {
       setError(
         "Please select where you want to store the items on your character."
       );
