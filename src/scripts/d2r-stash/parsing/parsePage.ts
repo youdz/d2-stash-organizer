@@ -14,10 +14,8 @@ export function parsePage(reader: SaveFileReader, stash: D2rStash) {
     items: [],
   };
 
-  reader.read(44);
-
   // Position at the start of the list
-  // reader.read(48);
+  reader.read(48);
   page.items.push(...parseItemList(reader, stash));
 
   return page;
