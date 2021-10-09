@@ -15,7 +15,6 @@ export function d2rStashToSaveFile(stash: D2rStash) {
     writeItemList(writer, page.items);
     // Retroactively add the length
     const pageEnd = writer.nextIndex;
-    console.log("Write:", pageEnd - pageStart);
     writer.writeInt32LE(pageEnd - pageStart, lengthPosition);
     // Reposition at the end
     writer.write([], pageEnd);

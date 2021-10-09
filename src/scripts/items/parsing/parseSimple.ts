@@ -46,6 +46,14 @@ export function parseSimple(stream: BinaryStream, owner: ItemsOwner) {
     ).trim();
   }
 
+  // Checking base for all items, not just simple ones. That way we fail early if something goes wrong.
+  const base = getBase(item);
+
+  // Items that check for the difficulty they were found in have 2 extra bits for the difficulty
+  if (base.trackQuestDifficulty) {
+    read(2);
+  }
+
   item.nbFilledSockets = readInt(item.simple ? 1 : 3);
   if (item.socketed && item.nbFilledSockets > 0) {
     // Array to store socketed items
@@ -53,7 +61,7 @@ export function parseSimple(stream: BinaryStream, owner: ItemsOwner) {
   }
 
   if (item.simple) {
-    item.name = getBase(item).name;
+    item.name = base.name;
   }
 
   return item;

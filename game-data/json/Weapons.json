@@ -1128,7 +1128,8 @@
     "width": 1,
     "height": 2,
     "qlevel": 0,
-    "levelReq": 0
+    "levelReq": 0,
+    "trackQuestDifficulty": true
   },
   "g33": {
     "name": "The Gidbinn",
@@ -1141,7 +1142,8 @@
     "width": 1,
     "height": 2,
     "qlevel": 0,
-    "levelReq": 0
+    "levelReq": 0,
+    "trackQuestDifficulty": true
   },
   "leg": {
     "name": "Wirt's Leg",
@@ -1154,7 +1156,8 @@
     "width": 1,
     "height": 3,
     "qlevel": 0,
-    "levelReq": 0
+    "levelReq": 0,
+    "trackQuestDifficulty": true
   },
   "hdm": {
     "name": "Horadric Malus",
@@ -1167,7 +1170,8 @@
     "width": 1,
     "height": 2,
     "qlevel": 0,
-    "levelReq": 0
+    "levelReq": 0,
+    "trackQuestDifficulty": true
   },
   "hfh": {
     "name": "Hell Forge Hammer",
@@ -1180,7 +1184,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 0,
-    "levelReq": 0
+    "levelReq": 0,
+    "trackQuestDifficulty": true
   },
   "hst": {
     "name": "Horadric Staff",
@@ -1193,7 +1198,8 @@
     "width": 1,
     "height": 4,
     "qlevel": 0,
-    "levelReq": 0
+    "levelReq": 0,
+    "trackQuestDifficulty": true
   },
   "msf": {
     "name": "Shaft of the Horadric Staff",
@@ -1206,7 +1212,8 @@
     "width": 1,
     "height": 3,
     "qlevel": 0,
-    "levelReq": 0
+    "levelReq": 0,
+    "trackQuestDifficulty": true
   },
   "9ha": {
     "name": "Hatchet",
@@ -2259,7 +2266,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 0,
-    "levelReq": 0
+    "levelReq": 0,
+    "trackQuestDifficulty": true
   },
   "qf2": {
     "name": "Khalim's Will",
@@ -2272,7 +2280,8 @@
     "width": 2,
     "height": 3,
     "qlevel": 0,
-    "levelReq": 0
+    "levelReq": 0,
+    "trackQuestDifficulty": true
   },
   "ktr": {
     "name": "Katar",

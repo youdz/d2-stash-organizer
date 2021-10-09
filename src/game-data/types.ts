@@ -15,6 +15,7 @@ export interface Equipment {
   qlevel: number;
   levelReq: number;
   stackable: boolean;
+  trackQuestDifficulty?: boolean;
 }
 
 export interface Armor extends Equipment {

@@ -165,7 +165,8 @@
     "height": 1,
     "qlevel": 15,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "rin": {
     "name": "Ring",
@@ -201,7 +202,8 @@
     "height": 2,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "bkd": {
     "name": "Key to the Cairn Stones",
@@ -213,7 +215,8 @@
     "height": 2,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "aqv": {
     "name": "Arrows",
@@ -441,7 +444,8 @@
     "height": 2,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "xyz": {
     "name": "Right Click to permanently add 20 to Life\\nPotion of Life",
@@ -453,7 +457,8 @@
     "height": 1,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "j34": {
     "name": "A Jade Figurine",
@@ -465,7 +470,8 @@
     "height": 2,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "g34": {
     "name": "The Golden Bird",
@@ -477,7 +483,8 @@
     "height": 2,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "bbb": {
     "name": "Lam Esen's Tome",
@@ -489,7 +496,8 @@
     "height": 2,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "box": {
     "name": "Horadric Cube",
@@ -513,7 +521,8 @@
     "height": 2,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "mss": {
     "name": "Mephisto's Soulstone",
@@ -525,7 +534,8 @@
     "height": 1,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "ass": {
     "name": "Right Click to learn skill of your choice\\nBook of Skill",
@@ -537,7 +547,8 @@
     "height": 2,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "qey": {
     "name": "Khalim's Eye",
@@ -549,7 +560,8 @@
     "height": 1,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "qhr": {
     "name": "Khalim's Heart",
@@ -561,7 +573,8 @@
     "height": 1,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "qbr": {
     "name": "Khalim's Brain",
@@ -573,7 +586,8 @@
     "height": 1,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "ear": {
     "name": "Ear",
@@ -1641,7 +1655,8 @@
     "height": 1,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "0sc": {
     "name": "Scroll of Knowledge",
@@ -1665,7 +1680,8 @@
     "height": 2,
     "qlevel": 0,
     "levelReq": 0,
-    "stackable": false
+    "stackable": false,
+    "trackQuestDifficulty": true
   },
   "pk1": {
     "name": "Key of Terror",

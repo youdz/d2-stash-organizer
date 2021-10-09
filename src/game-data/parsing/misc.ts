@@ -17,6 +17,7 @@ export async function miscToJson() {
       qlevel: Number(line[5]),
       levelReq: Number(line[6]),
       stackable: line[43] === "1",
+      trackQuestDifficulty: line[48] === "1" || undefined,
     };
     // Token of absolution name is messed up, has the description at the start
     if (code === "toa") {

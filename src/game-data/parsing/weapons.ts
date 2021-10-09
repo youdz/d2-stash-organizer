@@ -25,6 +25,7 @@ export async function weaponsToJson() {
       height: Number(line[42]),
       qlevel: Number(line[27]),
       levelReq: Number(line[28]),
+      trackQuestDifficulty: line[66] === "1" || undefined,
     };
   }
   await writeJson("Weapons", weapons);

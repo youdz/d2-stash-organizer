@@ -14,7 +14,6 @@ export function parsePage(reader: SaveFileReader, stash: D2rStash) {
     items: [],
   };
 
-  console.log("Read:", reader.readInt32LE());
   reader.read(44);
 
   // Position at the start of the list
