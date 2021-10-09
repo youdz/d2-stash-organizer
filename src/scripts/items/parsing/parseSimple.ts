@@ -50,7 +50,7 @@ export function parseSimple(stream: BinaryStream, owner: ItemsOwner) {
   const base = getBase(item);
 
   // Items that check for the difficulty they were found in have 2 extra bits for the difficulty
-  if (base.trackQuestDifficulty) {
+  if (base.type === "ques" && base.trackQuestDifficulty) {
     read(2);
   }
 
