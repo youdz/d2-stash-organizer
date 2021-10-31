@@ -60,7 +60,7 @@ export function parseQuality(
       break;
     case ItemQuality.UNIQUE:
       item.unique = readInt(12);
-      item.name = UNIQUE_ITEMS[item.unique].name;
+      item.code === "std" ? item.name = getBase(item).name : item.name = UNIQUE_ITEMS[item.unique].name;
       break;
     case ItemQuality.RARE:
     case ItemQuality.CRAFTED:

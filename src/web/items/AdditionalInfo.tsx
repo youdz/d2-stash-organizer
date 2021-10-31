@@ -17,6 +17,7 @@ export function AdditionalInfo({ item, quantity }: AdditionalInfoProps) {
 
   if (
     item.runeword ||
+    item.code !== "std" &&
     item.quality === ItemQuality.UNIQUE ||
     item.quality === ItemQuality.SET
   ) {
