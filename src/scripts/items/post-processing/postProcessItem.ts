@@ -9,6 +9,7 @@ import { addSetMods } from "./addSetModifiers";
 export function postProcessItem(item: Item) {
   if (
     item.runeword ||
+    item.code !== "std" &&
     item.quality === ItemQuality.UNIQUE ||
     item.quality === ItemQuality.SET
   ) {
